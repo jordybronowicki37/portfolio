@@ -1,13 +1,12 @@
 <script setup lang="ts">
-
-import AboutMe from "../components/AboutMe.vue";
-import Quote from "../components/Quote.vue";
+import Editor from "../components/Editor.vue";
 </script>
 
 <template>
   <div>
-    <AboutMe/>
-    <Quote/>
+    <Editor>
+
+    </Editor>
   </div>
 </template>
 
