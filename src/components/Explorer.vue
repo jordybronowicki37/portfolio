@@ -5,12 +5,12 @@ import ExplorerFolderItem from "./ExplorerFolderItem.vue";
 
 <template>
   <div id="file-explorer">
-    <ExplorerFileItem title="Home" link="/"/>
-    <ExplorerFileItem title="About me" link="/about"/>
+    <ExplorerFileItem title="home.txt" link="/"/>
+    <ExplorerFileItem title="about-me.txt" link="/about"/>
 
-    <ExplorerFolderItem title="Projects" link="/projects">
-      <ExplorerFileItem title="Production calculator" link="/projects/prodcal"/>
-      <ExplorerFileItem title="Snake game" link="/projects/snake"/>
+    <ExplorerFolderItem title="projects" link="/projects">
+      <ExplorerFileItem title="production-calculator.txt" link="/projects/prodcal"/>
+      <ExplorerFileItem title="snake-game.txt" link="/projects/snake"/>
     </ExplorerFolderItem>
   </div>
 </template>

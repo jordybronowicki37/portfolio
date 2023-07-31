@@ -11,7 +11,7 @@ const folderOpen = ref<boolean>(true);
       <box-icon v-on:click="folderOpen = !folderOpen" v-if="folderOpen" name='chevron-down' size="xs" color="#ffffffde"></box-icon>
     </div>
     <box-icon name='folder' size="xs" color="#ffffffde"></box-icon>
-    <router-link to="/projects">Projects</router-link>
+    <router-link :to="link">{{title}}</router-link>
   </nav>
 
   <div class="folder-contents" v-if="folderOpen">
