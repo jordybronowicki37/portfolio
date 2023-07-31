@@ -9,17 +9,8 @@ import MainTitle from "./MainTitle.vue";
     </div>
 
     <div class="navigation">
-      <nav>
-        <router-link to="/">Home</router-link>
-      </nav>
-      <nav>
-        <router-link to="/about">About me</router-link>
-      </nav>
-      <nav>
-        <router-link to="/projects">Projects</router-link>
-      </nav>
       <nav class="github">
-        <a href="https://github.com/jordybronowicki37/portfolio">GitHub<box-icon name='link-external' color="#ffffffde" size="xs"/></a>
+        <a href="https://github.com/jordybronowicki37/portfolio" target="_blank">GitHub<box-icon name='link-external' color="#ffffffde" size="xs"/></a>
       </nav>
     </div>
   </header>
