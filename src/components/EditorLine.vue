@@ -5,7 +5,7 @@ defineProps<{indentation: number}>()
 <template>
   <div class="editor-line">
     <span class="line-number"/>
-    <span class="line-indentation" v-for="_ in indentation"/>
+    <span class="line-indentation" :key="i" v-for="i in indentation"/>
     <div class="line-content">
       <slot/>
     </div>
@@ -15,7 +15,6 @@ defineProps<{indentation: number}>()
 <style scoped>
 .editor-line {
   display: flex;
-  min-height: 1em;
 }
 
 #editor .editor-line:last-child {
