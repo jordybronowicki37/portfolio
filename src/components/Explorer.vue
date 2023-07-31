@@ -1,10 +1,20 @@
 <script setup lang="ts">
 import ExplorerFileItem from "./ExplorerFileItem.vue";
 import ExplorerFolderItem from "./ExplorerFolderItem.vue";
+import {ref} from "vue";
+
+const explorerOpened = ref<boolean>(true);
 </script>
 
 <template>
-  <div id="file-explorer">
+  <div id="file-explorer-tab" v-on:click="explorerOpened=true" v-if="!explorerOpened">File explorer</div>
+
+  <div id="file-explorer" v-if="explorerOpened">
+    <div id="file-explorer-title">
+      <div>File explorer</div>
+      <div id="minimize-explorer" v-on:click="explorerOpened=false"><box-icon name='minus' size="xs" color="#ffffffde"></box-icon></div>
+    </div>
+
     <ExplorerFileItem title="home.txt" link="/"/>
     <ExplorerFileItem title="about-me.txt" link="/about"/>
 
@@ -23,5 +33,38 @@ import ExplorerFolderItem from "./ExplorerFolderItem.vue";
   background: #444;
   min-width: 20%;
   max-width: 20%;
+}
+
+#file-explorer-tab {
+  cursor: pointer;
+  padding: 0 0.5rem;
+  font-weight: bold;
+  font-size: small;
+  position: absolute;
+  left:0;
+  top:0;
+  transform: rotate(-90deg) translateX(-100%);
+  transform-origin: top left;
+}
+
+#file-explorer-tab:hover,
+#minimize-explorer:hover {
+  background: #2227;
+}
+
+#file-explorer-title {
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  font-size: small;
+  background-color: #333b;
+  position: relative;
+}
+
+#minimize-explorer {
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
 }
 </style>
