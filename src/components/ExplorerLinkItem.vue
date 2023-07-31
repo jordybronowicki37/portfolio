@@ -1,11 +1,11 @@
 <script setup lang="ts">
-defineProps<{link: string, title: string}>()
+defineProps<{link: string, title: string}>();
 </script>
 
 <template>
   <nav>
-    <box-icon name='file' size="xs" color="#ffffffde"></box-icon>
-    <router-link :to="link">{{title}}</router-link>
+    <box-icon name='link-external' size="xs" color="#ffffffde"></box-icon>
+    <a :href="link" target="_blank">{{title}}</a>
   </nav>
 </template>
 
@@ -20,12 +20,7 @@ nav {
 
 a {
   color: inherit;
-  text-decoration: none;
   user-select: none;
-}
-
-a.router-link-active {
-  color: #ea6d30;
 }
 
 a:hover {

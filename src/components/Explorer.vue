@@ -2,6 +2,7 @@
 import ExplorerFileItem from "./ExplorerFileItem.vue";
 import ExplorerFolderItem from "./ExplorerFolderItem.vue";
 import {ref} from "vue";
+import ExplorerLinkItem from "./ExplorerLinkItem.vue";
 
 const explorerOpened = ref<boolean>(true);
 </script>
@@ -22,6 +23,8 @@ const explorerOpened = ref<boolean>(true);
       <ExplorerFileItem title="production-calculator.txt" link="/projects/prodcal"/>
       <ExplorerFileItem title="snake-game.txt" link="/projects/snake"/>
     </ExplorerFolderItem>
+
+    <ExplorerLinkItem title="GitHub" link="https://github.com/jordybronowicki37/portfolio"/>
   </div>
 </template>
 
