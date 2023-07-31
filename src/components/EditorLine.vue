@@ -28,7 +28,7 @@ defineProps<{indentation: number}>()
   display: inline-block;
   text-align: right;
   color: #999;
-  background: #444;
+  background: #333;
   border-right: 2px solid #555;
   height: 100%;
   width: 2em;
@@ -44,5 +44,6 @@ defineProps<{indentation: number}>()
 
 .line-content {
   margin-left: 10px;
+  padding-right: 1rem;
 }
 </style>
