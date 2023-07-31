@@ -1,18 +1,34 @@
 <script setup lang="ts">
-import MainTitle from "./MainTitle.vue";
+import {useRoute} from "vue-router";
+
+const route = useRoute()
+console.log(route)
+
+function GetTitle(route: string): string {
+  switch (route) {
+    case "/":
+      return "home.txt";
+    case "/about":
+      return "about-me.txt";
+    case "/projects":
+      return "projects";
+    case "/projects/prodcal":
+      return "production-calculator.txt";
+    case "/projects/snake":
+      return "snake-game.txt";
+    default:
+      return "unknown";
+  }
+}
 </script>
 
 <template>
   <header>
-    <div class="title">
-      <MainTitle/>
-    </div>
+    <img id="icon" src="/icon.svg" alt="Icon">
 
-    <div class="navigation">
-      <nav class="github">
-        <a href="https://github.com/jordybronowicki37/portfolio" target="_blank">GitHub<box-icon name='link-external' color="#ffffffde" size="xs"/></a>
-      </nav>
-    </div>
+    <div id="current-file-title">Editing: {{GetTitle(route.fullPath)}}</div>
+
+    <div></div>
   </header>
 </template>
 
@@ -20,25 +36,21 @@ import MainTitle from "./MainTitle.vue";
 header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
   background: #303030;
 }
 
-.navigation {
-  display: flex;
-  align-items: center;
+header>* {
+  padding: 0.2rem;
 }
 
-.navigation a {
-  padding: 1rem 1rem;
-  color: inherit;
+#icon {
+  height: 1.5rem;
+  width: 1.5rem;
 }
 
-.navigation .router-link-active {
-  color: #ea6d30;
-}
-
-.navigation a:hover {
-  color: #ea6d3099;
+#current-file-title {
+  color: #bbb;
 }
 </style>
