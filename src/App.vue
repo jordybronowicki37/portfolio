@@ -24,13 +24,17 @@ import Explorer from "./components/Explorer.vue";
 }
 
 #page-center {
+  position: relative;
   flex-grow: 2;
   display: flex;
   flex-direction: row;
+  max-height: 100%;
+  overflow: hidden;
 }
 
 #page-content {
   display: flex;
   flex-direction: column;
+  overflow: auto;
 }
 </style>
