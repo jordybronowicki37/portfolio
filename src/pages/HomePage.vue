@@ -15,11 +15,21 @@ import EditorLine from "../components/EditorLine.vue";
     <EditorLine :indentation="3">
       <h1>Hello there</h1>
     </EditorLine>
-    <EditorLine :indentation="3">
+    <EditorLine :indentation="4">
       <p>Welcome to my portfolio website.</p>
     </EditorLine>
+
+    <EditorLine :indentation="3"/>
     <EditorLine :indentation="3">
-      <p>With the design of this website I want to show non programmers what the world of programming looks like.</p>
+      <h2>Project intentions</h2>
+    </EditorLine>
+    <EditorLine :indentation="4">
+      <p>
+        The intention behind my portfolio project is to show non-programmers what the world of programming looks like.
+        This is achieved by designing the entire project around a <b>code editor</b>. The <b>code editor</b> is one
+        of the most important tools inside of a programmer's arsenal. Every page of my portfolio is designed to look
+        like a file. All pages can be found by using the file explorer on the left of the editor.
+      </p>
     </EditorLine>
     <EditorLine :indentation="3"/>
     <EditorLine :indentation="3"/>
