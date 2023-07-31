@@ -14,6 +14,7 @@
   font-weight: bold;
   text-align: center;
   letter-spacing: -2px;
+  line-height: 1.5;
   width: 3rem;
   height: 3rem;
   margin: 0.5rem;

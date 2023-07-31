@@ -27,7 +27,6 @@ import MainTitle from "./MainTitle.vue";
 
 <style scoped>
 header {
-  position: fixed;
   display: flex;
   justify-content: space-between;
   width: 100%;
