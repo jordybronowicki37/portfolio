@@ -16,3 +16,17 @@
 body {
   margin: 0;
 }
+
+h1 {
+  margin: 0;
+}
+
+h2 {
+  margin: 0;
+  font-size: larger;
+  color: #999;
+}
+
+p {
+  margin: 0;
+}

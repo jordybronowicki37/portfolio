@@ -33,10 +33,5 @@ import EditorLine from "../components/EditorLine.vue";
 </template>
 
 <style scoped>
-h1 {
-  margin: 0;
-}
-p {
-  margin: 0;
-}
+
 </style>

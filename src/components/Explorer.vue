@@ -10,6 +10,7 @@ import ExplorerFolderItem from "./ExplorerFolderItem.vue";
 
     <ExplorerFolderItem title="Projects" link="/projects">
       <ExplorerFileItem title="Production calculator" link="/projects/prodcal"/>
+      <ExplorerFileItem title="Snake game" link="/projects/snake"/>
     </ExplorerFolderItem>
   </div>
 </template>

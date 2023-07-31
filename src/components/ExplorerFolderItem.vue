@@ -6,7 +6,7 @@ const folderOpen = ref<boolean>(true);
 
 <template>
   <nav class="folder-item">
-    <div>
+    <div class="folder-collapse">
       <box-icon v-on:click="folderOpen = !folderOpen" v-if="!folderOpen" name='chevron-right' size="xs" color="#ffffffde"></box-icon>
       <box-icon v-on:click="folderOpen = !folderOpen" v-if="folderOpen" name='chevron-down' size="xs" color="#ffffffde"></box-icon>
     </div>
@@ -32,8 +32,13 @@ const folderOpen = ref<boolean>(true);
   width: 1rem;
 }
 
+.folder-collapse {
+  cursor: pointer;
+}
+
 .folder-contents {
   display: flex;
+  flex-direction: column;
   margin-left: 1rem;
 }
 

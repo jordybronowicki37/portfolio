@@ -80,14 +80,5 @@ import EditorLine from "../components/EditorLine.vue";
 </template>
 
 <style scoped>
-h1 {
-  margin: 0;
-  line-height: 1;
-}
 
-h2 {
-  margin: 0;
-  font-size: larger;
-  color: #999;
-}
 </style>
