@@ -11,12 +11,15 @@ import EditorLine from "../components/EditorLine.vue";
 
       <EditorLine :indentation="1"/>
       <EditorLine :indentation="2">
-        <section>
-          Hey there! I'm Jordy Bronowicki, a passionate back-end software developer with a flair for turning ideas into
-          functional and efficient code. My journey into the world of programming started with small Python programs,
-          but it was during my Bachelor's degree in ICT at the University of Applied Sciences in Utrecht that I truly
-          fell in love with the art of building digital solutions.
-        </section>
+        <div class="text-container-with-profile-pic">
+          <section>
+            Hey there! I'm Jordy Bronowicki, a passionate back-end software developer with a flair for turning ideas into
+            functional and efficient code. My journey into the world of programming started with small Python programs,
+            but it was during my Bachelor's degree in ICT at the University of Applied Sciences in Utrecht that I truly
+            fell in love with the art of building digital solutions.
+          </section>
+          <img src="/pixel-user.png" alt="User profile picture">
+        </div>
       </EditorLine>
 
       <EditorLine :indentation="1"/>
@@ -80,5 +83,14 @@ import EditorLine from "../components/EditorLine.vue";
 </template>
 
 <style scoped>
-
+.text-container-with-profile-pic {
+  display: flex;
+  align-items: center;
+}
+.text-container-with-profile-pic img {
+  border-radius: 1rem;
+  margin: 1rem;
+  height: 10rem;
+  width: 10rem;
+}
 </style>
