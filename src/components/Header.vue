@@ -7,15 +7,15 @@ console.log(route)
 function GetTitle(route: string): string {
   switch (route) {
     case "/":
-      return "home.txt";
+      return "home";
     case "/about":
-      return "about-me.txt";
+      return "about-me";
     case "/projects":
       return "projects";
     case "/projects/prodcal":
-      return "production-calculator.txt";
+      return "production-calculator";
     case "/projects/snake":
-      return "snake-game.txt";
+      return "snake-game";
     default:
       return "unknown";
   }

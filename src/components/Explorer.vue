@@ -16,12 +16,12 @@ const explorerOpened = ref<boolean>(true);
       <div id="minimize-explorer" v-on:click="explorerOpened=false"><box-icon name='minus' size="xs" color="#ffffffde"></box-icon></div>
     </div>
 
-    <ExplorerFileItem title="home.txt" link="/"/>
-    <ExplorerFileItem title="about-me.txt" link="/about"/>
+    <ExplorerFileItem title="home" link="/"/>
+    <ExplorerFileItem title="about-me" link="/about"/>
 
     <ExplorerFolderItem title="projects" link="/projects">
-      <ExplorerFileItem title="production-calculator.txt" link="/projects/prodcal"/>
-      <ExplorerFileItem title="snake-game.txt" link="/projects/snake"/>
+      <ExplorerFileItem title="production-calculator" link="/projects/prodcal"/>
+      <ExplorerFileItem title="snake-game" link="/projects/snake"/>
     </ExplorerFolderItem>
 
     <ExplorerLinkItem title="GitHub" link="https://github.com/jordybronowicki37/portfolio"/>
