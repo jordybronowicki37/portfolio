@@ -36,5 +36,6 @@ import Explorer from "./components/Explorer.vue";
   display: flex;
   flex-direction: column;
   overflow: auto;
+  flex-grow: 2;
 }
 </style>

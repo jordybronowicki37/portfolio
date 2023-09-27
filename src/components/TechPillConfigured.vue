@@ -17,7 +17,7 @@ const typeData = GetPillData(type);
   margin: 0 0.5rem;
   text-transform: uppercase;
   font-weight: 800;
-  font-size: 14px;
+  font-size: 10px;
   user-select: none;
 }
 </style>
