@@ -2,7 +2,6 @@
 import {useRoute} from "vue-router";
 
 const route = useRoute()
-console.log(route)
 
 function GetTitle(route: string): string {
   switch (route) {
