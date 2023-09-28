@@ -115,7 +115,7 @@ const PillData: PillDataType[] = [
 
     // Project types
     {
-        type: "external",
+        type: "school/external",
         bgColor: "#af5b5b",
     },
     {

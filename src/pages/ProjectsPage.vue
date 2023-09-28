@@ -41,7 +41,7 @@ import TechPillContainer from "../components/TechPillContainer.vue";
         <section class="project-card">
           <div>
             <h2>Snake Game</h2>
-            <img class="screenshot" src="/prod-cal-editor.png" alt="Production calculator editor preview">
+            <img class="screenshot" src="/snake-game.png" alt="Production calculator editor screenshot">
           </div>
           <TechPillContainer
               link="https://github.com/jordybronowicki37/vue-snake"
@@ -59,7 +59,7 @@ import TechPillContainer from "../components/TechPillContainer.vue";
         <section class="project-card">
           <div>
             <h2>Portfolio</h2>
-            <img class="screenshot" src="/prod-cal-editor.png" alt="Production calculator editor preview">
+            <img class="screenshot" src="/portfolio-home.png" alt="Portfolio home page screenshot">
           </div>
           <TechPillContainer
               link="https://github.com/jordybronowicki37/portfolio"
@@ -75,54 +75,9 @@ import TechPillContainer from "../components/TechPillContainer.vue";
         <section class="project-card">
           <div>
             <h2>Neerslag radar</h2>
-            <img class="screenshot" src="/prod-cal-editor.png" alt="Production calculator editor preview">
+            <img class="screenshot" src="/neerslag-radar-basic-views.png" alt="Production calculator editor preview">
           </div>
-          <TechPillContainer :types="['.net', 'c#', 'angular', 'typescript', 'external']" background-color="transparent"/>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi beatae dolor eveniet hic laudantium maxime
-            nemo recusandae velit voluptas. Et exercitationem nesciunt nihil sed unde. Amet corporis dolore dolorum in
-            labore maiores maxime minima nemo nulla officia optio pariatur possimus quia, quisquam ratione sint totam.
-            Ea magni perspiciatis recusandae veniam.
-          </p>
-        </section>
-
-        <!--Rooster/absentie tool-->
-        <section class="project-card">
-          <div>
-            <h2>Rooster tool</h2>
-            <img class="screenshot" src="/prod-cal-editor.png" alt="Production calculator editor preview">
-          </div>
-          <TechPillContainer :types="['java', 'azure', 'school']" background-color="transparent"/>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi beatae dolor eveniet hic laudantium maxime
-            nemo recusandae velit voluptas. Et exercitationem nesciunt nihil sed unde. Amet corporis dolore dolorum in
-            labore maiores maxime minima nemo nulla officia optio pariatur possimus quia, quisquam ratione sint totam.
-            Ea magni perspiciatis recusandae veniam.
-          </p>
-        </section>
-
-        <!--Tetris-->
-        <section class="project-card">
-          <div>
-            <h2>Tetris</h2>
-            <img class="screenshot" src="/prod-cal-editor.png" alt="Production calculator editor preview">
-          </div>
-          <TechPillContainer :types="['c#', 'signalr', 'school']" background-color="transparent"/>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi beatae dolor eveniet hic laudantium maxime
-            nemo recusandae velit voluptas. Et exercitationem nesciunt nihil sed unde. Amet corporis dolore dolorum in
-            labore maiores maxime minima nemo nulla officia optio pariatur possimus quia, quisquam ratione sint totam.
-            Ea magni perspiciatis recusandae veniam.
-          </p>
-        </section>
-
-        <!--Chat-->
-        <section class="project-card">
-          <div>
-            <h2>Chat application</h2>
-            <img class="screenshot" src="/prod-cal-editor.png" alt="Production calculator editor preview">
-          </div>
-          <TechPillContainer :types="['java', 'azure', 'javascript', 'html', 'css', 'personal']" background-color="transparent"/>
+          <TechPillContainer :types="['.net', 'c#', 'angular', 'typescript', 'school/external']" background-color="transparent"/>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi beatae dolor eveniet hic laudantium maxime
             nemo recusandae velit voluptas. Et exercitationem nesciunt nihil sed unde. Amet corporis dolore dolorum in
@@ -164,6 +119,7 @@ import TechPillContainer from "../components/TechPillContainer.vue";
   padding: 0.5rem;
 }
 .screenshot {
+  height: 10rem;
   width: 20rem;
 }
 .learn-more-nav {
