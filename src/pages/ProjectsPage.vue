@@ -29,10 +29,8 @@ import TechPillContainer from "../components/TechPillContainer.vue";
               link="https://github.com/jordybronowicki37/production-calculator"
               background-color="transparent"/>
           <p class="card-text-content">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi beatae dolor eveniet hic laudantium maxime
-            nemo recusandae velit voluptas. Et exercitationem nesciunt nihil sed unde. Amet corporis dolore dolorum in
-            labore maiores maxime minima nemo nulla officia optio pariatur possimus quia, quisquam ratione sint totam.
-            Ea magni perspiciatis recusandae veniam.
+            The production calculator allows you to easily create new production chains or map out existing factories.
+            Calculate product throughput, identify efficiency problems and compare recipe efficiency.
           </p>
           <router-link class="learn-more-nav" to="/projects/prodcal">Learn more</router-link>
         </section>
@@ -48,9 +46,8 @@ import TechPillContainer from "../components/TechPillContainer.vue";
               :types="['vue', 'typescript', 'personal']"
               background-color="transparent"/>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi beatae dolor eveniet hic laudantium maxime
-            nemo recusandae velit voluptas. Et exercitationem nesciunt nihil sed unde. Amet corporis dolore dolorum in
-            labore maiores maxime minima nemo nulla officia
+            Play a more exciting version of the classic game of snake. Complete with a collection of exciting levels,
+            single-player challenges, strategic power-ups, custom skins and two fun multiplayer game-modes.
           </p>
           <router-link class="learn-more-nav" to="/projects/snake">Learn more</router-link>
         </section>
@@ -66,8 +63,7 @@ import TechPillContainer from "../components/TechPillContainer.vue";
               :types="['vue', 'typescript', 'personal']"
               background-color="transparent"/>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi beatae dolor eveniet hic laudantium maxime
-            nemo recusandae velit voluptas.
+            This is the project that you are looking at right now, my portfolio website.
           </p>
         </section>
 
@@ -79,10 +75,9 @@ import TechPillContainer from "../components/TechPillContainer.vue";
           </div>
           <TechPillContainer :types="['.net', 'c#', 'angular', 'typescript', 'school/external']" background-color="transparent"/>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi beatae dolor eveniet hic laudantium maxime
-            nemo recusandae velit voluptas. Et exercitationem nesciunt nihil sed unde. Amet corporis dolore dolorum in
-            labore maiores maxime minima nemo nulla officia optio pariatur possimus quia, quisquam ratione sint totam.
-            Ea magni perspiciatis recusandae veniam.
+            This project was part of a collaboration between a student group and an external client. We were tasked to
+            develop an application that contained interactive weather animations. Raw weather data would be processed and
+            plot onto a map or graph with which you can interact to compare weather patterns.
           </p>
         </section>
       </div>
