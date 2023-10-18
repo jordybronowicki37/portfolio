@@ -20,8 +20,10 @@ const explorerOpened = ref<boolean>(true);
     <ExplorerFileItem title="about-me" link="/about"/>
 
     <ExplorerFolderItem title="projects" link="/projects">
-      <ExplorerFileItem title="production-calculator" link="/projects/prodcal"/>
-      <ExplorerFileItem title="snake-game" link="/projects/snake"/>
+      <ExplorerFileItem title="production calculator" link="/projects/production-calculator"/>
+      <ExplorerFileItem title="snake game" link="/projects/snake-game"/>
+      <ExplorerFileItem title="portfolio" link="/projects/portfolio"/>
+      <ExplorerFileItem title="neerslag radar" link="/projects/neerslag-radar"/>
     </ExplorerFolderItem>
 
     <ExplorerLinkItem title="GitHub" link="https://github.com/jordybronowicki37/portfolio"/>

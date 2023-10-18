@@ -32,7 +32,7 @@ import TechPillContainer from "../components/TechPillContainer.vue";
             The production calculator allows you to easily create new production chains or map out existing factories.
             Calculate product throughput, identify efficiency problems and compare recipe efficiency.
           </p>
-          <router-link class="learn-more-nav" to="/projects/prodcal">Learn more</router-link>
+          <router-link class="learn-more-nav" to="/projects/production-calculator">Learn more</router-link>
         </section>
 
         <!--Vue Snake-->
@@ -49,7 +49,7 @@ import TechPillContainer from "../components/TechPillContainer.vue";
             Play a more exciting version of the classic game of snake. Complete with a collection of exciting levels,
             single-player challenges, strategic power-ups, custom skins and two fun multiplayer game-modes.
           </p>
-          <router-link class="learn-more-nav" to="/projects/snake">Learn more</router-link>
+          <router-link class="learn-more-nav" to="/projects/snake-game">Learn more</router-link>
         </section>
 
         <!--Portfolio-->
@@ -65,6 +65,7 @@ import TechPillContainer from "../components/TechPillContainer.vue";
           <p>
             This is the project that you are looking at right now, my portfolio website.
           </p>
+          <router-link class="learn-more-nav" to="/projects/portfolio">Learn more</router-link>
         </section>
 
         <!--Neerslag radar-->
@@ -79,6 +80,7 @@ import TechPillContainer from "../components/TechPillContainer.vue";
             develop an application that contained interactive weather animations. Raw weather data would be processed and
             plot onto a map or graph with which you can interact to compare weather patterns.
           </p>
+          <router-link class="learn-more-nav" to="/projects/neerslag-radar">Learn more</router-link>
         </section>
       </div>
     </EditorLine>
