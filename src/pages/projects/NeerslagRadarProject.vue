@@ -10,7 +10,7 @@ import TechPillContainer from "../../components/TechPillContainer.vue";
     <EditorLine :indentation="0"/>
     <EditorLine :indentation="0"/>
     <EditorLine :indentation="1">
-      <h2>Project: Production Calculator</h2>
+      <h2>Project: Neerslag Radar</h2>
     </EditorLine>
     <EditorLine :indentation="1">
       <TechPillContainer
@@ -22,10 +22,12 @@ import TechPillContainer from "../../components/TechPillContainer.vue";
     <EditorLine :indentation="2">
       <ImageTextCombinedView>
         <template #left>
-          <h3>Make some simple comparisons</h3>
-          <section>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos illo quae quaerat rerum. Ea nihil suscipit vel voluptas? Accusamus ad architecto atque autem beatae culpa, delectus deserunt doloremque dolorum fuga incidunt laboriosam magni necessitatibus nisi officiis omnis quae quaerat qui quia quidem quo quos repudiandae soluta suscipit tenetur ullam voluptate.
-          </section>
+          <div class="text-section">
+            <h3>Make some simple comparisons</h3>
+            <section>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos illo quae quaerat rerum. Ea nihil suscipit vel voluptas? Accusamus ad architecto atque autem beatae culpa, delectus deserunt doloremque dolorum fuga incidunt laboriosam magni necessitatibus nisi officiis omnis quae quaerat qui quia quidem quo quos repudiandae soluta suscipit tenetur ullam voluptate.
+            </section>
+          </div>
         </template>
         <template #right>
           <img src="/neerslag-radar-basic-views.png" alt="Neerslag radar basic view" class="project-image">
@@ -41,10 +43,12 @@ import TechPillContainer from "../../components/TechPillContainer.vue";
           <img src="/neerslag-radar-complex-views.png" alt="Neerslag radar complex view" class="project-image">
         </template>
         <template #right>
-          <h3>Or have a lot of complex views</h3>
-          <section>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos illo quae quaerat rerum. Ea nihil suscipit vel voluptas? Accusamus ad architecto atque autem beatae culpa, delectus deserunt doloremque dolorum fuga incidunt laboriosam magni necessitatibus nisi officiis omnis quae quaerat qui quia quidem quo quos repudiandae soluta suscipit tenetur ullam voluptate.
-          </section>
+          <div class="text-section">
+            <h3>Or have a lot of complex views</h3>
+            <section>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos illo quae quaerat rerum. Ea nihil suscipit vel voluptas? Accusamus ad architecto atque autem beatae culpa, delectus deserunt doloremque dolorum fuga incidunt laboriosam magni necessitatibus nisi officiis omnis quae quaerat qui quia quidem quo quos repudiandae soluta suscipit tenetur ullam voluptate.
+            </section>
+          </div>
         </template>
       </ImageTextCombinedView>
     </EditorLine>
@@ -54,10 +58,12 @@ import TechPillContainer from "../../components/TechPillContainer.vue";
     <EditorLine :indentation="2">
       <ImageTextCombinedView>
         <template #left>
-          <h3>Save multiple configurations</h3>
-          <section>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos illo quae quaerat rerum. Ea nihil suscipit vel voluptas? Accusamus ad architecto atque autem beatae culpa, delectus deserunt doloremque dolorum fuga incidunt laboriosam magni necessitatibus nisi officiis omnis quae quaerat qui quia quidem quo quos repudiandae soluta suscipit tenetur ullam voluptate.
-          </section>
+          <div class="text-section">
+            <h3>Save multiple configurations</h3>
+            <section>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos illo quae quaerat rerum. Ea nihil suscipit vel voluptas? Accusamus ad architecto atque autem beatae culpa, delectus deserunt doloremque dolorum fuga incidunt laboriosam magni necessitatibus nisi officiis omnis quae quaerat qui quia quidem quo quos repudiandae soluta suscipit tenetur ullam voluptate.
+            </section>
+          </div>
         </template>
         <template #right>
           <img src="/neerslag-radar-configs.png" alt="Neerslag radar configurations" class="project-image">
@@ -76,5 +82,8 @@ import TechPillContainer from "../../components/TechPillContainer.vue";
   height: 15rem;
   width: 100%;
   object-fit: contain;
+}
+.text-section {
+  padding: 1rem;
 }
 </style>

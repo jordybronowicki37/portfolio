@@ -14,7 +14,7 @@ import TechPillContainer from "../../components/TechPillContainer.vue";
     </EditorLine>
     <EditorLine :indentation="1">
       <TechPillContainer
-          :types="['.net', 'c#', 'mongodb', 'react', 'sass', 'typescript', 'personal']"
+          :types="['.net', 'c#', 'mongodb', 'react', 'typescript', 'sass', 'personal']"
           link="https://github.com/jordybronowicki37/production-calculator"/>
     </EditorLine>
 
@@ -22,10 +22,12 @@ import TechPillContainer from "../../components/TechPillContainer.vue";
     <EditorLine :indentation="2">
       <ImageTextCombinedView>
         <template #left>
-          <h3>Multiple different projects</h3>
-          <section>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos illo quae quaerat rerum. Ea nihil suscipit vel voluptas? Accusamus ad architecto atque autem beatae culpa, delectus deserunt doloremque dolorum fuga incidunt laboriosam magni necessitatibus nisi officiis omnis quae quaerat qui quia quidem quo quos repudiandae soluta suscipit tenetur ullam voluptate.
-          </section>
+          <div class="text-section">
+            <h3>Multiple different projects</h3>
+            <section>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos illo quae quaerat rerum. Ea nihil suscipit vel voluptas? Accusamus ad architecto atque autem beatae culpa, delectus deserunt doloremque dolorum fuga incidunt laboriosam magni necessitatibus nisi officiis omnis quae quaerat qui quia quidem quo quos repudiandae soluta suscipit tenetur ullam voluptate.
+            </section>
+          </div>
         </template>
         <template #right>
           <img src="/prod-cal-projects.png" alt="Production calculator projects preview" class="project-image">
@@ -41,14 +43,15 @@ import TechPillContainer from "../../components/TechPillContainer.vue";
           <img src="/prod-cal-editor.png" alt="Production calculator editor preview" class="project-image">
         </template>
         <template #right>
-          <h3>Editor</h3>
-          <section>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos illo quae quaerat rerum. Ea nihil suscipit vel voluptas? Accusamus ad architecto atque autem beatae culpa, delectus deserunt doloremque dolorum fuga incidunt laboriosam magni necessitatibus nisi officiis omnis quae quaerat qui quia quidem quo quos repudiandae soluta suscipit tenetur ullam voluptate.
-          </section>
+          <div class="text-section">
+            <h3>Editor</h3>
+            <section>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos illo quae quaerat rerum. Ea nihil suscipit vel voluptas? Accusamus ad architecto atque autem beatae culpa, delectus deserunt doloremque dolorum fuga incidunt laboriosam magni necessitatibus nisi officiis omnis quae quaerat qui quia quidem quo quos repudiandae soluta suscipit tenetur ullam voluptate.
+            </section>
+          </div>
         </template>
       </ImageTextCombinedView>
     </EditorLine>
-
 
     <EditorLine :indentation="1"/>
     <EditorLine :indentation="0"/>
@@ -61,5 +64,8 @@ import TechPillContainer from "../../components/TechPillContainer.vue";
   height: 15rem;
   width: 100%;
   object-fit: contain;
+}
+.text-section {
+  padding: 1rem;
 }
 </style>

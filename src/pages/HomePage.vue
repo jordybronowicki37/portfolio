@@ -13,7 +13,7 @@ import EditorLine from "../components/EditorLine.vue";
     <EditorLine :indentation="2"/>
     <EditorLine :indentation="3"/>
     <EditorLine :indentation="3">
-      <h1>Hello there</h1>
+      <h2>Hello there</h2>
     </EditorLine>
     <EditorLine :indentation="4">
       <p>Welcome to my portfolio website.</p>
@@ -21,7 +21,7 @@ import EditorLine from "../components/EditorLine.vue";
 
     <EditorLine :indentation="3"/>
     <EditorLine :indentation="3">
-      <h2>Project intentions</h2>
+      <h3>Project intentions</h3>
     </EditorLine>
     <EditorLine :indentation="4">
       <p>
@@ -31,7 +31,6 @@ import EditorLine from "../components/EditorLine.vue";
         like a file. All pages can be found by using the file explorer on the left of the editor.
       </p>
     </EditorLine>
-    <EditorLine :indentation="3"/>
     <EditorLine :indentation="3"/>
     <EditorLine :indentation="2"/>
     <EditorLine :indentation="1"/>
@@ -43,5 +42,7 @@ import EditorLine from "../components/EditorLine.vue";
 </template>
 
 <style scoped>
-
+h2 {
+  font-size: xx-large;
+}
 </style>

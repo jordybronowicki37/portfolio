@@ -18,6 +18,10 @@ body, h1, h2, h3, h4, p {
 }
 
 h2 {
+  font-size: x-large;
+}
+
+h3 {
   font-size: larger;
   color: #999;
 }

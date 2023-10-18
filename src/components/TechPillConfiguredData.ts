@@ -24,7 +24,7 @@ const PillData: PillDataType[] = [
     },
     {
         type: "java",
-        bgColor: "#F89B24",
+        bgColor: "#EC2025",
     },
     {
         type: "python",
