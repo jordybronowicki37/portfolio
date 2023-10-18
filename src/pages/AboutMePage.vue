@@ -6,8 +6,8 @@ import EditorLine from "../components/EditorLine.vue";
 <template>
     <Editor>
       <EditorLine :indentation="0"/>
-      <EditorLine :indentation="0"><h1>Jordy Bronowicki</h1></EditorLine>
-      <EditorLine :indentation="1"><h2>Full-stack software developer</h2></EditorLine>
+      <EditorLine :indentation="0"><h2>Jordy Bronowicki</h2></EditorLine>
+      <EditorLine :indentation="1"><h3>Full-stack software developer</h3></EditorLine>
 
       <EditorLine :indentation="1"/>
       <EditorLine :indentation="2">
@@ -24,7 +24,7 @@ import EditorLine from "../components/EditorLine.vue";
 
       <EditorLine :indentation="1"/>
       <EditorLine :indentation="1"/>
-      <EditorLine :indentation="1"><h2>My work</h2></EditorLine>
+      <EditorLine :indentation="1"><h3>My work</h3></EditorLine>
       <EditorLine :indentation="2">
         <section>
           My work is not just a profession; it's a playground of endless possibilities. I have a natural curiosity that
@@ -35,7 +35,7 @@ import EditorLine from "../components/EditorLine.vue";
 
       <EditorLine :indentation="1"/>
       <EditorLine :indentation="1"/>
-      <EditorLine :indentation="1"><h2>What sets me apart</h2></EditorLine>
+      <EditorLine :indentation="1"><h3>What sets me apart</h3></EditorLine>
       <EditorLine :indentation="2">
         <section>
           What sets me apart is my ability to absorb knowledge quickly. This allows me to efficiently tackle challenges
@@ -46,7 +46,7 @@ import EditorLine from "../components/EditorLine.vue";
 
       <EditorLine :indentation="1"/>
       <EditorLine :indentation="1"/>
-      <EditorLine :indentation="1"><h2>My proudest achievement</h2></EditorLine>
+      <EditorLine :indentation="1"><h3>My proudest achievement</h3></EditorLine>
       <EditorLine :indentation="2">
         <section>
           One of my proudest accomplishments is the "Production Calculator" project. This powerful tool empowers users
@@ -58,7 +58,7 @@ import EditorLine from "../components/EditorLine.vue";
 
       <EditorLine :indentation="1"/>
       <EditorLine :indentation="1"/>
-      <EditorLine :indentation="1"><h2>Looking ahead</h2></EditorLine>
+      <EditorLine :indentation="1"><h3>Looking ahead</h3></EditorLine>
       <EditorLine :indentation="2">
         <section>
           Looking ahead, my vision is to simplify people's lives through technology. I want to develop handy,
@@ -68,7 +68,7 @@ import EditorLine from "../components/EditorLine.vue";
 
       <EditorLine :indentation="1"/>
       <EditorLine :indentation="1"/>
-      <EditorLine :indentation="1"><h2>Thank you</h2></EditorLine>
+      <EditorLine :indentation="1"><h3>Thank you</h3></EditorLine>
       <EditorLine :indentation="2">
         <section>
           Thank you for visiting my portfolio website, and I hope you enjoy exploring my projects and accomplishments.

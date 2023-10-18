@@ -13,20 +13,11 @@
   -webkit-text-size-adjust: 100%;
 }
 
-body {
-  margin: 0;
-}
-
-h1 {
+body, h1, h2, h3, h4, p {
   margin: 0;
 }
 
 h2 {
-  margin: 0;
   font-size: larger;
   color: #999;
-}
-
-p {
-  margin: 0;
 }
