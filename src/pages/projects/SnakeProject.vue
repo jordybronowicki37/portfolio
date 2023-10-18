@@ -12,11 +12,10 @@ import TechPillContainer from "../../components/TechPillContainer.vue";
     <EditorLine :indentation="1">
       <h2>Project: Snake game</h2>
     </EditorLine>
-    <EditorLine :indentation="2">
+    <EditorLine :indentation="1">
       <TechPillContainer
           link="https://github.com/jordybronowicki37/vue-snake"
-          :types="['vue', 'typescript', 'personal']"
-          background-color="transparent"/>
+          :types="['vue', 'typescript', 'personal']"/>
     </EditorLine>
 
     <EditorLine :indentation="2"/>
@@ -50,7 +49,7 @@ import TechPillContainer from "../../components/TechPillContainer.vue";
       </ImageTextCombinedView>
     </EditorLine>
 
-    <EditorLine :indentation="0"/>
+    <EditorLine :indentation="1"/>
     <EditorLine :indentation="0"/>
     <EditorLine :indentation="0"/>
   </Editor>
@@ -59,5 +58,7 @@ import TechPillContainer from "../../components/TechPillContainer.vue";
 <style scoped>
 .project-image {
   height: 15rem;
+  width: 100%;
+  object-fit: contain;
 }
 </style>

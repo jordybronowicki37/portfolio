@@ -11,11 +11,8 @@ function GetTitle(route: string): string {
       return "about-me";
     case "/projects":
       return "projects";
-    case "/projects/prodcal":
-      return "production-calculator";
-    case "/projects/snake":
-      return "snake-game";
     default:
+      if (route.startsWith("/projects/")) return route.replace("/projects/", "");
       return "unknown";
   }
 }

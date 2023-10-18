@@ -15,8 +15,7 @@ import TechPillContainer from "../../components/TechPillContainer.vue";
     <EditorLine :indentation="1">
       <TechPillContainer
           :types="['.net', 'c#', 'mongodb', 'react', 'sass', 'typescript', 'personal']"
-          link="https://github.com/jordybronowicki37/production-calculator"
-          background-color="#222"/>
+          link="https://github.com/jordybronowicki37/production-calculator"/>
     </EditorLine>
 
     <EditorLine :indentation="2"/>
@@ -51,7 +50,7 @@ import TechPillContainer from "../../components/TechPillContainer.vue";
     </EditorLine>
 
 
-    <EditorLine :indentation="0"/>
+    <EditorLine :indentation="1"/>
     <EditorLine :indentation="0"/>
     <EditorLine :indentation="0"/>
   </Editor>
@@ -60,5 +59,7 @@ import TechPillContainer from "../../components/TechPillContainer.vue";
 <style scoped>
 .project-image {
   height: 15rem;
+  width: 100%;
+  object-fit: contain;
 }
 </style>
