@@ -10,6 +10,7 @@ import ProdCalProject from "./pages/projects/ProdCalProject.vue";
 import SnakeProject from "./pages/projects/SnakeProject.vue";
 import PortfolioProject from "./pages/projects/PortfolioProject.vue";
 import NeerslagRadarProject from "./pages/projects/NeerslagRadarProject.vue";
+import TaskManagerProject from "./pages/projects/TaskManagerProject.vue";
 
 const routes: RouteRecordRaw[] = [
     { path: "/", component: HomePage },
@@ -18,6 +19,7 @@ const routes: RouteRecordRaw[] = [
     { path: "/projects/production-calculator", component: ProdCalProject },
     { path: "/projects/snake-game", component: SnakeProject },
     { path: "/projects/portfolio", component: PortfolioProject },
+    { path: "/projects/task-manager", component: TaskManagerProject },
     { path: "/projects/neerslag-radar", component: NeerslagRadarProject },
 ]
 

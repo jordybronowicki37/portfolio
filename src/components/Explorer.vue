@@ -23,6 +23,7 @@ const explorerOpened = ref<boolean>(true);
       <ExplorerFileItem title="production calculator" link="/projects/production-calculator"/>
       <ExplorerFileItem title="snake game" link="/projects/snake-game"/>
       <ExplorerFileItem title="portfolio" link="/projects/portfolio"/>
+      <ExplorerFileItem title="task manager" link="/projects/task-manager"/>
       <ExplorerFileItem title="neerslag radar" link="/projects/neerslag-radar"/>
     </ExplorerFolderItem>
 

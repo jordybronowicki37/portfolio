@@ -25,7 +25,7 @@ import TechPillContainer from "../components/TechPillContainer.vue";
             <img class="screenshot" src="/prod-cal-editor.png" alt="Production calculator editor preview">
           </div>
           <TechPillContainer
-              :types="['.net', 'c#', 'mongodb', 'react', 'sass', 'typescript', 'personal']"
+              :types="['.net', 'c#', 'mongodb', 'react', 'typescript', 'sass', 'personal']"
               link="https://github.com/jordybronowicki37/production-calculator"
               background-color="transparent"/>
           <p class="card-text-content">
@@ -63,9 +63,26 @@ import TechPillContainer from "../components/TechPillContainer.vue";
               :types="['vue', 'typescript', 'personal']"
               background-color="transparent"/>
           <p>
-            This is the project that you are looking at right now, my portfolio website.
+            This is the project that you are looking at right now, my portfolio website. It previews and explains all
+            of my current projects in a code editor inspired website.
           </p>
           <router-link class="learn-more-nav" to="/projects/portfolio">Learn more</router-link>
+        </section>
+
+        <!--Task manager-->
+        <section class="project-card">
+          <div>
+            <h2>Task manager</h2>
+            <img class="screenshot" src="/tas-board.png" alt="Task manager board preview">
+          </div>
+          <TechPillContainer
+              :types="['java', 'spring', 'postgresql', 'aws', 'react', 'typescript', 'sass', 'school']"
+              background-color="transparent"/>
+          <p>
+            With TAS you can manage your tasks efficiently. This school project is inspired by the popular issue
+            management tool Trello and was created to learn microservices cloud deployment with AWS.
+          </p>
+          <router-link class="learn-more-nav" to="/projects/task-manager">Learn more</router-link>
         </section>
 
         <!--Neerslag radar-->
