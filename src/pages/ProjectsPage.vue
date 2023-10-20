@@ -11,29 +11,29 @@ import "./projects/ProjectCard.css";
 
 <template>
   <Editor>
-    <EditorLine :indentation="0"/>
+    <EditorLine :indentation="0" />
     <EditorLine :indentation="0">
       <h1>My Projects</h1>
     </EditorLine>
     <EditorLine :indentation="1">
       <p>Projects intro</p>
     </EditorLine>
-    <EditorLine :indentation="1"/>
-    <EditorLine :indentation="2"/>
+    <EditorLine :indentation="1" />
+    <EditorLine :indentation="2" />
 
     <EditorLine :indentation="2">
       <div class="projects-container">
-        <ProdCalProjectCard/>
-        <SnakeProjectCard/>
-        <PortfolioProjectCard/>
-        <TaskManagerProjectCard/>
-        <NeerslagRadarProjectCard/>
+        <ProdCalProjectCard />
+        <SnakeProjectCard />
+        <PortfolioProjectCard />
+        <TaskManagerProjectCard />
+        <NeerslagRadarProjectCard />
       </div>
     </EditorLine>
 
-    <EditorLine :indentation="2"/>
-    <EditorLine :indentation="1"/>
-    <EditorLine :indentation="0"/>
+    <EditorLine :indentation="2" />
+    <EditorLine :indentation="1" />
+    <EditorLine :indentation="0" />
   </Editor>
 </template>
 
