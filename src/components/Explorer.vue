@@ -74,4 +74,9 @@ const explorerOpened = ref<boolean>(true);
   top: 0;
   cursor: pointer;
 }
+@media screen and (max-width: 600px) {
+  #file-explorer-tab {
+    display: none;
+  }
+}
 </style>

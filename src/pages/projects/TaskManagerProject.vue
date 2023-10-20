@@ -20,15 +20,15 @@ import TechPillContainer from "../../components/TechPillContainer.vue";
     <EditorLine :indentation="2"/>
     <EditorLine :indentation="2">
       <ImageTextCombinedView>
-        <template #left>
-          <div class="text-section">
+        <template #text>
+          <div>
             <h3>Manage task inside of a board</h3>
             <section>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos illo quae quaerat rerum. Ea nihil suscipit vel voluptas? Accusamus ad architecto atque autem beatae culpa, delectus deserunt doloremque dolorum fuga incidunt laboriosam magni necessitatibus nisi officiis omnis quae quaerat qui quia quidem quo quos repudiandae soluta suscipit tenetur ullam voluptate.
             </section>
           </div>
         </template>
-        <template #right>
+        <template #image>
           <img src="/tas-board.png" alt="Tasks inside of a board example" class="project-image">
         </template>
       </ImageTextCombinedView>
@@ -37,17 +37,17 @@ import TechPillContainer from "../../components/TechPillContainer.vue";
     <EditorLine :indentation="2"/>
     <EditorLine :indentation="2"/>
     <EditorLine :indentation="2">
-      <ImageTextCombinedView>
-        <template #left>
-          <img src="/tas-edit-task.png" alt="Edit task properties" class="project-image">
-        </template>
-        <template #right>
-          <div class="text-section">
+      <ImageTextCombinedView image-on-the-left>
+        <template #text>
+          <div>
             <h3>Assign certain tags or users to organize tasks</h3>
             <section>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos illo quae quaerat rerum. Ea nihil suscipit vel voluptas? Accusamus ad architecto atque autem beatae culpa, delectus deserunt doloremque dolorum fuga incidunt laboriosam magni necessitatibus nisi officiis omnis quae quaerat qui quia quidem quo quos repudiandae soluta suscipit tenetur ullam voluptate.
             </section>
           </div>
+        </template>
+        <template #image>
+          <img src="/tas-edit-task.png" alt="Edit task properties" class="project-image">
         </template>
       </ImageTextCombinedView>
     </EditorLine>
@@ -64,5 +64,4 @@ import TechPillContainer from "../../components/TechPillContainer.vue";
   width: 100%;
   object-fit: contain;
 }
-
 </style>

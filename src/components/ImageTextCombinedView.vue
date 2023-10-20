@@ -1,14 +1,17 @@
 <script setup lang="ts">
-
+withDefaults(
+    defineProps<{ imageOnTheLeft?: boolean }>(),
+    {imageOnTheLeft: false}
+);
 </script>
 
 <template>
-  <div class="combined-view-container">
-    <div class="left-wrapper">
-      <slot name="left"/>
+  <div class="combined-view-container" :class="[ imageOnTheLeft ? 'image-on-the-left' : '']">
+    <div class="left-wrapper text-wrapper">
+      <slot name="text"/>
     </div>
-    <div class="right-wrapper">
-      <slot name="right"/>
+    <div class="right-wrapper image-wrapper">
+      <slot name="image"/>
     </div>
   </div>
 </template>
@@ -18,7 +21,25 @@
   display: flex;
   align-items: center;
 }
-.combined-view-container>div {
-  width: 50%;
+.image-on-the-left {
+  flex-direction: row-reverse;
+}
+.image-wrapper {
+  width: 40%;
+}
+.text-wrapper {
+  width: 60%;
+  padding: 1rem;
+}
+@media screen and (max-width: 600px) {
+  .combined-view-container {
+    flex-direction: column;
+  }
+  .image-wrapper {
+    width: 100%;
+  }
+  .text-wrapper {
+    width: 100%;
+  }
 }
 </style>

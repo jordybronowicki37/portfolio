@@ -21,15 +21,15 @@ import TechPillContainer from "../../components/TechPillContainer.vue";
     <EditorLine :indentation="2"/>
     <EditorLine :indentation="2">
       <ImageTextCombinedView>
-        <template #left>
-          <div class="text-section">
+        <template #text>
+          <div>
             <h3>Multiple different projects</h3>
             <section>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos illo quae quaerat rerum. Ea nihil suscipit vel voluptas? Accusamus ad architecto atque autem beatae culpa, delectus deserunt doloremque dolorum fuga incidunt laboriosam magni necessitatibus nisi officiis omnis quae quaerat qui quia quidem quo quos repudiandae soluta suscipit tenetur ullam voluptate.
             </section>
           </div>
         </template>
-        <template #right>
+        <template #image>
           <img src="/prod-cal-projects.png" alt="Production calculator projects preview" class="project-image">
         </template>
       </ImageTextCombinedView>
@@ -38,17 +38,17 @@ import TechPillContainer from "../../components/TechPillContainer.vue";
     <EditorLine :indentation="2"/>
     <EditorLine :indentation="2"/>
     <EditorLine :indentation="2">
-      <ImageTextCombinedView>
-        <template #left>
-          <img src="/prod-cal-editor.png" alt="Production calculator editor preview" class="project-image">
-        </template>
-        <template #right>
-          <div class="text-section">
+      <ImageTextCombinedView image-on-the-left>
+        <template #text>
+          <div>
             <h3>Editor</h3>
             <section>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos illo quae quaerat rerum. Ea nihil suscipit vel voluptas? Accusamus ad architecto atque autem beatae culpa, delectus deserunt doloremque dolorum fuga incidunt laboriosam magni necessitatibus nisi officiis omnis quae quaerat qui quia quidem quo quos repudiandae soluta suscipit tenetur ullam voluptate.
             </section>
           </div>
+        </template>
+        <template #image>
+          <img src="/prod-cal-editor.png" alt="Production calculator editor preview" class="project-image">
         </template>
       </ImageTextCombinedView>
     </EditorLine>
@@ -64,8 +64,5 @@ import TechPillContainer from "../../components/TechPillContainer.vue";
   height: 15rem;
   width: 100%;
   object-fit: contain;
-}
-.text-section {
-  padding: 1rem;
 }
 </style>
