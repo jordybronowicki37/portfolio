@@ -6,11 +6,11 @@ import {createRouter, createWebHashHistory, RouteRecordRaw} from 'vue-router';
 import HomePage from "./pages/HomePage.vue";
 import AboutMePage from "./pages/AboutMePage.vue";
 import ProjectsPage from "./pages/ProjectsPage.vue";
-import ProdCalProject from "./pages/projects/ProdCalProject.vue";
-import SnakeProject from "./pages/projects/SnakeProject.vue";
-import PortfolioProject from "./pages/projects/PortfolioProject.vue";
-import NeerslagRadarProject from "./pages/projects/NeerslagRadarProject.vue";
-import TaskManagerProject from "./pages/projects/TaskManagerProject.vue";
+import ProdCalProject from "./pages/projects/ProdCalProjectPage.vue";
+import SnakeProject from "./pages/projects/SnakeProjectPage.vue";
+import PortfolioProject from "./pages/projects/PortfolioProjectPage.vue";
+import NeerslagRadarProject from "./pages/projects/NeerslagRadarProjectPage.vue";
+import TaskManagerProject from "./pages/projects/TaskManagerProjectPage.vue";
 
 const routes: RouteRecordRaw[] = [
     { path: "/", component: HomePage },

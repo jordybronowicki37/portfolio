@@ -3,6 +3,7 @@ import Editor from "../../components/Editor.vue";
 import EditorLine from "../../components/EditorLine.vue";
 import ImageTextCombinedView from "../../components/ImageTextCombinedView.vue";
 import TechPillContainer from "../../components/TechPillContainer.vue";
+import "./ProjectPage.css";
 </script>
 
 <template>
@@ -42,9 +43,5 @@ import TechPillContainer from "../../components/TechPillContainer.vue";
 </template>
 
 <style scoped>
-.project-image {
-  height: 15rem;
-  width: 100%;
-  object-fit: contain;
-}
+
 </style>
