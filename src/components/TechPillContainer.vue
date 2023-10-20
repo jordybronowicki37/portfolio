@@ -9,12 +9,26 @@ withDefaults(
 
 <template>
   <div class="tech-pill-collection">
-    <TechPillConfigured v-for="type in types" :type="type"/>
-    <slot/>
-    <TechPillSimple bg-color="#555" v-if="link !== ''">
-      <a class="github-link" :href="link">
+    <TechPillConfigured
+      v-for="type in types"
+      :key="type"
+      :type="type"
+    />
+    <slot />
+    <TechPillSimple
+      v-if="link !== ''"
+      bg-color="#555"
+    >
+      <a
+        class="github-link"
+        :href="link"
+      >
         github
-        <box-icon name='link-external' size="10px" color="#ffffffde"/>
+        <box-icon
+          name="link-external"
+          size="10px"
+          color="#ffffffde"
+        />
       </a>
     </TechPillSimple>
   </div>

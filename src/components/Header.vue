@@ -20,11 +20,17 @@ function GetTitle(route: string): string {
 
 <template>
   <header>
-    <img id="icon" src="/icon.svg" alt="Icon">
+    <img
+      id="icon"
+      src="/icon.svg"
+      alt="Icon"
+    >
 
-    <div id="current-file-title">Editing: {{GetTitle(route.fullPath)}}</div>
+    <div id="current-file-title">
+      Editing: {{ GetTitle(route.fullPath) }}
+    </div>
 
-    <div></div>
+    <div />
   </header>
 </template>
 

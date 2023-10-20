@@ -5,13 +5,13 @@ import EditorLine from "../components/EditorLine.vue";
 
 <template>
   <Editor>
-    <EditorLine :indentation="0"/>
-    <EditorLine :indentation="0"/>
-    <EditorLine :indentation="0"/>
-    <EditorLine :indentation="0"/>
-    <EditorLine :indentation="1"/>
-    <EditorLine :indentation="2"/>
-    <EditorLine :indentation="3"/>
+    <EditorLine :indentation="0" />
+    <EditorLine :indentation="0" />
+    <EditorLine :indentation="0" />
+    <EditorLine :indentation="0" />
+    <EditorLine :indentation="1" />
+    <EditorLine :indentation="2" />
+    <EditorLine :indentation="3" />
     <EditorLine :indentation="3">
       <h2>Hello there</h2>
     </EditorLine>
@@ -19,7 +19,7 @@ import EditorLine from "../components/EditorLine.vue";
       <p>Welcome to my portfolio website.</p>
     </EditorLine>
 
-    <EditorLine :indentation="3"/>
+    <EditorLine :indentation="3" />
     <EditorLine :indentation="3">
       <h3>Project intentions</h3>
     </EditorLine>
@@ -31,13 +31,13 @@ import EditorLine from "../components/EditorLine.vue";
         like a file. All pages can be found by using the file explorer on the left of the editor.
       </p>
     </EditorLine>
-    <EditorLine :indentation="3"/>
-    <EditorLine :indentation="2"/>
-    <EditorLine :indentation="1"/>
-    <EditorLine :indentation="0"/>
-    <EditorLine :indentation="0"/>
-    <EditorLine :indentation="0"/>
-    <EditorLine :indentation="0"/>
+    <EditorLine :indentation="3" />
+    <EditorLine :indentation="2" />
+    <EditorLine :indentation="1" />
+    <EditorLine :indentation="0" />
+    <EditorLine :indentation="0" />
+    <EditorLine :indentation="0" />
+    <EditorLine :indentation="0" />
   </Editor>
 </template>
 

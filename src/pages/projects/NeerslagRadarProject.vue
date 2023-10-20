@@ -7,18 +7,19 @@ import TechPillContainer from "../../components/TechPillContainer.vue";
 
 <template>
   <Editor>
-    <EditorLine :indentation="0"/>
-    <EditorLine :indentation="0"/>
+    <EditorLine :indentation="0" />
+    <EditorLine :indentation="0" />
     <EditorLine :indentation="1">
       <h2>Project: Neerslag Radar</h2>
     </EditorLine>
     <EditorLine :indentation="1">
       <TechPillContainer
-          :types="['.net', 'c#', 'angular', 'typescript', 'school/external']"
-          link="https://github.com/jordybronowicki37/production-calculator"/>
+        :types="['.net', 'c#', 'angular', 'typescript', 'school/external']"
+        link="https://github.com/jordybronowicki37/production-calculator"
+      />
     </EditorLine>
 
-    <EditorLine :indentation="2"/>
+    <EditorLine :indentation="2" />
     <EditorLine :indentation="2">
       <ImageTextCombinedView>
         <template #left>
@@ -30,17 +31,25 @@ import TechPillContainer from "../../components/TechPillContainer.vue";
           </div>
         </template>
         <template #right>
-          <img src="/neerslag-radar-basic-views.png" alt="Neerslag radar basic view" class="project-image">
+          <img
+            src="/neerslag-radar-basic-views.png"
+            alt="Neerslag radar basic view"
+            class="project-image"
+          >
         </template>
       </ImageTextCombinedView>
     </EditorLine>
 
-    <EditorLine :indentation="2"/>
-    <EditorLine :indentation="2"/>
+    <EditorLine :indentation="2" />
+    <EditorLine :indentation="2" />
     <EditorLine :indentation="2">
       <ImageTextCombinedView>
         <template #left>
-          <img src="/neerslag-radar-complex-views.png" alt="Neerslag radar complex view" class="project-image">
+          <img
+            src="/neerslag-radar-complex-views.png"
+            alt="Neerslag radar complex view"
+            class="project-image"
+          >
         </template>
         <template #right>
           <div class="text-section">
@@ -53,8 +62,8 @@ import TechPillContainer from "../../components/TechPillContainer.vue";
       </ImageTextCombinedView>
     </EditorLine>
 
-    <EditorLine :indentation="2"/>
-    <EditorLine :indentation="2"/>
+    <EditorLine :indentation="2" />
+    <EditorLine :indentation="2" />
     <EditorLine :indentation="2">
       <ImageTextCombinedView>
         <template #left>
@@ -66,14 +75,18 @@ import TechPillContainer from "../../components/TechPillContainer.vue";
           </div>
         </template>
         <template #right>
-          <img src="/neerslag-radar-configs.png" alt="Neerslag radar configurations" class="project-image">
+          <img
+            src="/neerslag-radar-configs.png"
+            alt="Neerslag radar configurations"
+            class="project-image"
+          >
         </template>
       </ImageTextCombinedView>
     </EditorLine>
 
-    <EditorLine :indentation="1"/>
-    <EditorLine :indentation="0"/>
-    <EditorLine :indentation="0"/>
+    <EditorLine :indentation="1" />
+    <EditorLine :indentation="0" />
+    <EditorLine :indentation="0" />
   </Editor>
 </template>
 

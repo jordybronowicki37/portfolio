@@ -7,15 +7,36 @@ const folderOpen = ref<boolean>(true);
 <template>
   <nav class="folder-item">
     <div class="folder-collapse">
-      <box-icon v-on:click="folderOpen = !folderOpen" v-if="!folderOpen" name='chevron-right' size="xs" color="#ffffffde"></box-icon>
-      <box-icon v-on:click="folderOpen = !folderOpen" v-if="folderOpen" name='chevron-down' size="xs" color="#ffffffde"></box-icon>
+      <box-icon
+        v-if="!folderOpen"
+        name="chevron-right"
+        size="xs"
+        color="#ffffffde"
+        @click="folderOpen = !folderOpen"
+      />
+      <box-icon
+        v-if="folderOpen"
+        name="chevron-down"
+        size="xs"
+        color="#ffffffde"
+        @click="folderOpen = !folderOpen"
+      />
     </div>
-    <box-icon name='folder' size="xs" color="#ffffffde"></box-icon>
-    <router-link :to="link">{{title}}</router-link>
+    <box-icon
+      name="folder"
+      size="xs"
+      color="#ffffffde"
+    />
+    <router-link :to="link">
+      {{ title }}
+    </router-link>
   </nav>
 
-  <div class="folder-contents" v-if="folderOpen">
-    <slot/>
+  <div
+    v-if="folderOpen"
+    class="folder-contents"
+  >
+    <slot />
   </div>
 </template>
 

@@ -6,11 +6,11 @@ import Explorer from "./components/Explorer.vue";
 
 <template>
   <div id="page">
-    <Header/>
+    <Header />
     <div id="page-center">
-      <Explorer/>
+      <Explorer />
       <div id="page-content">
-        <router-view></router-view>
+        <router-view />
       </div>
     </div>
   </div>

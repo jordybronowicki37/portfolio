@@ -4,7 +4,7 @@ defineProps<{ bgColor: string; }>();
 
 <template>
   <div class="simple-tech-till">
-    <slot/>
+    <slot />
   </div>
 </template>
 

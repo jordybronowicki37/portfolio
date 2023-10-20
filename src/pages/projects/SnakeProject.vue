@@ -7,18 +7,19 @@ import TechPillContainer from "../../components/TechPillContainer.vue";
 
 <template>
   <Editor>
-    <EditorLine :indentation="0"/>
-    <EditorLine :indentation="0"/>
+    <EditorLine :indentation="0" />
+    <EditorLine :indentation="0" />
     <EditorLine :indentation="1">
       <h2>Project: Snake Game</h2>
     </EditorLine>
     <EditorLine :indentation="1">
       <TechPillContainer
-          link="https://github.com/jordybronowicki37/vue-snake"
-          :types="['vue', 'typescript', 'personal']"/>
+        link="https://github.com/jordybronowicki37/vue-snake"
+        :types="['vue', 'typescript', 'personal']"
+      />
     </EditorLine>
 
-    <EditorLine :indentation="2"/>
+    <EditorLine :indentation="2" />
     <EditorLine :indentation="2">
       <ImageTextCombinedView>
         <template #left>
@@ -30,17 +31,25 @@ import TechPillContainer from "../../components/TechPillContainer.vue";
           </div>
         </template>
         <template #right>
-          <img src="/snake-game.png" alt="Snake single-player game preview" class="project-image">
+          <img
+            src="/snake-game.png"
+            alt="Snake single-player game preview"
+            class="project-image"
+          >
         </template>
       </ImageTextCombinedView>
     </EditorLine>
 
-    <EditorLine :indentation="2"/>
-    <EditorLine :indentation="2"/>
+    <EditorLine :indentation="2" />
+    <EditorLine :indentation="2" />
     <EditorLine :indentation="2">
       <ImageTextCombinedView>
         <template #left>
-          <img src="/snake-levels.png" alt="Snake levels preview" class="project-image">
+          <img
+            src="/snake-levels.png"
+            alt="Snake levels preview"
+            class="project-image"
+          >
         </template>
         <template #right>
           <div class="text-section">
@@ -53,9 +62,9 @@ import TechPillContainer from "../../components/TechPillContainer.vue";
       </ImageTextCombinedView>
     </EditorLine>
 
-    <EditorLine :indentation="1"/>
-    <EditorLine :indentation="0"/>
-    <EditorLine :indentation="0"/>
+    <EditorLine :indentation="1" />
+    <EditorLine :indentation="0" />
+    <EditorLine :indentation="0" />
   </Editor>
 </template>
 

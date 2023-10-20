@@ -7,18 +7,19 @@ import TechPillContainer from "../../components/TechPillContainer.vue";
 
 <template>
   <Editor>
-    <EditorLine :indentation="0"/>
-    <EditorLine :indentation="0"/>
+    <EditorLine :indentation="0" />
+    <EditorLine :indentation="0" />
     <EditorLine :indentation="1">
       <h2>Project: Production Calculator</h2>
     </EditorLine>
     <EditorLine :indentation="1">
       <TechPillContainer
-          :types="['.net', 'c#', 'mongodb', 'react', 'typescript', 'sass', 'personal']"
-          link="https://github.com/jordybronowicki37/production-calculator"/>
+        :types="['.net', 'c#', 'mongodb', 'react', 'typescript', 'sass', 'personal']"
+        link="https://github.com/jordybronowicki37/production-calculator"
+      />
     </EditorLine>
 
-    <EditorLine :indentation="2"/>
+    <EditorLine :indentation="2" />
     <EditorLine :indentation="2">
       <ImageTextCombinedView>
         <template #left>
@@ -30,17 +31,25 @@ import TechPillContainer from "../../components/TechPillContainer.vue";
           </div>
         </template>
         <template #right>
-          <img src="/prod-cal-projects.png" alt="Production calculator projects preview" class="project-image">
+          <img
+            src="/prod-cal-projects.png"
+            alt="Production calculator projects preview"
+            class="project-image"
+          >
         </template>
       </ImageTextCombinedView>
     </EditorLine>
 
-    <EditorLine :indentation="2"/>
-    <EditorLine :indentation="2"/>
+    <EditorLine :indentation="2" />
+    <EditorLine :indentation="2" />
     <EditorLine :indentation="2">
       <ImageTextCombinedView>
         <template #left>
-          <img src="/prod-cal-editor.png" alt="Production calculator editor preview" class="project-image">
+          <img
+            src="/prod-cal-editor.png"
+            alt="Production calculator editor preview"
+            class="project-image"
+          >
         </template>
         <template #right>
           <div class="text-section">
@@ -53,9 +62,9 @@ import TechPillContainer from "../../components/TechPillContainer.vue";
       </ImageTextCombinedView>
     </EditorLine>
 
-    <EditorLine :indentation="1"/>
-    <EditorLine :indentation="0"/>
-    <EditorLine :indentation="0"/>
+    <EditorLine :indentation="1" />
+    <EditorLine :indentation="0" />
+    <EditorLine :indentation="0" />
   </Editor>
 </template>
 

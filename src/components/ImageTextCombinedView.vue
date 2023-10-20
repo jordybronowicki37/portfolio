@@ -5,10 +5,10 @@
 <template>
   <div class="combined-view-container">
     <div class="left-wrapper">
-      <slot name="left"/>
+      <slot name="left" />
     </div>
     <div class="right-wrapper">
-      <slot name="right"/>
+      <slot name="right" />
     </div>
   </div>
 </template>
