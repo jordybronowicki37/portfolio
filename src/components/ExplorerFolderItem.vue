@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import {ref} from "vue";
-defineProps<{link: string, title: string}>()
-const folderOpen = ref<boolean>(true);
+
+const {link} = defineProps<{link: string, title: string}>();
+
+const folderOpen = ref<boolean>(document.URL.includes(link));
 </script>
 
 <template>
@@ -11,7 +13,7 @@ const folderOpen = ref<boolean>(true);
       <box-icon v-on:click="folderOpen = !folderOpen" v-if="folderOpen" name='chevron-down' size="xs" color="#ffffffde"></box-icon>
     </div>
     <box-icon name='folder' size="xs" color="#ffffffde"></box-icon>
-    <router-link :to="link">{{title}}</router-link>
+    <router-link :to="link" v-on:click="folderOpen = true">{{title}}</router-link>
   </nav>
 
   <div class="folder-contents" v-if="folderOpen">
