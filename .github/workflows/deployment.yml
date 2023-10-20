@@ -2,9 +2,9 @@ name: Deployment pipeline
 
 on:
   workflow_dispatch:
-    branches: [ "main" ]
+    branches: [ "master" ]
   push:
-    branches: [ "main" ]
+    branches: [ "master" ]
     paths:
       - "**"
 
