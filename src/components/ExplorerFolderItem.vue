@@ -1,42 +1,23 @@
 <script setup lang="ts">
 import {ref} from "vue";
-defineProps<{link: string, title: string}>()
-const folderOpen = ref<boolean>(true);
+
+const {link} = defineProps<{link: string, title: string}>();
+
+const folderOpen = ref<boolean>(document.URL.includes(link));
 </script>
 
 <template>
   <nav class="folder-item">
     <div class="folder-collapse">
-      <box-icon
-        v-if="!folderOpen"
-        name="chevron-right"
-        size="xs"
-        color="#ffffffde"
-        @click="folderOpen = !folderOpen"
-      />
-      <box-icon
-        v-if="folderOpen"
-        name="chevron-down"
-        size="xs"
-        color="#ffffffde"
-        @click="folderOpen = !folderOpen"
-      />
+      <box-icon v-on:click="folderOpen = !folderOpen" v-if="!folderOpen" name='chevron-right' size="xs" color="#ffffffde"></box-icon>
+      <box-icon v-on:click="folderOpen = !folderOpen" v-if="folderOpen" name='chevron-down' size="xs" color="#ffffffde"></box-icon>
     </div>
-    <box-icon
-      name="folder"
-      size="xs"
-      color="#ffffffde"
-    />
-    <router-link :to="link">
-      {{ title }}
-    </router-link>
+    <box-icon name='folder' size="xs" color="#ffffffde"></box-icon>
+    <router-link :to="link" v-on:click="folderOpen = true">{{title}}</router-link>
   </nav>
 
-  <div
-    v-if="folderOpen"
-    class="folder-contents"
-  >
-    <slot />
+  <div class="folder-contents" v-if="folderOpen">
+    <slot/>
   </div>
 </template>
 

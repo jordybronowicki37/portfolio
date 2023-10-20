@@ -8,76 +8,31 @@ const explorerOpened = ref<boolean>(true);
 </script>
 
 <template>
-  <div
-    v-if="!explorerOpened"
-    id="file-explorer-tab"
-    @click="explorerOpened=true"
-  >
-    File explorer
-  </div>
+  <div class="file-explorer-tab" v-on:click="explorerOpened=true" v-if="!explorerOpened">File explorer</div>
 
-  <div
-    v-if="explorerOpened"
-    id="file-explorer"
-  >
-    <div id="file-explorer-title">
+  <div class="file-explorer" v-if="explorerOpened">
+    <div class="file-explorer-title">
       <div>File explorer</div>
-      <div
-        id="minimize-explorer"
-        @click="explorerOpened=false"
-      >
-        <box-icon
-          name="minus"
-          size="xs"
-          color="#ffffffde"
-        />
-      </div>
+      <div class="minimize-explorer" v-on:click="explorerOpened=false"><box-icon name='minus' size="xs" color="#ffffffde"></box-icon></div>
     </div>
 
-    <ExplorerFileItem
-      title="home"
-      link="/"
-    />
-    <ExplorerFileItem
-      title="about-me"
-      link="/about"
-    />
+    <ExplorerFileItem title="home" link="/"/>
+    <ExplorerFileItem title="about-me" link="/about"/>
 
-    <ExplorerFolderItem
-      title="projects"
-      link="/projects"
-    >
-      <ExplorerFileItem
-        title="production calculator"
-        link="/projects/production-calculator"
-      />
-      <ExplorerFileItem
-        title="snake game"
-        link="/projects/snake-game"
-      />
-      <ExplorerFileItem
-        title="portfolio"
-        link="/projects/portfolio"
-      />
-      <ExplorerFileItem
-        title="task manager"
-        link="/projects/task-manager"
-      />
-      <ExplorerFileItem
-        title="neerslag radar"
-        link="/projects/neerslag-radar"
-      />
+    <ExplorerFolderItem title="projects" link="/projects">
+      <ExplorerFileItem title="production calculator" link="/projects/production-calculator"/>
+      <ExplorerFileItem title="snake game" link="/projects/snake-game"/>
+      <ExplorerFileItem title="portfolio" link="/projects/portfolio"/>
+      <ExplorerFileItem title="task manager" link="/projects/task-manager"/>
+      <ExplorerFileItem title="neerslag radar" link="/projects/neerslag-radar"/>
     </ExplorerFolderItem>
 
-    <ExplorerLinkItem
-      title="GitHub"
-      link="https://github.com/jordybronowicki37/portfolio"
-    />
+    <ExplorerLinkItem title="GitHub" link="https://github.com/jordybronowicki37/portfolio"/>
   </div>
 </template>
 
 <style scoped>
-#file-explorer {
+.file-explorer {
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -86,7 +41,7 @@ const explorerOpened = ref<boolean>(true);
   max-width: 20%;
 }
 
-#file-explorer-tab {
+.file-explorer-tab {
   cursor: pointer;
   padding: 0 0.5rem;
   font-weight: bold;
@@ -98,12 +53,12 @@ const explorerOpened = ref<boolean>(true);
   transform-origin: top left;
 }
 
-#file-explorer-tab:hover,
-#minimize-explorer:hover {
+.file-explorer-tab:hover,
+.minimize-explorer:hover {
   background: #2227;
 }
 
-#file-explorer-title {
+.file-explorer-title {
   width: 100%;
   text-align: center;
   font-weight: bold;
@@ -113,10 +68,18 @@ const explorerOpened = ref<boolean>(true);
   overflow: hidden;
 }
 
-#minimize-explorer {
+.minimize-explorer {
   position: absolute;
   right: 0;
   top: 0;
   cursor: pointer;
+}
+@media screen and (max-width: 600px) {
+  .file-explorer-tab {
+    display: none;
+  }
+  .file-explorer {
+    display: none;
+  }
 }
 </style>

@@ -46,7 +46,20 @@ defineProps<{indentation: number}>();
 }
 
 .line-content {
-  margin-left: 10px;
-  padding-right: 1rem;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .line-number::before {
+    width: 1em;
+  }
+  .line-indentation {
+    min-width: 5px;
+  }
+  .line-content {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
 }
 </style>
