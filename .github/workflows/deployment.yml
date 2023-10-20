@@ -26,7 +26,7 @@ jobs:
         run: npm run lint
 
       - name: Trigger Render deployment
-        run: https://api.render.com/deploy/${{ secrets.RENDER_SERVICE_ID }}?key=${{ secrets.RENDER_PROJECT_KEY }}
+        run: curl -X GET https://api.render.com/deploy/${{ secrets.RENDER_SERVICE_ID }}?key=${{ secrets.RENDER_PROJECT_KEY }}
 
       - name: Create deployment on Github
         uses: chrnorm/deployment-action@v2
