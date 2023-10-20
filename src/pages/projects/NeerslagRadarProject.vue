@@ -13,9 +13,7 @@ import TechPillContainer from "../../components/TechPillContainer.vue";
       <h2>Project: Neerslag Radar</h2>
     </EditorLine>
     <EditorLine :indentation="1">
-      <TechPillContainer
-          :types="['.net', 'c#', 'angular', 'typescript', 'school/external']"
-          link="https://github.com/jordybronowicki37/production-calculator"/>
+      <TechPillContainer :types="['.net', 'c#', 'angular', 'typescript', 'school/external']" background-color="transparent"/>
     </EditorLine>
 
     <EditorLine :indentation="2"/>
