@@ -12,6 +12,8 @@ export function GetPillData(type: string): PillDataType {
     return data;
 }
 
+export const ALLPROJECTTYPES = ["personal", "school", "school/external"];
+
 const PillData: PillDataType[] = [
     // Backend
     {
