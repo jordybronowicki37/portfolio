@@ -9,7 +9,7 @@ withDefaults(
 
 <template>
   <div class="tech-pill-collection">
-    <TechPillConfigured v-for="type in types" :type="type"/>
+    <TechPillConfigured v-for="type in types" :type="type" :key="type"/>
     <slot/>
     <TechPillSimple bg-color="#555" v-if="link !== ''">
       <a class="github-link" :href="link" target="_blank">
