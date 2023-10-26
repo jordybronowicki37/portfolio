@@ -44,6 +44,7 @@ defineProps<{indentation: number}>()
 .line-content {
   padding-left: 10px;
   padding-right: 10px;
+  flex-grow: 1;
 }
 
 @media screen and (max-width: 600px) {
