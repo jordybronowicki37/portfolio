@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import projects from "../pages/projects/ProjectCardsData.json";
+import projects from "./ProjectCardsData.json";
 import {
   ALL_BACKEND_TYPES,
   ALL_DEPLOYMENT_TYPES,
@@ -7,7 +7,7 @@ import {
   ALL_PERSISTENCE_TYPES,
   ALL_PROJECT_TYPES
 } from "./TechPillConfiguredData";
-import {ProjectCardProps} from "../pages/projects/ProjectCard.vue";
+import {ProjectCardProps} from "./ProjectCard.vue";
 import TechPillConfigured from "./TechPillConfigured.vue";
 import {watch, ref} from "vue";
 

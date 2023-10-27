@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import Editor from "../components/Editor.vue";
 import EditorLine from "../components/EditorLine.vue";
-import projects from "./projects/ProjectCardsData.json";
-import ProjectCard, {ProjectCardProps} from "./projects/ProjectCard.vue";
+import projects from "../components/ProjectCardsData.json";
+import ProjectCard, {ProjectCardProps} from "../components/ProjectCard.vue";
 import {ref, watch} from "vue";
 import TechPillConfigured from "../components/TechPillConfigured.vue";
 import TagsFilter from "../components/TagsFilter.vue";

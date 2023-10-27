@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import TechPillContainer from "../../components/TechPillContainer.vue";
+import TechPillContainer from "./TechPillContainer.vue";
 
 export type ProjectCardProps = {
   title: string,
