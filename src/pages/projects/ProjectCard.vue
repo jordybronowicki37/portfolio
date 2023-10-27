@@ -17,17 +17,27 @@ defineProps<{project: ProjectCardProps}>();
 <template>
   <section class="project-card">
     <div>
-      <h2>{{project.title}}</h2>
-      <img class="screenshot" :src="project.imageSrc" :alt="project.imageAlt">
+      <h2>{{ project.title }}</h2>
+      <img
+        class="screenshot"
+        :src="project.imageSrc"
+        :alt="project.imageAlt"
+      >
     </div>
     <TechPillContainer
-        :link="project.externalLink"
-        :types="project.tags"
-        background-color="transparent"/>
+      :link="project.externalLink"
+      :types="project.tags"
+      background-color="transparent"
+    />
     <p>
-      {{project.description}}
+      {{ project.description }}
     </p>
-    <router-link class="learn-more-nav" :to="project.pageLink">Learn more</router-link>
+    <router-link
+      class="learn-more-nav"
+      :to="project.pageLink"
+    >
+      Learn more
+    </router-link>
   </section>
 </template>
 

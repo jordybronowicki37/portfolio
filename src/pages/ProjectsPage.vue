@@ -81,7 +81,7 @@ watch([filterTitle, filterTags], () => {
 
 <template>
   <Editor>
-    <EditorLine :indentation="0"/>
+    <EditorLine :indentation="0" />
     <EditorLine :indentation="0">
       <h1>My Projects</h1>
     </EditorLine>
@@ -90,30 +90,53 @@ watch([filterTitle, filterTags], () => {
       <p>Projects intro</p>
     </EditorLine>
 
-    <EditorLine :indentation="1"/>
+    <EditorLine :indentation="1" />
     <EditorLine :indentation="1">
       <div class="filters-wrapper">
         <p>Filter projects</p>
         <div class="filters">
           <div class="title-filter-wrapper">
             <label for="title-filter">Title</label>
-            <input type="text" id="title-filter" v-model="filterTitle">
+            <input
+              id="title-filter"
+              v-model="filterTitle"
+              type="text"
+            >
           </div>
 
-          <div class="tags-filter-wrapper" v-on:click="filterTagsOpened = !filterTagsOpened">
+          <div
+            class="tags-filter-wrapper"
+            @click="filterTagsOpened = !filterTagsOpened"
+          >
             <label>Tags</label>
             <div class="tags-filter-expand-button-wrapper">
-              <box-icon name='chevron-down' color="#ffffffde" :class="[filterTagsOpened ? 'opened': 'closed']"/>
+              <box-icon
+                name="chevron-down"
+                color="#ffffffde"
+                :class="[filterTagsOpened ? 'opened': 'closed']"
+              />
             </div>
 
             <div class="selected-tags">
-              <TechPillConfigured v-for="tag in filterTags" :type="tag" :key="tag"/>
+              <TechPillConfigured
+                v-for="tag in filterTags"
+                :key="tag"
+                :type="tag"
+              />
             </div>
 
-            <div class="tags-filter-options-wrapper" v-if="filterTagsOpened" v-on:click="$event.stopPropagation()">
+            <div
+              v-if="filterTagsOpened"
+              class="tags-filter-options-wrapper"
+              @click="$event.stopPropagation()"
+            >
               <header class="tags-filter-header">
                 <p>Tags filter</p>
-                <box-icon name='x' color="#ffffffde" v-on:click="filterTagsOpened = false"/>
+                <box-icon
+                  name="x"
+                  color="#ffffffde"
+                  @click="filterTagsOpened = false"
+                />
               </header>
               <div class="tags-filter-options">
                 <div class="tag-filter-group" v-for="tagGroup in tagOccurrenceGroups">
@@ -132,18 +155,22 @@ watch([filterTitle, filterTags], () => {
         </div>
       </div>
     </EditorLine>
-    <EditorLine :indentation="1"/>
+    <EditorLine :indentation="1" />
 
     <EditorLine :indentation="2">
       <div class="projects-container">
-        <ProjectCard :project="project" :key="project.title" v-for="project in projectsFiltered"/>
+        <ProjectCard
+          v-for="project in projectsFiltered"
+          :key="project.title"
+          :project="project"
+        />
       </div>
     </EditorLine>
 
-    <EditorLine :indentation="2"/>
-    <EditorLine :indentation="1"/>
-    <EditorLine :indentation="0"/>
-    <EditorLine :indentation="0"/>
+    <EditorLine :indentation="2" />
+    <EditorLine :indentation="1" />
+    <EditorLine :indentation="0" />
+    <EditorLine :indentation="0" />
   </Editor>
 </template>
 
@@ -179,6 +206,7 @@ watch([filterTitle, filterTags], () => {
   padding: 0.1em;
   font-size: 12px;
   background-color: #333;
+  user-select: none;
 }
 .tags-filter-expand-button-wrapper {
   position: absolute;
