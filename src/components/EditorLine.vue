@@ -1,13 +1,17 @@
 <script setup lang="ts">
-defineProps<{indentation: number}>()
+defineProps<{indentation: number}>();
 </script>
 
 <template>
   <div class="editor-line">
-    <span class="line-number"/>
-    <span class="line-indentation" :key="i" v-for="i in indentation"/>
+    <span class="line-number" />
+    <span
+      v-for="i in indentation"
+      :key="i"
+      class="line-indentation"
+    />
     <div class="line-content">
-      <slot/>
+      <slot />
     </div>
   </div>
 </template>

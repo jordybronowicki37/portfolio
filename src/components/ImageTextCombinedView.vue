@@ -6,12 +6,15 @@ withDefaults(
 </script>
 
 <template>
-  <div class="combined-view-container" :class="[ imageOnTheLeft ? 'image-on-the-left' : '']">
+  <div
+    class="combined-view-container"
+    :class="[ imageOnTheLeft ? 'image-on-the-left' : '']"
+  >
     <div class="left-wrapper text-wrapper">
-      <slot name="text"/>
+      <slot name="text" />
     </div>
     <div class="right-wrapper image-wrapper">
-      <slot name="image"/>
+      <slot name="image" />
     </div>
   </div>
 </template>

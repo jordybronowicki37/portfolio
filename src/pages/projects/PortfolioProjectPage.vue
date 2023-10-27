@@ -8,18 +8,19 @@ import "./ProjectPage.css";
 
 <template>
   <Editor>
-    <EditorLine :indentation="0"/>
-    <EditorLine :indentation="0"/>
+    <EditorLine :indentation="0" />
+    <EditorLine :indentation="0" />
     <EditorLine :indentation="1">
       <h2>Project: Portfolio</h2>
     </EditorLine>
     <EditorLine :indentation="1">
       <TechPillContainer
-          link="https://github.com/jordybronowicki37/portfolio"
-          :types="['vue', 'typescript', 'personal']"/>
+        link="https://github.com/jordybronowicki37/portfolio"
+        :types="['vue', 'typescript', 'personal']"
+      />
     </EditorLine>
 
-    <EditorLine :indentation="2"/>
+    <EditorLine :indentation="2" />
     <EditorLine :indentation="2">
       <ImageTextCombinedView>
         <template #text>
@@ -31,14 +32,18 @@ import "./ProjectPage.css";
           </div>
         </template>
         <template #image>
-          <img src="/portfolio-home.png" alt="Portfolio homepage preview" class="project-image">
+          <img
+            src="/portfolio-home.png"
+            alt="Portfolio homepage preview"
+            class="project-image"
+          >
         </template>
       </ImageTextCombinedView>
     </EditorLine>
 
-    <EditorLine :indentation="1"/>
-    <EditorLine :indentation="0"/>
-    <EditorLine :indentation="0"/>
+    <EditorLine :indentation="1" />
+    <EditorLine :indentation="0" />
+    <EditorLine :indentation="0" />
   </Editor>
 </template>
 

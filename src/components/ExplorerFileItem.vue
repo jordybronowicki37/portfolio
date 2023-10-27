@@ -4,8 +4,14 @@ defineProps<{link: string, title: string}>()
 
 <template>
   <nav>
-    <box-icon name='file' size="xs" color="#ffffffde"></box-icon>
-    <router-link :to="link">{{title}}</router-link>
+    <box-icon
+      name="file"
+      size="xs"
+      color="#ffffffde"
+    />
+    <router-link :to="link">
+      {{ title }}
+    </router-link>
   </nav>
 </template>
 

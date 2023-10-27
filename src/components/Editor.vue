@@ -4,7 +4,7 @@
 
 <template>
   <div id="editor">
-    <slot/>
+    <slot />
   </div>
 </template>
 

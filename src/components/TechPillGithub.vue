@@ -6,7 +6,14 @@ defineProps<{link: string}>()
 
 <template>
   <TechPillSimple bg-color="#555">
-    <a class="github-link" :href="link">github <box-icon name='link-external' size="xs" color="#ffffffde"/></a>
+    <a
+      class="github-link"
+      :href="link"
+    >github <box-icon
+      name="link-external"
+      size="xs"
+      color="#ffffffde"
+    /></a>
   </TechPillSimple>
 </template>
 

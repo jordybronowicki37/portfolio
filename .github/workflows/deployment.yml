@@ -1,0 +1,38 @@
+name: Deployment pipeline
+
+on:
+  workflow_dispatch:
+    branches: [ "master" ]
+  push:
+    branches: [ "master" ]
+    paths:
+      - "**"
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    permissions:
+      deployments: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Install packages
+        run: npm i
+
+      - name: Run linter
+        run: npm run lint
+
+      - name: Trigger Render deployment
+        run: curl -X GET https://api.render.com/deploy/${{ secrets.RENDER_SERVICE_ID }}?key=${{ secrets.RENDER_PROJECT_KEY }}
+
+      - name: Create deployment on Github
+        uses: chrnorm/deployment-action@v2
+        id: deployment
+        with:
+          token: ${{ github.token }}
+          environment-url: ${{ vars.RENDER_PUBLIC_URL }}
+          environment: production
+          initial-status: 'success'

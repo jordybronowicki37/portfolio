@@ -4,8 +4,15 @@ defineProps<{link: string, title: string}>();
 
 <template>
   <nav>
-    <box-icon name='link-external' size="xs" color="#ffffffde"></box-icon>
-    <a :href="link" target="_blank">{{title}}</a>
+    <box-icon
+      name="link-external"
+      size="xs"
+      color="#ffffffde"
+    />
+    <a
+      :href="link"
+      target="_blank"
+    >{{ title }}</a>
   </nav>
 </template>
 

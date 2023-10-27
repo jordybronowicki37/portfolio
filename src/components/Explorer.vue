@@ -8,26 +8,71 @@ const explorerOpened = ref<boolean>(true);
 </script>
 
 <template>
-  <div class="file-explorer-tab" v-on:click="explorerOpened=true" v-if="!explorerOpened">File explorer</div>
+  <div
+    v-if="!explorerOpened"
+    class="file-explorer-tab"
+    @click="explorerOpened=true"
+  >
+    File explorer
+  </div>
 
-  <div class="file-explorer" v-if="explorerOpened">
+  <div
+    v-if="explorerOpened"
+    class="file-explorer"
+  >
     <div class="file-explorer-title">
       <div>File explorer</div>
-      <div class="minimize-explorer" v-on:click="explorerOpened=false"><box-icon name='minus' size="xs" color="#ffffffde"></box-icon></div>
+      <div
+        class="minimize-explorer"
+        @click="explorerOpened=false"
+      >
+        <box-icon
+          name="minus"
+          size="xs"
+          color="#ffffffde"
+        />
+      </div>
     </div>
 
-    <ExplorerFileItem title="home" link="/"/>
-    <ExplorerFileItem title="about-me" link="/about"/>
+    <ExplorerFileItem
+      title="home"
+      link="/"
+    />
+    <ExplorerFileItem
+      title="about-me"
+      link="/about"
+    />
 
-    <ExplorerFolderItem title="projects" link="/projects">
-      <ExplorerFileItem title="production calculator" link="/projects/production-calculator"/>
-      <ExplorerFileItem title="snake game" link="/projects/snake-game"/>
-      <ExplorerFileItem title="portfolio" link="/projects/portfolio"/>
-      <ExplorerFileItem title="task manager" link="/projects/task-manager"/>
-      <ExplorerFileItem title="neerslag radar" link="/projects/neerslag-radar"/>
+    <ExplorerFolderItem
+      title="projects"
+      link="/projects"
+    >
+      <ExplorerFileItem
+        title="production calculator"
+        link="/projects/production-calculator"
+      />
+      <ExplorerFileItem
+        title="snake game"
+        link="/projects/snake-game"
+      />
+      <ExplorerFileItem
+        title="portfolio"
+        link="/projects/portfolio"
+      />
+      <ExplorerFileItem
+        title="task manager"
+        link="/projects/task-manager"
+      />
+      <ExplorerFileItem
+        title="neerslag radar"
+        link="/projects/neerslag-radar"
+      />
     </ExplorerFolderItem>
 
-    <ExplorerLinkItem title="GitHub" link="https://github.com/jordybronowicki37/portfolio"/>
+    <ExplorerLinkItem
+      title="GitHub"
+      link="https://github.com/jordybronowicki37/portfolio"
+    />
   </div>
 </template>
 

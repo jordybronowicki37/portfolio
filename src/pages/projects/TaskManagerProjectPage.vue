@@ -8,17 +8,18 @@ import "./ProjectPage.css";
 
 <template>
   <Editor>
-    <EditorLine :indentation="0"/>
-    <EditorLine :indentation="0"/>
+    <EditorLine :indentation="0" />
+    <EditorLine :indentation="0" />
     <EditorLine :indentation="1">
       <h2>Project: Task Manager</h2>
     </EditorLine>
     <EditorLine :indentation="1">
       <TechPillContainer
-          :types="['java', 'spring', 'postgresql', 'aws', 'react', 'typescript', 'sass', 'school']"/>
+        :types="['java', 'spring', 'postgresql', 'aws', 'react', 'typescript', 'sass', 'school']"
+      />
     </EditorLine>
 
-    <EditorLine :indentation="2"/>
+    <EditorLine :indentation="2" />
     <EditorLine :indentation="2">
       <ImageTextCombinedView>
         <template #text>
@@ -30,13 +31,17 @@ import "./ProjectPage.css";
           </div>
         </template>
         <template #image>
-          <img src="/tas-board.png" alt="Tasks inside of a board example" class="project-image">
+          <img
+            src="/tas-board.png"
+            alt="Tasks inside of a board example"
+            class="project-image"
+          >
         </template>
       </ImageTextCombinedView>
     </EditorLine>
 
-    <EditorLine :indentation="2"/>
-    <EditorLine :indentation="2"/>
+    <EditorLine :indentation="2" />
+    <EditorLine :indentation="2" />
     <EditorLine :indentation="2">
       <ImageTextCombinedView image-on-the-left>
         <template #text>
@@ -48,14 +53,18 @@ import "./ProjectPage.css";
           </div>
         </template>
         <template #image>
-          <img src="/tas-edit-task.png" alt="Edit task properties" class="project-image">
+          <img
+            src="/tas-edit-task.png"
+            alt="Edit task properties"
+            class="project-image"
+          >
         </template>
       </ImageTextCombinedView>
     </EditorLine>
 
-    <EditorLine :indentation="1"/>
-    <EditorLine :indentation="0"/>
-    <EditorLine :indentation="0"/>
+    <EditorLine :indentation="1" />
+    <EditorLine :indentation="0" />
+    <EditorLine :indentation="0" />
   </Editor>
 </template>
 

@@ -8,7 +8,9 @@ const typeData = GetPillData(type);
 
 <template>
   <TechPillSimple :bg-color="typeData.bgColor">
-    <p class="tech-text">{{typeData.type}}</p>
+    <p class="tech-text">
+      {{ typeData.type }}
+    </p>
   </TechPillSimple>
 </template>
 
