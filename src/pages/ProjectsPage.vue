@@ -70,8 +70,8 @@ watch([filterTitle, filterTags], () => {
             </div>
 
             <div
-              v-if="filterTagsOpened"
               class="tags-filter-options-wrapper"
+              :class="[filterTagsOpened ? 'filter-tags-opened' : 'filter-tags-closed']"
               @click="$event.stopPropagation()"
             >
               <header class="tags-filter-header">
@@ -207,6 +207,9 @@ watch([filterTitle, filterTags], () => {
   overflow-y: hidden;
   top: 100%;
   left: 0;
+}
+.filter-tags-closed {
+  display: none;
 }
 .tags-filter-header {
   position: relative;
