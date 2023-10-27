@@ -25,11 +25,13 @@ watch([filterTitle, filterTags], () => {
   <Editor>
     <EditorLine :indentation="0" />
     <EditorLine :indentation="0">
-      <h1>My Projects</h1>
+      <header class="page-header">
+        <h2>Projects</h2><span>{{allProjects.length}}</span>
+      </header>
     </EditorLine>
 
     <EditorLine :indentation="1">
-      <p>Projects intro</p>
+      <p>Here you can find some of the projects that I have either created myself or in collaboration with other students.</p>
     </EditorLine>
 
     <EditorLine :indentation="1" />
@@ -106,6 +108,17 @@ watch([filterTitle, filterTags], () => {
 </template>
 
 <style scoped>
+.page-header {
+  display: flex;
+  gap: 2rem;
+}
+.page-header>h2 {
+  font-size: x-large;
+}
+.page-header>span {
+  opacity: 0.7;
+  font-size: x-large;
+}
 .projects-container {
   display: flex;
   flex-wrap: wrap;
