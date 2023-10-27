@@ -26,7 +26,7 @@ watch([filterTitle, filterTags], () => {
     <EditorLine :indentation="0" />
     <EditorLine :indentation="0">
       <header class="page-header">
-        <h2>Projects</h2><span>{{allProjects.length}}</span>
+        <h2>Projects</h2><span>{{ allProjects.length }}</span>
       </header>
     </EditorLine>
 

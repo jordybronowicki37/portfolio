@@ -11,6 +11,7 @@ import SnakeProject from "./pages/projects/SnakeProjectPage.vue";
 import PortfolioProject from "./pages/projects/PortfolioProjectPage.vue";
 import NeerslagRadarProject from "./pages/projects/NeerslagRadarProjectPage.vue";
 import TaskManagerProject from "./pages/projects/TaskManagerProjectPage.vue";
+import ErrorPage from "./pages/ErrorPage.vue";
 
 const routes: RouteRecordRaw[] = [
     { path: "/", component: HomePage },
@@ -21,6 +22,7 @@ const routes: RouteRecordRaw[] = [
     { path: "/projects/portfolio", component: PortfolioProject },
     { path: "/projects/task-manager", component: TaskManagerProject },
     { path: "/projects/neerslag-radar", component: NeerslagRadarProject },
+    { path: "/:pathMatch(.*)*", component: ErrorPage },
 ]
 
 const router = createRouter({
