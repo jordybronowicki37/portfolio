@@ -12,7 +12,11 @@ export function GetPillData(type: string): PillDataType {
     return data;
 }
 
-export const ALLPROJECTTYPES = ["personal", "school", "school/external"];
+export const ALL_BACKEND_TYPES = [".net", "c#", "java", "python", "signalr", "spring", "rabbitmq"];
+export const ALL_FRONTEND_TYPES = ["angular", "css", "html", "javascript", "react", "redux", "sass", "typescript", "vue"];
+export const ALL_PERSISTENCE_TYPES = ["postgresql", "mysql", "mongodb"];
+export const ALL_DEPLOYMENT_TYPES = ["aws", "azure", "render", "docker"];
+export const ALL_PROJECT_TYPES = ["personal", "school", "school/external"];
 
 const PillData: PillDataType[] = [
     // Backend
