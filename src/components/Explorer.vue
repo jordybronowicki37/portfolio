@@ -7,43 +7,43 @@ import ExplorerLinkItem from "./ExplorerLinkItem.vue";
 
 <template>
   <ExplorerFileItem
-      title="home"
-      link="/"
+    title="home"
+    link="/"
   />
   <ExplorerFileItem
-      title="about-me"
-      link="/about"
+    title="about-me"
+    link="/about"
   />
 
   <ExplorerFolderItem
-      title="projects"
-      link="/projects"
+    title="projects"
+    link="/projects"
   >
     <ExplorerFileItem
-        title="production calculator"
-        link="/projects/production-calculator"
+      title="production calculator"
+      link="/projects/production-calculator"
     />
     <ExplorerFileItem
-        title="snake game"
-        link="/projects/snake-game"
+      title="snake game"
+      link="/projects/snake-game"
     />
     <ExplorerFileItem
-        title="portfolio"
-        link="/projects/portfolio"
+      title="portfolio"
+      link="/projects/portfolio"
     />
     <ExplorerFileItem
-        title="task manager"
-        link="/projects/task-manager"
+      title="task manager"
+      link="/projects/task-manager"
     />
     <ExplorerFileItem
-        title="neerslag radar"
-        link="/projects/neerslag-radar"
+      title="neerslag radar"
+      link="/projects/neerslag-radar"
     />
   </ExplorerFolderItem>
 
   <ExplorerLinkItem
-      title="GitHub"
-      link="https://github.com/jordybronowicki37/portfolio"
+    title="GitHub"
+    link="https://github.com/jordybronowicki37/portfolio"
   />
 </template>
 

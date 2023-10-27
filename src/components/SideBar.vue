@@ -32,7 +32,7 @@ const explorerOpened = ref<boolean>(true);
       </div>
     </div>
 
-    <Explorer/>
+    <Explorer />
   </div>
 </template>
 

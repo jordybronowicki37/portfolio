@@ -35,14 +35,18 @@ function GetTitle(route: string): string {
 
     <div>
       <box-icon
-          name="menu"
-          color="#ffffffde"
-          @click="mobileNavigationOpened = !mobileNavigationOpened"/>
+        name="menu"
+        color="#ffffffde"
+        @click="mobileNavigationOpened = !mobileNavigationOpened"
+      />
     </div>
 
-    <div class="mobile-navigation" :class="[mobileNavigationOpened ? 'opened' : 'closed']">
+    <div
+      class="mobile-navigation"
+      :class="[mobileNavigationOpened ? 'opened' : 'closed']"
+    >
       <div>
-        <Explorer/>
+        <Explorer />
       </div>
     </div>
   </header>
