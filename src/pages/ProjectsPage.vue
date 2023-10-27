@@ -132,7 +132,8 @@ watch([filterTitle, filterTags], () => {
   border-radius: 0.5rem;
 }
 .filters {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, auto));
   gap: 0.3rem;
 }
 .title-filter-wrapper {

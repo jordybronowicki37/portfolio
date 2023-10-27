@@ -33,7 +33,12 @@ function GetTitle(route: string): string {
       Editing: {{ GetTitle(route.fullPath) }}
     </div>
 
-    <box-icon name="menu" color="#ffffffde" @click="mobileNavigationOpened = !mobileNavigationOpened"/>
+    <div>
+      <box-icon
+          name="menu"
+          color="#ffffffde"
+          @click="mobileNavigationOpened = !mobileNavigationOpened"/>
+    </div>
 
     <div class="mobile-navigation" :class="[mobileNavigationOpened ? 'opened' : 'closed']">
       <div>
@@ -62,34 +67,41 @@ header>* {
 #current-file-title {
   color: #bbb;
 }
-header>box-icon {
+header box-icon {
   cursor: pointer;
 }
 .mobile-navigation {
   display: grid;
   grid-template-rows: 0fr;
+  grid-template-columns: 1fr;
   transition: 0.5s;
   position: absolute;
   top: 100%;
   left: 0;
-  width: 100%;
   z-index: 1;
+  width: 100%;
+  padding: 0;
   background-color: #242424;
-  padding: 0 1rem;
   border-bottom: 2px solid #555;
+}
+.mobile-navigation>div {
+  overflow: hidden;
+  padding: 1rem;
 }
 .mobile-navigation.opened {
   grid-template-rows: 1fr;
-  padding: 1rem;
 }
 .mobile-navigation.closed {
   border-bottom-color: transparent;
 }
-.mobile-navigation>div {
-  overflow: hidden;
+.mobile-navigation.closed>div {
+  padding: 0 1rem;
 }
 @media screen and (min-width: 600px) {
   .mobile-navigation {
+    display: none;
+  }
+  box-icon {
     display: none;
   }
 }
