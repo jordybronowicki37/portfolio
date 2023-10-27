@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import Header from "./components/Header.vue";
-import Explorer from "./components/Explorer.vue";
+import SideBar from "./components/SideBar.vue";
 
 </script>
 
@@ -8,7 +8,7 @@ import Explorer from "./components/Explorer.vue";
   <div id="page">
     <Header />
     <div id="page-center">
-      <Explorer />
+      <SideBar />
       <div id="page-content">
         <router-view />
       </div>
