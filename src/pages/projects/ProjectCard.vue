@@ -19,6 +19,7 @@ defineProps<{project: ProjectCardProps}>();
     <div>
       <h2>{{ project.title }}</h2>
       <img
+        v-if="project.imageSrc !== ''"
         class="screenshot"
         :src="project.imageSrc"
         :alt="project.imageAlt"
@@ -33,6 +34,7 @@ defineProps<{project: ProjectCardProps}>();
       {{ project.description }}
     </p>
     <router-link
+      v-if="project.pageLink !== ''"
       class="learn-more-nav"
       :to="project.pageLink"
     >
