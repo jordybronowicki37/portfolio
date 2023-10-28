@@ -15,10 +15,12 @@ import "./ProjectPage.css";
         <h2>Project: Portfolio</h2>
       </EditorLine>
       <EditorLine :indentation="1">
-        <TechPillContainer
-            link="https://github.com/jordybronowicki37/portfolio"
-            :types="['vue', 'typescript', 'personal']"
-        />
+        <div class="tags-wrapper">
+          <TechPillContainer
+              link="https://github.com/jordybronowicki37/portfolio"
+              :types="['vue', 'typescript', 'personal']"
+          />
+        </div>
       </EditorLine>
 
       <EditorLine :indentation="2" />
@@ -81,6 +83,7 @@ import "./ProjectPage.css";
         </section>
       </EditorLine>
 
+      <EditorLine :indentation="2" />
       <EditorLine :indentation="1" />
       <EditorLine :indentation="0" />
       <EditorLine :indentation="0" />

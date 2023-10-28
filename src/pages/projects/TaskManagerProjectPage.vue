@@ -15,9 +15,11 @@ import "./ProjectPage.css";
         <h2>Project: Task Manager</h2>
       </EditorLine>
       <EditorLine :indentation="1">
-        <TechPillContainer
-            :types="['java', 'spring', 'postgresql', 'aws', 'react', 'typescript', 'sass', 'school']"
-        />
+        <div class="tags-wrapper">
+          <TechPillContainer
+              :types="['java', 'spring', 'postgresql', 'aws', 'react', 'typescript', 'sass', 'school']"
+          />
+        </div>
       </EditorLine>
 
       <EditorLine :indentation="2" />
@@ -111,6 +113,7 @@ import "./ProjectPage.css";
         </section>
       </EditorLine>
 
+      <EditorLine :indentation="2" />
       <EditorLine :indentation="1" />
       <EditorLine :indentation="0" />
       <EditorLine :indentation="0" />

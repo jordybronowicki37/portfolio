@@ -15,10 +15,12 @@ import "./ProjectPage.css";
         <h2>Project: Snake Game</h2>
       </EditorLine>
       <EditorLine :indentation="1">
-        <TechPillContainer
-            link="https://github.com/jordybronowicki37/vue-snake"
-            :types="['vue', 'typescript', 'personal']"
-        />
+        <div class="tags-wrapper">
+          <TechPillContainer
+              link="https://github.com/jordybronowicki37/vue-snake"
+              :types="['vue', 'typescript', 'personal']"
+          />
+        </div>
       </EditorLine>
 
       <EditorLine :indentation="2" />
@@ -114,6 +116,7 @@ import "./ProjectPage.css";
         </ImageTextCombinedView>
       </EditorLine>
 
+      <EditorLine :indentation="2" />
       <EditorLine :indentation="1" />
       <EditorLine :indentation="0" />
       <EditorLine :indentation="0" />

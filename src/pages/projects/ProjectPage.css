@@ -4,6 +4,9 @@
 .project-page h3 {
     margin-bottom: 0.2rem;
 }
+.project-page .tags-wrapper {
+    width: fit-content;
+}
 .project-page .project-image {
     height: 15rem;
     width: 100%;
