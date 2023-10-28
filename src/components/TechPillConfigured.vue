@@ -23,5 +23,6 @@ const textColor = typeData.color ?? "#ffffffde";
   font-weight: 800;
   font-size: 10px;
   user-select: none;
+  white-space: nowrap;
 }
 </style>

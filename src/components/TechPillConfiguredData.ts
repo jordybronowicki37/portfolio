@@ -44,6 +44,7 @@ const PillData: PillDataType[] = [
   {
     type: "spring",
     bgColor: "#68BD45",
+    color: "#393d48"
   },
   {
     type: "rabbitmq",
@@ -58,6 +59,7 @@ const PillData: PillDataType[] = [
   {
     type: "css",
     bgColor: "#E44D26",
+    color: "#393d48"
   },
   {
     type: "html",
@@ -86,6 +88,7 @@ const PillData: PillDataType[] = [
   {
     type: "vue",
     bgColor: "#41B883",
+    color: "#393d48"
   },
 
   // Persistence
@@ -106,6 +109,7 @@ const PillData: PillDataType[] = [
   {
     type: "aws",
     bgColor: "#F7A80D",
+    color: "#393d48"
   },
   {
     type: "azure",
@@ -118,6 +122,7 @@ const PillData: PillDataType[] = [
   {
     type: "render",
     bgColor: "#5AEDC5",
+    color: "#393d48"
   },
   {
     type: "docker",
@@ -132,24 +137,27 @@ const PillData: PillDataType[] = [
   {
     type: "personal",
     bgColor: "#ea6d30",
+    color: "#393d48"
   },
   {
     type: "school",
-    bgColor: "#705499",
+    bgColor: "#705499"
   },
 
   // Project statuses
   {
     type: "completed",
-    bgColor: "#20ca52"
+    bgColor: "#20ca52",
+    color: "#393d48"
   },
   {
     type: "in progress",
-    bgColor: "#b28000"
+    bgColor: "#b28000",
+    color: "#393d48"
   },
   {
     type: "abandoned",
-    bgColor: "#222",
-    color: "#600000"
+    bgColor: "#646464",
+    color: "#d42d1c",
   },
 ];

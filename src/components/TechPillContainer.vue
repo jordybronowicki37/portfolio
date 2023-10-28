@@ -15,7 +15,10 @@ withDefaults(
       :type="type"
     />
     <slot />
-    <TechPillLink v-if="link !== ''" :link="link" />
+    <TechPillLink
+      v-if="link !== ''"
+      :link="link"
+    />
   </div>
 </template>
 
