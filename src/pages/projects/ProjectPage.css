@@ -1,5 +1,22 @@
-.project-image {
+.project-page {
+    height: 100%;
+}
+.project-page .project-image {
     height: 15rem;
     width: 100%;
     object-fit: contain;
+}
+.project-page .list-title {
+    padding-left: 1rem;
+}
+.project-page ul {
+    padding-left: 1rem;
+    margin: 0;
+}
+.project-page li:not(:last-child) {
+    margin-bottom: 0.5rem;
+}
+.project-page li>h4 {
+    font-size: 20px;
+    font-weight: 600;
 }
