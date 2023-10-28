@@ -218,4 +218,10 @@ watch([filterTitle, filterTags], () => {
   right: 0;
   cursor: pointer;
 }
+@media screen and (max-width: 600px) {
+  .filters {
+    display: flex;
+    flex-direction: column;
+  }
+}
 </style>
