@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import TechPillContainer from "./TechPillContainer.vue";
+import Header from "../App.vue";
 
 export type ProjectCardProps = {
   title: string,
@@ -16,7 +17,7 @@ defineProps<{project: ProjectCardProps}>();
 
 <template>
   <section class="project-card">
-    <div>
+    <header>
       <h2>{{ project.title }}</h2>
       <img
         v-if="project.imageSrc !== ''"
@@ -24,7 +25,7 @@ defineProps<{project: ProjectCardProps}>();
         :src="project.imageSrc"
         :alt="project.imageAlt"
       >
-    </div>
+    </header>
     <TechPillContainer
       :link="project.externalLink"
       :types="project.tags"
@@ -45,7 +46,6 @@ defineProps<{project: ProjectCardProps}>();
 
 <style scoped>
 .project-card {
-  width: 20rem;
   margin: 1rem;
   background-color: #333;
   display: flex;
@@ -54,7 +54,10 @@ defineProps<{project: ProjectCardProps}>();
   overflow: hidden;
   border-radius: 0.5rem;
 }
-.project-card h2 {
+header {
+  width: 100%;
+}
+h2 {
   text-align: center;
   font-size: 24px;
   color: #ddd;
@@ -63,11 +66,11 @@ defineProps<{project: ProjectCardProps}>();
   flex-grow: 1;
   padding: 0.5rem;
 }
-.project-card .screenshot {
-  height: 10rem;
-  width: 20rem;
+.screenshot {
+  width: 100%;
+  aspect-ratio: 2 / 1;
 }
-.project-card .learn-more-nav {
+.learn-more-nav {
   margin: 0.5rem;
   padding: 0.2rem 1rem;
   text-align: center;
@@ -76,7 +79,7 @@ defineProps<{project: ProjectCardProps}>();
   border: 1px solid #bbb;
   border-radius: 1rem;
 }
-.project-card .learn-more-nav:hover {
+.learn-more-nav:hover {
   background-color: #bbb;
   color: #333;
 }

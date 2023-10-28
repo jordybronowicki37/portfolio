@@ -120,8 +120,8 @@ watch([filterTitle, filterTags], () => {
   font-size: x-large;
 }
 .projects-container {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr))
 }
 .filters-wrapper {
   display: flex;
