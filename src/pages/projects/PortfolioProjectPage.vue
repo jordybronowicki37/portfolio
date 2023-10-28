@@ -2,8 +2,8 @@
 import Editor from "../../components/Editor.vue";
 import EditorLine from "../../components/EditorLine.vue";
 import ImageTextCombinedView from "../../components/ImageTextCombinedView.vue";
-import TechPillContainer from "../../components/TechPillContainer.vue";
 import "./ProjectPage.css";
+import ProjectProperties from "../../components/ProjectProperties.vue";
 </script>
 
 <template>
@@ -16,9 +16,13 @@ import "./ProjectPage.css";
       </EditorLine>
       <EditorLine :indentation="1">
         <div class="tags-wrapper">
-          <TechPillContainer
-              link="https://github.com/jordybronowicki37/portfolio"
-              :types="['vue', 'typescript', 'personal']"
+          <ProjectProperties
+            :languages="['typescript', 'html', 'css']"
+            :frameworks="['vue']"
+            deployment="render"
+            type="personal"
+            status="completed"
+            :links="['https://github.com/jordybronowicki37/portfolio']"
           />
         </div>
       </EditorLine>
@@ -38,9 +42,9 @@ import "./ProjectPage.css";
           </template>
           <template #image>
             <img
-                src="/portfolio-home.png"
-                alt="Portfolio homepage preview"
-                class="project-image"
+              src="/portfolio-home.png"
+              alt="Portfolio homepage preview"
+              class="project-image"
             >
           </template>
         </ImageTextCombinedView>
@@ -49,7 +53,9 @@ import "./ProjectPage.css";
       <EditorLine :indentation="2" />
       <EditorLine :indentation="2">
         <section>
-          <h3 class="list-title">Features</h3>
+          <h3 class="list-title">
+            Features
+          </h3>
           <ul>
             <li>
               <h4>Immersive Code Editor Environment</h4>

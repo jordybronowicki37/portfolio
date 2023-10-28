@@ -2,8 +2,8 @@
 import Editor from "../../components/Editor.vue";
 import EditorLine from "../../components/EditorLine.vue";
 import ImageTextCombinedView from "../../components/ImageTextCombinedView.vue";
-import TechPillContainer from "../../components/TechPillContainer.vue";
 import "./ProjectPage.css";
+import ProjectProperties from "../../components/ProjectProperties.vue";
 </script>
 
 <template>
@@ -16,9 +16,12 @@ import "./ProjectPage.css";
       </EditorLine>
       <EditorLine :indentation="1">
         <div class="tags-wrapper">
-          <TechPillContainer
-              :types="['.net', 'c#', 'angular', 'typescript', 'school/external']"
-              background-color="transparent"
+          <ProjectProperties
+            :languages="['c#', 'typescript', 'html', 'css']"
+            :frameworks="['.net', 'angular']"
+            type="school/external"
+            status="completed"
+            :links="[]"
           />
         </div>
       </EditorLine>
@@ -36,9 +39,9 @@ import "./ProjectPage.css";
           </template>
           <template #image>
             <img
-                src="/neerslag-radar-basic-views.png"
-                alt="Neerslag radar basic view"
-                class="project-image"
+              src="/neerslag-radar-basic-views.png"
+              alt="Neerslag radar basic view"
+              class="project-image"
             >
           </template>
         </ImageTextCombinedView>
@@ -57,9 +60,9 @@ import "./ProjectPage.css";
           </template>
           <template #image>
             <img
-                src="/neerslag-radar-complex-views.png"
-                alt="Neerslag radar complex view"
-                class="project-image"
+              src="/neerslag-radar-complex-views.png"
+              alt="Neerslag radar complex view"
+              class="project-image"
             >
           </template>
         </ImageTextCombinedView>
@@ -78,9 +81,9 @@ import "./ProjectPage.css";
           </template>
           <template #image>
             <img
-                src="/neerslag-radar-configs.png"
-                alt="Neerslag radar configurations"
-                class="project-image"
+              src="/neerslag-radar-configs.png"
+              alt="Neerslag radar configurations"
+              class="project-image"
             >
           </template>
         </ImageTextCombinedView>

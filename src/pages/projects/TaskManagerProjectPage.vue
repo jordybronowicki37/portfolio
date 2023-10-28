@@ -2,8 +2,8 @@
 import Editor from "../../components/Editor.vue";
 import EditorLine from "../../components/EditorLine.vue";
 import ImageTextCombinedView from "../../components/ImageTextCombinedView.vue";
-import TechPillContainer from "../../components/TechPillContainer.vue";
 import "./ProjectPage.css";
+import ProjectProperties from "../../components/ProjectProperties.vue";
 </script>
 
 <template>
@@ -16,8 +16,14 @@ import "./ProjectPage.css";
       </EditorLine>
       <EditorLine :indentation="1">
         <div class="tags-wrapper">
-          <TechPillContainer
-              :types="['java', 'spring', 'postgresql', 'aws', 'react', 'typescript', 'sass', 'school']"
+          <ProjectProperties
+            :languages="['java', 'typescript', 'html', 'sass']"
+            :frameworks="['spring', 'react']"
+            database="postgresql"
+            deployment="aws"
+            type="school"
+            status="completed"
+            :links="[]"
           />
         </div>
       </EditorLine>
@@ -37,9 +43,9 @@ import "./ProjectPage.css";
           </template>
           <template #image>
             <img
-                src="/tas-board.png"
-                alt="Tasks inside of a board example"
-                class="project-image"
+              src="/tas-board.png"
+              alt="Tasks inside of a board example"
+              class="project-image"
             >
           </template>
         </ImageTextCombinedView>
@@ -61,9 +67,9 @@ import "./ProjectPage.css";
           </template>
           <template #image>
             <img
-                src="/tas-edit-task.png"
-                alt="Edit task properties"
-                class="project-image"
+              src="/tas-edit-task.png"
+              alt="Edit task properties"
+              class="project-image"
             >
           </template>
         </ImageTextCombinedView>
@@ -72,7 +78,9 @@ import "./ProjectPage.css";
       <EditorLine :indentation="2" />
       <EditorLine :indentation="2">
         <section>
-          <h3 class="list-title">Features</h3>
+          <h3 class="list-title">
+            Features
+          </h3>
           <ul>
             <li>
               <h4>Create multiple Boards</h4>

@@ -2,8 +2,8 @@
 import EditorLine from "../../components/EditorLine.vue";
 import Editor from "../../components/Editor.vue";
 import ImageTextCombinedView from "../../components/ImageTextCombinedView.vue";
-import TechPillContainer from "../../components/TechPillContainer.vue";
 import "./ProjectPage.css";
+import ProjectProperties from "../../components/ProjectProperties.vue";
 </script>
 
 <template>
@@ -16,9 +16,16 @@ import "./ProjectPage.css";
       </EditorLine>
       <EditorLine :indentation="1">
         <div class="tags-wrapper">
-          <TechPillContainer
-              link="https://github.com/jordybronowicki37/vue-snake"
-              :types="['vue', 'typescript', 'personal']"
+          <ProjectProperties
+            :languages="['typescript', 'html', 'css']"
+            :frameworks="['vue']"
+            deployment="render"
+            type="personal"
+            status="in progress"
+            :links="[
+              'https://github.com/jordybronowicki37/vue-snake',
+              'https://snake-game-o64n.onrender.com/'
+            ]"
           />
         </div>
       </EditorLine>
@@ -37,9 +44,9 @@ import "./ProjectPage.css";
           </template>
           <template #image>
             <img
-                src="/snake-game.png"
-                alt="Snake single-player game preview"
-                class="project-image"
+              src="/snake-game.png"
+              alt="Snake single-player game preview"
+              class="project-image"
             >
           </template>
         </ImageTextCombinedView>
@@ -61,9 +68,9 @@ import "./ProjectPage.css";
           </template>
           <template #image>
             <img
-                src="/snake-game.png"
-                alt="Snake levels preview"
-                class="project-image"
+              src="/snake-game.png"
+              alt="Snake levels preview"
+              class="project-image"
             >
           </template>
         </ImageTextCombinedView>
@@ -83,9 +90,9 @@ import "./ProjectPage.css";
           </template>
           <template #image>
             <img
-                src="/snake-levels.png"
-                alt="Snake levels preview"
-                class="project-image"
+              src="/snake-levels.png"
+              alt="Snake levels preview"
+              class="project-image"
             >
           </template>
         </ImageTextCombinedView>
@@ -108,9 +115,9 @@ import "./ProjectPage.css";
           </template>
           <template #image>
             <img
-                src="/snake-levels.png"
-                alt="Snake levels preview"
-                class="project-image"
+              src="/snake-levels.png"
+              alt="Snake levels preview"
+              class="project-image"
             >
           </template>
         </ImageTextCombinedView>

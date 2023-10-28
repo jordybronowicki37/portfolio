@@ -2,8 +2,8 @@
 import Editor from "../../components/Editor.vue";
 import EditorLine from "../../components/EditorLine.vue";
 import ImageTextCombinedView from "../../components/ImageTextCombinedView.vue";
-import TechPillContainer from "../../components/TechPillContainer.vue";
 import "./ProjectPage.css";
+import ProjectProperties from "../../components/ProjectProperties.vue";
 </script>
 
 <template>
@@ -16,9 +16,13 @@ import "./ProjectPage.css";
       </EditorLine>
       <EditorLine :indentation="1">
         <div class="tags-wrapper">
-          <TechPillContainer
-              :types="['.net', 'c#', 'mongodb', 'react', 'typescript', 'sass', 'personal']"
-              link="https://github.com/jordybronowicki37/production-calculator"
+          <ProjectProperties
+            :languages="['c#', 'typescript', 'html', 'sass']"
+            :frameworks="['.net', 'react']"
+            database="mongodb"
+            type="personal"
+            status="in progress"
+            :links="['https://github.com/jordybronowicki37/production-calculator']"
           />
         </div>
       </EditorLine>
@@ -36,9 +40,9 @@ import "./ProjectPage.css";
           </template>
           <template #image>
             <img
-                src="/prod-cal-projects.png"
-                alt="Production calculator projects preview"
-                class="project-image"
+              src="/prod-cal-projects.png"
+              alt="Production calculator projects preview"
+              class="project-image"
             >
           </template>
         </ImageTextCombinedView>
@@ -57,9 +61,9 @@ import "./ProjectPage.css";
           </template>
           <template #image>
             <img
-                src="/prod-cal-editor.png"
-                alt="Production calculator editor preview"
-                class="project-image"
+              src="/prod-cal-editor.png"
+              alt="Production calculator editor preview"
+              class="project-image"
             >
           </template>
         </ImageTextCombinedView>
