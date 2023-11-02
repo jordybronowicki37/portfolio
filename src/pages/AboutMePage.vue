@@ -96,32 +96,55 @@ import EditorLine from "../components/EditorLine.vue";
 
     <EditorLine :indentation="1" />
     <EditorLine :indentation="1" />
-    <EditorLine :indentation="1" >
+    <EditorLine :indentation="1">
       <h3>Contact</h3>
     </EditorLine>
 
     <EditorLine :indentation="2">
       <div class="contact-info-line">
         <div class="contact-item-icon-wrapper">
-          <box-icon color="var(--bg-color-600)" size="2em" type='logo' name='linkedin-square' />
+          <box-icon
+            color="var(--bg-color-600)"
+            size="2em"
+            type="logo"
+            name="linkedin-square"
+          />
         </div>
-        <a href="https://www.linkedin.com/in/jordy-bronowicki/" target="_blank">jordy-bronowicki</a>
+        <a
+          href="https://www.linkedin.com/in/jordy-bronowicki/"
+          target="_blank"
+        >jordy-bronowicki</a>
       </div>
     </EditorLine>
     <EditorLine :indentation="2">
       <div class="contact-info-line">
         <div class="contact-item-icon-wrapper">
-          <box-icon color="var(--bg-color-600)" size="2em" type='logo' name='github' />
+          <box-icon
+            color="var(--bg-color-600)"
+            size="2em"
+            type="logo"
+            name="github"
+          />
         </div>
-        <a href="https://github.com/jordybronowicki37" target="_blank">jordybronowicki37</a>
+        <a
+          href="https://github.com/jordybronowicki37"
+          target="_blank"
+        >jordybronowicki37</a>
       </div>
     </EditorLine>
     <EditorLine :indentation="2">
       <div class="contact-info-line">
         <div class="contact-item-icon-wrapper">
-          <box-icon color="var(--bg-color-600)" size="2em" name='envelope' />
+          <box-icon
+            color="var(--bg-color-600)"
+            size="2em"
+            name="envelope"
+          />
         </div>
-        <a href="mailto:jordybronowicki37@gmail.com" target="_blank">jordybronowicki37@gmail.com</a>
+        <a
+          href="mailto:jordybronowicki37@gmail.com"
+          target="_blank"
+        >jordybronowicki37@gmail.com</a>
       </div>
     </EditorLine>
 
