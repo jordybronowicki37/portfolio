@@ -4,7 +4,7 @@
     "imageSrc": "/prod-cal-editor.png",
     "imageAlt": "Production calculator editor preview",
     "tags": [
-      ".net", "c#", "mongodb", "react", "typescript", "sass", "personal"
+      ".net", "c#", "mongodb", "react", "typescript", "redux", "sass", "personal"
     ],
 
     "externalLink": "https://github.com/jordybronowicki37/production-calculator",
@@ -35,7 +35,7 @@
     "title": "Task manager",
     "imageSrc": "/tas-board.png",
     "imageAlt": "Task manager board preview",
-    "tags": ["java", "spring", "postgresql", "aws", "react", "typescript", "sass", "school"],
+    "tags": ["java", "spring", "postgresql", "aws", "react", "typescript", "redux", "sass", "school"],
     "externalLink": "",
     "pageLink": "/projects/task-manager",
     "description": "With TAS you can manage your tasks efficiently. This school project is inspired by the popular issue management tool Trello and was created to learn microservices cloud deployment with AWS."

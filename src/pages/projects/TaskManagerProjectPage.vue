@@ -18,7 +18,7 @@ import ProjectProperties from "../../components/ProjectProperties.vue";
         <div class="tags-wrapper">
           <ProjectProperties
             :languages="['java', 'typescript', 'html', 'sass']"
-            :frameworks="['spring', 'react']"
+            :frameworks="['spring', 'react', 'redux']"
             database="postgresql"
             deployment="aws"
             type="school"

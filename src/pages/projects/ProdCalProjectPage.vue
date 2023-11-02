@@ -18,7 +18,7 @@ import ProjectProperties from "../../components/ProjectProperties.vue";
         <div class="tags-wrapper">
           <ProjectProperties
             :languages="['c#', 'typescript', 'html', 'sass']"
-            :frameworks="['.net', 'react']"
+            :frameworks="['.net', 'react', 'redux']"
             database="mongodb"
             type="personal"
             status="in progress"
