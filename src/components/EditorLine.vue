@@ -30,9 +30,9 @@ defineProps<{indentation: number}>();
   content: counter(line-number);
   display: inline-block;
   text-align: right;
-  color: #999;
-  background: #333;
-  border-right: 2px solid #555;
+  color: var(--secondary-color);
+  background: var(--bg-color-600);
+  border-right: 1px solid var(--secondary-color);
   height: 100%;
   width: 2em;
   padding-left: 0.2rem;
@@ -40,7 +40,7 @@ defineProps<{indentation: number}>();
 }
 
 .line-indentation {
-  border-right: 1px solid white;
+  border-right: 1px solid var(--secondary-color);
   min-width: 10px;
   min-height: 1em;
 }

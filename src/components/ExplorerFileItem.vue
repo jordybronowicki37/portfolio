@@ -23,18 +23,16 @@ nav {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
 a {
   color: inherit;
   text-decoration: none;
   user-select: none;
 }
-
 a.router-link-active {
-  color: #ea6d30;
+  color: var(--accent-color);
 }
-
 a:hover {
-  color: #ea6d3099;
+  color: var(--accent-color);
+  opacity: 0.7;
 }
 </style>

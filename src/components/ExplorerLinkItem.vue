@@ -24,13 +24,12 @@ nav {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
 a {
   color: inherit;
   user-select: none;
 }
-
 a:hover {
-  color: #ea6d3099;
+  color: var(--accent-color);
+  opacity: 0.7;
 }
 </style>

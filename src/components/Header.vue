@@ -58,7 +58,7 @@ header {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  background: #303030;
+  background: var(--bg-color-600);
   position: relative;
 }
 header>* {
@@ -69,7 +69,7 @@ header>* {
   width: 1.5rem;
 }
 #current-file-title {
-  color: #bbb;
+  color: var(--font-color-400);
 }
 header box-icon {
   cursor: pointer;
@@ -85,8 +85,8 @@ header box-icon {
   z-index: 1;
   width: 100%;
   padding: 0;
-  background-color: #242424;
-  border-bottom: 2px solid #555;
+  background-color: var(--bg-color-800);
+  border-bottom: 2px solid var(--bg-color-500);
 }
 .mobile-navigation>div {
   overflow: hidden;

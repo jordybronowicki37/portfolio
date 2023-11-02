@@ -4,7 +4,7 @@ import {GetPillData} from "./TechPillConfiguredData.ts";
 
 const {type} = defineProps<{type:string}>();
 const typeData = GetPillData(type);
-const textColor = typeData.color ?? "#ffffffde";
+const textColor = typeData.color ?? "var(--font-color-200)";
 </script>
 
 <template>

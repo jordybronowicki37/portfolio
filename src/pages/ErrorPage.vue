@@ -27,7 +27,7 @@ import Editor from "../components/Editor.vue";
   flex-grow: 1;
 }
 .not-found-code {
-  color: #8f1e1e;
+  color: var(--error-color);
   font-size: 80px;
   font-weight: 700;
 }

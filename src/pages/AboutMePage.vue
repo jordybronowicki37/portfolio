@@ -103,7 +103,7 @@ import EditorLine from "../components/EditorLine.vue";
     <EditorLine :indentation="2">
       <div class="contact-info-line">
         <div class="contact-item-icon-wrapper">
-          <box-icon color="#333" size="2em" type='logo' name='linkedin-square' />
+          <box-icon color="var(--bg-color-600)" size="2em" type='logo' name='linkedin-square' />
         </div>
         <a href="https://www.linkedin.com/in/jordy-bronowicki/" target="_blank">jordy-bronowicki</a>
       </div>
@@ -111,7 +111,7 @@ import EditorLine from "../components/EditorLine.vue";
     <EditorLine :indentation="2">
       <div class="contact-info-line">
         <div class="contact-item-icon-wrapper">
-          <box-icon color="#333" size="2em" type='logo' name='github' />
+          <box-icon color="var(--bg-color-600)" size="2em" type='logo' name='github' />
         </div>
         <a href="https://github.com/jordybronowicki37" target="_blank">jordybronowicki37</a>
       </div>
@@ -119,7 +119,7 @@ import EditorLine from "../components/EditorLine.vue";
     <EditorLine :indentation="2">
       <div class="contact-info-line">
         <div class="contact-item-icon-wrapper">
-          <box-icon color="#333" size="2em" name='envelope' />
+          <box-icon color="var(--bg-color-600)" size="2em" name='envelope' />
         </div>
         <a href="mailto:jordybronowicki37@gmail.com" target="_blank">jordybronowicki37@gmail.com</a>
       </div>

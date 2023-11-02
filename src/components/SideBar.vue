@@ -8,6 +8,7 @@ const explorerOpened = ref<boolean>(true);
 <template>
   <div
     v-if="!explorerOpened"
+    key="side-bar-title"
     class="file-explorer-tab"
     @click="explorerOpened=true"
   >
@@ -16,6 +17,7 @@ const explorerOpened = ref<boolean>(true);
 
   <div
     v-if="explorerOpened"
+    key="side-bar"
     class="side-bar"
   >
     <div class="side-bar-title">
@@ -41,11 +43,10 @@ const explorerOpened = ref<boolean>(true);
   display: flex;
   flex-direction: column;
   height: 100%;
-  background: #444;
+  background: var(--bg-color-500);
   min-width: 20%;
   max-width: 20%;
 }
-
 .file-explorer-tab {
   cursor: pointer;
   padding: 0 0.5rem;
@@ -57,22 +58,19 @@ const explorerOpened = ref<boolean>(true);
   transform: rotate(-90deg) translateX(-100%);
   transform-origin: top left;
 }
-
 .file-explorer-tab:hover,
 .minimize-explorer:hover {
-  background: #2227;
+  background: var(--bg-color-800);
 }
-
 .side-bar-title {
   width: 100%;
   text-align: center;
   font-weight: bold;
   font-size: small;
-  background-color: #333b;
+  background-color: var(--bg-color-600);
   position: relative;
   overflow: hidden;
 }
-
 .minimize-explorer {
   position: absolute;
   right: 0;

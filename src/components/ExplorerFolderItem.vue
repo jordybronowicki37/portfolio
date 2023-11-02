@@ -52,33 +52,28 @@ const folderOpen = ref<boolean>(document.URL.includes(link));
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
 .folder-item>div {
   display: inline-block;
   width: 1rem;
 }
-
 .folder-collapse {
   cursor: pointer;
 }
-
 .folder-contents {
   display: flex;
   flex-direction: column;
   margin-left: 1rem;
 }
-
 a {
   color: inherit;
   text-decoration: none;
   user-select: none;
 }
-
 a.router-link-active {
-  color: #ea6d30;
+  color: var(--accent-color);
 }
-
 a:hover {
-  color: #ea6d3099;
+  color: var(--accent-color);
+  opacity: 0.7;
 }
 </style>

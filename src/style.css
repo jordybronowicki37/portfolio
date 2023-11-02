@@ -2,9 +2,23 @@
   font-family: Monospaced, monospace;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: #ffffffde;
-  background-color: #242424;
+  --font-color-200: #ffffffde;
+  --font-color-300: #bdbdbd;
+  --font-color-400: #bbb;
+
+  --bg-color-800: #242424;
+  --bg-color-600: #333;
+  --bg-color-500: #444;
+
+  --secondary-color: #999;
+
+  --accent-color: #ea6d30;
+
+  --error-color: #8f1e1e;
+
+  color-scheme: dark only;
+  color: var(--font-color-200);
+  background-color: var(--bg-color-800);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;

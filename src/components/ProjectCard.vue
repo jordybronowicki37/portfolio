@@ -46,7 +46,7 @@ defineProps<{project: ProjectCardProps}>();
 <style scoped>
 .project-card {
   margin: 1rem;
-  background-color: #333;
+  background-color: var(--bg-color-600);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -59,7 +59,7 @@ header {
 h2 {
   text-align: center;
   font-size: 24px;
-  color: #ddd;
+  color: var(--font-color-300);
 }
 .project-card>p {
   flex-grow: 1;
@@ -73,13 +73,13 @@ h2 {
   margin: 0.5rem;
   padding: 0.2rem 1rem;
   text-align: center;
-  color: #bbb;
+  color: var(--font-color-400);
   text-decoration: none;
-  border: 1px solid #bbb;
+  border: 1px solid var(--font-color-400);
   border-radius: 1rem;
 }
 .learn-more-nav:hover {
-  background-color: #bbb;
-  color: #333;
+  background-color: var(--font-color-400);
+  color: var(--bg-color-600);
 }
 </style>

@@ -10,7 +10,7 @@ if (link.includes("github")) pillText = "github";
 if (link.includes("render")) pillText = "render";
 
 const typeData = GetPillData(pillText);
-const textColor = typeData.color ?? "#ffffffde";
+const textColor = typeData.color ?? "var(--font-color-200)";
 </script>
 
 <template>

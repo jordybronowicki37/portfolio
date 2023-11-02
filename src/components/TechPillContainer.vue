@@ -3,7 +3,7 @@ import TechPillConfigured from "./TechPillConfigured.vue";
 import TechPillLink from "./TechPillLink.vue";
 withDefaults(
     defineProps<{ types:string[]; backgroundColor?: string; link?: string; }>(),
-    { backgroundColor: "#333", link: "" }
+    { backgroundColor: "var(--bg-color-600)", link: "" }
 );
 </script>
 

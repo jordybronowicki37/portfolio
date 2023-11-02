@@ -84,7 +84,7 @@ defineProps<{
   display: grid;
   grid-template-columns: auto auto;
   gap: 0 0.5rem;
-  background-color: #303030;
+  background-color: var(--bg-color-600);
   border-radius: 0.5rem;
   padding: 0.2rem;
   margin: 0.2rem;

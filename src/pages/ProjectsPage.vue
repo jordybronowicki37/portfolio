@@ -128,7 +128,7 @@ watch([filterTitle, filterTags], () => {
   flex-direction: column;
   padding: 0.3rem;
   gap: 0.5rem;
-  background-color: #333;
+  background-color: var(--bg-color-600);
   border-radius: 0.5rem;
 }
 .filters {
@@ -150,7 +150,7 @@ watch([filterTitle, filterTags], () => {
   left: 0.8em;
   padding: 0.1em;
   font-size: 12px;
-  background-color: #333;
+  background-color: var(--bg-color-600);
   user-select: none;
 }
 .tags-filter-expand-button-wrapper {
@@ -199,7 +199,7 @@ watch([filterTitle, filterTags], () => {
   display: flex;
   flex-direction: column;
   position: absolute;
-  background-color: #242424;
+  background-color: var(--bg-color-800);
   border-radius: 0.5rem;
   border: 1px solid #bbb;
   width: 15rem;
