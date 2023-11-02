@@ -2,71 +2,79 @@
 import Editor from "../../components/Editor.vue";
 import EditorLine from "../../components/EditorLine.vue";
 import ImageTextCombinedView from "../../components/ImageTextCombinedView.vue";
-import TechPillContainer from "../../components/TechPillContainer.vue";
 import "./ProjectPage.css";
+import ProjectProperties from "../../components/ProjectProperties.vue";
 </script>
 
 <template>
-  <Editor>
-    <EditorLine :indentation="0" />
-    <EditorLine :indentation="0" />
-    <EditorLine :indentation="1">
-      <h2>Project: Production Calculator</h2>
-    </EditorLine>
-    <EditorLine :indentation="1">
-      <TechPillContainer
-        :types="['.net', 'c#', 'mongodb', 'react', 'typescript', 'sass', 'personal']"
-        link="https://github.com/jordybronowicki37/production-calculator"
-      />
-    </EditorLine>
+  <div class="project-page">
+    <Editor>
+      <EditorLine :indentation="0" />
+      <EditorLine :indentation="0" />
+      <EditorLine :indentation="1">
+        <h2>Project: Production Calculator</h2>
+      </EditorLine>
+      <EditorLine :indentation="1">
+        <div class="tags-wrapper">
+          <ProjectProperties
+            :languages="['c#', 'typescript', 'html', 'sass']"
+            :frameworks="['.net', 'react']"
+            database="mongodb"
+            type="personal"
+            status="in progress"
+            :links="['https://github.com/jordybronowicki37/production-calculator']"
+          />
+        </div>
+      </EditorLine>
 
-    <EditorLine :indentation="2" />
-    <EditorLine :indentation="2">
-      <ImageTextCombinedView>
-        <template #text>
-          <div>
-            <h3>Multiple different projects</h3>
-            <section>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos illo quae quaerat rerum. Ea nihil suscipit vel voluptas? Accusamus ad architecto atque autem beatae culpa, delectus deserunt doloremque dolorum fuga incidunt laboriosam magni necessitatibus nisi officiis omnis quae quaerat qui quia quidem quo quos repudiandae soluta suscipit tenetur ullam voluptate.
-            </section>
-          </div>
-        </template>
-        <template #image>
-          <img
-            src="/prod-cal-projects.png"
-            alt="Production calculator projects preview"
-            class="project-image"
-          >
-        </template>
-      </ImageTextCombinedView>
-    </EditorLine>
+      <EditorLine :indentation="2" />
+      <EditorLine :indentation="2">
+        <ImageTextCombinedView>
+          <template #text>
+            <div>
+              <h3>Multiple different projects</h3>
+              <section>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos illo quae quaerat rerum. Ea nihil suscipit vel voluptas? Accusamus ad architecto atque autem beatae culpa, delectus deserunt doloremque dolorum fuga incidunt laboriosam magni necessitatibus nisi officiis omnis quae quaerat qui quia quidem quo quos repudiandae soluta suscipit tenetur ullam voluptate.
+              </section>
+            </div>
+          </template>
+          <template #image>
+            <img
+              src="/prod-cal-projects.png"
+              alt="Production calculator projects preview"
+              class="project-image"
+            >
+          </template>
+        </ImageTextCombinedView>
+      </EditorLine>
 
-    <EditorLine :indentation="2" />
-    <EditorLine :indentation="2" />
-    <EditorLine :indentation="2">
-      <ImageTextCombinedView image-on-the-left>
-        <template #text>
-          <div>
-            <h3>Editor</h3>
-            <section>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos illo quae quaerat rerum. Ea nihil suscipit vel voluptas? Accusamus ad architecto atque autem beatae culpa, delectus deserunt doloremque dolorum fuga incidunt laboriosam magni necessitatibus nisi officiis omnis quae quaerat qui quia quidem quo quos repudiandae soluta suscipit tenetur ullam voluptate.
-            </section>
-          </div>
-        </template>
-        <template #image>
-          <img
-            src="/prod-cal-editor.png"
-            alt="Production calculator editor preview"
-            class="project-image"
-          >
-        </template>
-      </ImageTextCombinedView>
-    </EditorLine>
+      <EditorLine :indentation="2" />
+      <EditorLine :indentation="2">
+        <ImageTextCombinedView image-on-the-left>
+          <template #text>
+            <div>
+              <h3>Editor</h3>
+              <section>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos illo quae quaerat rerum. Ea nihil suscipit vel voluptas? Accusamus ad architecto atque autem beatae culpa, delectus deserunt doloremque dolorum fuga incidunt laboriosam magni necessitatibus nisi officiis omnis quae quaerat qui quia quidem quo quos repudiandae soluta suscipit tenetur ullam voluptate.
+              </section>
+            </div>
+          </template>
+          <template #image>
+            <img
+              src="/prod-cal-editor.png"
+              alt="Production calculator editor preview"
+              class="project-image"
+            >
+          </template>
+        </ImageTextCombinedView>
+      </EditorLine>
 
-    <EditorLine :indentation="1" />
-    <EditorLine :indentation="0" />
-    <EditorLine :indentation="0" />
-  </Editor>
+      <EditorLine :indentation="2" />
+      <EditorLine :indentation="1" />
+      <EditorLine :indentation="0" />
+      <EditorLine :indentation="0" />
+    </Editor>
+  </div>
 </template>
 
 <style scoped>

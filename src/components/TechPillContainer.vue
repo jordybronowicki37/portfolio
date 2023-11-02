@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import TechPillConfigured from "./TechPillConfigured.vue";
-import TechPillSimple from "./TechPillSimple.vue";
+import TechPillLink from "./TechPillLink.vue";
 withDefaults(
     defineProps<{ types:string[]; backgroundColor?: string; link?: string; }>(),
     { backgroundColor: "#333", link: "" }
@@ -15,23 +15,10 @@ withDefaults(
       :type="type"
     />
     <slot />
-    <TechPillSimple
+    <TechPillLink
       v-if="link !== ''"
-      bg-color="#555"
-    >
-      <a
-        class="github-link"
-        :href="link"
-        target="_blank"
-      >
-        github
-        <box-icon
-          name="link-external"
-          size="10px"
-          color="#ffffffde"
-        />
-      </a>
-    </TechPillSimple>
+      :link="link"
+    />
   </div>
 </template>
 
@@ -45,18 +32,5 @@ withDefaults(
   background-color: v-bind(backgroundColor);
   border-radius: 1rem;
   overflow: hidden;
-}
-.github-link {
-  display: flex;
-  gap: 0.2rem;
-  padding: 0 0.5rem;
-  text-transform: uppercase;
-  font-size: 10px;
-  font-weight: 800;
-  color: white;
-  user-select: none;
-}
-.github-link>box-icon {
-  line-height: 0;
 }
 </style>

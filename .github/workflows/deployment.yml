@@ -25,9 +25,6 @@ jobs:
       - name: Run linter
         run: npm run lint
 
-      - name: Trigger Render deployment
-        run: curl -X GET https://api.render.com/deploy/${{ secrets.RENDER_SERVICE_ID }}?key=${{ secrets.RENDER_PROJECT_KEY }}
-
       - name: Create deployment on Github
         uses: chrnorm/deployment-action@v2
         id: deployment
@@ -35,4 +32,25 @@ jobs:
           token: ${{ github.token }}
           environment-url: ${{ vars.RENDER_PUBLIC_URL }}
           environment: production
-          initial-status: 'success'
+          initial-status: 'in_progress'
+
+      - name: Trigger Render deployment
+        run: curl -X GET https://api.render.com/deploy/${{ secrets.RENDER_SERVICE_ID }}?key=${{ secrets.RENDER_PROJECT_KEY }}
+
+      - name: Update deployment status (success)
+        if: success()
+        uses: chrnorm/deployment-status@v2
+        with:
+          token: ${{ github.token }}
+          environment-url: ${{ steps.deployment.outputs.environment_url }}
+          deployment-id: ${{ steps.deployment.outputs.deployment_id }}
+          state: 'success'
+
+      - name: Update deployment status (failure)
+        if: failure()
+        uses: chrnorm/deployment-status@v2
+        with:
+          token: ${{ github.token }}
+          environment-url: ${{ steps.deployment.outputs.environment_url }}
+          deployment-id: ${{ steps.deployment.outputs.deployment_id }}
+          state: 'failure'

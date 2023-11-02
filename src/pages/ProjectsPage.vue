@@ -120,8 +120,8 @@ watch([filterTitle, filterTags], () => {
   font-size: x-large;
 }
 .projects-container {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr))
 }
 .filters-wrapper {
   display: flex;
@@ -220,5 +220,11 @@ watch([filterTitle, filterTags], () => {
   top: 0;
   right: 0;
   cursor: pointer;
+}
+@media screen and (max-width: 600px) {
+  .filters {
+    display: flex;
+    flex-direction: column;
+  }
 }
 </style>
