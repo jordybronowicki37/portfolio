@@ -15,6 +15,8 @@ const emit = defineEmits<{
   (e: 'tagsFilterChanged', value: string[]): void
 }>();
 
+const {initialTags} = defineProps<{initialTags: string[]}>()
+
 type TagOccurrence = {
   amount: number,
   tag: string,
@@ -69,7 +71,7 @@ const tagOccurrenceGroups: TagOccurrenceGroup[] = [
   }
 ];
 
-const filterTags = ref<string[]>([]);
+const filterTags = ref<string[]>(initialTags);
 
 watch(filterTags, () => {
   emit("tagsFilterChanged", filterTags.value);

@@ -6,18 +6,35 @@ import ProjectCard, {ProjectCardProps} from "../components/ProjectCard.vue";
 import {ref, watch} from "vue";
 import TechPillConfigured from "../components/TechPillConfigured.vue";
 import TagsFilter from "../components/TagsFilter.vue";
+import {useRoute, useRouter} from "vue-router";
+
+const router = useRouter();
+const route = useRoute();
+const filterTitleQuery = route.query.filterTitle;
+const filterTagsQuery = route.query.filterTags;
+
+const extractTagsFilterFromQuery = (): string[] => {
+  if (!filterTagsQuery) return [];
+  if (typeof filterTagsQuery === "string") return [<string>filterTagsQuery];
+  return <string[]>filterTagsQuery;
+}
 
 const allProjects = projects as ProjectCardProps[];
-
 const projectsFiltered = ref<ProjectCardProps[]>(allProjects);
-const filterTitle = ref<string>("");
-const filterTags = ref<string[]>([]);
+const filterTitle = ref<string>(<string>filterTitleQuery || "");
+const filterTags = ref<string[]>(extractTagsFilterFromQuery());
 const filterTagsOpened = ref<boolean>(false);
 
-watch([filterTitle, filterTags], () => {
+const filterProjects = () => {
   projectsFiltered.value = allProjects
       .filter(v => v.title.toLowerCase().includes(filterTitle.value.toLowerCase()))
       .filter(v => filterTags.value.every(tag => v.tags.includes(tag)));
+}
+filterProjects();
+
+watch([filterTitle, filterTags], () => {
+  router.replace({query: {filterTitle: filterTitle.value, filterTags: filterTags.value}});
+  filterProjects();
 })
 </script>
 
@@ -82,7 +99,7 @@ watch([filterTitle, filterTags], () => {
                   @click="filterTagsOpened = false"
                 />
               </header>
-              <TagsFilter @tags-filter-changed="v => filterTags = v" />
+              <TagsFilter @tags-filter-changed="v => filterTags = v" :initial-tags="filterTags" />
             </div>
           </div>
         </div>
