@@ -78,7 +78,7 @@ header box-icon {
   display: grid;
   grid-template-rows: 0fr;
   grid-template-columns: 1fr;
-  transition: 0.5s;
+  transition: grid-template-rows 0.5s;
   position: absolute;
   top: 100%;
   left: 0;
@@ -86,17 +86,15 @@ header box-icon {
   width: 100%;
   padding: 0;
   background-color: var(--bg-color-800);
-  border-bottom: 2px solid var(--bg-color-500);
+  border-bottom: 1px solid var(--bg-color-500);
 }
 .mobile-navigation>div {
   overflow: hidden;
   padding: 1rem;
+  transition: padding 0.5s;
 }
 .mobile-navigation.opened {
   grid-template-rows: 1fr;
-}
-.mobile-navigation.closed {
-  border-bottom-color: transparent;
 }
 .mobile-navigation.closed>div {
   padding: 0 1rem;

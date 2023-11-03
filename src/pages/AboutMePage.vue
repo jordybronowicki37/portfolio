@@ -16,16 +16,16 @@ import EditorLine from "../components/EditorLine.vue";
     <EditorLine :indentation="1" />
     <EditorLine :indentation="2">
       <div class="text-container-with-profile-pic">
+        <img
+          src="/pixel-user.png"
+          alt="User profile picture"
+        >
         <section>
           Hey there! I'm Jordy Bronowicki, a passionate back-end software developer with a flair for turning ideas into
           functional and efficient code. My journey into the world of programming started with small Python programs,
           but it was during my Bachelor's degree in ICT at the University of Applied Sciences in Utrecht that I truly
           fell in love with the art of building digital solutions.
         </section>
-        <img
-          src="/pixel-user.png"
-          alt="User profile picture"
-        >
       </div>
     </EditorLine>
 
@@ -156,6 +156,7 @@ import EditorLine from "../components/EditorLine.vue";
 <style scoped>
 .text-container-with-profile-pic {
   display: flex;
+  flex-direction: row-reverse;
   align-items: center;
 }
 .text-container-with-profile-pic img {
@@ -181,5 +182,17 @@ import EditorLine from "../components/EditorLine.vue";
 a {
   color: #ffffffde;
   font-size: 1em;
+}
+@media screen and (max-width: 600px) {
+  .text-container-with-profile-pic {
+    display: block;
+  }
+  .text-container-with-profile-pic img {
+    float: right;
+    border-radius: 0.5rem;
+    margin: 0.5rem;
+    height: 5rem;
+    width: 5rem;
+  }
 }
 </style>

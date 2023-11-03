@@ -52,6 +52,7 @@ defineProps<{project: ProjectCardProps}>();
   align-items: center;
   overflow: hidden;
   border-radius: 0.5rem;
+  max-width: 25rem;
 }
 header {
   width: 100%;
