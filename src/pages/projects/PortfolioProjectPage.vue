@@ -22,7 +22,10 @@ import ProjectProperties from "../../components/ProjectProperties.vue";
             deployment="render"
             type="personal"
             status="completed"
-            :links="['https://github.com/jordybronowicki37/portfolio']"
+            :links="[
+              'https://github.com/jordybronowicki37/portfolio',
+              'https://jordy-bronowicki-portfolio.onrender.com/'
+            ]"
           />
         </div>
       </EditorLine>

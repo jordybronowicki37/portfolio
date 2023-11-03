@@ -6,8 +6,7 @@
     "tags": [
       ".net", "c#", "mongodb", "react", "typescript", "redux", "sass", "personal"
     ],
-
-    "externalLink": "https://github.com/jordybronowicki37/production-calculator",
+    "externalLinks": ["https://github.com/jordybronowicki37/production-calculator"],
     "pageLink": "/projects/production-calculator",
     "description": "The production calculator allows you to easily create new production chains or map out existing factories. Calculate product throughput, identify efficiency problems and compare recipe efficiency."
   },
@@ -18,7 +17,10 @@
     "tags": [
       "vue", "typescript", "personal"
     ],
-    "externalLink": "https://github.com/jordybronowicki37/portfolio",
+    "externalLinks": [
+      "https://github.com/jordybronowicki37/portfolio",
+      "https://jordy-bronowicki-portfolio.onrender.com/"
+    ],
     "pageLink": "/projects/portfolio",
     "description": "This is the project that you are looking at right now, my portfolio website. It previews and explains all of my current projects in a code editor inspired website."
   },
@@ -27,7 +29,10 @@
     "imageSrc": "/snake-game.png",
     "imageAlt": "Production calculator editor screenshot",
     "tags": ["vue", "typescript", "personal"],
-    "externalLink": "https://github.com/jordybronowicki37/vue-snake",
+    "externalLinks": [
+      "https://github.com/jordybronowicki37/vue-snake",
+      "https://snake-game-o64n.onrender.com/"
+    ],
     "pageLink": "/projects/snake-game",
     "description": "Play a more exciting version of the classic game of snake. Complete with a collection of exciting levels, single-player challenges, strategic power-ups, custom skins and two fun multiplayer game-modes."
   },
@@ -36,7 +41,7 @@
     "imageSrc": "/tas-board.png",
     "imageAlt": "Task manager board preview",
     "tags": ["java", "spring", "postgresql", "aws", "react", "typescript", "redux", "sass", "school"],
-    "externalLink": "",
+    "externalLinks": [],
     "pageLink": "/projects/task-manager",
     "description": "With TAS you can manage your tasks efficiently. This school project is inspired by the popular issue management tool Trello and was created to learn microservices cloud deployment with AWS."
   },
@@ -47,7 +52,7 @@
     "tags": [
       ".net", "c#", "angular", "typescript", "school/external"
     ],
-    "externalLink": "",
+    "externalLinks": [],
     "pageLink": "/projects/neerslag-radar",
     "description": "This project was part of a collaboration between a student group and an external client. We were tasked to develop an application that contained interactive weather animations. Raw weather data would be processed and plot onto a map or graph with which you can interact to compare weather patterns."
   }

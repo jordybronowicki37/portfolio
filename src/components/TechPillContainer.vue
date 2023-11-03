@@ -2,8 +2,8 @@
 import TechPillConfigured from "./TechPillConfigured.vue";
 import TechPillLink from "./TechPillLink.vue";
 withDefaults(
-    defineProps<{ types:string[]; backgroundColor?: string; link?: string; }>(),
-    { backgroundColor: "var(--bg-color-600)", link: "" }
+    defineProps<{ types:string[]; backgroundColor?: string; links: string[]; }>(),
+    { backgroundColor: "var(--bg-color-600)" }
 );
 </script>
 
@@ -16,7 +16,8 @@ withDefaults(
     />
     <slot />
     <TechPillLink
-      v-if="link !== ''"
+      v-for="link in links"
+      :key="link"
       :link="link"
     />
   </div>

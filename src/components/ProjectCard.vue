@@ -6,7 +6,7 @@ export type ProjectCardProps = {
   imageSrc: string,
   imageAlt: string,
   tags: string[],
-  externalLink: string,
+  externalLinks: string[],
   pageLink: string,
   description:string
 }
@@ -26,7 +26,7 @@ defineProps<{project: ProjectCardProps}>();
       >
     </header>
     <TechPillContainer
-      :link="project.externalLink"
+      :links="project.externalLinks"
       :types="project.tags"
       background-color="transparent"
     />
