@@ -138,7 +138,8 @@ watch([filterTitle, filterTags], () => {
 }
 .projects-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr))
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  justify-items: center;
 }
 .filters-wrapper {
   display: flex;
