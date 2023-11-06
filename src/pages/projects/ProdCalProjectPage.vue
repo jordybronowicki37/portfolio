@@ -79,7 +79,9 @@ import ProjectProperties from "../../components/ProjectProperties.vue";
       <EditorLine :indentation="2" />
       <EditorLine :indentation="2">
         <section>
-          <h3 class="list-title">Connections and nodes</h3>
+          <h3 class="list-title">
+            Connections and nodes
+          </h3>
           <ul>
             <li>
               <h4>Connections</h4>
@@ -136,7 +138,9 @@ import ProjectProperties from "../../components/ProjectProperties.vue";
       <EditorLine :indentation="2" />
       <EditorLine :indentation="2">
         <section>
-          <h3 class="list-title">Features</h3>
+          <h3 class="list-title">
+            Features
+          </h3>
           <ul>
             <li>
               <h4>Projects</h4>
