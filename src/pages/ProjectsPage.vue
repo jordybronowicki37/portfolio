@@ -1,8 +1,8 @@
-<script setup lang="ts">
+<script setup lang="js">
 import Editor from "../components/Editor.vue";
 import EditorLine from "../components/EditorLine.vue";
 import projects from "../components/ProjectCardsData.json";
-import ProjectCard, {ProjectCardProps} from "../components/ProjectCard.vue";
+import ProjectCard from "../components/ProjectCard.vue";
 import {ref, watch} from "vue";
 import TechPillConfigured from "../components/TechPillConfigured.vue";
 import TagsFilter from "../components/TagsFilter.vue";
@@ -13,29 +13,28 @@ const route = useRoute();
 const filterTitleQuery = route.query.filterTitle;
 const filterTagsQuery = route.query.filterTags;
 
-const extractTagsFilterFromQuery = (): string[] => {
+const extractTagsFilterFromQuery = function () {
   if (!filterTagsQuery) return [];
-  if (typeof filterTagsQuery === "string") return [<string>filterTagsQuery];
-  return <string[]>filterTagsQuery;
+  if (typeof filterTagsQuery === "string") return [filterTagsQuery];
+  return filterTagsQuery;
 }
 
-const allProjects = projects as ProjectCardProps[];
-const projectsFiltered = ref<ProjectCardProps[]>(allProjects);
-const filterTitle = ref<string>(<string>filterTitleQuery || "");
-const filterTags = ref<string[]>(extractTagsFilterFromQuery());
-const filterTagsOpened = ref<boolean>(false);
+const projectsFiltered = ref(projects);
+const filterTitle = ref(filterTitleQuery || "");
+const filterTags = ref(extractTagsFilterFromQuery());
+const filterTagsOpened = ref(false);
 
-const filterProjects = () => {
-  projectsFiltered.value = allProjects
+const filterProjects = function () {
+  projectsFiltered.value = projects
       .filter(v => v.title.toLowerCase().includes(filterTitle.value.toLowerCase()))
       .filter(v => filterTags.value.every(tag => v.tags.includes(tag)));
 }
 filterProjects();
 
-watch([filterTitle, filterTags], () => {
+watch([filterTitle, filterTags], function () {
   router.replace({query: {filterTitle: filterTitle.value, filterTags: filterTags.value}});
-  filterProjects();
-})
+  filterProjects()
+});
 </script>
 
 <template>
@@ -99,7 +98,10 @@ watch([filterTitle, filterTags], () => {
                   @click="filterTagsOpened = false"
                 />
               </header>
-              <TagsFilter @tags-filter-changed="v => filterTags = v" :initial-tags="filterTags" />
+              <TagsFilter
+                :initial-tags="filterTags"
+                @tags-filter-changed="v => filterTags = v"
+              />
             </div>
           </div>
         </div>
