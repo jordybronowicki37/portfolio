@@ -34,7 +34,10 @@ import ProjectProperties from "../../components/ProjectProperties.vue";
             <div>
               <h3>Multiple different projects</h3>
               <section>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos illo quae quaerat rerum. Ea nihil suscipit vel voluptas? Accusamus ad architecto atque autem beatae culpa, delectus deserunt doloremque dolorum fuga incidunt laboriosam magni necessitatibus nisi officiis omnis quae quaerat qui quia quidem quo quos repudiandae soluta suscipit tenetur ullam voluptate.
+                With the Production Calculator, you can handle an array of projects tailored to your manufacturing
+                needs. From optimizing existing production lines to creating innovative setups, our tool supports
+                diverse industrial ventures. Select from a range of presets to kickstart your project, enabling
+                seamless exploration and analysis of various factory configurations.
               </section>
             </div>
           </template>
@@ -55,7 +58,11 @@ import ProjectProperties from "../../components/ProjectProperties.vue";
             <div>
               <h3>Editor</h3>
               <section>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos illo quae quaerat rerum. Ea nihil suscipit vel voluptas? Accusamus ad architecto atque autem beatae culpa, delectus deserunt doloremque dolorum fuga incidunt laboriosam magni necessitatibus nisi officiis omnis quae quaerat qui quia quidem quo quos repudiandae soluta suscipit tenetur ullam voluptate.
+                Our intuitive editor provides a visual representation of your entire production process.
+                Utilizing flow chart-based mapping, you can design, modify, and analyze production lines
+                with ease. The editor acts as your digital blueprint, offering a clear overview of nodes,
+                connections, and configurations. Dive deep into your projects, track efficiency, and refine
+                your manufacturing strategies.
               </section>
             </div>
           </template>
@@ -67,6 +74,102 @@ import ProjectProperties from "../../components/ProjectProperties.vue";
             >
           </template>
         </ImageTextCombinedView>
+      </EditorLine>
+
+      <EditorLine :indentation="2" />
+      <EditorLine :indentation="2">
+        <section>
+          <h3 class="list-title">Connections and nodes</h3>
+          <ul>
+            <li>
+              <h4>Connections</h4>
+              <p>
+                Link nodes by specifying the product traveling along the connection. The connection can represent
+                any type of transportation.
+              </p>
+            </li>
+            <li>
+              <h4>Start-node</h4>
+              <p>
+                Initiates the production process by creating new products. This can represent a resource collector
+                like a mine, pump or other extractor.
+              </p>
+            </li>
+            <li>
+              <h4>Production-node</h4>
+              <p>
+                Requires a recipes to transform products into different types. This can represent any machine that
+                has an input and an output.
+              </p>
+            </li>
+            <li>
+              <h4>End-node</h4>
+              <p>
+                Consumes, destroys or discards products marking the completion of the production cycle.
+              </p>
+            </li>
+            <li>
+              <h4>Input-node</h4>
+              <p>
+                This marks the input of a worksheet. It can represent any imported product for a factory. The parent
+                worksheet must provide these products to the worksheet-node.
+              </p>
+            </li>
+            <li>
+              <h4>Worksheet-node</h4>
+              <p>
+                With this node a worksheet can be reused inside of another worksheet. This can be useful for
+                creating an entire map of all the factories that have connections to each other.
+              </p>
+            </li>
+            <li>
+              <h4>Output-node</h4>
+              <p>
+                This node represents an output product of a worksheet, this product can then be used inside of the
+                parent worksheet for further processing.
+              </p>
+            </li>
+          </ul>
+        </section>
+      </EditorLine>
+
+      <EditorLine :indentation="2" />
+      <EditorLine :indentation="2">
+        <section>
+          <h3 class="list-title">Features</h3>
+          <ul>
+            <li>
+              <h4>Projects</h4>
+              <p>With a project you can group all the necessary elements of your game-save together.</p>
+            </li>
+            <li>
+              <h4>Entity collection presets</h4>
+              <p>
+                Choose from diverse presets tailored to different factory building games for your project.
+                This collection contains all the products, recipes and machines that are available in that game.
+              </p>
+            </li>
+            <li>
+              <h4>Separate into Worksheets</h4>
+              <p>
+                Create multiple worksheets within a project for the separation of different factories or production lines.
+                You can reuse these worksheets inside of other worksheets by using the worksheet-node.
+              </p>
+            </li>
+            <li>
+              <h4>Flow Chart Representation</h4>
+              <p>Visualize production lines and/or factories by using the intuitive flow chart based editor.</p>
+            </li>
+            <li>
+              <h4>Production Targets</h4>
+              <p>Set minimum, maximum, or exact product requirements for nodes, ensuring accurate calculations.</p>
+            </li>
+            <li>
+              <h4>Efficiency Analysis</h4>
+              <p>Calculate throughput and efficiency to optimize production processes.</p>
+            </li>
+          </ul>
+        </section>
       </EditorLine>
 
       <EditorLine :indentation="2" />
