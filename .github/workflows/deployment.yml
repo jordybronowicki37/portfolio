@@ -47,7 +47,7 @@ jobs:
           state: 'success'
 
       - name: Update deployment status (failure)
-        if: failure()
+        if: failure() && steps.deployment.outputs.continue == 'true'
         uses: chrnorm/deployment-status@v2
         with:
           token: ${{ github.token }}
