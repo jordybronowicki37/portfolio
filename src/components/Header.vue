@@ -93,6 +93,7 @@ header box-icon {
   padding: 1rem;
   transition: padding 0.5s;
 }
+/*noinspection CssUnusedSymbol*/
 .mobile-navigation.opened {
   grid-template-rows: 1fr;
 }

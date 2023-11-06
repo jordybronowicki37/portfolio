@@ -186,6 +186,7 @@ watch([filterTitle, filterTags], function () {
   rotate: 0deg;
   transition: all 0.3s;
 }
+/*noinspection CssUnusedSymbol*/
 .tags-filter-expand-button-wrapper>box-icon.opened {
   rotate: 180deg;
 }
@@ -228,6 +229,7 @@ watch([filterTitle, filterTags], function () {
   top: 100%;
   left: 0;
 }
+/*noinspection CssUnusedSymbol*/
 .filter-tags-closed {
   display: none;
 }

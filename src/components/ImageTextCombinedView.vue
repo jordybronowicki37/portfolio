@@ -24,6 +24,7 @@ withDefaults(
   display: flex;
   align-items: center;
 }
+/*noinspection CssUnusedSymbol*/
 .image-on-the-left {
   flex-direction: row-reverse;
 }

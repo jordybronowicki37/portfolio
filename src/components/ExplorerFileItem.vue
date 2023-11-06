@@ -15,6 +15,7 @@ defineProps<{link: string, title: string}>()
   </nav>
 </template>
 
+<!--suppress CssUnusedSymbol -->
 <style scoped>
 nav {
   margin-left: 1rem;
@@ -28,6 +29,7 @@ a {
   text-decoration: none;
   user-select: none;
 }
+/*noinspection CssUnusedSymbol*/
 a.router-link-active {
   color: var(--accent-color);
 }
