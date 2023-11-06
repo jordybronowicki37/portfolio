@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import Header from "./components/Header.vue";
 import SideBar from "./components/SideBar.vue";
+import Footer from "./components/Footer.vue";
 
 </script>
 
@@ -13,6 +14,7 @@ import SideBar from "./components/SideBar.vue";
         <router-view />
       </div>
     </div>
+    <Footer />
   </div>
 </template>
 
