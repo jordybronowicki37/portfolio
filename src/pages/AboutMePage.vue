@@ -104,7 +104,7 @@ import EditorLine from "../components/EditorLine.vue";
       <div class="contact-info-line">
         <div class="contact-item-icon-wrapper">
           <box-icon
-            color="var(--bg-color-600)"
+            color="var(--font-color-200)"
             size="2em"
             type="logo"
             name="linkedin-square"
@@ -120,7 +120,7 @@ import EditorLine from "../components/EditorLine.vue";
       <div class="contact-info-line">
         <div class="contact-item-icon-wrapper">
           <box-icon
-            color="var(--bg-color-600)"
+            color="var(--font-color-200)"
             size="2em"
             type="logo"
             name="github"
@@ -136,7 +136,7 @@ import EditorLine from "../components/EditorLine.vue";
       <div class="contact-info-line">
         <div class="contact-item-icon-wrapper">
           <box-icon
-            color="var(--bg-color-600)"
+            color="var(--font-color-200)"
             size="2em"
             name="envelope"
           />
@@ -175,12 +175,8 @@ import EditorLine from "../components/EditorLine.vue";
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #bdbdbd;
-  padding: 0.1rem;
-  border-radius: 0.5rem;
 }
 a {
-  color: #ffffffde;
   font-size: 1em;
 }
 @media screen and (max-width: 600px) {
