@@ -2,20 +2,22 @@
 import Header from "./components/Header.vue";
 import SideBar from "./components/SideBar.vue";
 import Footer from "./components/Footer.vue";
-
+import ThemesManager from "./components/ThemesManager.vue";
 </script>
 
 <template>
-  <div id="page">
-    <Header />
-    <div id="page-center">
-      <SideBar />
-      <div id="page-content">
-        <router-view />
+  <ThemesManager>
+    <div id="page">
+      <Header />
+      <div id="page-center">
+        <SideBar />
+        <div id="page-content">
+          <router-view />
+        </div>
       </div>
+      <Footer />
     </div>
-    <Footer />
-  </div>
+  </ThemesManager>
 </template>
 
 <style scoped>

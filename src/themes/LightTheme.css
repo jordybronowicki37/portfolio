@@ -1,0 +1,11 @@
+.light-theme {
+    --font-color-200: #242424;
+    --font-color-300: #333;
+    --font-color-400: #444;
+    --bg-color-800: #fff;
+    --bg-color-600: #ececef;
+    --bg-color-500: #e0dcdc;
+    --secondary-color: #999;
+    --accent-color: #42b0cd;
+    --error-color: #f10505;
+}

@@ -1,0 +1,11 @@
+.dark-blue-theme {
+    --font-color-200: #ffffffde;
+    --font-color-300: #bdbdbd;
+    --font-color-400: #bbb;
+    --bg-color-800: #01111D;
+    --bg-color-600: #051929;
+    --bg-color-500: #031D33;
+    --secondary-color: #89A4BB;
+    --accent-color: #ea6d30;
+    --error-color: #8f1e1e;
+}
