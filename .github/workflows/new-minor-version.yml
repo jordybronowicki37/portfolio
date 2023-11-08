@@ -1,8 +1,7 @@
 name: Minor version bump
 
 on:
-  workflow_dispatch:
-    ["dev"]
+  workflow_dispatch: ["dev"]
 
 jobs:
   bump-version:

@@ -5,6 +5,7 @@ on:
   push:
     branches: [ "dev" ]
     paths-ignore:
+      - ".github/workflows"
       - "docs"
       - "README.md"
 
