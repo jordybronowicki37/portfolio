@@ -69,6 +69,8 @@ const explorerOpened = ref<boolean>(true);
   font-size: small;
   background-color: var(--bg-color-600);
   position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
 }
 .minimize-explorer {
   position: absolute;
