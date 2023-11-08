@@ -7,7 +7,7 @@ defineProps<{link: string, title: string}>()
     <box-icon
       name="file"
       size="xs"
-      color="#ffffffde"
+      color="var(--font-color-200)"
     />
     <router-link :to="link">
       {{ title }}

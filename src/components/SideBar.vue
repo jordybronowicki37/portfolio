@@ -29,7 +29,7 @@ const explorerOpened = ref<boolean>(true);
         <box-icon
           name="minus"
           size="xs"
-          color="#ffffffde"
+          color="var(--font-color-200)"
         />
       </div>
     </div>

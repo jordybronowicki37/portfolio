@@ -72,7 +72,7 @@ watch([filterTitle, filterTags], function () {
             <div class="tags-filter-expand-button-wrapper">
               <box-icon
                 name="chevron-down"
-                color="#ffffffde"
+                color="var(--font-color-200)"
                 :class="[filterTagsOpened ? 'opened': 'closed']"
               />
             </div>
@@ -94,7 +94,7 @@ watch([filterTitle, filterTags], function () {
                 <p>Tags filter</p>
                 <box-icon
                   name="x"
-                  color="#ffffffde"
+                  color="var(--font-color-200)"
                   @click="filterTagsOpened = false"
                 />
               </header>

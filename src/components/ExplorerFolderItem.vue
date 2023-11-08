@@ -13,21 +13,21 @@ const folderOpen = ref<boolean>(document.URL.includes(link));
         v-if="!folderOpen"
         name="chevron-right"
         size="xs"
-        color="#ffffffde"
+        color="var(--font-color-200)"
         @click="folderOpen = !folderOpen"
       />
       <box-icon
         v-if="folderOpen"
         name="chevron-down"
         size="xs"
-        color="#ffffffde"
+        color="var(--font-color-200)"
         @click="folderOpen = !folderOpen"
       />
     </div>
     <box-icon
       name="folder"
       size="xs"
-      color="#ffffffde"
+      color="var(--font-color-200)"
     />
     <router-link
       :to="link"

@@ -36,7 +36,7 @@ function GetTitle(route: string): string {
     <div>
       <box-icon
         name="menu"
-        color="#ffffffde"
+        color="var(--font-color-200)"
         @click="mobileNavigationOpened = !mobileNavigationOpened"
       />
     </div>

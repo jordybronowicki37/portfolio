@@ -7,7 +7,7 @@ defineProps<{link: string, title: string}>();
     <box-icon
       name="link-external"
       size="xs"
-      color="#ffffffde"
+      color="var(--font-color-200)"
     />
     <a
       :href="link"
