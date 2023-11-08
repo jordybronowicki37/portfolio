@@ -25,6 +25,7 @@ import Editor from "../components/Editor.vue";
   align-items: center;
   justify-content: center;
   flex-grow: 1;
+  background-color: var(--bg-color-800);
 }
 .not-found-code {
   color: var(--error-color);
