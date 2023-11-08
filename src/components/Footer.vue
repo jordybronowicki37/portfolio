@@ -9,12 +9,21 @@ if (uri.includes("localhost") || uri.includes("-dev")) branchName = "dev";
 <template>
   <footer>
     <div>
-      <box-icon name='git-branch' size="1em" color="var(--font-color-200)" />
-      <span>{{branchName}}</span>
+      <box-icon
+        name="git-branch"
+        size="1em"
+        color="var(--font-color-200)"
+      />
+      <span>{{ branchName }}</span>
     </div>
     <div>V{{ packageJson.version }}</div>
     <button class="settings-button">
-      <box-icon type='solid' name='cog' size="1em" color="var(--font-color-200)" />
+      <box-icon
+        type="solid"
+        name="cog"
+        size="1em"
+        color="var(--font-color-200)"
+      />
     </button>
   </footer>
 </template>
