@@ -59,6 +59,7 @@ header {
   align-items: center;
   width: 100%;
   background: var(--bg-color-600);
+  border-bottom: 1px solid var(--secondary-color);
   position: relative;
 }
 header>* {

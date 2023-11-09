@@ -90,6 +90,7 @@ const dialog = ref<HTMLDialogElement>();
 <style scoped>
 footer {
   background: var(--bg-color-600);
+  border-top: 1px solid var(--secondary-color);
   display: flex;
   justify-content: flex-end;
 }
