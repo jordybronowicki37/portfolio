@@ -4,11 +4,10 @@ import {GetPillData} from "./TechPillConfiguredData.ts";
 
 const {type} = defineProps<{type:string}>();
 const typeData = GetPillData(type);
-const textColor = typeData.color ?? "#ffffffde";
 </script>
 
 <template>
-  <TechPillSimple :bg-color="typeData.bgColor">
+  <TechPillSimple :color="typeData.bgColor">
     <p class="tech-text">
       {{ typeData.type }}
     </p>
@@ -17,12 +16,11 @@ const textColor = typeData.color ?? "#ffffffde";
 
 <style scoped>
 .tech-text {
-  color: v-bind(textColor);
+  color: var(--font-color-200);
   margin: 0 0.5rem;
   text-transform: uppercase;
   font-weight: 800;
   font-size: 10px;
-  user-select: none;
   white-space: nowrap;
 }
 </style>

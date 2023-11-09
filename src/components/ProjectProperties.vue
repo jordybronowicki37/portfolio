@@ -10,7 +10,7 @@ defineProps<{
   type: string,
   status: string,
   links: string[],
-}>()
+}>();
 </script>
 
 <template>
@@ -83,7 +83,7 @@ defineProps<{
 .project-properties {
   display: grid;
   grid-template-columns: auto auto;
-  gap: 0 0.5rem;
+  gap: 0.3rem 0.5rem;
   background-color: var(--bg-color-600);
   border-radius: 0.5rem;
   padding: 0.2rem;

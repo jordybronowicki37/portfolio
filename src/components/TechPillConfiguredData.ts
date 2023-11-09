@@ -1,14 +1,13 @@
 export type PillDataType = {
   type: string;
   bgColor: string;
-  color?: string;
 }
 
 export function GetPillData(type: string): PillDataType {
   const data = PillData.find(v => v.type === type);
   if (data === undefined) return {
     type: "unknown",
-    bgColor: "red"
+    bgColor: "#f00"
   }
   return data;
 }
@@ -44,7 +43,6 @@ const PillData: PillDataType[] = [
   {
     type: "spring",
     bgColor: "#68BD45",
-    color: "#393d48"
   },
   {
     type: "rabbitmq",
@@ -59,7 +57,6 @@ const PillData: PillDataType[] = [
   {
     type: "css",
     bgColor: "#E44D26",
-    color: "#393d48"
   },
   {
     type: "html",
@@ -88,7 +85,6 @@ const PillData: PillDataType[] = [
   {
     type: "vue",
     bgColor: "#41B883",
-    color: "#393d48"
   },
 
   // Persistence
@@ -109,7 +105,6 @@ const PillData: PillDataType[] = [
   {
     type: "aws",
     bgColor: "#F7A80D",
-    color: "#393d48"
   },
   {
     type: "azure",
@@ -122,7 +117,6 @@ const PillData: PillDataType[] = [
   {
     type: "render",
     bgColor: "#5AEDC5",
-    color: "#393d48"
   },
   {
     type: "docker",
@@ -137,7 +131,6 @@ const PillData: PillDataType[] = [
   {
     type: "personal",
     bgColor: "#ea6d30",
-    color: "#393d48"
   },
   {
     type: "school",
@@ -148,16 +141,13 @@ const PillData: PillDataType[] = [
   {
     type: "completed",
     bgColor: "#20ca52",
-    color: "#393d48"
   },
   {
     type: "in progress",
     bgColor: "#b28000",
-    color: "#393d48"
   },
   {
     type: "abandoned",
     bgColor: "#646464",
-    color: "#d42d1c",
   },
 ];
