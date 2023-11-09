@@ -62,7 +62,7 @@ header {
       linear-gradient(
           90deg,
           color-mix(in srgb, var(--accent-color) 80%, transparent),
-          color-mix(in srgb, var(--bg-color-500) 90%, transparent) 40%
+          color-mix(in srgb, var(--bg-color-800) 90%, transparent) 40%
       );
   border-bottom: 1px solid var(--secondary-color);
   position: relative;
