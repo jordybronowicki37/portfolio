@@ -1,23 +1,25 @@
 <script setup lang="ts">
 import Explorer from "./Explorer.vue";
-import {ref} from "vue";
+import {ref, watch} from "vue";
 
+const resizableDiv = ref<HTMLDivElement>();
 const explorerOpened = ref<boolean>(true);
 const isResizing = ref<boolean>(false);
 const width = ref<number>(300);
-const startX = ref<number>(0);
 
-const startResize = (event: MouseEvent) => {
+watch(resizableDiv, () => {
+  if (resizableDiv.value === undefined) return;
+  width.value = resizableDiv.value?.clientWidth;
+});
+
+const startResize = () => {
   isResizing.value = true;
-  startX.value = event.pageX;
   document.addEventListener('mousemove', resize);
   document.addEventListener('mouseup', stopResize);
 }
 const resize = (event: MouseEvent) => {
   if (isResizing.value) {
-    const deltaX = event.pageX - startX.value;
-    width.value += deltaX;
-    startX.value = event.pageX;
+    width.value = event.clientX;
   }
 }
 const stopResize = () => {
@@ -29,9 +31,10 @@ const stopResize = () => {
 
 <template>
   <div
+    ref="resizableDiv"
     class="side-bar-wrapper"
     :class="[isResizing ? 'is-resizing' : '']"
-    :style="{width: `${width}px`}"
+    :style="{flex: `0 0 ${width}px`}"
   >
     <div
       v-if="!explorerOpened"
