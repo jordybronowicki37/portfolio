@@ -3,49 +3,97 @@ import Explorer from "./Explorer.vue";
 import {ref} from "vue";
 
 const explorerOpened = ref<boolean>(true);
+const isResizing = ref<boolean>(false);
+const width = ref<number>(300);
+const startX = ref<number>(0);
+
+const startResize = (event: MouseEvent) => {
+  isResizing.value = true;
+  startX.value = event.pageX;
+  document.addEventListener('mousemove', resize);
+  document.addEventListener('mouseup', stopResize);
+}
+const resize = (event: MouseEvent) => {
+  if (isResizing.value) {
+    const deltaX = event.pageX - startX.value;
+    width.value += deltaX;
+    startX.value = event.pageX;
+  }
+}
+const stopResize = () => {
+  isResizing.value = false;
+  document.removeEventListener('mousemove', resize);
+  document.removeEventListener('mouseup', stopResize);
+}
 </script>
 
 <template>
   <div
-    v-if="!explorerOpened"
-    key="side-bar-title"
-    class="file-explorer-tab"
-    @click="explorerOpened=true"
+    class="side-bar-wrapper"
+    :class="[isResizing ? 'is-resizing' : '']"
+    :style="{width: `${width}px`}"
   >
-    File explorer
-  </div>
-
-  <div
-    v-if="explorerOpened"
-    key="side-bar"
-    class="side-bar"
-  >
-    <div class="side-bar-title">
-      <div>File explorer</div>
-      <div
-        class="minimize-explorer"
-        @click="explorerOpened=false"
-      >
-        <box-icon
-          name="minus"
-          size="xs"
-          color="var(--font-color-200)"
-        />
-      </div>
+    <div
+      v-if="!explorerOpened"
+      key="side-bar-title"
+      class="file-explorer-tab"
+      @click="explorerOpened=true"
+    >
+      File explorer
     </div>
 
-    <Explorer />
+    <div
+      v-if="explorerOpened"
+      class="side-bar"
+    >
+      <div class="side-bar-title">
+        <div>File explorer</div>
+        <div
+          class="minimize-explorer"
+          @click="explorerOpened=false"
+        >
+          <box-icon
+            name="minus"
+            size="xs"
+            color="var(--font-color-200)"
+          />
+        </div>
+      </div>
+
+      <Explorer />
+    </div>
+    <div
+      class="side-bar-resize-handle"
+      @mousedown="startResize"
+    />
   </div>
 </template>
 
+<style>
+body :has(.is-resizing) {
+  user-select: none;
+  cursor: ew-resize;
+}
+</style>
+
 <style scoped>
+.side-bar-wrapper {
+  display: flex;
+  max-width: 40%;
+  min-width: 15%;
+}
+.side-bar-resize-handle {
+  cursor: ew-resize;
+  background-color: var(--bg-color-600);
+  border-left: 1px solid var(--secondary-color);
+  width: 3px;
+}
 .side-bar {
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
   height: 100%;
   background: var(--bg-color-500);
-  min-width: 20%;
-  max-width: 20%;
 }
 .file-explorer-tab {
   cursor: pointer;
@@ -79,10 +127,7 @@ const explorerOpened = ref<boolean>(true);
   cursor: pointer;
 }
 @media screen and (max-width: 600px) {
-  .file-explorer-tab {
-    display: none;
-  }
-  .side-bar {
+  .side-bar-wrapper {
     display: none;
   }
 }
