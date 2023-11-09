@@ -58,7 +58,10 @@ const dialog = ref<HTMLDialogElement>();
           @click="store.theme = Themes.default"
         >
           <div class="theme-preview default-theme">
-            <div v-for="_ in 5" />
+            <div
+              v-for="i in 5"
+              :key="i"
+            />
           </div>
           <div>Dark</div>
         </div>
@@ -68,7 +71,10 @@ const dialog = ref<HTMLDialogElement>();
           @click="store.theme = Themes['dark-blue']"
         >
           <div class="theme-preview dark-blue-theme">
-            <div v-for="_ in 5" />
+            <div
+              v-for="i in 5"
+              :key="i"
+            />
           </div>
           <div>Blue</div>
         </div>
@@ -78,7 +84,10 @@ const dialog = ref<HTMLDialogElement>();
           @click="store.theme = Themes.light"
         >
           <div class="theme-preview light-theme">
-            <div v-for="_ in 5" />
+            <div
+              v-for="i in 5"
+              :key="i"
+            />
           </div>
           <div>Light</div>
         </div>
