@@ -94,6 +94,7 @@ body :has(.is-resizing) {
   flex-grow: 1;
   height: 100%;
   background: var(--bg-color-500);
+  overflow: hidden;
 }
 .file-explorer-tab {
   cursor: pointer;
