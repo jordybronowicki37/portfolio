@@ -34,7 +34,7 @@ const stopResize = () => {
     ref="resizableDiv"
     class="side-bar-wrapper"
     :class="[isResizing ? 'is-resizing' : '']"
-    :style="{flex: `0 0 ${width}px`}"
+    :style="[explorerOpened ? {flex: `0 0 ${width}px`} : {minWidth: 'unset', width: 0}]"
   >
     <div
       v-if="!explorerOpened"
