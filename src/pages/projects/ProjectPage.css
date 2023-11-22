@@ -22,3 +22,12 @@
 .project-page li:not(:last-child) {
     margin-bottom: 0.5rem;
 }
+.services-list li {
+    display: flex;
+    align-items: center;
+}
+.services-list li img {
+    height: 2em;
+    width: 2em;
+    margin-right: 1em;
+}

@@ -4,6 +4,11 @@ import EditorLine from "../../components/EditorLine.vue";
 import ImageTextCombinedView from "../../components/ImageTextCombinedView.vue";
 import "./ProjectPage.css";
 import ProjectProperties from "../../components/ProjectProperties.vue";
+import ArchitectureAmazonS3 from 'aws-icons/icons/ArchitectureAmazonSimpleStorageService.svg';
+import ArchitectureAmazonCF from 'aws-icons/icons/ArchitectureAmazonCloudFront.svg';
+import ArchitectureAmazonECS from 'aws-icons/icons/ArchitectureAmazonElasticContainerService.svg';
+import ArchitectureAmazonECR from 'aws-icons/icons/ArchitectureAmazonElasticContainerRegistry.svg';
+import ArchitectureAmazonRDS from 'aws-icons/icons/ArchitectureAmazonRDS.svg';
 </script>
 
 <template>
@@ -116,6 +121,37 @@ import ProjectProperties from "../../components/ProjectProperties.vue";
                 Invite collaborators to your boards, fostering seamless communication and collaboration.
                 Assign tasks and work together to achieve common goals.
               </p>
+            </li>
+          </ul>
+        </section>
+      </EditorLine>
+
+      <EditorLine :indentation="2" />
+      <EditorLine :indentation="2">
+        <section>
+          <h3 class="list-title">
+            Amazon Web Services
+          </h3>
+          <ul class="services-list">
+            <li>
+              <img :src="ArchitectureAmazonCF" alt="AWS Cloudfront service icon">
+              <p>Cloudfront</p>
+            </li>
+            <li>
+              <img :src="ArchitectureAmazonECS" alt="AWS ECS service icon">
+              <p>ECS</p>
+            </li>
+            <li>
+              <img :src="ArchitectureAmazonECR" alt="AWS ECR service icon">
+              <p>ECR</p>
+            </li>
+            <li>
+              <img :src="ArchitectureAmazonS3" alt="AWS S3 service icon">
+              <p>S3</p>
+            </li>
+            <li>
+              <img :src="ArchitectureAmazonRDS" alt="AWS RDS service icon">
+              <p>RDS - PostgreSQL</p>
             </li>
           </ul>
         </section>
