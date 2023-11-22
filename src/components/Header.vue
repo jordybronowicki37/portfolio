@@ -58,6 +58,7 @@ header {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  background-color: linear-gradient(var(--bg-color-800));
   background-image:
       linear-gradient(
           90deg,
