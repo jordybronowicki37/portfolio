@@ -1,0 +1,34 @@
+name: Feature pipeline
+
+on:
+  repository_dispatch:
+    types:
+      - webhook
+
+jobs:
+  finish-deployment:
+    runs-on: ubuntu-latest
+
+    permissions:
+      deployments: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Get latest deployment ID
+        id: get_deployment_id
+        run: |
+          DEPLOYMENT_ID=$(curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+                        "https://api.github.com/repos/${{ github.repository }}/deployments?environment=production" \
+                        | jq -r '.[0].id')
+          echo "Latest Deployment ID: $DEPLOYMENT_ID"
+          echo "::set-output name=deployment_id::$DEPLOYMENT_ID"
+
+#      - name: Update deployment status (success)
+#        uses: chrnorm/deployment-status@v2
+#        with:
+#          token: ${{ github.token }}
+#          environment-url: ${{ vars.RENDER_DEV_URL }}
+#          deployment-id: ${{  }}
+#          state: 'success'
