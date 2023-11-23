@@ -134,23 +134,38 @@ import ArchitectureAmazonRDS from 'aws-icons/icons/ArchitectureAmazonRDS.svg';
           </h3>
           <ul class="services-list">
             <li>
-              <img :src="ArchitectureAmazonCF" alt="AWS Cloudfront service icon">
+              <img
+                :src="ArchitectureAmazonCF"
+                alt="AWS Cloudfront service icon"
+              >
               <p>Cloudfront</p>
             </li>
             <li>
-              <img :src="ArchitectureAmazonECS" alt="AWS ECS service icon">
+              <img
+                :src="ArchitectureAmazonECS"
+                alt="AWS ECS service icon"
+              >
               <p>ECS</p>
             </li>
             <li>
-              <img :src="ArchitectureAmazonECR" alt="AWS ECR service icon">
+              <img
+                :src="ArchitectureAmazonECR"
+                alt="AWS ECR service icon"
+              >
               <p>ECR</p>
             </li>
             <li>
-              <img :src="ArchitectureAmazonS3" alt="AWS S3 service icon">
+              <img
+                :src="ArchitectureAmazonS3"
+                alt="AWS S3 service icon"
+              >
               <p>S3</p>
             </li>
             <li>
-              <img :src="ArchitectureAmazonRDS" alt="AWS RDS service icon">
+              <img
+                :src="ArchitectureAmazonRDS"
+                alt="AWS RDS service icon"
+              >
               <p>RDS - PostgreSQL</p>
             </li>
           </ul>
