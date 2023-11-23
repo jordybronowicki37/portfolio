@@ -26,10 +26,10 @@ jobs:
           echo "Latest Deployment ID: $DEPLOYMENT_ID"
           echo "deployment_id=$DEPLOYMENT_ID" >> "$GITHUB_OUTPUT"
 
-      - name: Update deployment status (success)
+      - name: Update latest deployment status (success)
         uses: chrnorm/deployment-status@v2
         with:
           token: ${{ github.token }}
           environment-url: ${{ vars.RENDER_DEV_URL }}
           deployment-id: ${{ steps.get_deployment_id.outputs.DEPLOYMENT_ID }}
-          state: 'failure'
+          state: 'success'
