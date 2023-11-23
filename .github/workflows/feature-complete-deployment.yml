@@ -20,16 +20,16 @@ jobs:
       - name: Get latest deployment ID
         id: get_deployment_id
         run: |
-          DEPLOYMENT_ID=$(curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
-                        "https://api.github.com/repos/${{ github.repository }}/deployments?environment=production" \
+          DEPLOYMENT_ID=$(curl -s -H "Authorization: Bearer ${{ github.token }}" \
+                        "https://api.github.com/repos/${{ github.repository }}/deployments?environment=development" \
                         | jq -r '.[0].id')
           echo "Latest Deployment ID: $DEPLOYMENT_ID"
-          echo "::set-output name=deployment_id::$DEPLOYMENT_ID"
+          echo "deployment_id=$DEPLOYMENT_ID" >> "$GITHUB_ENV"
 
-#      - name: Update deployment status (success)
-#        uses: chrnorm/deployment-status@v2
-#        with:
-#          token: ${{ github.token }}
-#          environment-url: ${{ vars.RENDER_DEV_URL }}
-#          deployment-id: ${{  }}
-#          state: 'success'
+      - name: Update deployment status (success)
+        uses: chrnorm/deployment-status@v2
+        with:
+          token: ${{ github.token }}
+          environment-url: ${{ vars.RENDER_DEV_URL }}
+          deployment-id: "$deployment_id"
+          state: 'failure'
