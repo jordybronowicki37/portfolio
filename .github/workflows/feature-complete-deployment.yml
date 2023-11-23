@@ -1,6 +1,7 @@
-name: Feature pipeline
+name: Feature pipeline - complete deployment
 
 on:
+  workflow_dispatch:
   repository_dispatch:
     types:
       - webhook
