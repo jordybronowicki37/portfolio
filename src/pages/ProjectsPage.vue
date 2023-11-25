@@ -140,7 +140,7 @@ watch([filterTitle, filterTags], function () {
 }
 .projects-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(18rem, max-content));
+  grid-template-columns: repeat(auto-fit, minmax(20rem, max-content));
   justify-items: center;
 }
 .filters-wrapper {
