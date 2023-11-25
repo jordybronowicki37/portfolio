@@ -107,7 +107,7 @@ watch(filterTags, () => {
     </div>
   </div>
 </template>
-ue
+
 <style scoped>
 .tags-filter-options {
   flex-grow: 1;
