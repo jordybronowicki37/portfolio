@@ -26,8 +26,8 @@ import EditorLine from "../components/EditorLine.vue";
     <EditorLine :indentation="4">
       <p>
         The intention behind my portfolio project is to show non-programmers what the world of programming looks like.
-        This is achieved by designing the entire project around a <b>code editor</b>. The <b>code editor</b> is one
-        of the most important tools inside of a programmer's arsenal. Every page of my portfolio is designed to look
+        This is achieved by designing the entire project around a <b>code editor</b>. This is one
+        of the most important tools of every programmer. Every page of my portfolio is designed to look
         like a file. All pages can be found by using the file explorer on the left of the editor.
       </p>
     </EditorLine>

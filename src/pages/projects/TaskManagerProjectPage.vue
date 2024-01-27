@@ -130,7 +130,7 @@ import ArchitectureAmazonRDS from 'aws-icons/icons/ArchitectureAmazonRDS.svg';
       <EditorLine :indentation="2">
         <section>
           <h3 class="list-title">
-            Amazon Web Services
+            Used Amazon Web Services
           </h3>
           <ul class="services-list">
             <li>

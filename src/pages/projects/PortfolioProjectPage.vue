@@ -39,7 +39,7 @@ import ProjectProperties from "../../components/ProjectProperties.vue";
               <p>
                 My personal portfolio website stands as a testament to my passion for coding and design.
                 Designed to resemble a familiar code editor, this website serves as a digital canvas where I
-                showcase my diverse projects and skills.
+                showcase my projects and skills.
               </p>
             </section>
           </template>
