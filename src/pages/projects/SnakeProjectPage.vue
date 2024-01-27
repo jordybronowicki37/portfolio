@@ -42,13 +42,13 @@ import ProjectProperties from "../../components/ProjectProperties.vue";
               </section>
             </div>
           </template>
-          <template #image>
-            <img
-              src="/snake-game.png"
-              alt="Snake single-player game preview"
-              class="project-image"
-            >
-          </template>
+<!--          <template #image>-->
+<!--            <img-->
+<!--              src="/snake-game.png"-->
+<!--              alt="Snake single-player game preview"-->
+<!--              class="project-image"-->
+<!--            >-->
+<!--          </template>-->
         </ImageTextCombinedView>
       </EditorLine>
 
@@ -115,8 +115,8 @@ import ProjectProperties from "../../components/ProjectProperties.vue";
           </template>
           <template #image>
             <img
-              src="/snake-levels.png"
-              alt="Snake levels preview"
+              src="/snake-game-versus.png"
+              alt="Snake game versus mode preview"
               class="project-image"
             >
           </template>
