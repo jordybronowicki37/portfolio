@@ -21,7 +21,7 @@ import ProjectProperties from "../../components/ProjectProperties.vue";
             :frameworks="['.net', 'angular']"
             type="school/external"
             status="completed"
-            :links="[]"
+            :group-size="5"
           />
         </div>
       </EditorLine>

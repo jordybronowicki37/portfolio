@@ -27,8 +27,8 @@ import ArchitectureAmazonRDS from 'aws-icons/icons/ArchitectureAmazonRDS.svg';
             database="postgresql"
             deployment="aws"
             type="school"
+            :group-size="2"
             status="completed"
-            :links="[]"
           />
         </div>
       </EditorLine>

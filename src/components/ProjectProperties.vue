@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import TechPillConfigured from "./TechPillConfigured.vue";
 import TechPillLink from "./TechPillLink.vue";
+import TechPillSimple from "./TechPillSimple.vue";
 
 defineProps<{
   languages: string[],
@@ -8,8 +9,9 @@ defineProps<{
   database?: string,
   deployment?: string,
   type: string,
+  groupSize?: number,
   status: string,
-  links: string[],
+  links?: string[],
 }>();
 </script>
 
@@ -58,16 +60,25 @@ defineProps<{
       <TechPillConfigured :type="type" />
     </div>
 
+    <p v-if="groupSize">Group size:</p>
+    <div v-if="groupSize" class="tag-list-wrapper">
+      <TechPillSimple color="#555">
+        <p class="group-size-text">
+          {{groupSize}}
+        </p>
+      </TechPillSimple>
+    </div>
+
     <p>Status:</p>
     <div class="tag-list-wrapper">
       <TechPillConfigured :type="status" />
     </div>
 
-    <p v-if="links.length">
+    <p v-if="links && links.length">
       Links:
     </p>
     <div
-      v-if="links.length"
+      v-if="links && links.length"
       class="tag-list-wrapper"
     >
       <TechPillLink
@@ -94,5 +105,13 @@ defineProps<{
   align-items: center;
   flex-wrap: wrap;
   gap: 0.3rem;
+}
+.group-size-text {
+  color: var(--font-color-200);
+  margin: 0 0.5rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 10px;
+  white-space: nowrap;
 }
 </style>
