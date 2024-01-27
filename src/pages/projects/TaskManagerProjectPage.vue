@@ -4,11 +4,13 @@ import EditorLine from "../../components/EditorLine.vue";
 import ImageTextCombinedView from "../../components/ImageTextCombinedView.vue";
 import "./ProjectPage.css";
 import ProjectProperties from "../../components/ProjectProperties.vue";
-import ArchitectureAmazonS3 from 'aws-icons/icons/ArchitectureAmazonSimpleStorageService.svg';
-import ArchitectureAmazonCF from 'aws-icons/icons/ArchitectureAmazonCloudFront.svg';
-import ArchitectureAmazonECS from 'aws-icons/icons/ArchitectureAmazonElasticContainerService.svg';
-import ArchitectureAmazonECR from 'aws-icons/icons/ArchitectureAmazonElasticContainerRegistry.svg';
-import ArchitectureAmazonRDS from 'aws-icons/icons/ArchitectureAmazonRDS.svg';
+import AWSS3 from 'aws-icons/icons/ArchitectureAmazonSimpleStorageService.svg';
+import AWSCF from 'aws-icons/icons/ArchitectureAmazonCloudFront.svg';
+import AWSECS from 'aws-icons/icons/ArchitectureAmazonElasticContainerService.svg';
+import AWSECR from 'aws-icons/icons/ArchitectureAmazonElasticContainerRegistry.svg';
+import AWSRDS from 'aws-icons/icons/ArchitectureAmazonRDS.svg';
+import AWSALB from 'aws-icons/icons/ArchitectureElasticLoadBalancing.svg';
+import AWSFargate from 'aws-icons/icons/ArchitectureAWSFargate.svg';
 </script>
 
 <template>
@@ -135,38 +137,52 @@ import ArchitectureAmazonRDS from 'aws-icons/icons/ArchitectureAmazonRDS.svg';
           <ul class="services-list">
             <li>
               <img
-                :src="ArchitectureAmazonCF"
-                alt="AWS Cloudfront service icon"
+                :src="AWSCF"
+                alt="AWS Cloudfront icon"
               >
               <p>Cloudfront</p>
             </li>
             <li>
               <img
-                :src="ArchitectureAmazonECS"
-                alt="AWS ECS service icon"
+                :src="AWSALB"
+                alt="AWS Load Balancer icon"
+              >
+              <p>Load Balancer</p>
+            </li>
+            <li>
+              <img
+                :src="AWSECS"
+                alt="AWS ECS icon"
               >
               <p>ECS</p>
             </li>
             <li>
               <img
-                :src="ArchitectureAmazonECR"
-                alt="AWS ECR service icon"
+                :src="AWSECR"
+                alt="AWS ECR icon"
               >
               <p>ECR</p>
             </li>
             <li>
               <img
-                :src="ArchitectureAmazonS3"
-                alt="AWS S3 service icon"
+                :src="AWSFargate"
+                alt="AWS Fargate icon"
               >
-              <p>S3</p>
+              <p>Fargate</p>
             </li>
             <li>
               <img
-                :src="ArchitectureAmazonRDS"
-                alt="AWS RDS service icon"
+                :src="AWSRDS"
+                alt="AWS RDS icon"
               >
               <p>RDS - PostgreSQL</p>
+            </li>
+            <li>
+              <img
+                :src="AWSS3"
+                alt="AWS S3 icon"
+              >
+              <p>S3</p>
             </li>
           </ul>
         </section>
