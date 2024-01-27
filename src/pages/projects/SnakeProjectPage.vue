@@ -42,13 +42,13 @@ import ProjectProperties from "../../components/ProjectProperties.vue";
               </section>
             </div>
           </template>
-<!--          <template #image>-->
-<!--            <img-->
-<!--              src="/snake-game.png"-->
-<!--              alt="Snake single-player game preview"-->
-<!--              class="project-image"-->
-<!--            >-->
-<!--          </template>-->
+          <!--          <template #image>-->
+          <!--            <img-->
+          <!--              src="/snake-game.png"-->
+          <!--              alt="Snake single-player game preview"-->
+          <!--              class="project-image"-->
+          <!--            >-->
+          <!--          </template>-->
         </ImageTextCombinedView>
       </EditorLine>
 

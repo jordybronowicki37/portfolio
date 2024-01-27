@@ -1,15 +1,6 @@
 <script setup lang="ts">
 import TechPillContainer from "./TechPillContainer.vue";
-
-export type ProjectCardProps = {
-  title: string,
-  imageSrc: string,
-  imageAlt: string,
-  tags: string[],
-  externalLinks: string[],
-  pageLink: string,
-  description:string
-}
+import {ProjectCardProps} from "../data/Models";
 
 defineProps<{project: ProjectCardProps}>();
 </script>

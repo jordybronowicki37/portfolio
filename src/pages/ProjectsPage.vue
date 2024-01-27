@@ -1,4 +1,4 @@
-<script setup lang="js">
+<script setup lang="ts">
 import Editor from "../components/Editor.vue";
 import EditorLine from "../components/EditorLine.vue";
 import projects from "../components/ProjectCardsData.json";
@@ -7,33 +7,35 @@ import {ref, watch} from "vue";
 import TechPillConfigured from "../components/TechPillConfigured.vue";
 import TagsFilter from "../components/TagsFilter.vue";
 import {useRoute, useRouter} from "vue-router";
+import {ProjectCardProps} from "../data/Models";
 
 const router = useRouter();
 const route = useRoute();
-const filterTitleQuery = route.query.filterTitle;
+const filterTitleQuery = route.query.filterTitle as string | undefined;
 const filterTagsQuery = route.query.filterTags;
 
-const extractTagsFilterFromQuery = function () {
+function extractTagsFilterFromQuery(): string[] {
   if (!filterTagsQuery) return [];
   if (typeof filterTagsQuery === "string") return [filterTagsQuery];
-  return filterTagsQuery;
+  return filterTagsQuery as string[];
 }
 
-const projectsFiltered = ref(projects);
-const filterTitle = ref(filterTitleQuery || "");
-const filterTags = ref(extractTagsFilterFromQuery());
+const projectsFiltered = ref<ProjectCardProps[]>(projects);
+const filterTitle = ref<string>(filterTitleQuery ? filterTitleQuery: "");
+const filterTags = ref<string[]>(extractTagsFilterFromQuery());
 const filterTagsOpened = ref(false);
 
-const filterProjects = function () {
+function filterProjects() {
   projectsFiltered.value = projects
       .filter(v => v.title.toLowerCase().includes(filterTitle.value.toLowerCase()))
-      .filter(v => filterTags.value.every(tag => v.tags.includes(tag)));
+      .filter(v => filterTags.value.every(tag => v.tags.includes(tag)))
+      .sort((v1, v2) => v1.title > v2.title ? 1 : -1);
 }
 filterProjects();
 
 watch([filterTitle, filterTags], function () {
   router.replace({query: {filterTitle: filterTitle.value, filterTags: filterTags.value}});
-  filterProjects()
+  filterProjects();
 });
 </script>
 

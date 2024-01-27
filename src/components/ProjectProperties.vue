@@ -60,11 +60,16 @@ defineProps<{
       <TechPillConfigured :type="type" />
     </div>
 
-    <p v-if="groupSize">Group size:</p>
-    <div v-if="groupSize" class="tag-list-wrapper">
+    <p v-if="groupSize">
+      Group size:
+    </p>
+    <div
+      v-if="groupSize"
+      class="tag-list-wrapper"
+    >
       <TechPillSimple color="#555">
         <p class="group-size-text">
-          {{groupSize}}
+          {{ groupSize }}
         </p>
       </TechPillSimple>
     </div>
