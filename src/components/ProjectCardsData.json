@@ -55,5 +55,14 @@
     "externalLinks": [],
     "pageLink": "/projects/neerslag-radar",
     "description": "This project was part of a collaboration between a student group and an external client. We were tasked to develop an application that contained interactive weather animations. Raw weather data would be processed and plot onto a map or graph with which you can interact to compare weather patterns."
+  },
+  {
+    "title": "Aimas",
+    "imageSrc": "/aimas-overview.png",
+    "imageAlt": "Aimas overview page preview",
+    "tags": ["python", "websocket", "sam", "dynamodb", "aws", "react", "typescript", "redux", "sass", "school"],
+    "externalLinks": [],
+    "pageLink": "/projects/aimas",
+    "description": "With the Accidents and Incidents Management System (AIMAS), you can get a live preview of all accidents and incidents that are occurring in the Netherlands."
   }
 ]

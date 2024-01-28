@@ -37,6 +37,10 @@ const PillData: PillDataType[] = [
     bgColor: "#CCC267",
   },
   {
+    type: "sam",
+    bgColor: "#ffc60b",
+  },
+  {
     type: "signalr",
     bgColor: "#5EB6DA",
   },
@@ -86,6 +90,10 @@ const PillData: PillDataType[] = [
     type: "vue",
     bgColor: "#41B883",
   },
+  {
+    type: "websocket",
+    bgColor: "#f22008",
+  },
 
   // Persistence
   {
@@ -99,6 +107,10 @@ const PillData: PillDataType[] = [
   {
     type: "mongodb",
     bgColor: "#439934",
+  },
+  {
+    type: "dynamodb",
+    bgColor: "#3e43c6",
   },
 
   // Deployment
