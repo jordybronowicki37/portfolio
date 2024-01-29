@@ -7,3 +7,8 @@ export type ProjectCardProps = {
   pageLink: string,
   description:string
 }
+
+export type PillDataType = {
+  type: string;
+  bgColor: string;
+}

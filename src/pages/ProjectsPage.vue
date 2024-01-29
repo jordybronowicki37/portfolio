@@ -26,9 +26,12 @@ const filterTags = ref<string[]>(extractTagsFilterFromQuery());
 const filterTagsOpened = ref(false);
 
 function filterProjects() {
+  const techFilterTags = filterTags.value.filter(t => !["open source", "closed source"].includes(t))
   projectsFiltered.value = projects
       .filter(v => v.title.toLowerCase().includes(filterTitle.value.toLowerCase()))
-      .filter(v => filterTags.value.every(tag => v.tags.includes(tag)))
+      .filter(v => techFilterTags.every(tag => v.tags.includes(tag)))
+      .filter(v => !filterTags.value.includes("open source") || v.externalLinks.find(l => l.includes("github")) != undefined)
+      .filter(v => !filterTags.value.includes("closed source") || v.externalLinks.find(l => l.includes("github")) == undefined)
       .sort((v1, v2) => v1.title > v2.title ? 1 : -1);
 }
 filterProjects();

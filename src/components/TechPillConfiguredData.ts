@@ -1,10 +1,7 @@
-export type PillDataType = {
-  type: string;
-  bgColor: string;
-}
+import {PillDataType} from "../data/Models";
 
 export function GetPillData(type: string): PillDataType {
-  const data = PillData.find(v => v.type === type);
+  const data = ALL_TECH_PILL_TYPES.find(v => v.type === type);
   if (data === undefined) return {
     type: "unknown",
     bgColor: "#f00"
@@ -12,14 +9,7 @@ export function GetPillData(type: string): PillDataType {
   return data;
 }
 
-export const ALL_BACKEND_TYPES = [".net", "c#", "java", "python", "signalr", "spring", "rabbitmq"];
-export const ALL_FRONTEND_TYPES = ["angular", "css", "html", "javascript", "react", "redux", "sass", "typescript", "vue"];
-export const ALL_PERSISTENCE_TYPES = ["postgresql", "mysql", "mongodb"];
-export const ALL_DEPLOYMENT_TYPES = ["aws", "azure", "render", "docker"];
-export const ALL_PROJECT_TYPES = ["personal", "school", "school/external"];
-
-const PillData: PillDataType[] = [
-  // Backend
+export const ALL_BACKEND_TYPES: PillDataType[] = [
   {
     type: ".net",
     bgColor: "#116AB1",
@@ -41,6 +31,10 @@ const PillData: PillDataType[] = [
     bgColor: "#ffc60b",
   },
   {
+    type: "scala",
+    bgColor: "#f72f1b",
+  },
+  {
     type: "signalr",
     bgColor: "#5EB6DA",
   },
@@ -52,8 +46,8 @@ const PillData: PillDataType[] = [
     type: "rabbitmq",
     bgColor: "#FF6600",
   },
-
-  // Frontend
+];
+export const ALL_FRONTEND_TYPES: PillDataType[] = [
   {
     type: "angular",
     bgColor: "#DD0031",
@@ -94,8 +88,8 @@ const PillData: PillDataType[] = [
     type: "websocket",
     bgColor: "#f22008",
   },
-
-  // Persistence
+];
+export const ALL_PERSISTENCE_TYPES: PillDataType[] = [
   {
     type: "postgresql",
     bgColor: "#316192",
@@ -112,8 +106,8 @@ const PillData: PillDataType[] = [
     type: "dynamodb",
     bgColor: "#3e43c6",
   },
-
-  // Deployment
+];
+export const ALL_DEPLOYMENT_TYPES: PillDataType[] = [
   {
     type: "aws",
     bgColor: "#F7A80D",
@@ -134,8 +128,8 @@ const PillData: PillDataType[] = [
     type: "docker",
     bgColor: "#019BC6",
   },
-
-  // Project types
+];
+export const ALL_PROJECT_TYPES: PillDataType[] = [
   {
     type: "school/external",
     bgColor: "#af5b5b",
@@ -148,8 +142,8 @@ const PillData: PillDataType[] = [
     type: "school",
     bgColor: "#705499"
   },
-
-  // Project statuses
+];
+export const ALL_PROJECT_STATUSES: PillDataType[] = [
   {
     type: "completed",
     bgColor: "#20ca52",
@@ -163,3 +157,22 @@ const PillData: PillDataType[] = [
     bgColor: "#646464",
   },
 ];
+export const ALL_PROJECT_VISIBILITY: PillDataType[] = [
+  {
+    type: "open source",
+    bgColor: "#20ca52",
+  },
+  {
+    type: "closed source",
+    bgColor: "#a10f36",
+  },
+];
+export const ALL_TECH_PILL_TYPES: PillDataType[] = [
+  ...ALL_BACKEND_TYPES,
+  ...ALL_FRONTEND_TYPES,
+  ...ALL_PERSISTENCE_TYPES,
+  ...ALL_DEPLOYMENT_TYPES,
+  ...ALL_PROJECT_TYPES,
+  ...ALL_PROJECT_STATUSES,
+  ...ALL_PROJECT_VISIBILITY,
+]

@@ -4,7 +4,7 @@
     "imageSrc": "/prod-cal-editor.png",
     "imageAlt": "Production calculator editor preview",
     "tags": [
-      ".net", "c#", "mongodb", "react", "typescript", "redux", "sass", "personal"
+      ".net", "c#", "mongodb", "react", "typescript", "redux", "sass", "personal", "in progress"
     ],
     "externalLinks": ["https://github.com/jordybronowicki37/production-calculator"],
     "pageLink": "/projects/production-calculator",
@@ -15,7 +15,7 @@
     "imageSrc": "/portfolio-home.png",
     "imageAlt": "Portfolio home page screenshot",
     "tags": [
-      "vue", "typescript", "personal"
+      "vue", "typescript", "personal", "completed"
     ],
     "externalLinks": [
       "https://github.com/jordybronowicki37/portfolio",
@@ -28,7 +28,7 @@
     "title": "Snake Game",
     "imageSrc": "/snake-game.png",
     "imageAlt": "Production calculator editor screenshot",
-    "tags": ["vue", "typescript", "personal"],
+    "tags": ["vue", "typescript", "personal", "in progress"],
     "externalLinks": [
       "https://github.com/jordybronowicki37/vue-snake",
       "https://snake-game-o64n.onrender.com/"
@@ -40,7 +40,7 @@
     "title": "Task manager",
     "imageSrc": "/tas-board.png",
     "imageAlt": "Task manager board preview",
-    "tags": ["java", "spring", "postgresql", "aws", "react", "typescript", "redux", "sass", "school"],
+    "tags": ["java", "spring", "postgresql", "aws", "react", "typescript", "redux", "sass", "school", "completed"],
     "externalLinks": [],
     "pageLink": "/projects/task-manager",
     "description": "With TAS you can manage your tasks efficiently. This school project is inspired by the popular issue management tool Trello and was created to learn microservices cloud deployment with AWS."
@@ -50,7 +50,7 @@
     "imageSrc": "/neerslag-radar-basic-views.png",
     "imageAlt": "Production calculator editor preview",
     "tags": [
-      ".net", "c#", "angular", "typescript", "school/external"
+      ".net", "c#", "angular", "typescript", "school/external", "completed"
     ],
     "externalLinks": [],
     "pageLink": "/projects/neerslag-radar",
@@ -60,7 +60,7 @@
     "title": "Aimas",
     "imageSrc": "/aimas-overview.png",
     "imageAlt": "Aimas overview page preview",
-    "tags": ["python", "websocket", "sam", "dynamodb", "aws", "react", "typescript", "redux", "sass", "school"],
+    "tags": ["python", "websocket", "sam", "dynamodb", "aws", "react", "typescript", "redux", "sass", "school", "completed"],
     "externalLinks": [],
     "pageLink": "/projects/aimas",
     "description": "With the Accidents and Incidents Management System (AIMAS), you can get a live preview of all accidents and incidents that are occurring in the Netherlands."

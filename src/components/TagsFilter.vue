@@ -4,10 +4,10 @@ import {
   ALL_BACKEND_TYPES,
   ALL_DEPLOYMENT_TYPES,
   ALL_FRONTEND_TYPES,
-  ALL_PERSISTENCE_TYPES,
-  ALL_PROJECT_TYPES
+  ALL_PERSISTENCE_TYPES, ALL_PROJECT_STATUSES,
+  ALL_PROJECT_TYPES, ALL_PROJECT_VISIBILITY
 } from "./TechPillConfiguredData";
-import {ProjectCardProps} from "./ProjectCard.vue";
+import {PillDataType, ProjectCardProps} from "../data/Models";
 import TechPillConfigured from "./TechPillConfigured.vue";
 import {watch, ref} from "vue";
 
@@ -28,13 +28,7 @@ type TagOccurrenceGroup = {
   title: string,
   tags: TagOccurrence[];
 }
-const SortOccurrences = (occurrences: TagOccurrence[]): TagOccurrence[] => {
-  return occurrences.sort((a, b) => {
-    const difference = b.amount - a.amount;
-    if (difference !== 0) return difference;
-    return (a.tag > b.tag) ? 1 : ((b.tag > a.tag) ? -1 : 0);
-  });
-}
+
 const allProjects = projects as ProjectCardProps[];
 const flattenedTags = allProjects.flatMap(v => v.tags);
 const mappedTagOccurrences = flattenedTags.reduce((obj, tag) => {
@@ -42,16 +36,42 @@ const mappedTagOccurrences = flattenedTags.reduce((obj, tag) => {
   else obj[tag] = { amount: 1, tag }
   return obj;
 }, {} as TagOccurrenceObj);
+const openSourceProjects = allProjects.reduce((v, p) => p.externalLinks.find(l => l.includes("github")) ? v+1 : v, 0);
+const closedSourceProjects = allProjects.reduce((v, p) => p.externalLinks.find(l => l.includes("github")) ? v : v+1, 0);
+mappedTagOccurrences["open source"] = {tag: "open source", amount: openSourceProjects}
+mappedTagOccurrences["closed source"] = {tag: "closed source", amount: closedSourceProjects}
 
-const projectTypeOccurrences = SortOccurrences(Object.values(mappedTagOccurrences).filter(v => ALL_PROJECT_TYPES.includes(v.tag)));
-const backendOccurrences = SortOccurrences(Object.values(mappedTagOccurrences).filter(v => ALL_BACKEND_TYPES.includes(v.tag)));
-const frontendOccurrences = SortOccurrences(Object.values(mappedTagOccurrences).filter(v => ALL_FRONTEND_TYPES.includes(v.tag)));
-const persistenceOccurrences = SortOccurrences(Object.values(mappedTagOccurrences).filter(v => ALL_PERSISTENCE_TYPES.includes(v.tag)));
-const deploymentOccurrences = SortOccurrences(Object.values(mappedTagOccurrences).filter(v => ALL_DEPLOYMENT_TYPES.includes(v.tag)));
+function SortOccurrences(occurrences: TagOccurrence[]): TagOccurrence[] {
+  return occurrences.sort((a, b) => {
+    const difference = b.amount - a.amount;
+    if (difference !== 0) return difference;
+    return (a.tag > b.tag) ? 1 : ((b.tag > a.tag) ? -1 : 0);
+  });
+}
+
+function SortAndCountTypeOccurences(types: PillDataType[]) {
+  return SortOccurrences(Object.values(mappedTagOccurrences).filter(v => types.map(t => t.type).includes(v.tag)));
+}
+
+const backendOccurrences = SortAndCountTypeOccurences(ALL_BACKEND_TYPES);
+const deploymentOccurrences = SortAndCountTypeOccurences(ALL_DEPLOYMENT_TYPES);
+const frontendOccurrences = SortAndCountTypeOccurences(ALL_FRONTEND_TYPES);
+const persistenceOccurrences = SortAndCountTypeOccurences(ALL_PERSISTENCE_TYPES);
+const projectStatusOccurrences = SortAndCountTypeOccurences(ALL_PROJECT_STATUSES);
+const projectTypeOccurrences = SortAndCountTypeOccurences(ALL_PROJECT_TYPES);
+const projectVisibilityOccurrences = SortAndCountTypeOccurences(ALL_PROJECT_VISIBILITY);
 const tagOccurrenceGroups: TagOccurrenceGroup[] = [
   {
     title: "Project type",
     tags: projectTypeOccurrences
+  },
+  {
+    title: "Project completion status",
+    tags: projectStatusOccurrences
+  },
+  {
+    title: "Project visibility",
+    tags: projectVisibilityOccurrences
   },
   {
     title: "Backend",
