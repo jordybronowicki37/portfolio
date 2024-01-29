@@ -5,20 +5,6 @@ import {ref} from "vue";
 
 const route = useRoute();
 const mobileNavigationOpened = ref<boolean>(false);
-
-function GetTitle(route: string): string {
-  switch (route) {
-    case "/":
-      return "home";
-    case "/about":
-      return "about-me";
-    case "/projects":
-      return "projects";
-    default:
-      if (route.startsWith("/projects/")) return route.replace("/projects/", "");
-      return "unknown";
-  }
-}
 </script>
 
 <template>
@@ -30,7 +16,7 @@ function GetTitle(route: string): string {
     >
 
     <div id="current-file-title">
-      Editing: {{ GetTitle(route.fullPath) }}
+      Editing: {{ route.name }}
     </div>
 
     <div>

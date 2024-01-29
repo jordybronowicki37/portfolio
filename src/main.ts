@@ -1,4 +1,4 @@
-import { createApp } from 'vue';
+import {createApp} from 'vue';
 import './style.css';
 import 'boxicons'
 import App from './App.vue';
@@ -15,21 +15,61 @@ import AimasProject from "./pages/projects/AimasProjectPage.vue";
 import ErrorPage from "./pages/ErrorPage.vue";
 
 const routes: RouteRecordRaw[] = [
-    { path: "/", component: HomePage },
-    { path: "/about", component: AboutMePage },
-    { path: "/projects", component: ProjectsPage },
-    { path: "/projects/aimas", component: AimasProject },
-    { path: "/projects/neerslag-radar", component: NeerslagRadarProject },
-    { path: "/projects/production-calculator", component: ProdCalProject },
-    { path: "/projects/portfolio", component: PortfolioProject },
-    { path: "/projects/snake-game", component: SnakeProject },
-    { path: "/projects/task-manager", component: TaskManagerProject },
-    { path: "/:pathMatch(.*)*", component: ErrorPage },
+  {
+    path: "/",
+    name: "home",
+    component: HomePage
+  },
+  {
+    path: "/about",
+    name: "about-me",
+    component: AboutMePage
+  },
+  {
+    path: "/projects",
+    name: "projects",
+    component: ProjectsPage
+  },
+  {
+    path: "/projects/aimas",
+    name: "aimas-project",
+    component: AimasProject
+  },
+  {
+    path: "/projects/neerslag-radar",
+    name: "neerslag-radar-project",
+    component: NeerslagRadarProject
+  },
+  {
+    path: "/projects/production-calculator",
+    name: "production-calculator-project",
+    component: ProdCalProject
+  },
+  {
+    path: "/projects/portfolio",
+    name: "portfolio-project",
+    component: PortfolioProject
+  },
+  {
+    path: "/projects/snake-game",
+    name: "snake-game-project",
+    component: SnakeProject
+  },
+  {
+    path: "/projects/task-manager",
+    name: "task-manager-project",
+    component: TaskManagerProject
+  },
+  {
+    path: "/:pathMatch(.*)*",
+    name: "unknown",
+    component: ErrorPage
+  },
 ]
 
 const router = createRouter({
-    history: createWebHashHistory(),
-    routes
+  history: createWebHashHistory(),
+  routes
 });
 
 const createdApp = createApp(App);
