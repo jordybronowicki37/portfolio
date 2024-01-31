@@ -151,6 +151,13 @@ import AWSFargate from 'aws-icons/icons/ArchitectureAWSFargate.svg';
             </li>
             <li>
               <img
+                :src="AWSRDS"
+                alt="AWS RDS icon"
+              >
+              <p>RDS - PostgreSQL</p>
+            </li>
+            <li>
+              <img
                 :src="AWSECS"
                 alt="AWS ECS icon"
               >
@@ -169,13 +176,6 @@ import AWSFargate from 'aws-icons/icons/ArchitectureAWSFargate.svg';
                 alt="AWS Fargate icon"
               >
               <p>Fargate</p>
-            </li>
-            <li>
-              <img
-                :src="AWSRDS"
-                alt="AWS RDS icon"
-              >
-              <p>RDS - PostgreSQL</p>
             </li>
             <li>
               <img

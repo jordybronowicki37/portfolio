@@ -104,20 +104,6 @@ import AWSSNS from "aws-icons/icons/ArchitectureAmazonSimpleNotificationService.
             </li>
             <li>
               <img
-                :src="AWSS3"
-                alt="AWS S3 icon"
-              >
-              <p>S3</p>
-            </li>
-            <li>
-              <img
-                :src="AWSLambda"
-                alt="AWS Lambda icon"
-              >
-              <p>Lambda</p>
-            </li>
-            <li>
-              <img
                 :src="AWSDynamoDB"
                 alt="AWS DynamoDB icon"
               >
@@ -150,6 +136,20 @@ import AWSSNS from "aws-icons/icons/ArchitectureAmazonSimpleNotificationService.
                 alt="AWS SNS icon"
               >
               <p>SNS</p>
+            </li>
+            <li>
+              <img
+                :src="AWSLambda"
+                alt="AWS Lambda icon"
+              >
+              <p>Lambda</p>
+            </li>
+            <li>
+              <img
+                :src="AWSS3"
+                alt="AWS S3 icon"
+              >
+              <p>S3</p>
             </li>
           </ul>
         </section>
