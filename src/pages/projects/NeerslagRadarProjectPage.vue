@@ -27,13 +27,24 @@ import ProjectProperties from "../../components/ProjectProperties.vue";
       </EditorLine>
 
       <EditorLine :indentation="2" />
+      <EditorLine :indentation="2" >
+        <section>
+          This project was part of a collaboration between a student group and an external client. We were tasked
+          to develop an application that contained interactive weather animations. Raw weather data would be
+          processed and plot onto a map or graph with which you can interact to compare weather patterns.
+        </section>
+      </EditorLine>
+
+      <EditorLine :indentation="2" />
       <EditorLine :indentation="2">
         <ImageTextCombinedView>
           <template #text>
             <div>
-              <h3>Make some simple comparisons</h3>
+              <h3>Data insights</h3>
               <section>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos illo quae quaerat rerum. Ea nihil suscipit vel voluptas? Accusamus ad architecto atque autem beatae culpa, delectus deserunt doloremque dolorum fuga incidunt laboriosam magni necessitatibus nisi officiis omnis quae quaerat qui quia quidem quo quos repudiandae soluta suscipit tenetur ullam voluptate.
+                View the data in either a map or in a graph visualisation. The map visualisation animates through all
+                data slices in 5 minute intervals. The color gradient displays the rainfall intensity in mm/H. The graph
+                visualisation shows the average rainfall of the selected cells from the map above.
               </section>
             </div>
           </template>
@@ -52,9 +63,10 @@ import ProjectProperties from "../../components/ProjectProperties.vue";
         <ImageTextCombinedView image-on-the-left>
           <template #text>
             <div>
-              <h3>Or have a lot of complex views</h3>
+              <h3>Create complex dashboards</h3>
               <section>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos illo quae quaerat rerum. Ea nihil suscipit vel voluptas? Accusamus ad architecto atque autem beatae culpa, delectus deserunt doloremque dolorum fuga incidunt laboriosam magni necessitatibus nisi officiis omnis quae quaerat qui quia quidem quo quos repudiandae soluta suscipit tenetur ullam voluptate.
+                Create complex dashboards by adding multiple views with differing insights. Compare the data between
+                different locations by placing the visualisations next to each other.
               </section>
             </div>
           </template>
@@ -73,9 +85,9 @@ import ProjectProperties from "../../components/ProjectProperties.vue";
         <ImageTextCombinedView>
           <template #text>
             <div>
-              <h3>Save multiple configurations</h3>
+              <h3>Easily switch between dashboards</h3>
               <section>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos illo quae quaerat rerum. Ea nihil suscipit vel voluptas? Accusamus ad architecto atque autem beatae culpa, delectus deserunt doloremque dolorum fuga incidunt laboriosam magni necessitatibus nisi officiis omnis quae quaerat qui quia quidem quo quos repudiandae soluta suscipit tenetur ullam voluptate.
+                Create multiple dashboards so that you can easily switch between different insights or projects.
               </section>
             </div>
           </template>
@@ -87,6 +99,53 @@ import ProjectProperties from "../../components/ProjectProperties.vue";
             >
           </template>
         </ImageTextCombinedView>
+      </EditorLine>
+
+      <EditorLine :indentation="2" />
+      <EditorLine :indentation="2">
+        <section>
+          <h3 class="list-title">
+            Features
+          </h3>
+          <ul>
+            <li>
+              <h4>View your data iteratively in the map visualisation</h4>
+              <p>
+                View every frame separately or play them as a video.
+              </p>
+            </li>
+            <li>
+              <h4>Create selections</h4>
+              <p>
+                Make a selection of cells to only view the relevant information of a specific location.
+              </p>
+            </li>
+            <li>
+              <h4>View your data in a graph visualisation</h4>
+              <p>
+                View all the data of your selection in a graph.
+              </p>
+            </li>
+            <li>
+              <h4>View partial data</h4>
+              <p>
+                Configure a timespan to only view a section of the dataset.
+              </p>
+            </li>
+            <li>
+              <h4>Save, update and load dashboards as configurations</h4>
+              <p>
+                Dashboards are saved locally. They contain all of the added views with their selected settings.
+              </p>
+            </li>
+            <li>
+              <h4>Fast load times</h4>
+              <p>
+                By using data streaming, the load times for the dataset are extremely fast.
+              </p>
+            </li>
+          </ul>
+        </section>
       </EditorLine>
 
       <EditorLine :indentation="2" />
