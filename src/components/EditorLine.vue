@@ -19,7 +19,6 @@ defineProps<{indentation: number}>();
 <style scoped>
 .editor-line {
   display: flex;
-  background-color: var(--bg-color-800);
 }
 
 #editor .editor-line:last-child {
