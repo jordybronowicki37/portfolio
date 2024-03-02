@@ -1,5 +1,6 @@
 .project-page {
     height: 100%;
+    z-index: 1;
 }
 .project-page h3 {
     margin-bottom: 0.2rem;

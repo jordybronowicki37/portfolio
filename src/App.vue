@@ -3,6 +3,7 @@ import Header from "./components/Header.vue";
 import SideBar from "./components/SideBar.vue";
 import Footer from "./components/Footer.vue";
 import ThemesManager from "./components/ThemesManager.vue";
+import EditorBackground from "./components/EditorBackground.vue";
 </script>
 
 <template>
@@ -12,6 +13,7 @@ import ThemesManager from "./components/ThemesManager.vue";
       <div id="page-center">
         <SideBar />
         <div id="page-content">
+          <EditorBackground/>
           <router-view />
         </div>
       </div>
@@ -42,5 +44,6 @@ import ThemesManager from "./components/ThemesManager.vue";
   flex-direction: column;
   overflow: hidden auto;
   flex-grow: 2;
+  position: relative;
 }
 </style>

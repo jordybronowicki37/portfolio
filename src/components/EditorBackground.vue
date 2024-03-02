@@ -15,11 +15,11 @@
 
 <style scoped>
 .editor-background {
-  grid-column: 1;
-  grid-row: 1;
+  height: 0;
   display: grid;
   place-content: center;
-  overflow: hidden;
+  position: sticky;
+  top: 30rem;
 }
 .icon-wrapper {
   height: 40vw;
