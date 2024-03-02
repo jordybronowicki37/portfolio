@@ -12,7 +12,7 @@ import Header from "./Header.vue";
     <div id="page-center">
       <SideBar />
       <div id="page-content">
-        <EditorBackground/>
+        <EditorBackground />
         <slot />
       </div>
     </div>

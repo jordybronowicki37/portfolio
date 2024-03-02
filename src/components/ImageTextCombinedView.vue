@@ -24,20 +24,33 @@ function closeModal() {
     <div class="left-wrapper text-wrapper">
       <slot name="text" />
     </div>
-    <div class="right-wrapper image-wrapper" @click="openModal">
+    <div
+      class="right-wrapper image-wrapper"
+      @click="openModal"
+    >
       <slot name="image" />
     </div>
   </div>
 
-  <dialog class="full-screen-image-modal" ref="modal" @click="closeModal">
-    <div class="full-screen-image-wrapper" @click="$event.stopPropagation()">
+  <dialog
+    ref="modal"
+    class="full-screen-image-modal"
+    @click="closeModal"
+  >
+    <div
+      class="full-screen-image-wrapper"
+      @click="$event.stopPropagation()"
+    >
       <slot name="image" />
     </div>
-    <div class="modal-close-button-wrapper" @click="closeModal">
+    <div
+      class="modal-close-button-wrapper"
+      @click="closeModal"
+    >
       <box-icon
-          color="var(--font-color-200)"
-          size="2em"
-          name="x"
+        color="var(--font-color-200)"
+        size="2em"
+        name="x"
       />
     </div>
   </dialog>

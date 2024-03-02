@@ -5,10 +5,14 @@
 <template>
   <div class="editor-background">
     <div class="icon-wrapper">
-      <div class="polygon"/>
-      <div class="strike-line"/>
-      <div class="letter-j">J</div>
-      <div class="letter-b">B</div>
+      <div class="polygon" />
+      <div class="strike-line" />
+      <div class="letter-j">
+        J
+      </div>
+      <div class="letter-b">
+        B
+      </div>
     </div>
   </div>
 </template>

@@ -6,7 +6,7 @@ import Layout from "./components/Layout.vue";
 <template>
   <ThemesManager>
     <Layout>
-      <router-view/>
+      <router-view />
     </Layout>
   </ThemesManager>
 </template>
