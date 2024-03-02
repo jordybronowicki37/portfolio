@@ -19,6 +19,7 @@ import EditorBackground from "./EditorBackground.vue";
   height: 100%;
 }
 #editor-lines-wrapper {
+  z-index: 1;
   grid-column: 1;
   grid-row: 1;
   display: flex;

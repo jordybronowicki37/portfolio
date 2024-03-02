@@ -37,6 +37,7 @@ import ThemesManager from "./components/ThemesManager.vue";
 }
 
 #page-content {
+  background-color: var(--bg-color-800);
   display: flex;
   flex-direction: column;
   overflow: hidden auto;

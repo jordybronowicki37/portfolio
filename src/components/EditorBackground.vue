@@ -17,10 +17,8 @@
 .editor-background {
   grid-column: 1;
   grid-row: 1;
-  background-color: var(--bg-color-800);
   display: grid;
   place-content: center;
-  z-index: -1;
   overflow: hidden;
 }
 .icon-wrapper {
@@ -52,6 +50,7 @@
   font-size: 23vw;
   font-weight: bold;
   font-family: sans-serif;
+  user-select: none;
 }
 .letter-j {
   top: 3vw;
