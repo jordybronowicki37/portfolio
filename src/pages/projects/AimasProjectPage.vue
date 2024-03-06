@@ -20,7 +20,7 @@ import AWSSNS from "aws-icons/icons/ArchitectureAmazonSimpleNotificationService.
       <EditorLine :indentation="0" />
       <EditorLine :indentation="0" />
       <EditorLine :indentation="1">
-        <h2>Project: Task Manager</h2>
+        <h2>Project: AIMAS</h2>
       </EditorLine>
       <EditorLine :indentation="1">
         <div class="tags-wrapper">
