@@ -94,6 +94,7 @@ watch([filterTitle, filterTags], function () {
               class="tags-filter-options-wrapper"
               :class="[filterTagsOpened ? 'filter-tags-opened' : 'filter-tags-closed']"
               @click="$event.stopPropagation()"
+              @mouseleave="filterTagsOpened = false"
             >
               <header class="tags-filter-header">
                 <p>Tags filter</p>
