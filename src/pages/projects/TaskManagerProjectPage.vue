@@ -37,7 +37,10 @@ import AWSFargate from 'aws-icons/icons/ArchitectureAWSFargate.svg';
 
       <EditorLine :indentation="2" />
       <EditorLine :indentation="2">
-        <ImageTextCombinedView>
+        <ImageTextCombinedView
+          image-title="Board overview"
+          image-description="View all tasks inside of a board."
+        >
           <template #text>
             <div>
               <h3>Manage your tasks</h3>
@@ -60,7 +63,11 @@ import AWSFargate from 'aws-icons/icons/ArchitectureAWSFargate.svg';
 
       <EditorLine :indentation="2" />
       <EditorLine :indentation="2">
-        <ImageTextCombinedView image-on-the-left>
+        <ImageTextCombinedView
+          image-on-the-left
+          image-title="Edit task properties"
+          image-description="Edit the title or description, change the column, add or remove tags and assign users to the task."
+        >
           <template #text>
             <div>
               <h3>Assign tags and users to tasks</h3>

@@ -38,7 +38,10 @@ import AWSSNS from "aws-icons/icons/ArchitectureAmazonSimpleNotificationService.
 
       <EditorLine :indentation="2" />
       <EditorLine :indentation="2">
-        <ImageTextCombinedView>
+        <ImageTextCombinedView
+          image-title="AIMAS Accidents overview"
+          image-description="A live overview of all the incidents that are occurring on the dutch motorways."
+        >
           <template #text>
             <div>
               <h3>Live insights into all incidents</h3>

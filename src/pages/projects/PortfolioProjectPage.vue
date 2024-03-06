@@ -32,7 +32,10 @@ import ProjectProperties from "../../components/ProjectProperties.vue";
 
       <EditorLine :indentation="2" />
       <EditorLine :indentation="2">
-        <ImageTextCombinedView>
+        <ImageTextCombinedView
+          image-title="Portfolio homepage preview"
+          image-description="A code editor inspired portfolio."
+        >
           <template #text>
             <section>
               <h3>Code editor inspired</h3>

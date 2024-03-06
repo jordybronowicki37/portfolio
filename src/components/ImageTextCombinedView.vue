@@ -2,8 +2,12 @@
 import {ref} from "vue";
 
 withDefaults(
-    defineProps<{ imageOnTheLeft?: boolean }>(),
-    {imageOnTheLeft: false}
+    defineProps<{
+      imageOnTheLeft?: boolean,
+      imageTitle: string,
+      imageDescription: string,
+    }>(),
+    { imageOnTheLeft: false }
 );
 const modal = ref<HTMLDialogElement>();
 function openModal() {
@@ -38,13 +42,19 @@ function closeModal() {
     @click="closeModal"
   >
     <div
-      class="full-screen-image-wrapper"
+      class="full-screen-image-modal-content-wrapper"
       @click="$event.stopPropagation()"
     >
-      <slot name="image" />
+      <header>{{ imageTitle }}</header>
+      <p>{{ imageDescription }}</p>
+      <div class="full-screen-image-wrapper">
+        <slot name="image" />
+      </div>
     </div>
+
     <div
       class="modal-close-button-wrapper"
+      title="Close"
       @click="closeModal"
     >
       <box-icon
@@ -97,14 +107,18 @@ function closeModal() {
   border: 3px solid var(--bg-color-500);
   border-radius: 10px;
 }
-.full-screen-image-wrapper {
-  padding: 2rem;
+.full-screen-image-modal-content-wrapper {
+  padding: 1rem;
+}
+.full-screen-image-modal header {
+  font-size: large;
+  font-weight: bold;
 }
 .modal-close-button-wrapper {
   cursor: pointer;
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 0.5rem;
+  right: 0.5rem;
 }
 </style>
 <style>

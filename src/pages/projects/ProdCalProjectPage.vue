@@ -29,7 +29,10 @@ import ProjectProperties from "../../components/ProjectProperties.vue";
 
       <EditorLine :indentation="2" />
       <EditorLine :indentation="2">
-        <ImageTextCombinedView>
+        <ImageTextCombinedView
+          image-title="Production calculator projects preview"
+          image-description="An overview of all your projects."
+        >
           <template #text>
             <div>
               <h3>Multiple different projects</h3>
@@ -53,7 +56,11 @@ import ProjectProperties from "../../components/ProjectProperties.vue";
 
       <EditorLine :indentation="2" />
       <EditorLine :indentation="2">
-        <ImageTextCombinedView image-on-the-left>
+        <ImageTextCombinedView
+          image-on-the-left
+          image-title="Production calculator editor preview"
+          image-description="A preview of the editor."
+        >
           <template #text>
             <div>
               <h3>Editor</h3>

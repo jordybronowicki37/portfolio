@@ -37,7 +37,10 @@ import ProjectProperties from "../../components/ProjectProperties.vue";
 
       <EditorLine :indentation="2" />
       <EditorLine :indentation="2">
-        <ImageTextCombinedView>
+        <ImageTextCombinedView
+          image-title="Neerslag radar basic view"
+          image-description="A basic dashboard that is used to compare two different views."
+        >
           <template #text>
             <div>
               <h3>Data insights</h3>
@@ -60,7 +63,11 @@ import ProjectProperties from "../../components/ProjectProperties.vue";
 
       <EditorLine :indentation="2" />
       <EditorLine :indentation="2">
-        <ImageTextCombinedView image-on-the-left>
+        <ImageTextCombinedView
+          image-on-the-left
+          image-title="Neerslag radar complex view"
+          image-description="A complex dashboard that shows multiple views."
+        >
           <template #text>
             <div>
               <h3>Create complex dashboards</h3>
@@ -82,7 +89,10 @@ import ProjectProperties from "../../components/ProjectProperties.vue";
 
       <EditorLine :indentation="2" />
       <EditorLine :indentation="2">
-        <ImageTextCombinedView>
+        <ImageTextCombinedView
+          image-title="Neerslag radar configurations"
+          image-description="The configurations overview page where you can load different kind of dashboards."
+        >
           <template #text>
             <div>
               <h3>Easily switch between dashboards</h3>

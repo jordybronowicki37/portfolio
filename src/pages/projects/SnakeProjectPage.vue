@@ -43,7 +43,11 @@ import ProjectProperties from "../../components/ProjectProperties.vue";
 
       <EditorLine :indentation="2" />
       <EditorLine :indentation="2">
-        <ImageTextCombinedView image-on-the-left>
+        <ImageTextCombinedView
+          image-on-the-left
+          image-title="Snake single player mode preview"
+          image-description="A preview of the single player mode"
+        >
           <template #text>
             <div>
               <h3>Single player mode</h3>
@@ -58,7 +62,7 @@ import ProjectProperties from "../../components/ProjectProperties.vue";
           <template #image>
             <img
               src="/snake-game.png"
-              alt="Snake levels preview"
+              alt="Snake single player mode preview"
               class="project-image"
             >
           </template>
@@ -67,7 +71,10 @@ import ProjectProperties from "../../components/ProjectProperties.vue";
 
       <EditorLine :indentation="2" />
       <EditorLine :indentation="2">
-        <ImageTextCombinedView>
+        <ImageTextCombinedView
+          image-title="Snake levels preview"
+          image-description="An overview of all the levels that can be played."
+        >
           <template #text>
             <div>
               <h3>Choose out of a bunch of different levels</h3>
@@ -89,7 +96,11 @@ import ProjectProperties from "../../components/ProjectProperties.vue";
 
       <EditorLine :indentation="2" />
       <EditorLine :indentation="2">
-        <ImageTextCombinedView image-on-the-left>
+        <ImageTextCombinedView
+          image-on-the-left
+          image-title="Snake game versus mode preview"
+          image-description="A preview of the versus mode."
+        >
           <template #text>
             <div>
               <h3>Versus mode</h3>
@@ -121,7 +132,5 @@ import ProjectProperties from "../../components/ProjectProperties.vue";
 </template>
 
 <style scoped>
-.text-only-section {
-  padding: 0 1rem;
-}
+
 </style>

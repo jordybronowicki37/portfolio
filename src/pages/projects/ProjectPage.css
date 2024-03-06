@@ -23,6 +23,9 @@
 .project-page li:not(:last-child) {
     margin-bottom: 0.5rem;
 }
+.project-page .text-only-section {
+    padding: 0 1rem;
+}
 .services-list li {
     display: flex;
     align-items: center;
