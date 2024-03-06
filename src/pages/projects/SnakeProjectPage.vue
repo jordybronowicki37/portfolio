@@ -32,24 +32,13 @@ import ProjectProperties from "../../components/ProjectProperties.vue";
 
       <EditorLine :indentation="2" />
       <EditorLine :indentation="2">
-        <ImageTextCombinedView>
-          <template #text>
-            <div>
-              <h3>Play the famous game of snake</h3>
-              <section>
-                Dive into the thrilling world of my Snake Game, a project that offers not just one, but two exciting
-                game modes: Single Player and Versus Mode.
-              </section>
-            </div>
-          </template>
-          <!--          <template #image>-->
-          <!--            <img-->
-          <!--              src="/snake-game.png"-->
-          <!--              alt="Snake single-player game preview"-->
-          <!--              class="project-image"-->
-          <!--            >-->
-          <!--          </template>-->
-        </ImageTextCombinedView>
+        <div class="text-only-section">
+          <h3>Play the famous game of snake</h3>
+          <section>
+            Dive into the thrilling world of my Snake Game, a project that offers not just one, but two exciting
+            game modes: Single Player and Versus Mode.
+          </section>
+        </div>
       </EditorLine>
 
       <EditorLine :indentation="2" />
@@ -132,5 +121,7 @@ import ProjectProperties from "../../components/ProjectProperties.vue";
 </template>
 
 <style scoped>
-
+.text-only-section {
+  padding: 0 1rem;
+}
 </style>
