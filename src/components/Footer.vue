@@ -4,7 +4,7 @@ import {ref} from "vue";
 import BranchesOverview from "./BranchesOverview.vue";
 import ThemesOverview from "./ThemesOverview.vue";
 
-const uri = document.baseURI;
+const uri = location.hostname;
 let branchName = "master";
 if (uri.includes("-dev")) branchName = "staging";
 if (uri.includes("localhost")) branchName = "dev";
