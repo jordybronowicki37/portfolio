@@ -75,7 +75,7 @@ header box-icon {
   position: absolute;
   top: 100%;
   left: 0;
-  z-index: 1;
+  z-index: 10;
   width: 100%;
   padding: 0;
   background-color: var(--bg-color-800);
