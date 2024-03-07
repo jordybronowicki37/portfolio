@@ -11,7 +11,7 @@ const uri = location.hostname;
   >
     <div id="test-build-message">
       <p>
-        You are currently visiting a test build.
+        You are currently viewing a test build.
       </p>
       <a href="https://jordy-bronowicki-portfolio.onrender.com/">
         production build
