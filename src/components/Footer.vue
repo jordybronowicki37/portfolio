@@ -2,7 +2,7 @@
 import packageJson from '/package.json';
 import {ref} from "vue";
 import BranchesOverview from "./BranchesOverview.vue";
-import ThemesOverview from "./ThemesOverview.vue";
+import EditorSettings from "./EditorSettings.vue";
 
 const uri = location.hostname;
 let branchName = "master";
@@ -57,7 +57,7 @@ const branchesOverviewOpened = ref(false);
     @click="dialog?.close()"
   >
     <div @click="$event.stopPropagation()">
-      <ThemesOverview :close="() => dialog?.close()" />
+      <EditorSettings :close="() => dialog?.close()" />
     </div>
   </dialog>
 </template>

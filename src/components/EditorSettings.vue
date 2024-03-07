@@ -16,7 +16,6 @@ defineProps<{ close: () => void }>()
   </button>
 
   <h2>Themes</h2>
-
   <div class="themes-wrapper">
     <div
       class="theme-item"
