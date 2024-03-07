@@ -197,6 +197,7 @@ watch([filterTitle, filterTags], function () {
   rotate: 180deg;
 }
 .title-filter-wrapper input {
+  padding: 4px;
   flex-grow: 1;
   background-color: transparent;
   border: none;
@@ -218,7 +219,7 @@ watch([filterTitle, filterTags], function () {
   flex-wrap: wrap;
   flex-grow: 1;
   cursor: pointer;
-  min-height: 0.8rem;
+  min-height: 1.2rem;
   gap: 0.3rem;
   padding: 0.3rem;
 }
