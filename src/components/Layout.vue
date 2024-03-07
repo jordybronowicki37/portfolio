@@ -38,11 +38,11 @@ import EditorNotificationManager from "./EditorNotificationManager.vue";
   overflow: hidden;
 }
 #page-content-wrapper {
+  background-color: var(--bg-color-800);
   display: flex;
   flex-direction: column;
 }
 #page-content {
-  background-color: var(--bg-color-800);
   overflow: hidden auto;
   flex-grow: 2;
   position: relative;
