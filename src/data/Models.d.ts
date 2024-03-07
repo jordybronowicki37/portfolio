@@ -12,3 +12,5 @@ export type PillDataType = {
   type: string;
   bgColor: string;
 }
+
+export type NotificationTypes = "INFO" | "WARNING" | "ERROR";
