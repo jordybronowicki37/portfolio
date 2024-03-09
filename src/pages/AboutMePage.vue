@@ -21,7 +21,7 @@ import EditorLine from "../components/EditorLine.vue";
           alt="User profile picture"
         >
         <section>
-          Hey there! I'm Jordy Bronowicki, a passionate back-end software developer with a flair for turning ideas into
+          Hey there! I'm Jordy Bronowicki, a passionate full-stack software developer with a flair for turning ideas into
           functional and efficient code. My journey into the world of programming started with small Python programs,
           but it was during my Bachelor's degree in ICT at the University of Applied Sciences in Utrecht that I truly
           fell in love with the art of building digital solutions.
