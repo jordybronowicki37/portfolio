@@ -55,42 +55,48 @@ import ProjectProperties from "../../components/ProjectProperties.vue";
 
       <EditorLine :indentation="2" />
       <EditorLine :indentation="2">
-        <section>
-          <h3 class="list-title">
-            Features
-          </h3>
-          <ul>
-            <li>
-              <h4>Immersive Code Editor Environment</h4>
-              <p>
-                Navigating my portfolio feels like exploring lines of code in a familiar editor, creating a
-                comfortable space for fellow tech enthusiasts.
-              </p>
-            </li>
-            <li>
-              <h4>Project Showcase</h4>
-              <p>
-                Dive into a variety of projects, each encapsulating my dedication to innovation. From coding
-                experiments to fully developed applications, my work speaks volumes about my capabilities.
-              </p>
-            </li>
-            <li>
-              <h4>Responsive Design</h4>
-              <p>
-                The website seamlessly adjusts to different devices, ensuring a smooth experience whether
-                you're browsing on a desktop, tablet, or smartphone.
-              </p>
-            </li>
-            <li>
-              <h4>Connection Opportunities</h4>
-              <p>
-                Interested in discussing collaborations, projects, or just exchanging ideas? Reach out via
-                the contact section. I'm always eager to connect with fellow enthusiasts and professionals.
-              </p>
-            </li>
-          </ul>
-        </section>
+        <h3 class="list-title">
+          Features
+        </h3>
       </EditorLine>
+      <ul class="features-list">
+        <EditorLine :indentation="2">
+          <li>
+            <h4>Immersive Code Editor Environment</h4>
+            <p>
+              Navigating my portfolio feels like exploring lines of code in a familiar editor, creating a
+              comfortable space for fellow tech enthusiasts.
+            </p>
+          </li>
+        </EditorLine>
+        <EditorLine :indentation="2">
+          <li>
+            <h4>Project Showcase</h4>
+            <p>
+              Dive into a variety of projects, each encapsulating my dedication to innovation. From coding
+              experiments to fully developed applications, my work speaks volumes about my capabilities.
+            </p>
+          </li>
+        </EditorLine>
+        <EditorLine :indentation="2">
+          <li>
+            <h4>Responsive Design</h4>
+            <p>
+              The website seamlessly adjusts to different devices, ensuring a smooth experience whether
+              you're browsing on a desktop, tablet, or smartphone.
+            </p>
+          </li>
+        </EditorLine>
+        <EditorLine :indentation="2">
+          <li>
+            <h4>Connection Opportunities</h4>
+            <p>
+              Interested in discussing collaborations, projects, or just exchanging ideas? Reach out via
+              the contact section. I'm always eager to connect with fellow enthusiasts and professionals.
+            </p>
+          </li>
+        </EditorLine>
+      </ul>
 
       <EditorLine :indentation="2" />
       <EditorLine :indentation="1" />

@@ -59,101 +59,119 @@ import AWSSNS from "aws-icons/icons/ArchitectureAmazonSimpleNotificationService.
 
       <EditorLine :indentation="2" />
       <EditorLine :indentation="2">
-        <section>
-          <h3 class="list-title">
-            Features
-          </h3>
-          <ul>
-            <li>
-              <h4>Live updates</h4>
-              <p>
-                All the accident and incident data gets updated every 5 minutes.
-              </p>
-            </li>
-            <li>
-              <h4>Overview page</h4>
-              <p>
-                View all active accidents and incidents.
-              </p>
-            </li>
-            <li>
-              <h4>Order towing services</h4>
-              <p>
-                Create orders for towing services to come and help at the incident. The order is send to three separate
-                api's. An employee can either accept, deny or ignore the order. If multiple towing services accept the
-                order, then a random service gets chosen and the others get cancelled.
-              </p>
-            </li>
-          </ul>
-        </section>
+        <h3 class="list-title">
+          Features
+        </h3>
       </EditorLine>
+      <ul class="features-list">
+        <EditorLine :indentation="2">
+          <li>
+            <h4>Live updates</h4>
+            <p>
+              All the accident and incident data gets updated every 5 minutes.
+            </p>
+          </li>
+        </EditorLine>
+        <EditorLine :indentation="2">
+          <li>
+            <h4>Overview page</h4>
+            <p>
+              View all active accidents and incidents.
+            </p>
+          </li>
+        </EditorLine>
+        <EditorLine :indentation="2">
+          <li>
+            <h4>Order towing services</h4>
+            <p>
+              Create orders for towing services to come and help at the incident. The order is send to three separate
+              api's. An employee can either accept, deny or ignore the order. If multiple towing services accept the
+              order, then a random service gets chosen and the others get cancelled.
+            </p>
+          </li>
+        </EditorLine>
+      </ul>
 
       <EditorLine :indentation="2" />
       <EditorLine :indentation="2">
-        <section>
-          <h3 class="list-title">
-            Used Amazon Web Services
-          </h3>
-          <ul class="services-list">
-            <li>
-              <img
-                :src="AWSCloudFront"
-                alt="AWS Cloudfront icon"
-              >
-              <p>Cloudfront</p>
-            </li>
-            <li>
-              <img
-                :src="AWSDynamoDB"
-                alt="AWS DynamoDB icon"
-              >
-              <p>DynamoDB</p>
-            </li>
-            <li>
-              <img
-                :src="AWSApiGateway"
-                alt="AWS API gateway icon"
-              >
-              <p>API-Gateway</p>
-            </li>
-            <li>
-              <img
-                :src="AWSStepFunctions"
-                alt="AWS Step Functions icon"
-              >
-              <p>Step Functions</p>
-            </li>
-            <li>
-              <img
-                :src="AWSEventBridge"
-                alt="AWS Event Bridge icon"
-              >
-              <p>Event Bridge</p>
-            </li>
-            <li>
-              <img
-                :src="AWSSNS"
-                alt="AWS SNS icon"
-              >
-              <p>SNS</p>
-            </li>
-            <li>
-              <img
-                :src="AWSLambda"
-                alt="AWS Lambda icon"
-              >
-              <p>Lambda</p>
-            </li>
-            <li>
-              <img
-                :src="AWSS3"
-                alt="AWS S3 icon"
-              >
-              <p>S3</p>
-            </li>
-          </ul>
-        </section>
+        <h3 class="list-title">
+          Used Amazon Web Services
+        </h3>
       </EditorLine>
+      <ul class="services-list">
+        <EditorLine :indentation="2">
+          <li>
+            <img
+              :src="AWSCloudFront"
+              alt="AWS Cloudfront icon"
+            >
+            <p>Cloudfront</p>
+          </li>
+        </EditorLine>
+        <EditorLine :indentation="2">
+          <li>
+            <img
+              :src="AWSDynamoDB"
+              alt="AWS DynamoDB icon"
+            >
+            <p>DynamoDB</p>
+          </li>
+        </EditorLine>
+        <EditorLine :indentation="2">
+          <li>
+            <img
+              :src="AWSApiGateway"
+              alt="AWS API gateway icon"
+            >
+            <p>API-Gateway</p>
+          </li>
+        </EditorLine>
+        <EditorLine :indentation="2">
+          <li>
+            <img
+              :src="AWSStepFunctions"
+              alt="AWS Step Functions icon"
+            >
+            <p>Step Functions</p>
+          </li>
+        </EditorLine>
+        <EditorLine :indentation="2">
+          <li>
+            <img
+              :src="AWSEventBridge"
+              alt="AWS Event Bridge icon"
+            >
+            <p>Event Bridge</p>
+          </li>
+        </EditorLine>
+        <EditorLine :indentation="2">
+          <li>
+            <img
+              :src="AWSSNS"
+              alt="AWS SNS icon"
+            >
+            <p>SNS</p>
+          </li>
+        </EditorLine>
+        <EditorLine :indentation="2">
+          <li>
+            <img
+              :src="AWSLambda"
+              alt="AWS Lambda icon"
+            >
+            <p>Lambda</p>
+          </li>
+        </EditorLine>
+        <EditorLine :indentation="2">
+          <li>
+            <img
+              :src="AWSS3"
+              alt="AWS S3 icon"
+            >
+            <p>S3</p>
+          </li>
+        </EditorLine>
+      </ul>
 
       <EditorLine :indentation="2" />
       <EditorLine :indentation="1" />
