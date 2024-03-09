@@ -59,16 +59,21 @@ const visible = ref(true);
 <style scoped>
 .editor-notification {
   display: flex;
+  align-items: center;
   gap: 0.5rem;
   padding: 0.3rem;
   border-top: 2px solid;
   border-bottom: 2px solid;
+}
+.editor-notification-icon {
+  height: 1em;
 }
 .editor-notification-content {
   color: #000;
   flex-grow: 1;
 }
 .editor-notification-close-button {
+  height: 1em;
   cursor: pointer;
 }
 /*noinspection CssUnusedSymbol*/
