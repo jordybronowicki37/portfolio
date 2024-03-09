@@ -14,7 +14,10 @@ import ExplorerLinkItem from "./ExplorerLinkItem.vue";
       title="about-me"
       link="/about"
     />
-
+    <ExplorerFileItem
+      title="contact"
+      link="/contact"
+    />
     <ExplorerFolderItem
       title="projects"
       link="/projects"

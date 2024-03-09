@@ -113,51 +113,60 @@ import ProjectProperties from "../../components/ProjectProperties.vue";
 
       <EditorLine :indentation="2" />
       <EditorLine :indentation="2">
-        <section>
-          <h3 class="list-title">
-            Features
-          </h3>
-          <ul>
-            <li>
-              <h4>View your data iteratively in the map visualisation</h4>
-              <p>
-                View every frame separately or play them as a video.
-              </p>
-            </li>
-            <li>
-              <h4>Create selections</h4>
-              <p>
-                Make a selection of cells to only view the relevant information of a specific location.
-              </p>
-            </li>
-            <li>
-              <h4>View your data in a graph visualisation</h4>
-              <p>
-                View all the data of your selection in a graph.
-              </p>
-            </li>
-            <li>
-              <h4>View partial data</h4>
-              <p>
-                Configure a timespan to only view a section of the dataset.
-              </p>
-            </li>
-            <li>
-              <h4>Save, update and load dashboards as configurations</h4>
-              <p>
-                Dashboards are saved locally. They contain all of the added views with their selected settings.
-              </p>
-            </li>
-            <li>
-              <h4>Fast load times</h4>
-              <p>
-                By using data streaming, the load times for the dataset are extremely fast.
-              </p>
-            </li>
-          </ul>
-        </section>
+        <h3 class="list-title">
+          Features
+        </h3>
       </EditorLine>
-
+      <ul class="features-list">
+        <EditorLine :indentation="2">
+          <li>
+            <h4>View your data iteratively in the map visualisation</h4>
+            <p>
+              View every frame separately or play them as a video.
+            </p>
+          </li>
+        </EditorLine>
+        <EditorLine :indentation="2">
+          <li>
+            <h4>Create selections</h4>
+            <p>
+              Make a selection of cells to only view the relevant information of a specific location.
+            </p>
+          </li>
+        </EditorLine>
+        <EditorLine :indentation="2">
+          <li>
+            <h4>View your data in a graph visualisation</h4>
+            <p>
+              View all the data of your selection in a graph.
+            </p>
+          </li>
+        </EditorLine>
+        <EditorLine :indentation="2">
+          <li>
+            <h4>View partial data</h4>
+            <p>
+              Configure a timespan to only view a section of the dataset.
+            </p>
+          </li>
+        </EditorLine>
+        <EditorLine :indentation="2">
+          <li>
+            <h4>Save, update and load dashboards as configurations</h4>
+            <p>
+              Dashboards are saved locally. They contain all of the added views with their selected settings.
+            </p>
+          </li>
+        </EditorLine>
+        <EditorLine :indentation="2">
+          <li>
+            <h4>Fast load times</h4>
+            <p>
+              By using data streaming, the load times for the dataset are extremely fast.
+            </p>
+          </li>
+        </EditorLine>
+      </ul>
       <EditorLine :indentation="2" />
       <EditorLine :indentation="1" />
       <EditorLine :indentation="0" />

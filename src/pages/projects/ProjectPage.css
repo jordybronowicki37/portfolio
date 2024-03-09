@@ -17,11 +17,13 @@
     padding-left: 1rem;
 }
 .project-page ul {
-    padding-left: 1rem;
     margin: 0;
+    padding: 0;
 }
-.project-page li:not(:last-child) {
-    margin-bottom: 0.5rem;
+.features-list li {
+    margin-left: 2rem;
+    padding-left: 0.5rem;
+    margin-bottom: 0.2rem;
 }
 .project-page .text-only-section {
     padding: 0 1rem;
@@ -29,6 +31,9 @@
 .services-list li {
     display: flex;
     align-items: center;
+    padding-left: 1rem;
+    margin-bottom: 0.2rem;
+    list-style: none;
 }
 .services-list li img {
     height: 2em;
