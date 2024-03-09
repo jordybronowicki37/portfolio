@@ -41,6 +41,7 @@ import EditorNotificationManager from "./EditorNotificationManager.vue";
   background-color: var(--bg-color-800);
   display: flex;
   flex-direction: column;
+  flex-grow: 2;
 }
 #page-content {
   overflow: hidden auto;
