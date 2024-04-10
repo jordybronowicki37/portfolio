@@ -6,6 +6,9 @@ export enum Themes {
   "light" = "light",
 }
 
+export const LightThemes = [Themes.light];
+export const DarkThemes = [Themes.default, Themes["dark-blue"]];
+
 export const store = reactive<{theme: Themes}>({
   theme: Themes.default
 })
