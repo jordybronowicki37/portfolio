@@ -21,6 +21,11 @@ export const ALL_BACKEND_TYPES: PillDataType[] = [
     skillLevel: 76,
   },
   {
+    type: "graphql",
+    bgColor: "#e63bae",
+    skillLevel: 30,
+  },
+  {
     type: "java",
     bgColor: "#EC2025",
     skillLevel: 93,
@@ -70,7 +75,7 @@ export const ALL_FRONTEND_TYPES: PillDataType[] = [
   {
     type: "html",
     bgColor: "#1572B6",
-    skillLevel: 88,
+    skillLevel: 73,
   },
   {
     type: "javascript",
@@ -95,7 +100,7 @@ export const ALL_FRONTEND_TYPES: PillDataType[] = [
   {
     type: "typescript",
     bgColor: "#007ACC",
-    skillLevel: 73,
+    skillLevel: 77,
   },
   {
     type: "vue",
@@ -110,9 +115,19 @@ export const ALL_FRONTEND_TYPES: PillDataType[] = [
 ];
 export const ALL_PERSISTENCE_TYPES: PillDataType[] = [
   {
-    type: "postgresql",
-    bgColor: "#316192",
-    skillLevel: 80,
+    type: "dgraph",
+    bgColor: "#ff1e08",
+    skillLevel: 25,
+  },
+  {
+    type: "dynamodb",
+    bgColor: "#3e43c6",
+    skillLevel: 45,
+  },
+  {
+    type: "mongodb",
+    bgColor: "#439934",
+    skillLevel: 60,
   },
   {
     type: "mysql",
@@ -120,14 +135,9 @@ export const ALL_PERSISTENCE_TYPES: PillDataType[] = [
     skillLevel: 72,
   },
   {
-    type: "mongodb",
-    bgColor: "#439934",
-    skillLevel: 50,
-  },
-  {
-    type: "dynamodb",
-    bgColor: "#3e43c6",
-    skillLevel: 45,
+    type: "postgresql",
+    bgColor: "#316192",
+    skillLevel: 80,
   },
 ];
 export const ALL_DEPLOYMENT_TYPES: PillDataType[] = [
