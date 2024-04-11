@@ -1,8 +1,9 @@
 <script setup lang="ts">
 import {PillDataType} from "../data/Models";
 
-const {tech} = defineProps<{tech: PillDataType}>();
+const {tech, index} = defineProps<{tech: PillDataType, index: number}>();
 
+const animationDelay = `${index*30}ms`
 const color = tech.bgColor;
 let bgColor = color;
 if (color.length === 4) bgColor = color + "3";
@@ -13,8 +14,8 @@ const pillWidth = `${tech.skillLevel}%`
 <template>
   <div class="skill-pill-wrapper">
     <div class="skill-pill">
-      <div>{{tech.type}}</div>
-      <div>{{tech.skillLevel}}%</div>
+      <div>{{ tech.type }}</div>
+      <div>{{ tech.skillLevel }}%</div>
     </div>
   </div>
 </template>
@@ -22,8 +23,8 @@ const pillWidth = `${tech.skillLevel}%`
 <style scoped>
 .skill-pill-wrapper {
   max-width: 30rem;
-  background-color: #333;
-  border: 1px solid #333;
+  background-color: var(--bg-color-700);
+  border: 1px solid var(--bg-color-500);
 }
 .skill-pill {
   background-color: v-bind(bgColor);
@@ -34,9 +35,25 @@ const pillWidth = `${tech.skillLevel}%`
   display: flex;
   justify-content: space-between;
   gap: 0.5rem;
-  width: v-bind(pillWidth);
+  width: 0;
+  color: transparent;
+  animation: growPill 2s ease-in-out forwards;
+  animation-delay: v-bind(animationDelay);
+}
+.skill-pill div {
+  color: inherit;
 }
 .skill-pill-wrapper, .skill-pill {
   border-radius: 10rem;
+}
+@keyframes growPill {
+  from {
+    width: 0;
+    color: transparent;
+  }
+  to {
+    width: v-bind(pillWidth);
+    color: var(--font-color-200);
+  }
 }
 </style>
