@@ -8,11 +8,11 @@ import EditorLine from "../components/EditorLine.vue";
   <Editor>
     <EditorLine :indentation="0" />
     <EditorLine :indentation="0" />
-    <EditorLine :indentation="1">
+    <EditorLine :indentation="0">
       <h2>Contact</h2>
     </EditorLine>
-    <EditorLine :indentation="2">
-      Reach out and let's have a cup of coffee.
+    <EditorLine :indentation="1">
+      Reach out and let's build something cool.
     </EditorLine>
     <EditorLine :indentation="2" />
 
@@ -77,6 +77,7 @@ import EditorLine from "../components/EditorLine.vue";
         >jordybronowicki37@gmail.com</a>
       </div>
     </EditorLine>
+    <EditorLine :indentation="2" />
 
     <EditorLine :indentation="1" />
     <EditorLine :indentation="0" />
