@@ -14,6 +14,7 @@ import NeerslagRadarProject from "./pages/projects/NeerslagRadarProjectPage.vue"
 import TaskManagerProject from "./pages/projects/TaskManagerProjectPage.vue";
 import AimasProject from "./pages/projects/AimasProjectPage.vue";
 import ErrorPage from "./pages/ErrorPage.vue";
+import SkillsPage from "./pages/SkillsPage.vue";
 
 const routes: RouteRecordRaw[] = [
   {
@@ -30,6 +31,11 @@ const routes: RouteRecordRaw[] = [
     path: "/contact",
     name: "contact",
     component: ContactPage
+  },
+  {
+    path: "/skills",
+    name: "skills",
+    component: SkillsPage
   },
   {
     path: "/projects",

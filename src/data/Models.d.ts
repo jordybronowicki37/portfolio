@@ -11,6 +11,7 @@ export type ProjectCardProps = {
 export type PillDataType = {
   type: string;
   bgColor: string;
+  skillLevel?: number;
 }
 
 export type NotificationTypes = "INFO" | "WARNING" | "ERROR";

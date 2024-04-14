@@ -81,20 +81,23 @@ body :has(.is-resizing) {
 
 <style scoped>
 .side-bar-wrapper {
-  display: flex;
+  position: relative;
   max-width: 40%;
   min-width: 15%;
 }
 .side-bar-resize-handle {
   cursor: ew-resize;
-  background-color: var(--bg-color-600);
-  border-left: 1px solid var(--secondary-color);
-  width: 3px;
+  width: 5px;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  right: -2px;
+  z-index: 1;
 }
 .side-bar {
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
+  border-right: 1px solid var(--secondary-color);
   height: 100%;
   background: var(--bg-color-500);
   overflow: hidden;
@@ -104,11 +107,13 @@ body :has(.is-resizing) {
   padding: 0 0.5rem;
   font-weight: bold;
   font-size: small;
+  white-space: nowrap;
   position: absolute;
   left:0;
   top:0;
   transform: rotate(-90deg) translateX(-100%);
   transform-origin: top left;
+  z-index: 1;
 }
 .file-explorer-tab:hover,
 .minimize-explorer:hover {
