@@ -19,11 +19,11 @@ watch(route, () => {
       alt="Icon"
     >
 
-    <div id="current-file-title">
+    <div v-if="typeof route.name === 'string' && !['unknown', 'no-page'].includes(route.name)" id="current-file-title">
       Editing: {{ route.name }}
     </div>
 
-    <div>
+    <div class="mobile-navigation-open-btn">
       <box-icon
         name="menu"
         color="var(--font-color-200)"
@@ -101,7 +101,7 @@ header box-icon {
   .mobile-navigation {
     display: none;
   }
-  box-icon {
+  .mobile-navigation-open-btn box-icon {
     display: none;
   }
 }

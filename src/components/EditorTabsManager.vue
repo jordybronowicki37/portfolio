@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {useRoute} from "vue-router";
+import {useRoute, useRouter} from "vue-router";
 import {ref, watch, watchPostEffect} from "vue";
 
 type TabData = {
@@ -9,6 +9,7 @@ type TabData = {
 
 const tabsHistory = ref<TabData[]>([])
 const tabsContainer = ref<HTMLDivElement>();
+const router = useRouter();
 const route = useRoute();
 
 function translateScroll(e: WheelEvent) {
@@ -21,11 +22,12 @@ function translateScroll(e: WheelEvent) {
 
 function removeTab(name: string) {
   tabsHistory.value = tabsHistory.value.filter(t => t.name !== name);
+  if (tabsHistory.value.length === 0) router.push("/no-page");
 }
 
 watch(route, () => {
   if (typeof route.name !== "string") return;
-  if (route.name === "unknown") return;
+  if (["unknown", "no-page"].includes(route.name)) return;
   const foundTab = tabsHistory.value.find(tab => tab.name === route.name);
   if (foundTab) {
     foundTab.fullPath = route.fullPath;

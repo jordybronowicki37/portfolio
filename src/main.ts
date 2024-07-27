@@ -15,6 +15,7 @@ import TaskManagerProject from "./pages/projects/TaskManagerProjectPage.vue";
 import AimasProject from "./pages/projects/AimasProjectPage.vue";
 import ErrorPage from "./pages/ErrorPage.vue";
 import SkillsPage from "./pages/SkillsPage.vue";
+import NoOpenedFilesPage from "./pages/NoOpenedFilesPage.vue";
 
 const routes: RouteRecordRaw[] = [
   {
@@ -71,6 +72,11 @@ const routes: RouteRecordRaw[] = [
     path: "/projects/task-manager",
     name: "task-manager-project",
     component: TaskManagerProject
+  },
+  {
+    path: "/no-page",
+    name: "no-page",
+    component: NoOpenedFilesPage
   },
   {
     path: "/:pathMatch(.*)*",
