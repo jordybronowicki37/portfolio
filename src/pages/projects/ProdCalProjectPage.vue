@@ -4,6 +4,8 @@ import EditorLine from "../../components/EditorLine.vue";
 import ImageTextCombinedView from "../../components/ImageTextCombinedView.vue";
 import "./ProjectPage.css";
 import ProjectProperties from "../../components/ProjectProperties.vue";
+
+const githubURL = import.meta.env.VITE_PRODCAL_GITHUB_URL
 </script>
 
 <template>
@@ -22,7 +24,7 @@ import ProjectProperties from "../../components/ProjectProperties.vue";
             database="mongodb"
             type="personal"
             status="in progress"
-            :links="['https://github.com/jordybronowicki37/production-calculator']"
+            :links="[githubURL]"
           />
         </div>
       </EditorLine>

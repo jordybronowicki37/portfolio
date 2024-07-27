@@ -2,6 +2,7 @@
 import EditorNotification from "./EditorNotification.vue";
 
 const uri = location.hostname;
+const productionUrl = import.meta.env.VITE_PORTFOLIO_PRODUCTION_DEPLOYMENT_URL;
 </script>
 
 <template>
@@ -13,7 +14,7 @@ const uri = location.hostname;
       <p>
         You are currently viewing a test build.
       </p>
-      <a href="https://jordy-bronowicki-portfolio.onrender.com/">
+      <a :href="productionUrl">
         production build
       </a>
     </div>

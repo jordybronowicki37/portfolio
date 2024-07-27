@@ -1,12 +1,12 @@
 <script setup lang="ts">
-
 import Editor from "../components/Editor.vue";
 import EditorLine from "../components/EditorLine.vue";
+
+const env = import.meta.env;
 </script>
 
 <template>
   <Editor>
-    <EditorLine :indentation="0" />
     <EditorLine :indentation="0" />
     <EditorLine :indentation="0">
       <h2>Contact</h2>
@@ -40,9 +40,9 @@ import EditorLine from "../components/EditorLine.vue";
           />
         </div>
         <a
-          href="https://www.linkedin.com/in/jordy-bronowicki/"
+          :href="`https://www.linkedin.com/in/${env.VITE_LINKEDIN_PROFILE_URL}`"
           target="_blank"
-        >jordy-bronowicki</a>
+        >{{ env.VITE_LINKEDIN_PROFILE_URL }}</a>
       </div>
     </EditorLine>
     <EditorLine :indentation="2">
@@ -56,9 +56,9 @@ import EditorLine from "../components/EditorLine.vue";
           />
         </div>
         <a
-          href="https://github.com/jordybronowicki37"
+          :href="`https://github.com/${env.VITE_GITHUB_PROFILE_URL}`"
           target="_blank"
-        >jordybronowicki37</a>
+        >{{ env.VITE_GITHUB_PROFILE_URL }}</a>
       </div>
     </EditorLine>
     <EditorLine :indentation="2">
@@ -72,9 +72,9 @@ import EditorLine from "../components/EditorLine.vue";
           />
         </div>
         <a
-          href="mailto:jordybronowicki37@gmail.com"
+          :href="`mailto:${env.VITE_EMAIL_ADRESS}`"
           target="_blank"
-        >jordybronowicki37@gmail.com</a>
+        >{{ env.VITE_EMAIL_ADRESS }}</a>
       </div>
     </EditorLine>
     <EditorLine :indentation="2" />

@@ -4,6 +4,9 @@ import Editor from "../../components/Editor.vue";
 import ImageTextCombinedView from "../../components/ImageTextCombinedView.vue";
 import "./ProjectPage.css";
 import ProjectProperties from "../../components/ProjectProperties.vue";
+
+const deploymentURL = import.meta.env.VITE_SNAKE_DEPLOYMENT_URL;
+const githubURL = import.meta.env.VITE_SNAKE_GITHUB_URL;
 </script>
 
 <template>
@@ -23,8 +26,8 @@ import ProjectProperties from "../../components/ProjectProperties.vue";
             type="personal"
             status="in progress"
             :links="[
-              'https://github.com/jordybronowicki37/vue-snake',
-              'https://snake-game-o64n.onrender.com/'
+              githubURL,
+              deploymentURL
             ]"
           />
         </div>

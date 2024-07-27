@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import Editor from "../components/Editor.vue";
 import EditorLine from "../components/EditorLine.vue";
-import projects from "../components/ProjectCardsData.json";
+import {projectCardsData} from "../components/ProjectCardsData.ts";
 import ProjectCard from "../components/ProjectCard.vue";
 import {ref, watch} from "vue";
 import TechPillConfigured from "../components/TechPillConfigured.vue";
@@ -20,14 +20,14 @@ function extractTagsFilterFromQuery(): string[] {
   return filterTagsQuery as string[];
 }
 
-const projectsFiltered = ref<ProjectCardProps[]>(projects);
+const projectsFiltered = ref<ProjectCardProps[]>(projectCardsData);
 const filterTitle = ref<string>(filterTitleQuery ? filterTitleQuery: "");
 const filterTags = ref<string[]>(extractTagsFilterFromQuery());
 const filterTagsOpened = ref(false);
 
 function filterProjects() {
   const techFilterTags = filterTags.value.filter(t => !["open source", "closed source"].includes(t))
-  projectsFiltered.value = projects
+  projectsFiltered.value = projectCardsData
       .filter(v => v.title.toLowerCase().includes(filterTitle.value.toLowerCase()))
       .filter(v => techFilterTags.every(tag => v.tags.includes(tag)))
       .filter(v => !filterTags.value.includes("open source") || v.externalLinks.find(l => l.includes("github")) != undefined)
@@ -47,7 +47,7 @@ watch([filterTitle, filterTags], function () {
     <EditorLine :indentation="0" />
     <EditorLine :indentation="0">
       <header class="page-header">
-        <h2>Projects</h2><span>{{ projects.length }}</span>
+        <h2>Projects</h2><span>{{ projectCardsData.length }}</span>
       </header>
     </EditorLine>
 

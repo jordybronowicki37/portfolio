@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import projects from "./ProjectCardsData.json";
+import {projectCardsData} from "./ProjectCardsData.ts";
 import {
   ALL_BACKEND_TYPES,
   ALL_DEPLOYMENT_TYPES,
@@ -29,7 +29,7 @@ type TagOccurrenceGroup = {
   tags: TagOccurrence[];
 }
 
-const allProjects = projects as ProjectCardProps[];
+const allProjects = projectCardsData as ProjectCardProps[];
 const flattenedTags = allProjects.flatMap(v => v.tags);
 const mappedTagOccurrences = flattenedTags.reduce((obj, tag) => {
   if (obj[tag]) obj[tag].amount += 1;

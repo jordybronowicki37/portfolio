@@ -1,5 +1,7 @@
 <script setup lang="ts">
 defineProps<{ currentBranch: string }>()
+const productionUrl = import.meta.env.VITE_PORTFOLIO_PRODUCTION_DEPLOYMENT_URL;
+const developmentUrl = import.meta.env.VITE_PORTFOLIO_DEVELOPMENT_DEPLOYMENT_URL;
 </script>
 
 <template>
@@ -7,7 +9,7 @@ defineProps<{ currentBranch: string }>()
     <p>Branches</p>
     <ul>
       <li>
-        <a href="https://jordy-bronowicki-portfolio.onrender.com/">
+        <a :href="productionUrl">
           <box-icon
             name="git-branch"
             size="1em"
@@ -17,7 +19,7 @@ defineProps<{ currentBranch: string }>()
         </a>
       </li>
       <li>
-        <a href="https://jordy-bronowicki-portfolio-dev.onrender.com/">
+        <a :href="developmentUrl">
           <box-icon
             name="git-branch"
             size="1em"

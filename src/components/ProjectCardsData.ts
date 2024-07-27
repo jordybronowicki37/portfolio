@@ -1,4 +1,6 @@
-[
+import {ProjectCardProps} from "../data/Models";
+
+export const projectCardsData: ProjectCardProps[] = [
   {
     "title": "Production Calculator",
     "imageSrc": "/prod-cal-editor.png",
@@ -6,7 +8,7 @@
     "tags": [
       ".net", "c#", "mongodb", "react", "typescript", "redux", "sass", "personal", "in progress"
     ],
-    "externalLinks": ["https://github.com/jordybronowicki37/production-calculator"],
+    "externalLinks": [import.meta.env.VITE_PRODCAL_GITHUB_URL],
     "pageLink": "/projects/production-calculator",
     "description": "The production calculator allows you to easily create new production chains or map out existing factories. Calculate product throughput, identify efficiency problems and compare recipe efficiency."
   },
@@ -18,8 +20,8 @@
       "vue", "typescript", "personal", "completed"
     ],
     "externalLinks": [
-      "https://github.com/jordybronowicki37/portfolio",
-      "https://jordy-bronowicki-portfolio.onrender.com/"
+      import.meta.env.VITE_PORTFOLIO_GITHUB_URL,
+      import.meta.env.VITE_PORTFOLIO_PRODUCTION_DEPLOYMENT_URL
     ],
     "pageLink": "/projects/portfolio",
     "description": "This is the project that you are looking at right now, my portfolio website. It previews and explains all of my current projects in a code editor inspired website."
@@ -30,8 +32,8 @@
     "imageAlt": "Production calculator editor screenshot",
     "tags": ["vue", "typescript", "personal", "in progress"],
     "externalLinks": [
-      "https://github.com/jordybronowicki37/vue-snake",
-      "https://snake-game-o64n.onrender.com/"
+      import.meta.env.VITE_SNAKE_GITHUB_URL,
+      import.meta.env.VITE_SNAKE_DEPLOYMENT_URL
     ],
     "pageLink": "/projects/snake-game",
     "description": "Play a more exciting version of the classic game of snake. Complete with a collection of exciting levels, single-player challenges, strategic power-ups, custom skins and two fun multiplayer game-modes."

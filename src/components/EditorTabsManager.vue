@@ -47,11 +47,33 @@ watchPostEffect(() => {
 </script>
 
 <template>
-  <div ref="tabsContainer" class="editor-tabs-container" @wheel="translateScroll">
-    <div v-for="tab in tabsHistory" :key="tab.name" class="editor-tab" :class="[route.name === tab.name ? 'active-tab' : '']">
-      <router-link :to="tab.fullPath" class="editor-tab-link">{{tab.name}}</router-link>
-      <button @click="() => removeTab(tab.name)" class="editor-tab-close-btn" title="Close tab">
-        <box-icon name="x" size="xs" color="var(--font-color-200)" />
+  <div
+    ref="tabsContainer"
+    class="editor-tabs-container"
+    @wheel="translateScroll"
+  >
+    <div
+      v-for="tab in tabsHistory"
+      :key="tab.name"
+      class="editor-tab"
+      :class="[route.name === tab.name ? 'active-tab' : '']"
+    >
+      <router-link
+        :to="tab.fullPath"
+        class="editor-tab-link"
+      >
+        {{ tab.name }}
+      </router-link>
+      <button
+        class="editor-tab-close-btn"
+        title="Close tab"
+        @click="() => removeTab(tab.name)"
+      >
+        <box-icon
+          name="x"
+          size="xs"
+          color="var(--font-color-200)"
+        />
       </button>
     </div>
   </div>

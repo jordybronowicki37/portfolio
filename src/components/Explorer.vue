@@ -2,6 +2,8 @@
 import ExplorerFolderItem from "./ExplorerFolderItem.vue";
 import ExplorerFileItem from "./ExplorerFileItem.vue";
 import ExplorerLinkItem from "./ExplorerLinkItem.vue";
+
+const githubURL = import.meta.env.VITE_PORTFOLIO_GITHUB_URL;
 </script>
 
 <template>
@@ -54,7 +56,7 @@ import ExplorerLinkItem from "./ExplorerLinkItem.vue";
 
     <ExplorerLinkItem
       title="GitHub"
-      link="https://github.com/jordybronowicki37/portfolio"
+      :link="githubURL"
     />
   </div>
 </template>

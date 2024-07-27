@@ -4,6 +4,9 @@ import EditorLine from "../../components/EditorLine.vue";
 import ImageTextCombinedView from "../../components/ImageTextCombinedView.vue";
 import "./ProjectPage.css";
 import ProjectProperties from "../../components/ProjectProperties.vue";
+
+const deploymentURL = import.meta.env.VITE_PORTFOLIO_PRODUCTION_DEPLOYMENT_URL;
+const githubURL = import.meta.env.VITE_PORTFOLIO_GITHUB_URL;
 </script>
 
 <template>
@@ -22,10 +25,7 @@ import ProjectProperties from "../../components/ProjectProperties.vue";
             deployment="render"
             type="personal"
             status="completed"
-            :links="[
-              'https://github.com/jordybronowicki37/portfolio',
-              'https://jordy-bronowicki-portfolio.onrender.com/'
-            ]"
+            :links="[githubURL, deploymentURL]"
           />
         </div>
       </EditorLine>
