@@ -1,10 +1,14 @@
 <script setup lang="ts">
 import {useRoute} from "vue-router";
 import Explorer from "./Explorer.vue";
-import {ref} from "vue";
+import {ref, watch} from "vue";
 
 const route = useRoute();
 const mobileNavigationOpened = ref<boolean>(false);
+
+watch(route, () => {
+  mobileNavigationOpened.value = false;
+})
 </script>
 
 <template>
