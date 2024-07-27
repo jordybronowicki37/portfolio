@@ -11,7 +11,7 @@ import {ProjectCardProps} from "../data/Models";
 
 const router = useRouter();
 const route = useRoute();
-const filterTitleQuery = route.query.filterTitle as string | undefined;
+const filterTextQuery = route.query.filterText as string | undefined;
 const filterTagsQuery = route.query.filterTags;
 
 function extractTagsFilterFromQuery(): string[] {
@@ -21,25 +21,29 @@ function extractTagsFilterFromQuery(): string[] {
 }
 
 const projectsFiltered = ref<ProjectCardProps[]>(projectCardsData);
-const filterTitle = ref<string>(filterTitleQuery ? filterTitleQuery: "");
+const filterText = ref<string>(filterTextQuery ? filterTextQuery: "");
 const filterTags = ref<string[]>(extractTagsFilterFromQuery());
 const filterTagsOpened = ref(false);
 
 function filterProjects() {
-  const techFilterTags = filterTags.value.filter(t => !["open source", "closed source"].includes(t))
+  const techFilterTags = filterTags.value.filter(t => !["open source", "closed source"].includes(t));
+  const loweredFilterText = filterText.value.toLowerCase()
   projectsFiltered.value = projectCardsData
-      .filter(v => v.title.toLowerCase().includes(filterTitle.value.toLowerCase()))
+      .filter(v =>
+        v.title.toLowerCase().includes(loweredFilterText) ||
+        v.description.toLowerCase().includes(loweredFilterText) ||
+        v.tags.filter(t => t.toLowerCase().includes(loweredFilterText)).length > 0
+      )
       .filter(v => techFilterTags.every(tag => v.tags.includes(tag)))
       .filter(v => !filterTags.value.includes("open source") || v.externalLinks.find(l => l.includes("github")) != undefined)
       .filter(v => !filterTags.value.includes("closed source") || v.externalLinks.find(l => l.includes("github")) == undefined)
       .sort((v1, v2) => v1.title > v2.title ? 1 : -1);
 }
-filterProjects();
 
-watch([filterTitle, filterTags], function () {
-  router.replace({query: {filterTitle: filterTitle.value, filterTags: filterTags.value}});
+watch([filterText, filterTags], function () {
+  router.replace({query: {filterText: filterText.value !== "" ? filterText.value : undefined, filterTags: filterTags.value}});
   filterProjects();
-});
+}, {immediate: true});
 </script>
 
 <template>
@@ -60,11 +64,11 @@ watch([filterTitle, filterTags], function () {
       <div class="filters-wrapper">
         <p>Filter projects</p>
         <div class="filters">
-          <div class="title-filter-wrapper">
-            <label for="title-filter">Title</label>
+          <div class="text-filter-wrapper">
+            <label for="text-filter">Text</label>
             <input
-              id="title-filter"
-              v-model="filterTitle"
+              id="text-filter"
+              v-model="filterText"
               type="text"
             >
           </div>
@@ -162,7 +166,7 @@ watch([filterTitle, filterTags], function () {
   grid-template-columns: repeat(auto-fit, minmax(20rem, auto));
   gap: 0.3rem;
 }
-.title-filter-wrapper {
+.text-filter-wrapper {
   display: flex;
   position: relative;
   padding-top: 0.6em;
@@ -170,7 +174,7 @@ watch([filterTitle, filterTags], function () {
   border-radius: 0.5rem;
 }
 .tags-filter-wrapper>label,
-.title-filter-wrapper>label {
+.text-filter-wrapper>label {
   position: absolute;
   top: -0.7em;
   left: 0.8em;
@@ -196,14 +200,14 @@ watch([filterTitle, filterTags], function () {
 .tags-filter-expand-button-wrapper>box-icon.opened {
   rotate: 180deg;
 }
-.title-filter-wrapper input {
+.text-filter-wrapper input {
   padding: 4px;
   flex-grow: 1;
   background-color: transparent;
   border: none;
   border-radius: 0;
 }
-.title-filter-wrapper input:focus {
+.text-filter-wrapper input:focus {
   background-color: transparent;
   outline: none;
 }
