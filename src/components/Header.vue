@@ -19,7 +19,10 @@ watch(route, () => {
       alt="Icon"
     >
 
-    <div v-if="typeof route.name === 'string' && !['unknown', 'no-page'].includes(route.name)" id="current-file-title">
+    <div
+      v-if="typeof route.name === 'string' && !['unknown', 'no-page'].includes(route.name)"
+      id="current-file-title"
+    >
       Editing: {{ route.name }}
     </div>
 

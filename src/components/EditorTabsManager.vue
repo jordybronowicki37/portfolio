@@ -21,8 +21,20 @@ function translateScroll(e: WheelEvent) {
 }
 
 function removeTab(name: string) {
-  tabsHistory.value = tabsHistory.value.filter(t => t.name !== name);
-  if (tabsHistory.value.length === 0) router.push("/no-page");
+  let tabs = tabsHistory.value;
+  const isCurrentTab = route.name === name;
+  const removeIndex = tabs.findIndex(t => t.name === name);
+  if (removeIndex === -1) return;
+  tabs = tabs.filter(t => t.name !== name);
+  tabsHistory.value = tabs;
+
+  if (tabs.length === 0) {
+    router.push("/no-page");
+    return;
+  }
+  if (!isCurrentTab) return;
+  if (tabs.length === removeIndex) router.push(tabs[removeIndex-1].fullPath);
+  else router.push(tabs[removeIndex].fullPath);
 }
 
 watch(route, () => {
