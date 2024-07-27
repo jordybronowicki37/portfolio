@@ -64,6 +64,7 @@ const visible = ref(true);
   padding: 0.3rem;
   border-top: 2px solid;
   border-bottom: 2px solid;
+  z-index: 1;
 }
 .editor-notification-icon {
   height: 1em;
