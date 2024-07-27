@@ -7,11 +7,6 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
-
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
@@ -22,4 +17,11 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-/vite.config.ts.timestamp-*.mjs
+
+# Project specific
+node_modules
+package-lock.json
+dist
+dist-ssr
+*.local
+vite.config.ts.timestamp-*.mjs
