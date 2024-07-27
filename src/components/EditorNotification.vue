@@ -62,7 +62,6 @@ const visible = ref(true);
   align-items: center;
   gap: 0.5rem;
   padding: 0.3rem;
-  border-top: 2px solid;
   border-bottom: 2px solid;
   z-index: 1;
 }
