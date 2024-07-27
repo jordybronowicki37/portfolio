@@ -4,6 +4,7 @@ import Footer from "./Footer.vue";
 import EditorBackground from "./EditorBackground.vue";
 import Header from "./Header.vue";
 import EditorNotificationManager from "./EditorNotificationManager.vue";
+import EditorTabsManager from "./EditorTabsManager.vue";
 </script>
 
 <template>
@@ -12,6 +13,7 @@ import EditorNotificationManager from "./EditorNotificationManager.vue";
     <div id="page-center">
       <SideBar />
       <div id="page-content-wrapper">
+        <EditorTabsManager />
         <EditorNotificationManager />
         <EditorBackground />
         <div id="page-content">
@@ -42,6 +44,7 @@ import EditorNotificationManager from "./EditorNotificationManager.vue";
   display: flex;
   flex-direction: column;
   flex-grow: 2;
+  overflow: hidden;
 }
 #page-content {
   overflow: hidden auto;
