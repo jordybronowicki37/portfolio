@@ -80,9 +80,18 @@ export const projectCardsData: ProjectCardProps[] = [
     "title": "MTG collection manager",
     "imageSrc": "/mtg-card-overview.png",
     "imageAlt": "A preview of a MTG-card",
-    "tags": ["python", "sam", "scala", "dynamodb", "aws", "vue", "typescript", "cypress", "scryfall", "school", "completed"],
+    "tags": ["python", "sam", "scala", "dynamodb", "aws", "vue", "typescript", "sass", "cypress", "scryfall", "school", "completed"],
     "externalLinks": [],
     "pageLink": "",
     "description": "A system in which you can manage your MTG-cards collection. Additionally you can also create and manage playable decks for the commander game mode. If you would want a certain card for in your collection you could add it to your wishlist.",
+  },
+  {
+    "title": "Mining game - map generation",
+    "imageSrc": "/mining-game-map-gen-3d-2.png",
+    "imageAlt": "A topdown preview of the map generation",
+    "tags": ["c#", "unity", "group", "abandoned"],
+    "externalLinks": ["https://github.com/jordybronowicki37/mining-game-generation-test"],
+    "pageLink": "",
+    "description": "Me and my friend group wanted to create a fun game in which you would compete in mining for resources. This is a small overview of the map generation that is to be used inside of the game.",
   }
 ]

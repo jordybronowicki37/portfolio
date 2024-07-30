@@ -181,11 +181,15 @@ export const ALL_INTEGRATION_TYPES: PillDataType[] = [
     type: "scryfall",
     bgColor: "#a4819a",
   },
+  {
+    type: "unity",
+    bgColor: "#4c4c4c",
+  },
 ];
 export const ALL_PROJECT_TYPES: PillDataType[] = [
   {
-    type: "school/external",
-    bgColor: "#af5b5b",
+    type: "group",
+    bgColor: "#a33097",
   },
   {
     type: "personal",
@@ -194,6 +198,10 @@ export const ALL_PROJECT_TYPES: PillDataType[] = [
   {
     type: "school",
     bgColor: "#705499"
+  },
+  {
+    type: "school/external",
+    bgColor: "#af5b5b",
   },
 ];
 export const ALL_PROJECT_STATUSES: PillDataType[] = [
