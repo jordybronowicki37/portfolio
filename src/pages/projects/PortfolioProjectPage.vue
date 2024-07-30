@@ -32,6 +32,16 @@ const githubURL = import.meta.env.VITE_PORTFOLIO_GITHUB_URL;
 
       <EditorLine :indentation="2" />
       <EditorLine :indentation="2">
+        <h3>Project intentions</h3>
+        <section>
+          For my portfolio website I wanted a place in which I could share my work. And with that I don't mean to just
+          share my projects, but also my place of work. I did this by designing my portfolio as a code editor, my
+          daily place of work.
+        </section>
+      </EditorLine>
+
+      <EditorLine :indentation="2" />
+      <EditorLine :indentation="2">
         <ImageTextCombinedView
           image-title="Portfolio homepage preview"
           image-description="A code editor inspired portfolio."

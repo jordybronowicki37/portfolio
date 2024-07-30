@@ -29,6 +29,7 @@ import ProjectProperties from "../../components/ProjectProperties.vue";
 
       <EditorLine :indentation="2" />
       <EditorLine :indentation="2">
+        <h3>Project intentions</h3>
         <section>
           This project was part of a collaboration between a student group and an external client. We were tasked
           to develop an application that contained interactive weather animations. Raw weather data would be

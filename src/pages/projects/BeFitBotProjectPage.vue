@@ -32,6 +32,17 @@ const githubURL = import.meta.env.VITE_BEFIT_GITHUB_URL;
 
       <EditorLine :indentation="2" />
       <EditorLine :indentation="2">
+        <h3>Project intentions</h3>
+        <section>
+          I started this project because my friend group wanted to collectively start working out more, but there
+          wasn't any good app in which we could create custom exercises, set goals, compare progress and send
+          motivation quotes. We also wanted it to have discord integrations so that we could easily use it from within
+          our server.
+        </section>
+      </EditorLine>
+
+      <EditorLine :indentation="2" />
+      <EditorLine :indentation="2">
         <ImageTextCombinedView
           image-title="Create exercise logs"
           image-description="See how you are progressing with this specific exercise."

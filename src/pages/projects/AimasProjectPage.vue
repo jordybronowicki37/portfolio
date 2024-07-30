@@ -39,6 +39,17 @@ import AWSSNS from "aws-icons/icons/ArchitectureAmazonSimpleNotificationService.
 
       <EditorLine :indentation="2" />
       <EditorLine :indentation="2">
+        <h3>Project intentions</h3>
+        <section>
+          For this school assignment we had to work in pairs to create a serverless application in AWS using SAM. The
+          assignment was to create an employee dashboard for an accident management company. The dashboard had to show
+          the currently registered accidents on the dutch motorways. For this we would be using real world live data
+          provided via an api call.
+        </section>
+      </EditorLine>
+
+      <EditorLine :indentation="2" />
+      <EditorLine :indentation="2">
         <ImageTextCombinedView
           image-title="AIMAS Accidents overview"
           image-description="A live overview of all the incidents that are occurring on the dutch motorways."

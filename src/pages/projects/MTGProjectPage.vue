@@ -41,6 +41,16 @@ import AWSIAM from "aws-icons/icons/ArchitectureAWSIdentityandAccessManagement.s
 
       <EditorLine :indentation="2" />
       <EditorLine :indentation="2">
+        <h3>Project intentions</h3>
+        <section>
+          For this school assignment we had to create an application in which our tutor could manage his own Magic The
+          Gathering cards collection. He also wanted the ability to create his own decks from the cards of his
+          collection and wishlist cards that he did not yet own.
+        </section>
+      </EditorLine>
+
+      <EditorLine :indentation="2" />
+      <EditorLine :indentation="2">
         <ImageTextCombinedView
           image-title="MTG Card oracle view"
           image-description="View a card's oracle to see all the different releases."

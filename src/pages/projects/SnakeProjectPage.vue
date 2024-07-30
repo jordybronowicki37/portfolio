@@ -35,6 +35,19 @@ const githubURL = import.meta.env.VITE_SNAKE_GITHUB_URL;
 
       <EditorLine :indentation="2" />
       <EditorLine :indentation="2">
+        <h3>Project intentions</h3>
+        <section>
+          With this personal project I wanted to learn web development with the Vue framework. I wanted to see if it
+          would be possible to recreate the game Snake and give my own twist to it. I did not have munch confidence in
+          the performance of Vue and thought that I might have to mutate the dom manually for the game to be performant.
+          But I was quite surprised at how well Vue performs and detects changes within deeply nested objects. Creating
+          this game with Vue was actually pretty easy and much fun. I intend to work on the game and extend it's
+          features whenever I get some free time.
+        </section>
+      </EditorLine>
+
+      <EditorLine :indentation="2" />
+      <EditorLine :indentation="2">
         <div class="text-only-section">
           <h3>Play the famous game of snake</h3>
           <section>

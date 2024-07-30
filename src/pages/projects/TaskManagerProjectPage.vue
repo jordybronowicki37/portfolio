@@ -38,6 +38,17 @@ import AWSFargate from 'aws-icons/icons/ArchitectureAWSFargate.svg';
 
       <EditorLine :indentation="2" />
       <EditorLine :indentation="2">
+        <h3>Project intentions</h3>
+        <section>
+          For this school assignment we had to recreate the productivity tool Trello within AWS. The application had
+          to have simple authentication and the user should be able to: create boards, create and manage tasks, move
+          tasks from one lane to another and add tags to tasks. The main goal of the assignment was to learn the
+          deployment process of AWS. We had setup a production and testing environment with CI/CD pipelines.
+        </section>
+      </EditorLine>
+
+      <EditorLine :indentation="2" />
+      <EditorLine :indentation="2">
         <ImageTextCombinedView
           image-title="Board overview"
           image-description="View all tasks inside of a board."

@@ -31,6 +31,17 @@ const githubURL = import.meta.env.VITE_PRODCAL_GITHUB_URL
 
       <EditorLine :indentation="2" />
       <EditorLine :indentation="2">
+        <h3>Project intentions</h3>
+        <section>
+          I like to play factory building games. The satisfaction of automating basic tasks and watching your
+          factory grow is just amazing. But sometimes it can get quite complicated to calculate the required product
+          throughput for a certain production process. So I wanted to create a tool which can help with the
+          complicated mess of calculations that you get when planning a factory.
+        </section>
+      </EditorLine>
+
+      <EditorLine :indentation="2" />
+      <EditorLine :indentation="2">
         <ImageTextCombinedView
           image-title="Production calculator projects preview"
           image-description="An overview of all your projects."
