@@ -27,7 +27,7 @@ import AWSIAM from "aws-icons/icons/ArchitectureAWSIdentityandAccessManagement.s
         <div class="tags-wrapper">
           <ProjectProperties
             :languages="['python', 'scala', 'typescript', 'html', 'sass']"
-            :frameworks="['sam', 'websocket', 'react', 'redux']"
+            :frameworks="['sam', 'vue', 'cypress']"
             :integrations="['scryfall']"
             database="dynamodb"
             deployment="aws"
