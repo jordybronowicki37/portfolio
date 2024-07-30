@@ -25,7 +25,7 @@ defineProps<{project: ProjectCardProps}>();
       {{ project.description }}
     </p>
     <router-link
-      v-if="project.pageLink !== ''"
+      v-if="project.pageLink"
       class="learn-more-nav"
       :to="project.pageLink"
     >

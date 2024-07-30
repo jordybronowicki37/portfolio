@@ -4,7 +4,7 @@ export type ProjectCardProps = {
   imageAlt: string,
   tags: string[],
   externalLinks: string[],
-  pageLink: string,
+  pageLink?: string,
   description:string
 }
 
