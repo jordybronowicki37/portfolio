@@ -3,85 +3,72 @@ import './style.css';
 import 'boxicons'
 import App from './App.vue';
 import {createRouter, createWebHashHistory, RouteRecordRaw} from 'vue-router';
-import HomePage from "./pages/HomePage.vue";
-import AboutMePage from "./pages/AboutMePage.vue";
-import ContactPage from "./pages/ContactPage.vue";
-import ProjectsPage from "./pages/ProjectsPage.vue";
-import ProdCalProject from "./pages/projects/ProdCalProjectPage.vue";
-import SnakeProject from "./pages/projects/SnakeProjectPage.vue";
-import PortfolioProject from "./pages/projects/PortfolioProjectPage.vue";
-import NeerslagRadarProject from "./pages/projects/NeerslagRadarProjectPage.vue";
-import TaskManagerProject from "./pages/projects/TaskManagerProjectPage.vue";
-import AimasProject from "./pages/projects/AimasProjectPage.vue";
-import ErrorPage from "./pages/ErrorPage.vue";
-import SkillsPage from "./pages/SkillsPage.vue";
-import NoOpenedFilesPage from "./pages/NoOpenedFilesPage.vue";
 
 const routes: RouteRecordRaw[] = [
   {
     path: "/",
     name: "home",
-    component: HomePage
+    component: () => import("./pages/HomePage.vue")
   },
   {
     path: "/about",
     name: "about-me",
-    component: AboutMePage
+    component: () => import("./pages/AboutMePage.vue")
   },
   {
     path: "/contact",
     name: "contact",
-    component: ContactPage
+    component: () => import("./pages/ContactPage.vue")
   },
   {
     path: "/skills",
     name: "skills",
-    component: SkillsPage
+    component: () => import("./pages/SkillsPage.vue")
   },
   {
     path: "/projects",
     name: "projects",
-    component: ProjectsPage
+    component: () => import("./pages/ProjectsPage.vue")
   },
   {
     path: "/projects/aimas",
     name: "aimas-project",
-    component: AimasProject
+    component: () => import("./pages/projects/AimasProjectPage.vue")
   },
   {
     path: "/projects/neerslag-radar",
     name: "neerslag-radar-project",
-    component: NeerslagRadarProject
+    component: () => import("./pages/projects/NeerslagRadarProjectPage.vue")
   },
   {
     path: "/projects/production-calculator",
     name: "production-calculator-project",
-    component: ProdCalProject
+    component: () => import("./pages/projects/ProdCalProjectPage.vue")
   },
   {
     path: "/projects/portfolio",
     name: "portfolio-project",
-    component: PortfolioProject
+    component: () => import("./pages/projects/PortfolioProjectPage.vue")
   },
   {
     path: "/projects/snake-game",
     name: "snake-game-project",
-    component: SnakeProject
+    component: () => import("./pages/projects/SnakeProjectPage.vue")
   },
   {
     path: "/projects/task-manager",
     name: "task-manager-project",
-    component: TaskManagerProject
+    component: () => import("./pages/projects/TaskManagerProjectPage.vue")
   },
   {
     path: "/no-page",
     name: "no-page",
-    component: NoOpenedFilesPage
+    component: () => import("./pages/NoOpenedFilesPage.vue")
   },
   {
     path: "/:pathMatch(.*)*",
     name: "unknown",
-    component: ErrorPage
+    component: () => import("./pages/ErrorPage.vue")
   },
 ]
 
