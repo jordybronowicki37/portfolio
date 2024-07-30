@@ -82,7 +82,7 @@ export const projectCardsData: ProjectCardProps[] = [
     "imageAlt": "A preview of a MTG-card",
     "tags": ["python", "sam", "scala", "dynamodb", "aws", "vue", "typescript", "sass", "cypress", "scryfall", "school", "completed"],
     "externalLinks": [],
-    "pageLink": "",
+    "pageLink": "/projects/mtg",
     "description": "A system in which you can manage your MTG-cards collection. Additionally you can also create and manage playable decks for the commander game mode. If you would want a certain card for in your collection you could add it to your wishlist.",
   },
   {
