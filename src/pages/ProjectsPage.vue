@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import Editor from "../components/Editor.vue";
 import EditorLine from "../components/EditorLine.vue";
-import {projectCardsData} from "../components/ProjectCardsData.ts";
+import {projectCardsData} from "../data/ProjectCardsData.ts";
 import ProjectCard from "../components/ProjectCard.vue";
 import {ref, watch} from "vue";
 import TechPillConfigured from "../components/TechPillConfigured.vue";

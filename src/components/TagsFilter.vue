@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import {projectCardsData} from "./ProjectCardsData.ts";
+import {projectCardsData} from "../data/ProjectCardsData.ts";
 import {
   ALL_BACKEND_TYPES,
   ALL_DEPLOYMENT_TYPES,
   ALL_FRONTEND_TYPES, ALL_INTEGRATION_TYPES,
   ALL_PERSISTENCE_TYPES, ALL_PROJECT_STATUSES,
   ALL_PROJECT_TYPES, ALL_PROJECT_VISIBILITY
-} from "./TechPillConfiguredData";
+} from "../data/TechPillConfiguredData.ts";
 import {PillDataType, ProjectCardProps} from "../data/Models";
 import TechPillConfigured from "./TechPillConfigured.vue";
 import {watch, ref} from "vue";

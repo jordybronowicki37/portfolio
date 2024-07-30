@@ -6,7 +6,7 @@ import {
   ALL_DEPLOYMENT_TYPES,
   ALL_FRONTEND_TYPES,
   ALL_PERSISTENCE_TYPES
-} from "../components/TechPillConfiguredData.ts";
+} from "../data/TechPillConfiguredData.ts";
 import SkillPill from "../components/SkillPill.vue";
 import {PillDataType} from "../data/Models";
 

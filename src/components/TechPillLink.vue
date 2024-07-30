@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import TechPillSimple from "./TechPillSimple.vue";
-import {GetPillData} from "./TechPillConfiguredData.ts";
+import {GetPillData} from "../data/TechPillConfiguredData.ts";
 
 const {link} = defineProps<{link: string}>();
 

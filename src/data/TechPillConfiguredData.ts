@@ -1,4 +1,4 @@
-import {PillDataType} from "../data/Models";
+import {PillDataType} from "./Models";
 
 export function GetPillData(type: string): PillDataType {
   const data = ALL_TECH_PILL_TYPES.find(v => v.type === type);
