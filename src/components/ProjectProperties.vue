@@ -6,6 +6,7 @@ import TechPillSimple from "./TechPillSimple.vue";
 defineProps<{
   languages: string[],
   frameworks: string[],
+  integrations?: string[],
   database?: string,
   deployment?: string,
   type: string,
@@ -32,6 +33,15 @@ defineProps<{
         v-for="framework in frameworks"
         :key="framework"
         :type="framework"
+      />
+    </div>
+
+    <p v-if="integrations">Integrations:</p>
+    <div v-if="integrations" class="tag-list-wrapper">
+      <TechPillConfigured
+        v-for="integration in integrations"
+        :key="integration"
+        :type="integration"
       />
     </div>
 
