@@ -4,6 +4,8 @@ import EditorLine from "../../components/EditorLine.vue";
 import ImageTextCombinedView from "../../components/ImageTextCombinedView.vue";
 import "./ProjectPage.css";
 import ProjectProperties from "../../components/ProjectProperties.vue";
+
+const githubURL = import.meta.env.VITE_BEFIT_GITHUB_URL;
 </script>
 
 <template>
@@ -23,6 +25,7 @@ import ProjectProperties from "../../components/ProjectProperties.vue";
             database="postgresql"
             type="personal"
             status="in progress"
+            :links="[githubURL]"
           />
         </div>
       </EditorLine>

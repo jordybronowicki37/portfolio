@@ -37,8 +37,13 @@ defineProps<{
       />
     </div>
 
-    <p v-if="integrations">Integrations:</p>
-    <div v-if="integrations" class="tag-list-wrapper">
+    <p v-if="integrations">
+      Integrations:
+    </p>
+    <div
+      v-if="integrations"
+      class="tag-list-wrapper"
+    >
       <TechPillConfigured
         v-for="integration in integrations"
         :key="integration"

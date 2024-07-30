@@ -8,7 +8,9 @@ export const projectCardsData: ProjectCardProps[] = [
     "tags": [
       ".net", "c#", "mongodb", "react", "typescript", "redux", "sass", "personal", "in progress"
     ],
-    "externalLinks": [import.meta.env.VITE_PRODCAL_GITHUB_URL],
+    "externalLinks": [
+      import.meta.env.VITE_PRODCAL_GITHUB_URL
+    ],
     "pageLink": "/projects/production-calculator",
     "description": "The production calculator allows you to easily create new production chains or map out existing factories. Calculate product throughput, identify efficiency problems and compare recipe efficiency."
   },
@@ -72,7 +74,9 @@ export const projectCardsData: ProjectCardProps[] = [
     "imageSrc": "/befit-exercise-progress.png",
     "imageAlt": "A standard exercise progress report",
     "tags": ["java", "spring", "postgresql", "discord", "personal", "in progress"],
-    "externalLinks": ["https://github.com/jordybronowicki37/befit-bot"],
+    "externalLinks": [
+      import.meta.env.VITE_BEFIT_GITHUB_URL
+    ],
     "pageLink": "/projects/befit",
     "description": "A discord bot that can track your gym progress and motivate you. You can specify your own exercises, set your own goals, compare your progress to others and also ask for motivational quotes.",
   },
@@ -90,7 +94,9 @@ export const projectCardsData: ProjectCardProps[] = [
     "imageSrc": "/mining-game-map-gen-3d-2.png",
     "imageAlt": "A topdown preview of the map generation",
     "tags": ["c#", "unity", "group", "abandoned"],
-    "externalLinks": ["https://github.com/jordybronowicki37/mining-game-generation-test"],
+    "externalLinks": [
+      import.meta.env.VITE_MINING_GAME_GITHUB_URL
+    ],
     "pageLink": "",
     "description": "Me and my friend group wanted to create a fun game in which you would compete in mining for resources. This is a small overview of the map generation that is to be used inside of the game.",
   }
