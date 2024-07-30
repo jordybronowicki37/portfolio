@@ -152,6 +152,10 @@ export const ALL_DEPLOYMENT_TYPES: PillDataType[] = [
     skillLevel: 20,
   },
   {
+    type: "discord",
+    bgColor: "#5F64DC",
+  },
+  {
     type: "github",
     bgColor: "#555",
     skillLevel: 60,

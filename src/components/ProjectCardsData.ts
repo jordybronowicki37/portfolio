@@ -66,5 +66,14 @@ export const projectCardsData: ProjectCardProps[] = [
     "externalLinks": [],
     "pageLink": "/projects/aimas",
     "description": "With the Accidents and Incidents Management System (AIMAS), you can get a live preview of all accidents and incidents that are occurring in the Netherlands."
+  },
+  {
+    "title": "BeFit-bot",
+    "imageSrc": "/befit-exercise-progress.png",
+    "imageAlt": "A standard exercise progress report",
+    "tags": ["java", "spring", "postgresql", "discord", "personal", "in progress"],
+    "externalLinks": [],
+    "pageLink": "",
+    "description": "A discord bot that can track your gym progress and motivate you. You can specify your own exercises, set your own goals, compare your progress to others and also ask for motivational quotes.",
   }
 ]
