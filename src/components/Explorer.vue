@@ -33,6 +33,10 @@ const githubURL = import.meta.env.VITE_PORTFOLIO_GITHUB_URL;
         link="/projects/aimas"
       />
       <ExplorerFileItem
+        title="befit"
+        link="/projects/befit"
+      />
+      <ExplorerFileItem
         title="mtg collection manager"
         link="/projects/mtg"
       />

@@ -36,6 +36,11 @@ const routes: RouteRecordRaw[] = [
     component: () => import("./pages/projects/AimasProjectPage.vue")
   },
   {
+    path: "/projects/befit",
+    name: "befit-bot",
+    component: () => import("./pages/projects/BeFitBotProjectPage.vue")
+  },
+  {
     path: "/projects/mtg",
     name: "mtg-collection-manager",
     component: () => import("./pages/projects/MTGProjectPage.vue")

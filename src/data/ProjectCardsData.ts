@@ -73,7 +73,7 @@ export const projectCardsData: ProjectCardProps[] = [
     "imageAlt": "A standard exercise progress report",
     "tags": ["java", "spring", "postgresql", "discord", "personal", "in progress"],
     "externalLinks": ["https://github.com/jordybronowicki37/befit-bot"],
-    "pageLink": "",
+    "pageLink": "/projects/befit",
     "description": "A discord bot that can track your gym progress and motivate you. You can specify your own exercises, set your own goals, compare your progress to others and also ask for motivational quotes.",
   },
   {
