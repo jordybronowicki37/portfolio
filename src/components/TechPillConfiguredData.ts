@@ -73,6 +73,11 @@ export const ALL_FRONTEND_TYPES: PillDataType[] = [
     skillLevel: 87,
   },
   {
+    type: "cypress",
+    bgColor: "#5c9f93",
+    skillLevel: 33,
+  },
+  {
     type: "html",
     bgColor: "#1572B6",
     skillLevel: 73,
@@ -152,10 +157,6 @@ export const ALL_DEPLOYMENT_TYPES: PillDataType[] = [
     skillLevel: 20,
   },
   {
-    type: "discord",
-    bgColor: "#5F64DC",
-  },
-  {
     type: "github",
     bgColor: "#555",
     skillLevel: 60,
@@ -169,6 +170,12 @@ export const ALL_DEPLOYMENT_TYPES: PillDataType[] = [
     type: "docker",
     bgColor: "#019BC6",
     skillLevel: 46,
+  },
+];
+export const ALL_INTEGRATION_TYPES: PillDataType[] = [
+  {
+    type: "discord",
+    bgColor: "#5F64DC",
   },
 ];
 export const ALL_PROJECT_TYPES: PillDataType[] = [
@@ -214,6 +221,7 @@ export const ALL_TECH_PILL_TYPES: PillDataType[] = [
   ...ALL_FRONTEND_TYPES,
   ...ALL_PERSISTENCE_TYPES,
   ...ALL_DEPLOYMENT_TYPES,
+  ...ALL_INTEGRATION_TYPES,
   ...ALL_PROJECT_TYPES,
   ...ALL_PROJECT_STATUSES,
   ...ALL_PROJECT_VISIBILITY,

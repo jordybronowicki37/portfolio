@@ -3,7 +3,7 @@ import {projectCardsData} from "./ProjectCardsData.ts";
 import {
   ALL_BACKEND_TYPES,
   ALL_DEPLOYMENT_TYPES,
-  ALL_FRONTEND_TYPES,
+  ALL_FRONTEND_TYPES, ALL_INTEGRATION_TYPES,
   ALL_PERSISTENCE_TYPES, ALL_PROJECT_STATUSES,
   ALL_PROJECT_TYPES, ALL_PROJECT_VISIBILITY
 } from "./TechPillConfiguredData";
@@ -60,6 +60,7 @@ const persistenceOccurrences = SortAndCountTypeOccurences(ALL_PERSISTENCE_TYPES)
 const projectStatusOccurrences = SortAndCountTypeOccurences(ALL_PROJECT_STATUSES);
 const projectTypeOccurrences = SortAndCountTypeOccurences(ALL_PROJECT_TYPES);
 const projectVisibilityOccurrences = SortAndCountTypeOccurences(ALL_PROJECT_VISIBILITY);
+const integrationOccurrences = SortAndCountTypeOccurences(ALL_INTEGRATION_TYPES);
 const tagOccurrenceGroups: TagOccurrenceGroup[] = [
   {
     title: "Project type",
@@ -88,6 +89,10 @@ const tagOccurrenceGroups: TagOccurrenceGroup[] = [
   {
     title: "Deployment",
     tags: deploymentOccurrences
+  },
+  {
+    title: "Integration",
+    tags: integrationOccurrences
   }
 ];
 
