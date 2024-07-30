@@ -72,8 +72,17 @@ export const projectCardsData: ProjectCardProps[] = [
     "imageSrc": "/befit-exercise-progress.png",
     "imageAlt": "A standard exercise progress report",
     "tags": ["java", "spring", "postgresql", "discord", "personal", "in progress"],
-    "externalLinks": [],
+    "externalLinks": ["https://github.com/jordybronowicki37/befit-bot"],
     "pageLink": "",
     "description": "A discord bot that can track your gym progress and motivate you. You can specify your own exercises, set your own goals, compare your progress to others and also ask for motivational quotes.",
+  },
+  {
+    "title": "MTG collection manager",
+    "imageSrc": "/mtg-card-overview.png",
+    "imageAlt": "A preview of a MTG-card",
+    "tags": ["python", "sam", "scala", "dynamodb", "aws", "vue", "typescript", "cypress", "scryfall", "school", "completed"],
+    "externalLinks": [],
+    "pageLink": "",
+    "description": "A system in which you can manage your MTG-cards collection. Additionally you can also create and manage playable decks for the commander game mode. If you would want a certain card for in your collection you could add it to your wishlist.",
   }
 ]

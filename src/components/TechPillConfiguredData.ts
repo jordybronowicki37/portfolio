@@ -177,6 +177,10 @@ export const ALL_INTEGRATION_TYPES: PillDataType[] = [
     type: "discord",
     bgColor: "#5F64DC",
   },
+  {
+    type: "scryfall",
+    bgColor: "#a4819a",
+  },
 ];
 export const ALL_PROJECT_TYPES: PillDataType[] = [
   {
