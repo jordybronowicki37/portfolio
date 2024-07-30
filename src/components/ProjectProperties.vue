@@ -11,6 +11,7 @@ defineProps<{
   deployment?: string,
   type: string,
   groupSize?: number,
+  grade?: number,
   status: string,
   links?: string[],
 }>();
@@ -68,6 +69,20 @@ defineProps<{
     <p>Type:</p>
     <div class="tag-list-wrapper">
       <TechPillConfigured :type="type" />
+    </div>
+
+    <p v-if="grade">
+      Grade:
+    </p>
+    <div
+      v-if="grade"
+      class="tag-list-wrapper"
+    >
+      <TechPillSimple color="#555">
+        <p class="group-size-text">
+          {{ grade }}
+        </p>
+      </TechPillSimple>
     </div>
 
     <p v-if="groupSize">

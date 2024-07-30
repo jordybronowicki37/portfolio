@@ -29,6 +29,7 @@ import AWSFargate from 'aws-icons/icons/ArchitectureAWSFargate.svg';
             database="postgresql"
             deployment="aws"
             type="school"
+            :grade="8.1"
             :group-size="2"
             status="completed"
           />

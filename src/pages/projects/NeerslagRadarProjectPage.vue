@@ -21,6 +21,7 @@ import ProjectProperties from "../../components/ProjectProperties.vue";
             :frameworks="['.net', 'angular']"
             type="school/external"
             status="completed"
+            :grade="8.5"
             :group-size="5"
           />
         </div>

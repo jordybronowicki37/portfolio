@@ -30,6 +30,7 @@ import AWSSNS from "aws-icons/icons/ArchitectureAmazonSimpleNotificationService.
             database="dynamodb"
             deployment="aws"
             type="school"
+            :grade="7.8"
             :group-size="2"
             status="completed"
           />
