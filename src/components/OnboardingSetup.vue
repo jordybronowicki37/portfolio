@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import {StepEntity, useVOnboarding, VOnboardingWrapper} from "v-onboarding";
-import {onMounted, ref} from "vue";
+import {onMounted, ref, watch} from "vue";
 import 'v-onboarding/dist/style.css'
 import {bottom, right} from "@popperjs/core";
 import {useRoute, useRouter} from "vue-router";
+import {HIDE_ONBOARDING_KEY, store} from "../data/Store";
 
-const HIDE_ONBOARDING_KEY = "HIDE_ONBOARDING";
 const popperDefaultOptions = {
   modifiers: [
     {
@@ -116,6 +116,7 @@ const {start} = useVOnboarding(wrapper);
 
 async function StartOnboarding() {
   localStorage.setItem(HIDE_ONBOARDING_KEY, "true");
+  store.startOnboarding = false;
   if (!dialog.value) return;
   dialog.value.close();
   if (route.name !== "home") await router.replace({name: "home"});
@@ -124,12 +125,30 @@ async function StartOnboarding() {
 
 function SkipOnboarding() {
   localStorage.setItem(HIDE_ONBOARDING_KEY, "true");
+  store.startOnboarding = false;
   if (!dialog.value) return;
   dialog.value.close();
 }
 
+function UpdateModalVisibility() {
+  if (!dialog.value) return;
+  if (!dialog.value.open) dialog.value.classList.add("hide-modal");
+  else dialog.value.classList.remove("hide-modal");
+}
+
+watch(() => store.startOnboarding, () => {
+  if (!store.startOnboarding) return;
+  if (!dialog.value) return;
+  dialog.value.showModal();
+  UpdateModalVisibility();
+});
+
+watch(() => dialog.value?.open, () => {
+  UpdateModalVisibility();
+});
+
 onMounted(() => {
-  if (localStorage.getItem(HIDE_ONBOARDING_KEY) === "true") return;
+  if (!store.startOnboarding) return;
   if (!dialog.value) return;
   dialog.value.showModal();
 });
@@ -223,6 +242,9 @@ onMounted(() => {
 }
 .start-btn:hover {
   opacity: 0.7;
+}
+.hide-modal {
+  display: none;
 }
 </style>
 
