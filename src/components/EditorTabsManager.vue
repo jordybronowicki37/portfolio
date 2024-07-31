@@ -62,6 +62,7 @@ watchPostEffect(() => {
 
 <template>
   <div
+    id="tabs-container"
     ref="tabsContainer"
     class="editor-tabs-container"
     @wheel="translateScroll"

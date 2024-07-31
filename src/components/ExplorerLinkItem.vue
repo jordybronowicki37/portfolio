@@ -3,7 +3,7 @@ defineProps<{link: string, title: string}>();
 </script>
 
 <template>
-  <nav>
+  <nav :class="[`link-item-${title}`]">
     <box-icon
       name="link-external"
       size="xs"

@@ -3,7 +3,7 @@ defineProps<{link: string, title: string}>()
 </script>
 
 <template>
-  <nav>
+  <nav :class="[`file-item-${title}`]">
     <box-icon
       name="file"
       size="xs"

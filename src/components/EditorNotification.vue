@@ -56,6 +56,7 @@ const visible = ref(true);
   </div>
 </template>
 
+<!--suppress CssUnusedSymbol -->
 <style scoped>
 .editor-notification {
   display: flex;
@@ -76,17 +77,14 @@ const visible = ref(true);
   height: 1em;
   cursor: pointer;
 }
-/*noinspection CssUnusedSymbol*/
 .editor-notification-type-INFO {
   background-color: #7185ef;
   border-color: #0522be;
 }
-/*noinspection CssUnusedSymbol*/
 .editor-notification-type-WARNING {
   background-color: #efef59;
   border-color: #6c6c04;
 }
-/*noinspection CssUnusedSymbol*/
 .editor-notification-type-ERROR {
   background-color: #f35565;
   border-color: #af0518;

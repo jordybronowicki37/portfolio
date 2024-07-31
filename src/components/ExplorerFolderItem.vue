@@ -7,7 +7,10 @@ const folderOpen = ref<boolean>(document.URL.includes(link));
 </script>
 
 <template>
-  <nav class="folder-item">
+  <nav
+    class="folder-item"
+    :class="[`folder-item-${title}`]"
+  >
     <div class="folder-collapse">
       <box-icon
         v-if="!folderOpen"

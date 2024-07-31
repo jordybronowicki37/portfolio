@@ -40,6 +40,7 @@ const branchesOverviewOpened = ref(false);
       V{{ packageJson.version }}
     </div>
     <button
+      id="editor-settings-button"
       class="settings-button footer-tab"
       @click="dialog?.showModal()"
     >

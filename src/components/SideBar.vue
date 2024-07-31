@@ -47,6 +47,7 @@ const stopResize = () => {
 
     <div
       v-if="explorerOpened"
+      id="onboarding-view-side-bar"
       class="side-bar"
     >
       <div class="side-bar-title">
