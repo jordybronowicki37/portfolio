@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {StepEntity, useVOnboarding, VOnboardingWrapper} from "v-onboarding";
+import {onAfterStepOptions, onBeforeStepOptions, StepEntity, useVOnboarding, VOnboardingWrapper} from "v-onboarding";
 import {onMounted, ref, watch} from "vue";
 import 'v-onboarding/dist/style.css'
 import {bottom, right} from "@popperjs/core";
@@ -31,7 +31,30 @@ const steps: StepEntity[] = [
     }
   },
   {
-    attachTo: {element: '#onboarding-view-side-bar'},
+    attachTo: {element: '#mobile-navigation-open-btn'},
+    content: {
+      title: "Open the file explorer",
+      description: "Here you can find the file explorer."
+    },
+    on: {
+      beforeStep: opt => SkipStepOnMobileMode(opt, true),
+      async afterStep(opt) {
+        if (!IsInMobileMode()) return;
+        if (!opt || opt.isBackward) return;
+        await router.replace({query: {mobileNavOpened: "true"}});
+        // Wait for the opening animation to finish
+        await new Promise(resolve => setTimeout(resolve, 500));
+      },
+    },
+    options: {
+      popper: {
+        ...popperDefaultOptions,
+        placement: "bottom-start",
+      }
+    }
+  },
+  {
+    attachTo: {element: IsInMobileMode() ? '#mobile-navigation': '#onboarding-view-side-bar'},
     content: {
       title: "File explorer",
       description: "This is where you can find all of the different pages of this website. It follows a file like structure similar to the storage system of a computer."
@@ -39,17 +62,21 @@ const steps: StepEntity[] = [
     options: {
       popper: {
         ...popperDefaultOptions,
-        placement: right,
+        placement: IsInMobileMode() ? bottom : right,
       }
     }
   },
   {
-    attachTo: {element: '#onboarding-view-side-bar .folder-item-projects'},
+    attachTo: {element: `${IsInMobileMode() ? '#mobile-navigation': '#onboarding-view-side-bar'} .folder-item-projects`},
     content: {
       title: "My projects",
       description: "Here you can find my projects. Feel free to explore the folder however you want!"
     },
     on: {
+      beforeStep(options) {
+        if (!options || options.isForward) return;
+        router.back();
+      },
       async afterStep(options) {
         if (!options || options.isBackward) return;
         await router.push({name: "projects"});
@@ -58,7 +85,7 @@ const steps: StepEntity[] = [
     options: {
       popper: {
         ...popperDefaultOptions,
-        placement: "right-start",
+        placement: IsInMobileMode() ? "bottom-start" : "right-start",
       }
     }
   },
@@ -67,12 +94,6 @@ const steps: StepEntity[] = [
     content: {
       title: "Filter projects",
       description: "Here you can filter and search in my collection of projects. Some of them are personal while others I have worked on during my education. Have fun exploring!"
-    },
-    on: {
-      afterStep(options) {
-        if (!options || options.isForward) return;
-        router.back();
-      },
     },
     options: {
       popper: {
@@ -112,7 +133,19 @@ const router = useRouter();
 const route = useRoute();
 const dialog = ref<HTMLDialogElement>();
 const wrapper = ref(null);
-const {start} = useVOnboarding(wrapper);
+const {start, goToStep} = useVOnboarding(wrapper);
+
+function IsInMobileMode(): boolean {
+  const value = document.defaultView?.visualViewport?.width
+  return value != null && value < 600;
+}
+
+function SkipStepOnMobileMode(options: onBeforeStepOptions | onAfterStepOptions | undefined, invert: boolean = false): void {
+  if (IsInMobileMode() === !invert) {
+    if (options == undefined || options.direction == undefined) return;
+    goToStep(n => n + options.direction);
+  }
+}
 
 async function StartOnboarding() {
   localStorage.setItem(HIDE_ONBOARDING_KEY, "true");
@@ -130,21 +163,10 @@ function SkipOnboarding() {
   dialog.value.close();
 }
 
-function UpdateModalVisibility() {
-  if (!dialog.value) return;
-  if (!dialog.value.open) dialog.value.classList.add("hide-modal");
-  else dialog.value.classList.remove("hide-modal");
-}
-
 watch(() => store.startOnboarding, () => {
   if (!store.startOnboarding) return;
   if (!dialog.value) return;
   dialog.value.showModal();
-  UpdateModalVisibility();
-});
-
-watch(() => dialog.value?.open, () => {
-  UpdateModalVisibility();
 });
 
 onMounted(() => {
@@ -242,9 +264,6 @@ onMounted(() => {
 }
 .start-btn:hover {
   opacity: 0.7;
-}
-.hide-modal {
-  display: none;
 }
 </style>
 
