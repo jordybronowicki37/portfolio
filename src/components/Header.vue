@@ -57,7 +57,7 @@ watch(route, () => {
       :class="[mobileNavigationOpened ? 'opened' : 'closed']"
     >
       <div @click="CloseMobileNavigation">
-        <Explorer/>
+        <Explorer />
       </div>
     </div>
   </header>

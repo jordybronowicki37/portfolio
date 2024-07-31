@@ -67,7 +67,9 @@ function restartOnboarding() {
 
     <div class="tutorial-setting-wrapper">
       <h2>Tutorial</h2>
-      <button @click="restartOnboarding">Restart tutorial</button>
+      <button @click="restartOnboarding">
+        Restart tutorial
+      </button>
     </div>
   </div>
 </template>
