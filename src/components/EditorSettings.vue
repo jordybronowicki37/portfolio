@@ -2,12 +2,17 @@
 import {store, Themes} from "../data/Store.ts";
 
 defineProps<{ close: () => void }>()
+const emit = defineEmits(['close'])
+
+function restartOnboarding() {
+  emit('close');
+}
 </script>
 
 <template>
   <button
     class="close-button"
-    @click="close"
+    @click="$emit('close')"
   >
     <box-icon
       name="x"

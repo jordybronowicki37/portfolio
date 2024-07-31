@@ -58,7 +58,7 @@ const branchesOverviewOpened = ref(false);
     @click="dialog?.close()"
   >
     <div @click="$event.stopPropagation()">
-      <EditorSettings :close="() => dialog?.close()" />
+      <EditorSettings @close="() => dialog?.close()" />
     </div>
   </dialog>
 </template>
