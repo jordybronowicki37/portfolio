@@ -177,7 +177,7 @@ import AWSServiceCard from "../../components/AWSServiceCard.vue";
               <AWSServiceCard name="SSM" />
             </li>
             <li>
-              <AWSServiceCard name="AWSCognito" />
+              <AWSServiceCard name="Cognito" />
             </li>
             <li>
               <AWSServiceCard name="IAM" />

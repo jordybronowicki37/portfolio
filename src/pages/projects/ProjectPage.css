@@ -36,5 +36,6 @@
     margin-left: 1rem !important;
 }
 .services-list li {
+    display: flex;
     list-style: none;
 }
