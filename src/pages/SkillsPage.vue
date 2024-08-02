@@ -32,17 +32,19 @@ let skillPillCount = -1;
       <h2>My skills</h2>
     </EditorLine>
 
-    <EditorLine :indentation="1">
-      <h3>So you are interested in my skills?</h3>
-    </EditorLine>
-    <EditorLine :indentation="2">
-      <p>
-        Below, I've evaluated various skills and technologies based on my proficiency level. This assessment takes
-        into account the number of projects I've undertaken with these technologies and my confidence in utilizing
-        them in future endeavors. Additionally, I've considered the concepts within these technologies that I aim
-        to further explore.
-      </p>
-    </EditorLine>
+    <section>
+      <EditorLine :indentation="1">
+        <h3>So you are interested in my skills?</h3>
+      </EditorLine>
+      <EditorLine :indentation="2">
+        <p>
+          Below, I've evaluated various skills and technologies based on my proficiency level. This assessment takes
+          into account the number of projects I've undertaken with these technologies and my confidence in utilizing
+          them in future endeavors. Additionally, I've considered the concepts within these technologies that I aim
+          to further explore.
+        </p>
+      </EditorLine>
+    </section>
 
     <EditorLine :indentation="1" />
     <EditorLine :indentation="1">

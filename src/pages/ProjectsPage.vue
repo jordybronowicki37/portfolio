@@ -55,18 +55,20 @@ watch([filterText, filterTags], function () {
   <Editor>
     <div id="onboarding-view-projects">
       <EditorLine :indentation="0" />
-      <EditorLine :indentation="0">
-        <header class="page-header">
-          <h2>Projects</h2><span>{{ projectCardsData.length }}</span>
-        </header>
-      </EditorLine>
 
-      <EditorLine :indentation="1">
-        <p>
-          Here you can find some of the projects that I have either created myself or in collaboration with other
-          students.
-        </p>
-      </EditorLine>
+      <section>
+        <EditorLine :indentation="0">
+          <header class="page-header">
+            <h2>Projects</h2><span>{{ projectCardsData.length }}</span>
+          </header>
+        </EditorLine>
+        <EditorLine :indentation="1">
+          <p>
+            Here you can find some of the projects that I have either created myself or in collaboration with other
+            students.
+          </p>
+        </EditorLine>
+      </section>
 
       <EditorLine :indentation="1" />
       <EditorLine :indentation="1">
