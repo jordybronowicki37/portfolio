@@ -16,7 +16,7 @@ const selectedIcon = AWS_ICONS[name];
       >
       <h4>{{ selectedIcon.title }}</h4>
     </header>
-    <p>{{selectedIcon.description}}</p>
+    <p>{{ selectedIcon.description }}</p>
   </section>
 </template>
 
