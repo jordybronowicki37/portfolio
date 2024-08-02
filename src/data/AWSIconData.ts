@@ -16,7 +16,13 @@ import AWSSNS from "aws-icons/icons/ArchitectureAmazonSimpleNotificationService.
 import AWSSSM from "aws-icons/icons/ArchitectureAWSSystemsManager.svg";
 import AWSStepFunctions from "aws-icons/icons/ArchitectureAWSStepFunctions.svg";
 
-export const AWS_ICONS = {
+export type AWSIconData = {
+  icon: string,
+  title: string,
+  description: string,
+}
+
+export const AWS_ICONS: {[key: string]: AWSIconData} = {
   ALB: {
     icon: AWSELB,
     title: "Elastic Load Balancer",
