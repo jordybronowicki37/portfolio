@@ -7,7 +7,7 @@ const productionUrl = import.meta.env.VITE_PORTFOLIO_PRODUCTION_DEPLOYMENT_URL;
 
 <template>
   <EditorNotification
-    v-if="uri.includes('-dev') || uri.includes('localhost')"
+    v-if="uri.includes('-dev')"
     type="WARNING"
   >
     <div id="test-build-message">
