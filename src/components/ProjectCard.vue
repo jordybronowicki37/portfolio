@@ -52,6 +52,7 @@ h2 {
   text-align: center;
   font-size: 24px;
   color: var(--font-color-300);
+  padding: 0.2rem 0.5rem;
 }
 .project-card>p {
   flex-grow: 1;

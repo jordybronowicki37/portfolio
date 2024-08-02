@@ -132,7 +132,7 @@ defineProps<{
   gap: 0.3rem 0.5rem;
   background-color: var(--bg-color-600);
   border-radius: 0.5rem;
-  padding: 0.2rem;
+  padding: 0.5rem;
   margin: 0.2rem;
 }
 .tag-list-wrapper {
