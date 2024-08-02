@@ -5,7 +5,7 @@ import TechPillSimple from "./TechPillSimple.vue";
 
 defineProps<{
   languages: string[],
-  frameworks: string[],
+  frameworks?: string[],
   integrations?: string[],
   database?: string,
   deployment?: string,
@@ -28,8 +28,13 @@ defineProps<{
       />
     </div>
 
-    <p>Frameworks:</p>
-    <div class="tag-list-wrapper">
+    <p v-if="frameworks">
+      Frameworks:
+    </p>
+    <div
+      v-if="frameworks"
+      class="tag-list-wrapper"
+    >
       <TechPillConfigured
         v-for="framework in frameworks"
         :key="framework"
