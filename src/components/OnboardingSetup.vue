@@ -219,12 +219,6 @@ onMounted(() => {
   padding: 1rem;
   width: 20rem;
 }
-.onboarding-starting-dialog:focus-visible {
-  outline: none;
-}
-.onboarding-starting-dialog::backdrop {
-  background-color: #00000080;
-}
 .onboarding-starting-dialog header {
   font-size: 1.25rem;
   font-weight: 500;

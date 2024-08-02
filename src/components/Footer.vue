@@ -106,9 +106,6 @@ dialog {
   overflow: hidden auto;
   padding: 0;
 }
-dialog::backdrop {
-  backdrop-filter: blur(4px);
-}
 dialog>div {
   padding: 1rem;
   min-width: 10rem;
