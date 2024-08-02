@@ -4,14 +4,7 @@ import EditorLine from "../../components/EditorLine.vue";
 import ImageTextCombinedView from "../../components/ImageTextCombinedView.vue";
 import "./ProjectPage.css";
 import ProjectProperties from "../../components/ProjectProperties.vue";
-import AWSCloudFront from "aws-icons/icons/ArchitectureAmazonCloudFront.svg";
-import AWSApiGateway from "aws-icons/icons/ArchitectureAmazonAPIGateway.svg";
-import AWSDynamoDB from "aws-icons/icons/ArchitectureAmazonDynamoDB.svg";
-import AWSS3 from "aws-icons/icons/ArchitectureAmazonSimpleStorageService.svg";
-import AWSLambda from "aws-icons/icons/ArchitectureAWSLambda.svg";
-import AWSStepFunctions from "aws-icons/icons/ArchitectureAWSStepFunctions.svg";
-import AWSEventBridge from "aws-icons/icons/ArchitectureAmazonEventBridge.svg";
-import AWSSNS from "aws-icons/icons/ArchitectureAmazonSimpleNotificationService.svg";
+import AWSServiceCard from "../../components/AWSServiceCard.vue";
 </script>
 
 <template>
@@ -113,80 +106,37 @@ import AWSSNS from "aws-icons/icons/ArchitectureAmazonSimpleNotificationService.
           Used Amazon Web Services
         </h3>
       </EditorLine>
-      <ul class="services-list">
-        <EditorLine :indentation="2">
+      <EditorLine :indentation="2">
+        <ul class="services-list">
           <li>
-            <img
-              :src="AWSCloudFront"
-              alt="AWS Cloudfront icon"
-            >
-            <p>Cloudfront</p>
+            <AWSServiceCard name="CloudFront" />
           </li>
-        </EditorLine>
-        <EditorLine :indentation="2">
           <li>
-            <img
-              :src="AWSDynamoDB"
-              alt="AWS DynamoDB icon"
-            >
-            <p>DynamoDB</p>
+            <AWSServiceCard name="DynamoDB" />
           </li>
-        </EditorLine>
-        <EditorLine :indentation="2">
           <li>
-            <img
-              :src="AWSApiGateway"
-              alt="AWS API gateway icon"
-            >
-            <p>API-Gateway</p>
+            <AWSServiceCard name="ApiGateway" />
           </li>
-        </EditorLine>
-        <EditorLine :indentation="2">
           <li>
-            <img
-              :src="AWSStepFunctions"
-              alt="AWS Step Functions icon"
-            >
-            <p>Step Functions</p>
+            <AWSServiceCard name="StepFunctions" />
           </li>
-        </EditorLine>
-        <EditorLine :indentation="2">
           <li>
-            <img
-              :src="AWSEventBridge"
-              alt="AWS Event Bridge icon"
-            >
-            <p>Event Bridge</p>
+            <AWSServiceCard name="EventBridge" />
           </li>
-        </EditorLine>
-        <EditorLine :indentation="2">
           <li>
-            <img
-              :src="AWSSNS"
-              alt="AWS SNS icon"
-            >
-            <p>SNS</p>
+            <AWSServiceCard name="SNS" />
           </li>
-        </EditorLine>
-        <EditorLine :indentation="2">
           <li>
-            <img
-              :src="AWSLambda"
-              alt="AWS Lambda icon"
-            >
-            <p>Lambda</p>
+            <AWSServiceCard name="SSM" />
           </li>
-        </EditorLine>
-        <EditorLine :indentation="2">
           <li>
-            <img
-              :src="AWSS3"
-              alt="AWS S3 icon"
-            >
-            <p>S3</p>
+            <AWSServiceCard name="Lambda" />
           </li>
-        </EditorLine>
-      </ul>
+          <li>
+            <AWSServiceCard name="S3" />
+          </li>
+        </ul>
+      </EditorLine>
 
       <EditorLine :indentation="2" />
       <EditorLine :indentation="1" />

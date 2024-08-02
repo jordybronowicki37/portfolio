@@ -4,13 +4,7 @@ import EditorLine from "../../components/EditorLine.vue";
 import ImageTextCombinedView from "../../components/ImageTextCombinedView.vue";
 import "./ProjectPage.css";
 import ProjectProperties from "../../components/ProjectProperties.vue";
-import AWSS3 from 'aws-icons/icons/ArchitectureAmazonSimpleStorageService.svg';
-import AWSCF from 'aws-icons/icons/ArchitectureAmazonCloudFront.svg';
-import AWSECS from 'aws-icons/icons/ArchitectureAmazonElasticContainerService.svg';
-import AWSECR from 'aws-icons/icons/ArchitectureAmazonElasticContainerRegistry.svg';
-import AWSRDS from 'aws-icons/icons/ArchitectureAmazonRDS.svg';
-import AWSALB from 'aws-icons/icons/ArchitectureElasticLoadBalancing.svg';
-import AWSFargate from 'aws-icons/icons/ArchitectureAWSFargate.svg';
+import AWSServiceCard from "../../components/AWSServiceCard.vue";
 </script>
 
 <template>
@@ -164,53 +158,25 @@ import AWSFargate from 'aws-icons/icons/ArchitectureAWSFargate.svg';
           </h3>
           <ul class="services-list">
             <li>
-              <img
-                :src="AWSCF"
-                alt="AWS Cloudfront icon"
-              >
-              <p>Cloudfront</p>
+              <AWSServiceCard name="CloudFront" />
             </li>
             <li>
-              <img
-                :src="AWSALB"
-                alt="AWS Load Balancer icon"
-              >
-              <p>Load Balancer</p>
+              <AWSServiceCard name="ALB" />
             </li>
             <li>
-              <img
-                :src="AWSRDS"
-                alt="AWS RDS icon"
-              >
-              <p>RDS - PostgreSQL</p>
+              <AWSServiceCard name="RDS" />
             </li>
             <li>
-              <img
-                :src="AWSECS"
-                alt="AWS ECS icon"
-              >
-              <p>ECS</p>
+              <AWSServiceCard name="ECS" />
             </li>
             <li>
-              <img
-                :src="AWSECR"
-                alt="AWS ECR icon"
-              >
-              <p>ECR</p>
+              <AWSServiceCard name="ECR" />
             </li>
             <li>
-              <img
-                :src="AWSFargate"
-                alt="AWS Fargate icon"
-              >
-              <p>Fargate</p>
+              <AWSServiceCard name="Fargate" />
             </li>
             <li>
-              <img
-                :src="AWSS3"
-                alt="AWS S3 icon"
-              >
-              <p>S3</p>
+              <AWSServiceCard name="S3" />
             </li>
           </ul>
         </section>

@@ -28,15 +28,13 @@
 .project-page .text-only-section {
     padding: 0 1rem;
 }
-.services-list li {
-    display: flex;
-    align-items: center;
-    padding-left: 1rem;
-    margin-bottom: 0.2rem;
-    list-style: none;
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, max-content));
+    justify-items: center;
+    gap: 1rem;
+    margin-left: 1rem !important;
 }
-.services-list li img {
-    height: 2em;
-    width: 2em;
-    margin-right: 1em;
+.services-list li {
+    list-style: none;
 }
