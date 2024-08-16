@@ -40,9 +40,9 @@ const env = import.meta.env;
           />
         </div>
         <a
-          :href="`https://www.linkedin.com/in/${env.VITE_LINKEDIN_PROFILE_URL}`"
+          :href="`https://www.linkedin.com/in/${env.VITE_LINKEDIN_PROFILE}`"
           target="_blank"
-        >{{ env.VITE_LINKEDIN_PROFILE_URL }}</a>
+        >{{ env.VITE_LINKEDIN_PROFILE }}</a>
       </div>
     </EditorLine>
     <EditorLine :indentation="2">
@@ -56,9 +56,9 @@ const env = import.meta.env;
           />
         </div>
         <a
-          :href="`https://github.com/${env.VITE_GITHUB_PROFILE_URL}`"
+          :href="`https://github.com/${env.VITE_GITHUB_PROFILE}`"
           target="_blank"
-        >{{ env.VITE_GITHUB_PROFILE_URL }}</a>
+        >{{ env.VITE_GITHUB_PROFILE }}</a>
       </div>
     </EditorLine>
     <EditorLine :indentation="2">
