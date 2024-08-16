@@ -59,10 +59,11 @@ function close() {
         </p>
 
         <ul v-if="tech.links && tech.links.length > 0">
-          <li>
+          <li
+            v-for="link in tech.links"
+            :key="link.name"
+          >
             <a
-              v-for="link in tech.links"
-              :key="link.name"
               :href="link.url"
             >{{ link.name }}</a>
           </li>
