@@ -4,7 +4,7 @@
   "author": "Jordy Bronowicki",
   "homepage": "https://github.com/jordybronowicki37/portfolio",
   "private": true,
-  "version": "1.2.9",
+  "version": "1.2.10",
   "type": "module",
   "scripts": {
     "dev": "vite",
