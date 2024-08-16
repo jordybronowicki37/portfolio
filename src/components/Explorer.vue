@@ -8,68 +8,73 @@ const githubURL = import.meta.env.VITE_PORTFOLIO_GITHUB_URL;
 
 <template>
   <div class="explorer">
-    <ExplorerFileItem
-      title="home"
-      link="/"
-    />
-    <ExplorerFileItem
-      title="about-me"
-      link="/about"
-    />
-    <ExplorerFileItem
-      title="contact"
-      link="/contact"
-    />
-    <ExplorerFileItem
-      title="skills"
-      link="/skills"
-    />
     <ExplorerFolderItem
-      title="projects"
-      link="/projects"
+      title="portfolio project"
+      link="/"
     >
       <ExplorerFileItem
-        title="aimas"
-        link="/projects/aimas"
+        title="home"
+        link="/"
       />
       <ExplorerFileItem
-        title="befit"
-        link="/projects/befit"
+        title="about me"
+        link="/about"
       />
       <ExplorerFileItem
-        title="mining-game"
-        link="/projects/mining-game"
+        title="contact"
+        link="/contact"
       />
       <ExplorerFileItem
-        title="mtg collection manager"
-        link="/projects/mtg"
+        title="skills"
+        link="/skills"
       />
-      <ExplorerFileItem
-        title="neerslag radar"
-        link="/projects/neerslag-radar"
-      />
-      <ExplorerFileItem
-        title="portfolio"
-        link="/projects/portfolio"
-      />
-      <ExplorerFileItem
-        title="production calculator"
-        link="/projects/production-calculator"
-      />
-      <ExplorerFileItem
-        title="snake game"
-        link="/projects/snake-game"
-      />
-      <ExplorerFileItem
-        title="task manager"
-        link="/projects/task-manager"
+      <ExplorerFolderItem
+        title="projects"
+        link="/projects"
+      >
+        <ExplorerFileItem
+          title="aimas"
+          link="/projects/aimas"
+        />
+        <ExplorerFileItem
+          title="befit"
+          link="/projects/befit"
+        />
+        <ExplorerFileItem
+          title="mining game"
+          link="/projects/mining-game"
+        />
+        <ExplorerFileItem
+          title="mtg collection manager"
+          link="/projects/mtg"
+        />
+        <ExplorerFileItem
+          title="neerslag radar"
+          link="/projects/neerslag-radar"
+        />
+        <ExplorerFileItem
+          title="portfolio"
+          link="/projects/portfolio"
+        />
+        <ExplorerFileItem
+          title="production calculator"
+          link="/projects/production-calculator"
+        />
+        <ExplorerFileItem
+          title="snake game"
+          link="/projects/snake-game"
+        />
+        <ExplorerFileItem
+          title="task manager"
+          link="/projects/task-manager"
+        />
+      </ExplorerFolderItem>
+
+      <ExplorerLinkItem
+        title="GitHub"
+        :link="githubURL"
       />
     </ExplorerFolderItem>
-
-    <ExplorerLinkItem
-      title="GitHub"
-      :link="githubURL"
-    />
   </div>
 </template>
 
