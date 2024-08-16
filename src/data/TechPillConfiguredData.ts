@@ -117,6 +117,11 @@ export const ALL_FRONTEND_TYPES: PillDataType[] = [
     bgColor: "#f22008",
     skillLevel: 40,
   },
+  {
+    type: "wpf",
+    bgColor: "#0d518d",
+    skillLevel: 50,
+  },
 ];
 export const ALL_PERSISTENCE_TYPES: PillDataType[] = [
   {

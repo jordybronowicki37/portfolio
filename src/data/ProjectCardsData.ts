@@ -93,11 +93,11 @@ export const projectCardsData: ProjectCardProps[] = [
     "title": "Mining game - map generation",
     "imageSrc": "/mining-game-map-gen-3d-2.png",
     "imageAlt": "A topdown preview of the map generation",
-    "tags": ["c#", "unity", "group", "abandoned"],
+    "tags": ["c#", "wpf", "unity", "group", "in progress"],
     "externalLinks": [
       import.meta.env.VITE_MINING_GAME_GITHUB_URL
     ],
-    "pageLink": "",
+    "pageLink": "/projects/mining-game",
     "description": "Me and my friend group wanted to create a fun game in which you would compete in mining for resources. This is a small overview of the map generation that is to be used inside of the game.",
   }
 ]

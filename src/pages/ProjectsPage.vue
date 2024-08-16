@@ -37,7 +37,7 @@ function filterProjects() {
     .filter(v => techFilterTags.every(tag => v.tags.includes(tag)))
     .filter(v => !filterTags.value.includes("open source") || v.externalLinks.find(l => l.includes("github")) != undefined)
     .filter(v => !filterTags.value.includes("closed source") || v.externalLinks.find(l => l.includes("github")) == undefined)
-    .sort((v1, v2) => v1.title > v2.title ? 1 : -1);
+    .sort((v1, v2) => v1.title.toLowerCase() > v2.title.toLowerCase() ? 1 : -1);
 }
 
 watch([filterText, filterTags], function () {

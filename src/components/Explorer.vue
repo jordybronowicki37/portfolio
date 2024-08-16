@@ -37,6 +37,10 @@ const githubURL = import.meta.env.VITE_PORTFOLIO_GITHUB_URL;
         link="/projects/befit"
       />
       <ExplorerFileItem
+        title="mining-game"
+        link="/projects/mining-game"
+      />
+      <ExplorerFileItem
         title="mtg collection manager"
         link="/projects/mtg"
       />
