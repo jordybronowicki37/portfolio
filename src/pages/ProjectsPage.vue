@@ -102,6 +102,7 @@ watch([filterText, filterTags], function () {
                   v-for="tag in filterTags"
                   :key="tag"
                   :type="tag"
+                  decoration-only
                 />
               </div>
 

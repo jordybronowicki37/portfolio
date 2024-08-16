@@ -125,7 +125,10 @@ watch(filterTags, () => {
           :value="tagOccurrence.tag"
         >
         <label :for="tagOccurrence.tag">
-          <TechPillConfigured :type="tagOccurrence.tag" />
+          <TechPillConfigured
+            :type="tagOccurrence.tag"
+            decoration-only
+          />
         </label>
         <span>{{ tagOccurrence.amount }}</span>
       </div>

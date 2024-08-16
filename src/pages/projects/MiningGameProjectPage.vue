@@ -195,7 +195,9 @@ import ProjectProperties from "../../components/ProjectProperties.vue";
 
       <EditorLine :indentation="2" />
       <EditorLine :indentation="2">
-        <p class="to-be-expanded">To be expanded!</p>
+        <p class="to-be-expanded">
+          To be expanded!
+        </p>
       </EditorLine>
 
       <EditorLine :indentation="2" />

@@ -209,7 +209,7 @@ onMounted(() => {
 </template>
 
 <style scoped>
-.onboarding-starting-dialog {
+dialog {
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -219,25 +219,25 @@ onMounted(() => {
   padding: 1rem;
   width: 20rem;
 }
-.onboarding-starting-dialog header {
+header {
   font-size: 1.25rem;
   font-weight: 500;
   line-height: 1.5;
 }
-.onboarding-starting-dialog section {
+section {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
-.onboarding-starting-dialog section p {
+p {
   font-size: .875rem;
   color: var(--font-color-400);
 }
-.onboarding-starting-dialog footer {
+footer {
   display: flex;
   gap: 1rem;
 }
-.onboarding-starting-dialog button {
+button {
   box-shadow: 0 1px 2px #0000000d;
   padding: .5rem 1.25rem;
   border-radius: 9999px;
