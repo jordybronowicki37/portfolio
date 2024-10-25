@@ -88,9 +88,18 @@ const githubURL = import.meta.env.VITE_PORTFOLIO_GITHUB_URL;
         </EditorLine>
         <EditorLine :indentation="2">
           <div class="images-collection text-only-section">
-            <img src="/portfolio-theme-1.jpeg" alt="Portfolio theme">
-            <img src="/portfolio-theme-2.jpeg" alt="Portfolio theme">
-            <img src="/portfolio-theme-3.jpeg" alt="Portfolio theme">
+            <img
+              src="/portfolio-theme-1.jpeg"
+              alt="Portfolio theme"
+            >
+            <img
+              src="/portfolio-theme-2.jpeg"
+              alt="Portfolio theme"
+            >
+            <img
+              src="/portfolio-theme-3.jpeg"
+              alt="Portfolio theme"
+            >
           </div>
         </EditorLine>
       </section>
