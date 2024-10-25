@@ -16,7 +16,7 @@ export const projectCardsData: ProjectCardProps[] = [
   },
   {
     "title": "Portfolio",
-    "imageSrc": "/portfolio-home.png",
+    "imageSrc": "/portfolio-projects.jpeg",
     "imageAlt": "Portfolio home page screenshot",
     "tags": [
       "vue", "typescript", "personal", "completed"

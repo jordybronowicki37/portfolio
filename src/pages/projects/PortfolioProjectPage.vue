@@ -65,12 +65,33 @@ const githubURL = import.meta.env.VITE_PORTFOLIO_GITHUB_URL;
             </template>
             <template #image>
               <img
-                src="/portfolio-home.png"
+                src="/portfolio-projects.jpeg"
                 alt="Portfolio homepage preview"
                 class="project-image"
               >
             </template>
           </ImageTextCombinedView>
+        </EditorLine>
+      </section>
+
+      <section>
+        <EditorLine :indentation="2" />
+        <EditorLine :indentation="2">
+          <h3 class="text-only-section">
+            Themes
+          </h3>
+        </EditorLine>
+        <EditorLine :indentation="2">
+          <p class="text-only-section">
+            The editor supports multiple different themes so that you can customize it however you like.
+          </p>
+        </EditorLine>
+        <EditorLine :indentation="2">
+          <div class="images-collection text-only-section">
+            <img src="/portfolio-theme-1.jpeg" alt="Portfolio theme">
+            <img src="/portfolio-theme-2.jpeg" alt="Portfolio theme">
+            <img src="/portfolio-theme-3.jpeg" alt="Portfolio theme">
+          </div>
         </EditorLine>
       </section>
 
@@ -130,5 +151,11 @@ const githubURL = import.meta.env.VITE_PORTFOLIO_GITHUB_URL;
 </template>
 
 <style scoped>
-
+.images-collection {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, max-content));
+}
+.images-collection img {
+  width: 100%;
+}
 </style>
