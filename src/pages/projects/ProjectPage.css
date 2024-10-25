@@ -13,29 +13,36 @@
     width: 100%;
     object-fit: contain;
 }
-.project-page .list-title {
-    padding-left: 1rem;
-}
 .project-page ul {
     margin: 0;
     padding: 0;
 }
 .features-list li {
-    margin-left: 2rem;
-    padding-left: 0.5rem;
+    margin-left: 1rem;
     margin-bottom: 0.2rem;
-}
-.project-page .text-only-section {
-    padding: 0 1rem;
 }
 .services-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(15rem, max-content));
     justify-items: center;
     gap: 1rem;
-    margin-left: 1rem !important;
 }
 .services-list li {
     display: flex;
     list-style: none;
+}
+@media screen and (min-width: 600px) {
+    .project-page .text-only-section {
+        padding-left: 1rem;
+    }
+    .project-page .list-title {
+        padding-left: 1rem;
+    }
+    .features-list li {
+        margin-left: 2rem;
+        padding-left: 0.5rem;
+    }
+    .services-list {
+        margin-left: 1rem !important;
+    }
 }

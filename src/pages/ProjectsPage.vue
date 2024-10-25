@@ -167,8 +167,23 @@ watch([filterText, filterTags], function () {
 
 .projects-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, max-content));
   justify-items: center;
+  gap: 10px;
+}
+@media screen and (min-width: 1201px) {
+  .projects-container {
+    grid-template-columns: repeat(auto-fit, minmax(20rem, max-content));
+  }
+}
+@media screen and (max-width: 1200px) and (min-width: 601px) {
+  .projects-container {
+    grid-template-columns: repeat(auto-fit, minmax(15rem, max-content));
+  }
+}
+@media screen and (max-width: 600px) {
+  .projects-container {
+    grid-template-columns: repeat(auto-fit, minmax(12rem, max-content));
+  }
 }
 
 .filters-wrapper {
@@ -182,7 +197,7 @@ watch([filterText, filterTags], function () {
 
 .filters {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, auto));
+  grid-template-columns: repeat(auto-fit, minmax(15rem, auto));
   gap: 0.3rem;
 }
 
