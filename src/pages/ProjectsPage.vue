@@ -43,6 +43,7 @@ function filterProjects() {
 watch([filterText, filterTags], function () {
   router.replace({
     query: {
+      ...route.query,
       filterText: filterText.value !== "" ? filterText.value : undefined,
       filterTags: filterTags.value
     }

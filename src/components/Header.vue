@@ -13,12 +13,12 @@ function ToggleMobileNavigation() {
 }
 
 function CloseMobileNavigation() {
-  router.replace({query: {mobileNavOpened: undefined}});
+  router.replace({query: {...route.query, mobileNavOpened: undefined}});
   mobileNavigationOpened.value = false;
 }
 
 function OpenMobileNavigation() {
-  router.replace({query: {mobileNavOpened: "true"}});
+  router.replace({query: {...route.query, mobileNavOpened: "true"}});
   mobileNavigationOpened.value = true;
 }
 
@@ -56,7 +56,7 @@ watch(route, () => {
       id="mobile-navigation"
       :class="[mobileNavigationOpened ? 'opened' : 'closed']"
     >
-      <div @click="CloseMobileNavigation">
+      <div>
         <Explorer />
       </div>
     </div>
