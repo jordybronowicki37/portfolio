@@ -7,8 +7,8 @@ like a file. All pages can be found by using the file explorer on the left of th
 ## Themes
 The editor supports multiple different themes.
 ### Default theme (Dracula)
-![Project preview - Home page](./docs/project-preview-1.png)
+![Project preview - Home page](./public/portfolio-theme-1.jpeg)
 ### Dark Blue Theme
-![Project preview - Home page](./docs/project-preview-2.png)
+![Project preview - Home page](./public/portfolio-theme-2.jpeg)
 ### Light Theme
-![Project preview - Home page](./docs/project-preview-3.png)
+![Project preview - Home page](./public/portfolio-theme-3.jpeg)
