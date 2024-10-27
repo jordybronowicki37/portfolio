@@ -24,7 +24,7 @@ const githubURL = import.meta.env.VITE_BEFIT_GITHUB_URL;
             :integrations="['discord']"
             database="postgresql"
             type="personal"
-            status="in progress"
+            status="completed"
             :links="[githubURL]"
           />
         </div>

@@ -16,7 +16,7 @@ export const projectCardsData: ProjectCardProps[] = [
   },
   {
     "title": "Portfolio",
-    "imageSrc": "/portfolio-home.png",
+    "imageSrc": "/portfolio-projects.jpeg",
     "imageAlt": "Portfolio home page screenshot",
     "tags": [
       "vue", "typescript", "personal", "completed"
@@ -73,7 +73,7 @@ export const projectCardsData: ProjectCardProps[] = [
     "title": "BeFit-bot",
     "imageSrc": "/befit-exercise-progress.png",
     "imageAlt": "A standard exercise progress report",
-    "tags": ["java", "spring", "postgresql", "discord", "personal", "in progress"],
+    "tags": ["java", "spring", "postgresql", "discord", "personal", "completed"],
     "externalLinks": [
       import.meta.env.VITE_BEFIT_GITHUB_URL
     ],

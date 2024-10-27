@@ -41,13 +41,14 @@ watch(route, () => {
   if (typeof route.name !== "string") return;
   if (["unknown", "no-page"].includes(route.name)) return;
   const foundTab = tabsHistory.value.find(tab => tab.name === route.name);
+  let pathUrl = route.fullPath.replace("mobileNavOpened=true", "mobileNavOpened=false");
   if (foundTab) {
-    foundTab.fullPath = route.fullPath;
+    foundTab.fullPath = pathUrl;
   }
   else {
     const newTab: TabData = {
       name: route.name,
-      fullPath: route.fullPath,
+      fullPath: pathUrl,
     }
     tabsHistory.value.push(newTab);
   }

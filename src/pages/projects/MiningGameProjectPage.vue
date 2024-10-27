@@ -12,7 +12,7 @@ import ProjectProperties from "../../components/ProjectProperties.vue";
       <EditorLine :indentation="0" />
       <EditorLine :indentation="0" />
       <EditorLine :indentation="1">
-        <h2>Project: AIMAS</h2>
+        <h2>Project: Mining Game - Map Generation</h2>
       </EditorLine>
       <EditorLine :indentation="1">
         <div class="tags-wrapper">

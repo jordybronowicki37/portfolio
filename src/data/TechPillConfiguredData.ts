@@ -529,25 +529,25 @@ export const ALL_PROJECT_TYPES: PillDataType[] = [
   {
     type: "group",
     category: "project-type",
-    noDetails: true,
+    description: "This project was created in collaboration with my friend group.",
     bgColor: "#a33097",
   },
   {
     type: "personal",
     category: "project-type",
-    noDetails: true,
+    description: "This project is a personal project that I fully created myself.",
     bgColor: "#ea6d30",
   },
   {
     type: "school",
     category: "project-type",
-    noDetails: true,
+    description: "This was a school project that I either created all by myself or with a group of students.",
     bgColor: "#705499"
   },
   {
     type: "school/external",
     category: "project-type",
-    noDetails: true,
+    description: "This was a school project that was created with a group of students and an external client.",
     bgColor: "#af5b5b",
   },
 ];
@@ -555,19 +555,19 @@ export const ALL_PROJECT_STATUSES: PillDataType[] = [
   {
     type: "completed",
     category: "project-status",
-    noDetails: true,
+    description: "This project had been completed but can still receive updates.",
     bgColor: "#20ca52",
   },
   {
     type: "in progress",
     category: "project-status",
-    noDetails: true,
+    description: "This project is still under development.",
     bgColor: "#b28000",
   },
   {
     type: "abandoned",
     category: "project-status",
-    noDetails: true,
+    description: "This project was sadly abandoned.",
     bgColor: "#646464",
   },
 ];

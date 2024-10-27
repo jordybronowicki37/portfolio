@@ -36,7 +36,6 @@ defineProps<{project: ProjectCardProps}>();
 
 <style scoped>
 .project-card {
-  margin: 1rem;
   background-color: var(--bg-color-600);
   display: flex;
   flex-direction: column;

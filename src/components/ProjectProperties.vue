@@ -89,7 +89,7 @@ defineProps<{
       class="tag-list-wrapper"
     >
       <TechPillSimple color="#555">
-        <p class="group-size-text">
+        <p class="grade-text">
           {{ grade }}
         </p>
       </TechPillSimple>
@@ -138,7 +138,6 @@ defineProps<{
   background-color: var(--bg-color-600);
   border-radius: 0.5rem;
   padding: 0.5rem;
-  margin: 0.2rem;
 }
 .tag-list-wrapper {
   display: flex;
@@ -146,12 +145,13 @@ defineProps<{
   flex-wrap: wrap;
   gap: 0.3rem;
 }
-.group-size-text {
+.grade-text, .group-size-text {
   color: var(--font-color-200);
   margin: 0 0.5rem;
   text-transform: uppercase;
   font-weight: 800;
   font-size: 10px;
   white-space: nowrap;
+  user-select: none;
 }
 </style>
