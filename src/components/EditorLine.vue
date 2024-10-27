@@ -49,6 +49,8 @@ defineProps<{indentation: number}>();
   padding-left: 10px;
   padding-right: 10px;
   flex-grow: 1;
+  container-name: editor-line;
+  container-type: inline-size;
 }
 
 @media screen and (max-width: 600px) {
