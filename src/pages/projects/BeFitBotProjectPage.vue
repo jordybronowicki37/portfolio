@@ -65,7 +65,7 @@ const githubURL = import.meta.env.VITE_BEFIT_GITHUB_URL;
             </template>
             <template #image>
               <img
-                src="/befit-new-exercise-log.png"
+                src="/befit-log.png"
                 alt="An example of an exercise log"
                 class="project-image"
               >
@@ -79,8 +79,65 @@ const githubURL = import.meta.env.VITE_BEFIT_GITHUB_URL;
         <EditorLine :indentation="2">
           <ImageTextCombinedView
             image-on-the-left
+            image-title="View exercise data"
+            image-description=""
+          >
+            <template #text>
+              <div>
+                <h3>View detailed data on an exercise</h3>
+                <p>
+                  View detailed data on a single exercise, see your own statistics on the exercise and view the
+                  exercise leaderboard.
+                </p>
+              </div>
+            </template>
+            <template #image>
+              <img
+                src="/befit-exercise.png"
+                alt="An example of a detailed exercise report"
+                class="project-image"
+              >
+            </template>
+          </ImageTextCombinedView>
+        </EditorLine>
+      </section>
+
+      <section>
+        <EditorLine :indentation="2" />
+        <EditorLine :indentation="2">
+          <ImageTextCombinedView
+            image-title="View leaderboard"
+            image-description="The global leaderboard and information about your own position."
+          >
+            <template #text>
+              <div>
+                <h3>View the global leaderboard</h3>
+                <p>
+                  The global leaderboard takes in account all of the exercises you have participated in.
+                  A score is calculated for each exercise by taking in account the total amount of participants
+                  and your rank on that exercise. By adding up all of these scores, you get your total score for
+                  the global leaderboard.
+                </p>
+              </div>
+            </template>
+            <template #image>
+              <img
+                src="/befit-leaderboard.png"
+                alt="An example of a leaderboard"
+                class="project-image"
+              >
+            </template>
+          </ImageTextCombinedView>
+        </EditorLine>
+      </section>
+
+      <section>
+        <EditorLine :indentation="2" />
+        <EditorLine :indentation="2">
+          <ImageTextCombinedView
+            image-on-the-left
             image-title="A progress chart"
-            image-description="View your progress on a specific exercise."
+            image-description="View your and your friends progress on a specific exercise."
           >
             <template #text>
               <div>
@@ -88,14 +145,67 @@ const githubURL = import.meta.env.VITE_BEFIT_GITHUB_URL;
                 <p>
                   View your progress on a specific exercise on a line-chart. This can either represent the amount of
                   weight that you lifted, the sets that you completed, the time it took to reach a certain goal or the
-                  distance that you traversed.
+                  distance that you traversed. You can see your own progress, but also the progress of your friends.
                 </p>
               </div>
             </template>
             <template #image>
               <img
-                src="/befit-exercise-progress.png"
+                src="/befit-progress.png"
                 alt="An example of a progress chart"
+                class="project-image"
+              >
+            </template>
+          </ImageTextCombinedView>
+        </EditorLine>
+      </section>
+
+      <section>
+        <EditorLine :indentation="2" />
+        <EditorLine :indentation="2">
+          <ImageTextCombinedView
+            image-title="A progress chart"
+            image-description="View your user stats"
+          >
+            <template #text>
+              <div>
+                <h3>View your stats</h3>
+                <p>
+                  View a lot of statistics from your user account and try to improve those numbers!
+                </p>
+              </div>
+            </template>
+            <template #image>
+              <img
+                src="/befit-stats.png"
+                alt="An example of a user's stats"
+                class="project-image"
+              >
+            </template>
+          </ImageTextCombinedView>
+        </EditorLine>
+      </section>
+
+      <section>
+        <EditorLine :indentation="2" />
+        <EditorLine :indentation="2">
+          <ImageTextCombinedView
+            image-on-the-left
+            image-title="User achievements"
+            image-description="View both your completed and locked achievements."
+          >
+            <template #text>
+              <div>
+                <h3>Achievements</h3>
+                <p>
+                  There are 20 unique achievements for you to complete. You must complete them all!
+                </p>
+              </div>
+            </template>
+            <template #image>
+              <img
+                src="/befit-achievements.png"
+                alt="An example of the achievements command"
                 class="project-image"
               >
             </template>
@@ -157,6 +267,12 @@ const githubURL = import.meta.env.VITE_BEFIT_GITHUB_URL;
               <p>
                 Receive and request motivational quotes that keep you working hard on achieving your goals.
               </p>
+            </li>
+          </EditorLine>
+          <EditorLine :indentation="2">
+            <li>
+              <h4>And much much more...</h4>
+              <p>View the GitHub repository for a full breakdown of all commands and functionalities.</p>
             </li>
           </EditorLine>
         </ul>
