@@ -66,7 +66,7 @@ const githubURL = import.meta.env.VITE_PRODCAL_GITHUB_URL
             </template>
             <template #image>
               <img
-                src="/prod-cal-projects.png"
+                src="/img/projects/prod-cal-projects.png"
                 alt="Production calculator projects preview"
                 class="project-image"
               >
@@ -97,7 +97,7 @@ const githubURL = import.meta.env.VITE_PRODCAL_GITHUB_URL
             </template>
             <template #image>
               <img
-                src="/prod-cal-editor.png"
+                src="/img/projects/prod-cal-editor.png"
                 alt="Production calculator editor preview"
                 class="project-image"
               >

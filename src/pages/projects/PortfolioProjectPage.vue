@@ -66,7 +66,7 @@ const githubURL = import.meta.env.VITE_PORTFOLIO_GITHUB_URL;
             </template>
             <template #image>
               <img
-                src="/portfolio-theme-1.jpeg"
+                src="/img/projects/portfolio-theme-1.jpeg"
                 alt="Portfolio homepage preview"
                 class="project-image"
               >
@@ -92,7 +92,7 @@ const githubURL = import.meta.env.VITE_PORTFOLIO_GITHUB_URL;
             </template>
             <template #image>
               <img
-                src="/portfolio-projects.jpeg"
+                src="/img/projects/portfolio-projects.jpeg"
                 alt="Portfolio projects preview"
                 class="project-image"
               >
@@ -120,7 +120,7 @@ const githubURL = import.meta.env.VITE_PORTFOLIO_GITHUB_URL;
               description=""
             >
               <img
-                src="/portfolio-theme-1.jpeg"
+                src="/img/projects/portfolio-theme-1.jpeg"
                 alt="Portfolio theme"
               >
             </ImageFocusModal>
@@ -129,7 +129,7 @@ const githubURL = import.meta.env.VITE_PORTFOLIO_GITHUB_URL;
               description=""
             >
               <img
-                src="/portfolio-theme-2.jpeg"
+                src="/img/projects/portfolio-theme-2.jpeg"
                 alt="Portfolio theme"
               >
             </ImageFocusModal>
@@ -138,7 +138,7 @@ const githubURL = import.meta.env.VITE_PORTFOLIO_GITHUB_URL;
               description=""
             >
               <img
-                src="/portfolio-theme-3.jpeg"
+                src="/img/projects/portfolio-theme-3.jpeg"
                 alt="Portfolio theme"
               >
             </ImageFocusModal>

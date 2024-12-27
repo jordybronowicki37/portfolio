@@ -71,7 +71,7 @@ import ProjectProperties from "../../components/ProjectProperties.vue";
             </template>
             <template #image>
               <img
-                src="/mining-game-map-gen-flat-1.png"
+                src="/img/projects/mining-game-map-gen-flat-1.png"
                 alt="Mining game map generation topdown overview"
                 class="project-image"
               >
@@ -101,7 +101,7 @@ import ProjectProperties from "../../components/ProjectProperties.vue";
             </template>
             <template #image>
               <img
-                src="/mining-game-map-gen-flat-2.png"
+                src="/img/projects/mining-game-map-gen-flat-2.png"
                 alt="Mining game map generation topdown overview with resource generation"
                 class="project-image"
               >
@@ -129,7 +129,7 @@ import ProjectProperties from "../../components/ProjectProperties.vue";
             </template>
             <template #image>
               <img
-                src="/mining-game-map-gen-3d-1.png"
+                src="/img/projects/mining-game-map-gen-3d-1.png"
                 alt="Mining game map generation topdown overview with 3D blocks"
                 class="project-image"
               >
@@ -157,7 +157,7 @@ import ProjectProperties from "../../components/ProjectProperties.vue";
             </template>
             <template #image>
               <img
-                src="/mining-game-map-gen-3d-2.png"
+                src="/img/projects/mining-game-map-gen-3d-2.png"
                 alt="Mining game map generation topdown overview with 3D blocks"
                 class="project-image"
               >
@@ -184,7 +184,7 @@ import ProjectProperties from "../../components/ProjectProperties.vue";
             </template>
             <template #image>
               <img
-                src="/mining-game-map-gen-tracks-1.png"
+                src="/img/projects/mining-game-map-gen-tracks-1.png"
                 alt="Mining game map generation topdown overview with 3D blocks and tracks"
                 class="project-image"
               >

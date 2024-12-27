@@ -31,7 +31,7 @@ watch(route, () => {
   <header>
     <img
       id="icon"
-      src="/icon.svg"
+      src="/img/icon.svg"
       alt="Icon"
     >
 

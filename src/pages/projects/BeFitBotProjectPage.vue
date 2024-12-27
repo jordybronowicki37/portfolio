@@ -65,7 +65,7 @@ const githubURL = import.meta.env.VITE_BEFIT_GITHUB_URL;
             </template>
             <template #image>
               <img
-                src="/befit-log.png"
+                src="/img/projects/befit-log.png"
                 alt="An example of an exercise log"
                 class="project-image"
               >
@@ -93,7 +93,7 @@ const githubURL = import.meta.env.VITE_BEFIT_GITHUB_URL;
             </template>
             <template #image>
               <img
-                src="/befit-exercise.png"
+                src="/img/projects/befit-exercise.png"
                 alt="An example of a detailed exercise report"
                 class="project-image"
               >
@@ -122,7 +122,7 @@ const githubURL = import.meta.env.VITE_BEFIT_GITHUB_URL;
             </template>
             <template #image>
               <img
-                src="/befit-leaderboard.png"
+                src="/img/projects/befit-leaderboard.png"
                 alt="An example of a leaderboard"
                 class="project-image"
               >
@@ -151,7 +151,7 @@ const githubURL = import.meta.env.VITE_BEFIT_GITHUB_URL;
             </template>
             <template #image>
               <img
-                src="/befit-progress.png"
+                src="/img/projects/befit-progress.png"
                 alt="An example of a progress chart"
                 class="project-image"
               >
@@ -177,7 +177,7 @@ const githubURL = import.meta.env.VITE_BEFIT_GITHUB_URL;
             </template>
             <template #image>
               <img
-                src="/befit-stats.png"
+                src="/img/projects/befit-stats.png"
                 alt="An example of a user's stats"
                 class="project-image"
               >
@@ -204,7 +204,7 @@ const githubURL = import.meta.env.VITE_BEFIT_GITHUB_URL;
             </template>
             <template #image>
               <img
-                src="/befit-achievements.png"
+                src="/img/projects/befit-achievements.png"
                 alt="An example of the achievements command"
                 class="project-image"
               >

@@ -62,7 +62,7 @@ import ProjectProperties from "../../components/ProjectProperties.vue";
             </template>
             <template #image>
               <img
-                src="/neerslag-radar-basic-views.png"
+                src="/img/projects/neerslag-radar-basic-views.png"
                 alt="Neerslag radar basic view"
                 class="project-image"
               >
@@ -90,7 +90,7 @@ import ProjectProperties from "../../components/ProjectProperties.vue";
             </template>
             <template #image>
               <img
-                src="/neerslag-radar-complex-views.png"
+                src="/img/projects/neerslag-radar-complex-views.png"
                 alt="Neerslag radar complex view"
                 class="project-image"
               >
@@ -116,7 +116,7 @@ import ProjectProperties from "../../components/ProjectProperties.vue";
             </template>
             <template #image>
               <img
-                src="/neerslag-radar-configs.png"
+                src="/img/projects/neerslag-radar-configs.png"
                 alt="Neerslag radar configurations"
                 class="project-image"
               >

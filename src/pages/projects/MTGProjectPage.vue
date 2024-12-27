@@ -65,7 +65,7 @@ import AWSServiceCard from "../../components/AWSServiceCard.vue";
             </template>
             <template #image>
               <img
-                src="/mtg-oracle-overview.png"
+                src="/img/projects/mtg-oracle-overview.png"
                 alt="MTG oracle overview"
                 class="project-image"
               >
@@ -94,7 +94,7 @@ import AWSServiceCard from "../../components/AWSServiceCard.vue";
             </template>
             <template #image>
               <img
-                src="/mtg-card-overview.png"
+                src="/img/projects/mtg-card-overview.png"
                 alt="MTG card overview"
                 class="project-image"
               >
