@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import {store, Themes} from "../data/Store.ts";
+import ThemePreview from "./ThemePreview.vue";
+import ThemeEditor from "./ThemeEditor.vue";
+import {ref} from "vue";
 
 const emit = defineEmits(['close'])
 
@@ -24,18 +27,16 @@ function restartOnboarding() {
     <div class="themes-setting-wrapper">
       <h2>Themes</h2>
       <div class="themes-wrapper">
-        <div
+        <button
+          v-for="theme in Themes"
           class="theme-item"
-          @click="store.theme = Themes.default"
+          @click="store.theme = theme"
         >
-          <div class="theme-preview default-theme">
-            <div
-              v-for="i in 5"
-              :key="i"
-            />
-          </div>
-          <div>Dark</div>
-        </div>
+          <ThemePreview :theme="theme+'-theme'" />
+          <i class="theme-name">{{ theme }}</i>
+        </button>
+      </div>
+    </div>
 
         <div
           class="theme-item"

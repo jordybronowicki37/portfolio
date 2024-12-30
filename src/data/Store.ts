@@ -3,18 +3,18 @@ import {reactive} from "vue";
 export const HIDE_ONBOARDING_KEY = "HIDE_ONBOARDING";
 
 export enum Themes {
-  "default" = "default",
-  "dark-blue" = "dark-blue",
+  "dark" = "dark",
+  "blue" = "blue",
   "light" = "light",
 }
-export const LightThemes = [Themes.light];
-export const DarkThemes = [Themes.default, Themes["dark-blue"]];
 
 export type StoreTypes = {
   theme: Themes,
   startOnboarding: boolean
+  theme: string,
+  startOnboarding: boolean,
 }
 export const store = reactive<StoreTypes>({
-  theme: Themes.default,
+  theme: localStorage.getItem(CURRENT_THEME_KEY) || Themes.dark,
   startOnboarding: localStorage.getItem(HIDE_ONBOARDING_KEY) !== "true",
 })
