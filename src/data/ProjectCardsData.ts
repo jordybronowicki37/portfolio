@@ -71,7 +71,7 @@ export const projectCardsData: ProjectCardProps[] = [
   },
   {
     "title": "BeFit-bot",
-    "imageSrc": "/img/projects/befit-exercise-progress.png",
+    "imageSrc": "/img/projects/befit-progress.png",
     "imageAlt": "A standard exercise progress report",
     "tags": ["java", "spring", "postgresql", "discord", "personal", "completed"],
     "externalLinks": [

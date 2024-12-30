@@ -26,3 +26,22 @@ export type PillDataType = {
 }
 
 export type NotificationTypes = "INFO" | "WARNING" | "ERROR";
+
+export type CustomTheme = {
+  id: number,
+  displayName: string,
+  colors: CustomThemeColors,
+}
+
+export type CustomThemeColors = {
+  titleColor: string,
+  textColor: string,
+  subTextColor: string,
+  backgroundFarColor: string,
+  backgroundMidColor: string,
+  backgroundNearColor: string,
+  foregroundColor: string,
+  secondaryColor: string,
+  accentColor: string,
+  errorColor: string,
+}
