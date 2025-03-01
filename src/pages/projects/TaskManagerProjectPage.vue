@@ -66,7 +66,7 @@ import AWSServiceCard from "../../components/AWSServiceCard.vue";
             </template>
             <template #image>
               <img
-                src="/tas-board.png"
+                src="/img/projects/tas-board.png"
                 alt="Tasks inside of a board example"
                 class="project-image"
               >
@@ -97,7 +97,7 @@ import AWSServiceCard from "../../components/AWSServiceCard.vue";
             </template>
             <template #image>
               <img
-                src="/tas-edit-task.png"
+                src="/img/projects/tas-edit-task.png"
                 alt="Edit task properties"
                 class="project-image"
               >

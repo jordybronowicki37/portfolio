@@ -64,7 +64,7 @@ import AWSServiceCard from "../../components/AWSServiceCard.vue";
             </template>
             <template #image>
               <img
-                src="/aimas-overview.png"
+                src="/img/projects/aimas-overview.png"
                 alt="Accidents overview"
                 class="project-image"
               >

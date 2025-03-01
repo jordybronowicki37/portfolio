@@ -18,7 +18,7 @@ import EditorLine from "../components/EditorLine.vue";
       <EditorLine :indentation="2">
         <div class="text-container-with-profile-pic">
           <img
-            src="/pixel-user.png"
+            src="/img/pixel-user.png"
             alt="User profile picture"
           >
           <p>

@@ -3,7 +3,7 @@ import {ProjectCardProps} from "./Models";
 export const projectCardsData: ProjectCardProps[] = [
   {
     "title": "Production Calculator",
-    "imageSrc": "/prod-cal-editor.png",
+    "imageSrc": "/img/projects/prod-cal-editor.png",
     "imageAlt": "Production calculator editor preview",
     "tags": [
       ".net", "c#", "mongodb", "react", "typescript", "redux", "sass", "personal", "in progress"
@@ -16,7 +16,7 @@ export const projectCardsData: ProjectCardProps[] = [
   },
   {
     "title": "Portfolio",
-    "imageSrc": "/portfolio-projects.jpeg",
+    "imageSrc": "/img/projects/portfolio-projects.jpeg",
     "imageAlt": "Portfolio home page screenshot",
     "tags": [
       "vue", "typescript", "personal", "completed"
@@ -30,7 +30,7 @@ export const projectCardsData: ProjectCardProps[] = [
   },
   {
     "title": "Snake Game",
-    "imageSrc": "/snake-game.png",
+    "imageSrc": "/img/projects/snake-game.png",
     "imageAlt": "Production calculator editor screenshot",
     "tags": ["vue", "typescript", "personal", "in progress"],
     "externalLinks": [
@@ -42,7 +42,7 @@ export const projectCardsData: ProjectCardProps[] = [
   },
   {
     "title": "Task manager",
-    "imageSrc": "/tas-board.png",
+    "imageSrc": "/img/projects/tas-board.png",
     "imageAlt": "Task manager board preview",
     "tags": ["java", "spring", "postgresql", "aws", "react", "typescript", "redux", "sass", "school", "completed"],
     "externalLinks": [],
@@ -51,7 +51,7 @@ export const projectCardsData: ProjectCardProps[] = [
   },
   {
     "title": "Neerslag radar",
-    "imageSrc": "/neerslag-radar-basic-views.png",
+    "imageSrc": "/img/projects/neerslag-radar-basic-views.png",
     "imageAlt": "Production calculator editor preview",
     "tags": [
       ".net", "c#", "angular", "typescript", "school/external", "completed"
@@ -62,7 +62,7 @@ export const projectCardsData: ProjectCardProps[] = [
   },
   {
     "title": "Aimas",
-    "imageSrc": "/aimas-overview.png",
+    "imageSrc": "/img/projects/aimas-overview.png",
     "imageAlt": "Aimas overview page preview",
     "tags": ["python", "websocket", "sam", "dynamodb", "aws", "react", "typescript", "redux", "sass", "school", "completed"],
     "externalLinks": [],
@@ -71,7 +71,7 @@ export const projectCardsData: ProjectCardProps[] = [
   },
   {
     "title": "BeFit-bot",
-    "imageSrc": "/befit-exercise-progress.png",
+    "imageSrc": "/img/projects/befit-progress.png",
     "imageAlt": "A standard exercise progress report",
     "tags": ["java", "spring", "postgresql", "discord", "personal", "completed"],
     "externalLinks": [
@@ -82,7 +82,7 @@ export const projectCardsData: ProjectCardProps[] = [
   },
   {
     "title": "MTG collection manager",
-    "imageSrc": "/mtg-card-overview.png",
+    "imageSrc": "/img/projects/mtg-card-overview.png",
     "imageAlt": "A preview of a MTG-card",
     "tags": ["python", "sam", "scala", "dynamodb", "aws", "vue", "typescript", "sass", "cypress", "scryfall", "school", "completed"],
     "externalLinks": [],
@@ -91,7 +91,7 @@ export const projectCardsData: ProjectCardProps[] = [
   },
   {
     "title": "Mining game - map generation",
-    "imageSrc": "/mining-game-map-gen-3d-2.png",
+    "imageSrc": "/img/projects/mining-game-map-gen-3d-2.png",
     "imageAlt": "A topdown preview of the map generation",
     "tags": ["c#", "wpf", "unity", "group", "in progress"],
     "externalLinks": [

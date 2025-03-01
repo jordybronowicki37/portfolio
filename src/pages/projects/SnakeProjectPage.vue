@@ -88,7 +88,7 @@ const githubURL = import.meta.env.VITE_SNAKE_GITHUB_URL;
             </template>
             <template #image>
               <img
-                src="/snake-game.png"
+                src="/img/projects/snake-game.png"
                 alt="Snake single player mode preview"
                 class="project-image"
               >
@@ -115,7 +115,7 @@ const githubURL = import.meta.env.VITE_SNAKE_GITHUB_URL;
             </template>
             <template #image>
               <img
-                src="/snake-levels.png"
+                src="/img/projects/snake-levels.png"
                 alt="Snake levels preview"
                 class="project-image"
               >
@@ -146,7 +146,7 @@ const githubURL = import.meta.env.VITE_SNAKE_GITHUB_URL;
             </template>
             <template #image>
               <img
-                src="/snake-game-versus.png"
+                src="/img/projects/snake-game-versus.png"
                 alt="Snake game versus mode preview"
                 class="project-image"
               >

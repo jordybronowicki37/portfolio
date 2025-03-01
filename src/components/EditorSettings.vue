@@ -1,11 +1,31 @@
 <script setup lang="ts">
 import {store, Themes} from "../data/Store.ts";
+import ThemePreview from "./ThemePreview.vue";
+import ThemeEditor, {ThemeEditorModes} from "./ThemeEditor.vue";
+import {ref} from "vue";
 
 const emit = defineEmits(['close'])
+const themeEditorDialog = ref<HTMLDialogElement>();
+const themeEditorData = ref<ThemeEditorModes>({mode: "create"})
 
 function restartOnboarding() {
   emit('close');
   store.startOnboarding = true;
+}
+function removeTheme(id: number) {
+  store.customThemes = store.customThemes.filter(item => item.id !== id);
+}
+function copyTheme(id: number) {
+  themeEditorData.value = {mode: "copy", id: id};
+  themeEditorDialog.value?.showModal()
+}
+function editTheme(id: number) {
+  themeEditorData.value = {mode: "edit", id: id};
+  themeEditorDialog.value?.showModal()
+}
+function createTheme() {
+  themeEditorData.value = {mode: "create"};
+  themeEditorDialog.value?.showModal()
 }
 </script>
 
@@ -24,45 +44,76 @@ function restartOnboarding() {
     <div class="themes-setting-wrapper">
       <h2>Themes</h2>
       <div class="themes-wrapper">
-        <div
+        <button
+          v-for="[title, theme] in Object.entries(Themes)"
+          :key="title"
           class="theme-item"
-          @click="store.theme = Themes.default"
+          @click="store.theme = theme"
         >
-          <div class="theme-preview default-theme">
-            <div
-              v-for="i in 5"
-              :key="i"
-            />
-          </div>
-          <div>Dark</div>
-        </div>
+          <ThemePreview :theme="theme" />
+          <i class="theme-name">{{ title }}</i>
+        </button>
+      </div>
+    </div>
 
+    <div>
+      <h2>Custom themes</h2>
+      <div class="custom-themes-container themes-wrapper">
         <div
-          class="theme-item"
-          @click="store.theme = Themes['dark-blue']"
+          v-for="theme in store.customThemes"
+          :key="theme.id"
+          class="custom-theme-item"
         >
-          <div class="theme-preview dark-blue-theme">
-            <div
-              v-for="i in 5"
-              :key="i"
-            />
+          <button
+            class="theme-item"
+            @click="store.theme = 'custom-theme-'+theme.id"
+          >
+            <ThemePreview :theme="'custom-theme-'+theme.id" />
+            <i class="theme-name">{{ theme.displayName }}</i>
+          </button>
+          <div class="custom-themes-actions">
+            <button
+              title="Remove"
+              @click="removeTheme(theme.id)"
+            >
+              <box-icon
+                type="solid"
+                name="trash"
+                size="1em"
+                color="var(--font-color-200)"
+              />
+            </button>
+            <button
+              title="Copy"
+              @click="copyTheme(theme.id)"
+            >
+              <box-icon
+                type="solid"
+                name="copy"
+                size="1em"
+                color="var(--font-color-200)"
+              />
+            </button>
+            <button
+              title="Edit"
+              @click="editTheme(theme.id)"
+            >
+              <box-icon
+                type="solid"
+                name="edit"
+                size="1em"
+                color="var(--font-color-200)"
+              />
+            </button>
           </div>
-          <div>Blue</div>
-        </div>
-
-        <div
-          class="theme-item"
-          @click="store.theme = Themes.light"
-        >
-          <div class="theme-preview light-theme">
-            <div
-              v-for="i in 5"
-              :key="i"
-            />
-          </div>
-          <div>Light</div>
         </div>
       </div>
+      <button
+        class="create-button"
+        @click="createTheme"
+      >
+        Create new
+      </button>
     </div>
 
     <div class="tutorial-setting-wrapper">
@@ -71,6 +122,18 @@ function restartOnboarding() {
         Restart tutorial
       </button>
     </div>
+
+    <dialog
+      ref="themeEditorDialog"
+      @click="themeEditorDialog?.close()"
+    >
+      <div @click="$event.stopPropagation()">
+        <ThemeEditor
+          :data="themeEditorData"
+          @close="themeEditorDialog?.close()"
+        />
+      </div>
+    </dialog>
   </div>
 </template>
 
@@ -91,6 +154,7 @@ function restartOnboarding() {
 }
 .themes-wrapper {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   gap: 1rem;
 }
@@ -100,29 +164,47 @@ function restartOnboarding() {
   align-items: center;
   user-select: none;
   cursor: pointer;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  transition: all 0.3s;
 }
-.theme-preview {
-  border: 2px solid var(--accent-color);
-  background-color: var(--bg-color-800);
-  color: var(--font-color-200);
-  border-radius: 0.5rem;
+.theme-item:focus-visible {
+  outline: none;
+}
+.theme-item:hover {
+  scale: 1.1;
+}
+.theme-name {
+  text-transform: capitalize;
+  font-style: normal;
+}
+.custom-themes-container {
   display: grid;
-  padding: 0.5rem;
-  gap: 0.2rem;
-  grid-template-areas:
-      "a b c"
-      "a d e";
+  grid-template-columns: auto auto auto auto;
 }
-.theme-preview>div {
-  min-height: 1rem;
-  min-width: 1rem;
-  background-color: var(--bg-color-600);
+.custom-theme-item {
+  display: flex;
 }
-.theme-preview>div:first-child {
-  background-color: var(--bg-color-500);
-  grid-area: a;
+.custom-themes-actions {
+  display: flex;
+  flex-direction: column;
 }
-.tutorial-setting-wrapper button {
+.custom-themes-actions button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+.custom-themes-actions button:focus-visible {
+  outline: none;
+}
+.custom-themes-actions button:hover {
+  opacity: 1;
+}
+.tutorial-setting-wrapper button, .create-button {
   box-shadow: 0 1px 2px #0000000d;
   padding: .3rem .5rem;
   border-radius: 0.5rem;
@@ -131,8 +213,16 @@ function restartOnboarding() {
   background-color: transparent;
   border: 1px solid var(--font-color-200);
 }
-.tutorial-setting-wrapper button:hover {
+.tutorial-setting-wrapper button:hover, .create-button:hover {
   background-color: var(--bg-color-800);
   opacity: 0.8;
+}
+dialog {
+  position: relative;
+  background-color: var(--bg-color-500);
+  border: 2px solid var(--accent-color);
+  border-radius: 1rem;
+  overflow: hidden auto;
+  padding: 0;
 }
 </style>
