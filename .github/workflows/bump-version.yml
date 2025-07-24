@@ -1,0 +1,33 @@
+name: Bump version
+
+on:
+  workflow_dispatch:
+    inputs:
+      bump-type:
+        type: choice
+        required: true
+        description: Version bump type
+        options:
+          - patch
+          - minor
+          - major
+
+jobs:
+  bump-version:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Automated Version Bump
+        uses: phips28/gh-action-bump-version@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          version-type: ${{ inputs.bump-type }}
+          bump-policy: 'ignore'
+          tag-prefix:  'v'

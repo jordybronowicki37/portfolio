@@ -3,11 +3,11 @@ name: Feature pipeline
 on:
   workflow_dispatch:
   push:
-    branches: [ "dev" ]
+    branches: [ dev ]
     paths-ignore:
-      - ".github/workflows/**"
-      - "docs/**"
-      - "README.md"
+      - .github/**
+      - docs/**
+      - README.md
 
 jobs:
   build-and-test:
@@ -34,12 +34,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: 'Automated Version Bump'
-        uses: 'phips28/gh-action-bump-version@master'
+      - name: Automated Version Bump
+        uses: phips28/gh-action-bump-version@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          version-type: 'patch'
+          major-wording: '#MAJOR,major'
+          minor-wording: '#MINOR,minor'
+          tag-prefix:  'v'
 
   deploy-dev:
     runs-on: ubuntu-latest
@@ -59,7 +61,7 @@ jobs:
           token: ${{ github.token }}
           environment-url: ${{ vars.RENDER_DEV_URL }}
           environment: development
-          initial-status: 'in_progress'
+          initial-status: in_progress
 
       - name: Trigger Render deployment
         run: curl -X GET https://api.render.com/deploy/${{ secrets.RENDER_DEV_SERVICE_ID }}?key=${{ secrets.RENDER_DEV_PROJECT_KEY }}
@@ -71,7 +73,7 @@ jobs:
           token: ${{ github.token }}
           environment-url: ${{ steps.deployment.outputs.environment_url }}
           deployment-id: ${{ steps.deployment.outputs.deployment_id }}
-          state: 'success'
+          state: success
 
       - name: Update deployment status (failure)
         if: failure()
@@ -80,4 +82,4 @@ jobs:
           token: ${{ github.token }}
           environment-url: ${{ steps.deployment.outputs.environment_url }}
           deployment-id: ${{ steps.deployment.outputs.deployment_id }}
-          state: 'failure'
+          state: failure

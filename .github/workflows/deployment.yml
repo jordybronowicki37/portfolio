@@ -3,11 +3,11 @@ name: Deployment pipeline
 on:
   workflow_dispatch:
   push:
-    branches: [ "master" ]
+    branches: [ master ]
     paths-ignore:
-      - ".github/workflows/**"
-      - "docs/**"
-      - "README.md"
+      - .github/**
+      - docs/**
+      - README.md
 
 jobs:
   build-and-test:
@@ -41,7 +41,7 @@ jobs:
           token: ${{ github.token }}
           environment-url: ${{ vars.RENDER_PUBLIC_URL }}
           environment: production
-          initial-status: 'in_progress'
+          initial-status: in_progress
 
       - name: Trigger Render deployment
         run: curl -X GET https://api.render.com/deploy/${{ secrets.RENDER_SERVICE_ID }}?key=${{ secrets.RENDER_PROJECT_KEY }}
@@ -53,13 +53,13 @@ jobs:
           token: ${{ github.token }}
           environment-url: ${{ steps.deployment.outputs.environment_url }}
           deployment-id: ${{ steps.deployment.outputs.deployment_id }}
-          state: 'success'
+          state: success
 
       - name: Update deployment status (failure)
-        if: failure() && steps.deployment.outputs.continue == 'true'
+        if: failure() && steps.deployment.outputs.continue == true
         uses: chrnorm/deployment-status@v2
         with:
           token: ${{ github.token }}
           environment-url: ${{ steps.deployment.outputs.environment_url }}
           deployment-id: ${{ steps.deployment.outputs.deployment_id }}
-          state: 'failure'
+          state: failure
