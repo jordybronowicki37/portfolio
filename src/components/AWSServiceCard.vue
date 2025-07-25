@@ -21,13 +21,19 @@ function closeModal() {
 
 <template>
   <section class="aws-service-card">
-    <header @click="openModal" class="main-header">
+    <header
+      class="main-header"
+      @click="openModal"
+    >
       <img
         :src="selectedIcon.icon"
         :alt="`AWS ${selectedIcon.title} icon`"
       >
       <h4>{{ selectedIcon.title }}</h4>
-      <div title="Info" class="info-icon">
+      <div
+        title="Info"
+        class="info-icon"
+      >
         <box-icon
           color="var(--font-color-200)"
           size="1.2em"
@@ -35,7 +41,10 @@ function closeModal() {
         />
       </div>
     </header>
-    <dialog ref="modal" @click="closeModal">
+    <dialog
+      ref="modal"
+      @click="closeModal"
+    >
       <div @click="$event.stopPropagation()">
         <header class="card-header">
           <img
