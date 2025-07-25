@@ -21,18 +21,14 @@
     margin: 0;
     padding: 0;
 }
+.services-list li {
+    margin-bottom: 0.5rem;
+}
 .features-list li {
-    margin-left: 1rem;
-    margin-bottom: 0.2rem;
+    margin-left: 1.5rem;
+    margin-bottom: 0.5rem;
 }
 .services-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(15rem, max-content));
-    justify-items: center;
-    gap: 1rem;
-}
-.services-list li {
-    display: flex;
     list-style: none;
 }
 @media screen and (min-width: 600px) {
