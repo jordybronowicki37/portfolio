@@ -4,6 +4,7 @@ import EditorLine from "../../components/EditorLine.vue";
 import ImageTextCombinedView from "../../components/ImageTextCombinedView.vue";
 import "./ProjectPage.css";
 import ProjectProperties from "../../components/ProjectProperties.vue";
+import TextDocBlock from "../../components/TextDocBlock.vue";
 </script>
 
 <template>
@@ -27,22 +28,17 @@ import ProjectProperties from "../../components/ProjectProperties.vue";
         </div>
       </EditorLine>
 
-      <section>
-        <EditorLine :indentation="2" />
-        <EditorLine :indentation="2">
-          <h3 class="text-only-section">
-            Project intentions
-          </h3>
-        </EditorLine>
-        <EditorLine :indentation="2">
-          <p class="text-only-section">
-            Me and my friend group wanted to create a fun game in which you would compete in mining for resources.
-            My task was to create the procedural map generation. This is a small overview of the development process
-            behind this task. First I created a simplified representation using WPF and then ported the generation
-            logic to the game engine Unity.
-          </p>
-        </EditorLine>
-      </section>
+      <EditorLine :indentation="2" />
+      <EditorLine :indentation="2">
+        <TextDocBlock
+          text="
+          Me and my friend group wanted to create a fun game in which you would compete in mining for resources.
+          My task was to create the procedural map generation. This is a small overview of the development process
+          behind this task. First I created a simplified representation using WPF and then ported the generation
+          logic to the game engine Unity.
+          "
+        />
+      </EditorLine>
 
       <section>
         <EditorLine :indentation="2" />

@@ -4,6 +4,7 @@ import EditorLine from "../../components/EditorLine.vue";
 import ImageTextCombinedView from "../../components/ImageTextCombinedView.vue";
 import "./ProjectPage.css";
 import ProjectProperties from "../../components/ProjectProperties.vue";
+import TextDocBlock from "../../components/TextDocBlock.vue";
 
 const githubURL = import.meta.env.VITE_PRODCAL_GITHUB_URL
 </script>
@@ -29,22 +30,17 @@ const githubURL = import.meta.env.VITE_PRODCAL_GITHUB_URL
         </div>
       </EditorLine>
 
-      <section>
-        <EditorLine :indentation="2" />
-        <EditorLine :indentation="2">
-          <h3 class="text-only-section">
-            Project intentions
-          </h3>
-        </EditorLine>
-        <EditorLine :indentation="2">
-          <p class="text-only-section">
-            I like to play factory building games. The satisfaction of automating basic tasks and watching your
-            factory grow is just amazing. But sometimes it can get quite complicated to calculate the required product
-            throughput for a certain production process. So I wanted to create a tool which can help with the
-            complicated mess of calculations that you get when planning a factory.
-          </p>
-        </EditorLine>
-      </section>
+      <EditorLine :indentation="2" />
+      <EditorLine :indentation="2">
+        <TextDocBlock
+          text="
+          I like to play factory building games. The satisfaction of automating basic tasks and watching your
+          factory grow is just amazing. But sometimes it can get quite complicated to calculate the required product
+          throughput for a certain production process. So I wanted to create a tool which can help with the
+          complicated mess of calculations that you get when planning a factory.
+          "
+        />
+      </EditorLine>
 
       <section>
         <EditorLine :indentation="2" />

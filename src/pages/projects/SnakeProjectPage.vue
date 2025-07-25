@@ -4,6 +4,7 @@ import Editor from "../../components/Editor.vue";
 import ImageTextCombinedView from "../../components/ImageTextCombinedView.vue";
 import "./ProjectPage.css";
 import ProjectProperties from "../../components/ProjectProperties.vue";
+import TextDocBlock from "../../components/TextDocBlock.vue";
 
 const deploymentURL = import.meta.env.VITE_SNAKE_DEPLOYMENT_URL;
 const githubURL = import.meta.env.VITE_SNAKE_GITHUB_URL;
@@ -33,24 +34,19 @@ const githubURL = import.meta.env.VITE_SNAKE_GITHUB_URL;
         </div>
       </EditorLine>
 
-      <section>
-        <EditorLine :indentation="2" />
-        <EditorLine :indentation="2">
-          <h3 class="text-only-section">
-            Project intentions
-          </h3>
-        </EditorLine>
-        <EditorLine :indentation="2">
-          <p class="text-only-section">
-            With this personal project I wanted to learn web development with the Vue framework. I wanted to see if it
-            would be possible to recreate the game Snake and give my own twist to it. I did not have munch confidence in
-            the performance of Vue and thought that I might have to mutate the dom manually for the game to be performant.
-            But I was quite surprised at how well Vue performs and detects changes within deeply nested objects. Creating
-            this game with Vue was actually pretty easy and much fun. I intend to work on the game and extend it's
-            features whenever I get some free time.
-          </p>
-        </EditorLine>
-      </section>
+      <EditorLine :indentation="2" />
+      <EditorLine :indentation="2">
+        <TextDocBlock
+          text="
+          With this personal project I wanted to learn web development with the Vue framework. I wanted to see if it
+          would be possible to recreate the game Snake and give my own twist to it. I did not have munch confidence in
+          the performance of Vue and thought that I might have to mutate the dom manually for the game to be performant.
+          But I was quite surprised at how well Vue performs and detects changes within deeply nested objects. Creating
+          this game with Vue was actually pretty easy and much fun. I intend to work on the game and extend it's
+          features whenever I get some free time.
+          "
+        />
+      </EditorLine>
 
       <section>
         <EditorLine :indentation="2" />

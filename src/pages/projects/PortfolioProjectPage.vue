@@ -5,6 +5,7 @@ import ImageTextCombinedView from "../../components/ImageTextCombinedView.vue";
 import "./ProjectPage.css";
 import ProjectProperties from "../../components/ProjectProperties.vue";
 import ImageFocusModal from "../../components/ImageFocusModal.vue";
+import TextDocBlock from "../../components/TextDocBlock.vue";
 
 const deploymentURL = import.meta.env.VITE_PORTFOLIO_PRODUCTION_DEPLOYMENT_URL;
 const githubURL = import.meta.env.VITE_PORTFOLIO_GITHUB_URL;
@@ -31,21 +32,16 @@ const githubURL = import.meta.env.VITE_PORTFOLIO_GITHUB_URL;
         </div>
       </EditorLine>
 
-      <section>
-        <EditorLine :indentation="2" />
-        <EditorLine :indentation="2">
-          <h3 class="text-only-section">
-            Project intentions
-          </h3>
-        </EditorLine>
-        <EditorLine :indentation="2">
-          <p class="text-only-section">
-            For my portfolio website I wanted a place in which I could share my work. And with that I don't mean to just
-            share my projects, but also my place of work. I did this by designing my portfolio as a code editor, my
-            daily place of work.
-          </p>
-        </EditorLine>
-      </section>
+      <EditorLine :indentation="2" />
+      <EditorLine :indentation="2">
+        <TextDocBlock
+          text="
+          For my portfolio website I wanted a place in which I could share my work. And with that I don't mean to just
+          share my projects, but also my place of work. I did this by designing my portfolio as a code editor, my
+          daily place of work.
+          "
+        />
+      </EditorLine>
 
       <section>
         <EditorLine :indentation="2" />

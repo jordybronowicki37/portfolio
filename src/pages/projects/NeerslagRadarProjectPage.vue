@@ -4,6 +4,7 @@ import EditorLine from "../../components/EditorLine.vue";
 import ImageTextCombinedView from "../../components/ImageTextCombinedView.vue";
 import "./ProjectPage.css";
 import ProjectProperties from "../../components/ProjectProperties.vue";
+import TextDocBlock from "../../components/TextDocBlock.vue";
 </script>
 
 <template>
@@ -27,21 +28,16 @@ import ProjectProperties from "../../components/ProjectProperties.vue";
         </div>
       </EditorLine>
 
-      <section>
-        <EditorLine :indentation="2" />
-        <EditorLine :indentation="2">
-          <h3 class="text-only-section">
-            Project intentions
-          </h3>
-        </EditorLine>
-        <EditorLine :indentation="2">
-          <p class="text-only-section">
-            This project was part of a collaboration between a student group and an external client. We were tasked
-            to develop an application that contained interactive weather animations. Raw weather data would be
-            processed and plot onto a map or graph with which you can interact to compare weather patterns.
-          </p>
-        </EditorLine>
-      </section>
+      <EditorLine :indentation="2" />
+      <EditorLine :indentation="2">
+        <TextDocBlock
+          text="
+          This project was part of a collaboration between a student group and an external client. We were tasked
+          to develop an application that contained interactive weather animations. Raw weather data would be
+          processed and plot onto a map or graph with which you can interact to compare weather patterns.
+          "
+        />
+      </EditorLine>
 
       <section>
         <EditorLine :indentation="2" />

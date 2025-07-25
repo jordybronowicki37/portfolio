@@ -5,6 +5,7 @@ import ImageTextCombinedView from "../../components/ImageTextCombinedView.vue";
 import "./ProjectPage.css";
 import ProjectProperties from "../../components/ProjectProperties.vue";
 import AWSServiceCard from "../../components/AWSServiceCard.vue";
+import TextDocBlock from "../../components/TextDocBlock.vue";
 </script>
 
 <template>
@@ -31,21 +32,16 @@ import AWSServiceCard from "../../components/AWSServiceCard.vue";
         </div>
       </EditorLine>
 
-      <section>
-        <EditorLine :indentation="2" />
-        <EditorLine :indentation="2">
-          <h3 class="text-only-section">
-            Project intentions
-          </h3>
-        </EditorLine>
-        <EditorLine :indentation="2">
-          <p class="text-only-section">
-            For this school assignment we had to create an application in which our tutor could manage his own Magic The
-            Gathering cards collection. He also wanted the ability to create his own decks from the cards of his
-            collection and wishlist cards that he did not yet own.
-          </p>
-        </EditorLine>
-      </section>
+      <EditorLine :indentation="2" />
+      <EditorLine :indentation="2">
+        <TextDocBlock
+          text="
+          For this school assignment we had to create an application in which our tutor could manage his own Magic The
+          Gathering cards collection. He also wanted the ability to create his own decks from the cards of his
+          collection and wishlist cards that he did not yet own.
+          "
+        />
+      </EditorLine>
 
       <section>
         <EditorLine :indentation="2" />

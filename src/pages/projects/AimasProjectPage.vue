@@ -5,6 +5,7 @@ import ImageTextCombinedView from "../../components/ImageTextCombinedView.vue";
 import "./ProjectPage.css";
 import ProjectProperties from "../../components/ProjectProperties.vue";
 import AWSServiceCard from "../../components/AWSServiceCard.vue";
+import TextDocBlock from "../../components/TextDocBlock.vue";
 </script>
 
 <template>
@@ -30,22 +31,17 @@ import AWSServiceCard from "../../components/AWSServiceCard.vue";
         </div>
       </EditorLine>
 
-      <section>
-        <EditorLine :indentation="2" />
-        <EditorLine :indentation="2">
-          <h3 class="text-only-section">
-            Project intentions
-          </h3>
-        </EditorLine>
-        <EditorLine :indentation="2">
-          <p class="text-only-section">
-            For this school assignment we had to work in pairs to create a serverless application in AWS using SAM. The
-            assignment was to create an employee dashboard for an accident management company. The dashboard had to show
-            the currently registered accidents on the dutch motorways. For this we would be using real world live data
-            provided via an api call.
-          </p>
-        </EditorLine>
-      </section>
+      <EditorLine :indentation="2" />
+      <EditorLine :indentation="2">
+        <TextDocBlock
+          text="
+          For this school assignment we had to work in pairs to create a serverless application in AWS using SAM.
+          The assignment was to create an employee dashboard for an accident management company.
+          The dashboard had to show the currently registered accidents on the dutch motorways.
+          For this we would be using real world live data provided via an api call.
+          "
+        />
+      </EditorLine>
 
       <section>
         <EditorLine :indentation="2" />

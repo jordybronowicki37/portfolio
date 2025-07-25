@@ -4,6 +4,7 @@ import EditorLine from "../../components/EditorLine.vue";
 import ImageTextCombinedView from "../../components/ImageTextCombinedView.vue";
 import "./ProjectPage.css";
 import ProjectProperties from "../../components/ProjectProperties.vue";
+import TextDocBlock from "../../components/TextDocBlock.vue";
 
 const githubURL = import.meta.env.VITE_BEFIT_GITHUB_URL;
 </script>
@@ -30,22 +31,17 @@ const githubURL = import.meta.env.VITE_BEFIT_GITHUB_URL;
         </div>
       </EditorLine>
 
-      <section>
-        <EditorLine :indentation="2" />
-        <EditorLine :indentation="2">
-          <h3 class="text-only-section">
-            Project intentions
-          </h3>
-        </EditorLine>
-        <EditorLine :indentation="2">
-          <p class="text-only-section">
-            I started this project because my friend group wanted to collectively start working out more, but there
-            wasn't any good app in which we could create custom exercises, set goals, compare progress and send
-            motivation quotes. We also wanted it to have discord integrations so that we could easily use it from within
-            our server.
-          </p>
-        </EditorLine>
-      </section>
+      <EditorLine :indentation="2" />
+      <EditorLine :indentation="2">
+        <TextDocBlock
+          text="
+          I started this project because my friend group wanted to collectively start working out more, but there
+          wasn't any good app in which we could create custom exercises, set goals, compare progress and send
+          motivation quotes. We also wanted it to have discord integrations so that we could easily use it from within
+          our server.
+          "
+        />
+      </EditorLine>
 
       <section>
         <EditorLine :indentation="2" />
