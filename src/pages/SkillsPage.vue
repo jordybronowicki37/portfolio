@@ -7,7 +7,7 @@ import {
   ALL_FRONTEND_TYPES,
   ALL_PERSISTENCE_TYPES
 } from "../data/TechPillConfiguredData.ts";
-import SkillPill from "../components/SkillPill.vue";
+import SkillProgressBar from "../components/SkillProgressBar.vue";
 import {PillDataType} from "../data/Models";
 
 function processTechPills(a: PillDataType[]): PillDataType[] {
@@ -57,7 +57,7 @@ let skillPillCount = -1;
         :indentation="1"
       >
         <li>
-          <SkillPill
+          <SkillProgressBar
             :tech="tech"
             :index="skillPillCount++"
           />
@@ -76,7 +76,7 @@ let skillPillCount = -1;
         :indentation="1"
       >
         <li>
-          <SkillPill
+          <SkillProgressBar
             :tech="tech"
             :index="skillPillCount++"
           />
@@ -95,7 +95,7 @@ let skillPillCount = -1;
         :indentation="1"
       >
         <li>
-          <SkillPill
+          <SkillProgressBar
             :tech="tech"
             :index="skillPillCount++"
           />
@@ -114,7 +114,7 @@ let skillPillCount = -1;
         :indentation="1"
       >
         <li>
-          <SkillPill
+          <SkillProgressBar
             :tech="tech"
             :index="skillPillCount++"
           />

@@ -1,17 +1,17 @@
 <script setup lang="ts">
-import SideBar from "./SideBar.vue";
-import Footer from "./Footer.vue";
+import SiteSideBar from "./SiteSideBar.vue";
+import SiteFooter from "./SiteFooter.vue";
 import EditorBackground from "./EditorBackground.vue";
-import Header from "./Header.vue";
+import SiteHeader from "./SiteHeader.vue";
 import EditorNotificationManager from "./EditorNotificationManager.vue";
 import EditorTabsManager from "./EditorTabsManager.vue";
 </script>
 
 <template>
   <div id="page">
-    <Header />
+    <SiteHeader />
     <div id="page-center">
-      <SideBar />
+      <SiteSideBar />
       <div id="page-content-wrapper">
         <EditorTabsManager />
         <EditorNotificationManager />
@@ -21,7 +21,7 @@ import EditorTabsManager from "./EditorTabsManager.vue";
         </div>
       </div>
     </div>
-    <Footer />
+    <SiteFooter />
   </div>
 </template>
 

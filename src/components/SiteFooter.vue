@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import packageJson from '/package.json';
 import {ref} from "vue";
-import BranchesOverview from "./BranchesOverview.vue";
+import EditorBranchesOverview from "./EditorBranchesOverview.vue";
 import EditorSettings from "./EditorSettings.vue";
 
 const uri = location.hostname;
@@ -32,7 +32,7 @@ const branchesOverviewOpened = ref(false);
         class="branches-overview"
         @mouseleave="branchesOverviewOpened = false"
       >
-        <BranchesOverview :current-branch="branchName" />
+        <EditorBranchesOverview :current-branch="branchName" />
       </div>
     </div>
     <div class="footer-separator" />
