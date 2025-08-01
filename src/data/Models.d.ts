@@ -45,3 +45,8 @@ export type CustomThemeColors = {
   accentColor: string,
   errorColor: string,
 }
+
+export type EditorTab = {
+  name: string;
+  fullPath: string;
+}
