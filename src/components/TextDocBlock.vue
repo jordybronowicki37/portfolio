@@ -21,9 +21,10 @@ defineProps<{text: string}>()
 </template>
 
 <style scoped>
-div, p, span {
+div, p {
   color: #5c7e67;
   font-family: monospace;
+  font-size: large;
 }
 p {
   font-style: italic;

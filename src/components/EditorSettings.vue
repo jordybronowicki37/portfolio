@@ -219,10 +219,6 @@ function createTheme() {
 }
 dialog {
   position: relative;
-  background-color: var(--bg-color-500);
-  border: 2px solid var(--accent-color);
-  border-radius: 1rem;
   overflow: hidden auto;
-  padding: 0;
 }
 </style>

@@ -8,48 +8,53 @@
   -webkit-text-size-adjust: 100%;
 }
 
+/* Headings */
 body, h1, h2, h3, h4, p {
   margin: 0;
 }
-
 h2 {
   font-size: x-large;
 }
-
 h3 {
   font-size: larger;
   opacity: 0.8;
 }
-
 h4 {
   font-size: 16px;
   font-weight: 600;
   opacity: 0.7;
 }
 
+/* Dialog */
+dialog {
+  background-color: var(--bg-color-600);
+  border-radius: .375rem;
+  border: none;
+  padding: 0;
+}
+dialog>div {
+  padding: 1rem;
+}
 dialog::backdrop {
   background-color: #00000080;
 }
-
 dialog:focus-visible {
   outline: none;
 }
 
-/* Works on Firefox */
+/* Scrollbar on Firefox */
 * {
   scrollbar-width: thin;
   scrollbar-color: var(--bg-color-500) var(--bg-color-800);
 }
 
-/* Works on Chrome, Edge, and Safari */
+/* Scrollbar on Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
   width: 12px;
 }
-
 *::-webkit-scrollbar-track {
   background: var(--bg-color-800);
 }
-
 *::-webkit-scrollbar-thumb {
   background-color: var(--bg-color-600);
   border-radius: 20px;

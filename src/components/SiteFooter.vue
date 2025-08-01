@@ -100,14 +100,9 @@ footer {
 }
 dialog {
   position: relative;
-  background-color: var(--bg-color-500);
-  border: 2px solid var(--accent-color);
-  border-radius: 1rem;
   overflow: hidden auto;
-  padding: 0;
 }
 dialog>div {
-  padding: 1rem;
   min-width: 10rem;
   min-height: 10rem;
 }

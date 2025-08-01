@@ -94,22 +94,12 @@ img {
 p {
   margin-top: 1rem;
 }
-dialog::backdrop {
-  backdrop-filter: blur(10px);
-}
 dialog:focus-visible {
   outline: none;
 }
 dialog {
-  padding: 0;
   width: 90vw;
   max-width: 40rem;
-  background-color: var(--bg-color-800);
-  border: 3px solid var(--bg-color-500);
-  border-radius: 10px;
-}
-dialog>div {
-  padding: 1rem;
 }
 .modal-close-button-wrapper {
   cursor: pointer;

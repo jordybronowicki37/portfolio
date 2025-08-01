@@ -76,14 +76,7 @@ function close() {
 
 <style scoped>
 dialog {
-  background-color: var(--bg-color-600);
-  border: none;
-  border-radius: .375rem;
-  padding: 0;
   width: 20rem;
-}
-dialog>div {
-  padding: 1rem;
 }
 section {
   display: flex;
