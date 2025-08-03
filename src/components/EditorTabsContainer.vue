@@ -2,10 +2,8 @@
 import {useRoute, useRouter} from "vue-router";
 import {ref, watchPostEffect} from "vue";
 import {store} from "../data/Store.ts";
-import {EditorTab} from "../data/Models";
 
 const tabsContainer = ref<HTMLDivElement>();
-const tabHistory = ref<EditorTab[]>(store.tabHistory)
 const router = useRouter();
 const route = useRoute();
 

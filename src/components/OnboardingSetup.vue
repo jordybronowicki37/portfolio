@@ -86,6 +86,10 @@ const steps: StepEntity[] = [
       popper: {
         ...popperDefaultOptions,
         placement: IsInMobileMode() ? "bottom-start" : "right-start",
+      },
+      overlay: {
+        borderRadius: 5,
+        // preventOverlayInteraction: false
       }
     }
   },

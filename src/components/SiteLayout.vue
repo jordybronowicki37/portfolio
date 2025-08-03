@@ -4,7 +4,6 @@ import SiteFooter from "./SiteFooter.vue";
 import EditorBackground from "./EditorBackground.vue";
 import SiteHeader from "./SiteHeader.vue";
 import EditorNotificationManager from "./EditorNotificationManager.vue";
-import EditorTabsContainer from "./EditorTabsContainer.vue";
 </script>
 
 <template>
@@ -13,7 +12,6 @@ import EditorTabsContainer from "./EditorTabsContainer.vue";
     <div id="page-center">
       <SiteSideBar />
       <div id="page-content-wrapper">
-        <EditorTabsContainer />
         <EditorNotificationManager />
         <EditorBackground />
         <div id="page-content">
