@@ -3,7 +3,7 @@ import Explorer from "./Explorer.vue";
 import {ref, watch} from "vue";
 
 const resizableDiv = ref<HTMLDivElement>();
-const explorerOpened = ref<boolean>(true);
+const tabOpened = ref<string>("File explorer");
 const isResizing = ref<boolean>(false);
 const width = ref<number>(300);
 
@@ -27,47 +27,98 @@ const stopResize = () => {
   document.removeEventListener('mousemove', resize);
   document.removeEventListener('mouseup', stopResize);
 }
+function switchTabVisibility(tab: string) {
+  const isAlreadyOpened = tabOpened.value === tab;
+  if (isAlreadyOpened) {
+    tabOpened.value = '';
+  } else {
+    tabOpened.value = tab;
+  }
+}
 </script>
 
 <template>
   <div
+    id="side-bar-wrapper"
     ref="resizableDiv"
-    class="side-bar-wrapper"
     :class="[isResizing ? 'is-resizing' : '']"
-    :style="[explorerOpened ? {flex: `0 0 ${width}px`} : {minWidth: 'unset', width: 0}]"
+    :style="[tabOpened ? {flex: `0 0 ${width}px`} : {minWidth: 'initial'}]"
   >
-    <div
-      v-if="!explorerOpened"
-      key="side-bar-title"
-      class="file-explorer-tab"
-      @click="explorerOpened=true"
-    >
-      File explorer
+    <div id="side-menu">
+      <button :class="[tabOpened === 'File explorer' ? 'active' : '']">
+        <box-icon
+          name="folder"
+          size="1.5rem"
+          color="var(--font-color-200)"
+          title="File explorer"
+          @click="switchTabVisibility('File explorer')"
+        />
+      </button>
+      <button :class="[tabOpened === 'Commits' ? 'active' : '']">
+        <box-icon
+          name="git-commit"
+          size="1.5rem"
+          color="var(--font-color-200)"
+          title="Commits"
+          @click="switchTabVisibility('Commits')"
+        />
+      </button>
+      <button :class="[tabOpened === 'Pull requests' ? 'active' : '']">
+        <box-icon
+          name="git-pull-request"
+          size="1.5rem"
+          color="var(--font-color-200)"
+          title="Pull requests"
+          @click="switchTabVisibility('Pull requests')"
+        />
+      </button>
+      <button :class="[tabOpened === 'Headings' ? 'active' : '']">
+        <box-icon
+          name="hash"
+          size="1.5rem"
+          color="var(--font-color-200)"
+          title="Headings"
+          @click="switchTabVisibility('Headings')"
+        />
+      </button>
+      <a href="https://github.com/jordybronowicki37">
+        <box-icon
+          name="github"
+          type="logo"
+          size="1.5rem"
+          color="var(--font-color-200)"
+          title="GitHub profile"
+        />
+      </a>
     </div>
 
     <div
-      v-if="explorerOpened"
-      id="onboarding-view-side-bar"
-      class="side-bar"
+      v-if="tabOpened"
+      id="side-bar-content-wrapper"
     >
-      <div class="side-bar-title">
-        <div>File explorer</div>
-        <div
-          class="minimize-explorer"
-          @click="explorerOpened=false"
+      <div id="side-bar-title">
+        <div>{{ tabOpened }}</div>
+        <button
+          @click="tabOpened=''"
         >
           <box-icon
             name="minus"
             size="xs"
             color="var(--font-color-200)"
           />
-        </div>
+        </button>
       </div>
 
-      <Explorer />
+      <div
+        v-if="tabOpened === 'File explorer'"
+        id="onboarding-view-side-bar"
+      >
+        <Explorer />
+      </div>
     </div>
+
     <div
-      class="side-bar-resize-handle"
+      id="side-bar-resize-handle"
       @mousedown="startResize"
     />
   </div>
@@ -81,12 +132,41 @@ body :has(.is-resizing) {
 </style>
 
 <style scoped>
-.side-bar-wrapper {
+#side-bar-wrapper {
+  display: flex;
   position: relative;
   max-width: 40%;
   min-width: 15%;
+  background: var(--bg-color-600);
 }
-.side-bar-resize-handle {
+#side-menu {
+  border-right: 1px solid var(--bg-color-800);
+}
+#side-menu>* {
+  all: unset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  height: 1.3rem;
+  width: 1.3rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+#side-menu>*:hover {
+  background: var(--bg-color-500);
+}
+#side-menu .active {
+  background: var(--bg-color-500);
+}
+#side-bar-content-wrapper {
+  border-right: 1px solid var(--secondary-color);
+  height: 100%;
+  flex-grow: 1;
+  overflow: hidden;
+}
+#side-bar-resize-handle {
   cursor: ew-resize;
   width: 5px;
   position: absolute;
@@ -95,49 +175,28 @@ body :has(.is-resizing) {
   right: -2px;
   z-index: 1;
 }
-.side-bar {
-  display: flex;
-  flex-direction: column;
-  border-right: 1px solid var(--secondary-color);
-  height: 100%;
-  background: var(--bg-color-500);
-  overflow: hidden;
-}
-.file-explorer-tab {
-  cursor: pointer;
-  padding: 0 0.5rem;
-  font-weight: bold;
-  font-size: small;
-  white-space: nowrap;
-  position: absolute;
-  left:0;
-  top:0;
-  transform: rotate(-90deg) translateX(-100%);
-  transform-origin: top left;
-  z-index: 1;
-}
-.file-explorer-tab:hover,
-.minimize-explorer:hover {
-  background: var(--bg-color-800);
-}
-.side-bar-title {
+#side-bar-title {
   width: 100%;
   text-align: center;
   font-weight: bold;
-  font-size: small;
-  background-color: var(--bg-color-600);
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--bg-color-800);
   position: relative;
   overflow: hidden;
   flex-shrink: 0;
 }
-.minimize-explorer {
+#side-bar-title button:hover {
+  background: var(--bg-color-800);
+}
+#side-bar-title button {
+  all: unset;
   position: absolute;
   right: 0;
   top: 0;
   cursor: pointer;
 }
 @media screen and (max-width: 600px) {
-  .side-bar-wrapper {
+  #side-bar-wrapper {
     display: none;
   }
 }
