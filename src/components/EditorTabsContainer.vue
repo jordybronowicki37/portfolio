@@ -79,7 +79,7 @@ watchPostEffect(() => {
   flex: 0 0 content;
   width: 100%;
   overflow: auto;
-  background-color: var(--bg-color-600);
+  background-color: var(--bg-color-700);
   border-bottom: 1px solid var(--secondary-color);
   scroll-behavior: smooth;
   z-index: 1;

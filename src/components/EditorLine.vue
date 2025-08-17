@@ -31,7 +31,7 @@ defineProps<{indentation: number}>();
   display: inline-block;
   text-align: right;
   color: var(--secondary-color);
-  background: var(--bg-color-600);
+  background: var(--bg-color-700);
   border-right: 1px solid var(--secondary-color);
   height: 100%;
   width: 2em;

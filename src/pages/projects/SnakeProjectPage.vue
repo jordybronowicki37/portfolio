@@ -147,9 +147,9 @@ const githubURL = import.meta.env.VITE_SNAKE_GITHUB_URL;
         type="personal"
         status="in progress"
         :links="[
-            githubURL,
-            deploymentURL
-          ]"
+          githubURL,
+          deploymentURL
+        ]"
       />
     </template>
   </EditorProject>

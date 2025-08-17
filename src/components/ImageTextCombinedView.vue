@@ -33,6 +33,7 @@ withDefaults(
 .combined-view-container {
   display: flex;
   align-items: center;
+  gap: 1rem;
 }
 /*noinspection CssUnusedSymbol*/
 .image-on-the-left {
@@ -40,7 +41,7 @@ withDefaults(
 }
 .text-wrapper {
   width: 60%;
-  padding: 1rem;
+  flex-grow: 1;
 }
 @container editor-line (width < 500px) {
   .text-wrapper {

@@ -48,21 +48,15 @@ import Editor from "../../components/Editor.vue";
   margin-bottom: 0.5rem;
 }
 .services-list {
+  margin-left: 1rem !important;
   list-style: none;
 }
 @media screen and (min-width: 600px) {
   .project-page .text-only-section {
     padding-left: 1rem;
   }
-  .project-page .list-title {
-    padding-left: 1rem;
-  }
   .features-list li {
-    margin-left: 2rem;
-    padding-left: 0.5rem;
-  }
-  .services-list {
-    margin-left: 1rem !important;
+    margin-left: 1.25rem;
   }
 }
 

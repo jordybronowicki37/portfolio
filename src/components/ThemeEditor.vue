@@ -142,6 +142,7 @@ watchEffect(() => {
             type="color"
           >
           <input
+            id="titleColorInputPreview"
             class="color-code-preview"
             :value="titleColor"
             type="text"
@@ -157,6 +158,7 @@ watchEffect(() => {
             type="color"
           >
           <input
+            id="textColorInputPreview"
             class="color-code-preview"
             :value="textColor"
             type="text"
@@ -172,6 +174,7 @@ watchEffect(() => {
             type="color"
           >
           <input
+            id="subTextColorInputPreview"
             class="color-code-preview"
             :value="subTextColor"
             type="text"
@@ -187,6 +190,7 @@ watchEffect(() => {
             type="color"
           >
           <input
+            id="backgroundFarColorInputPreview"
             class="color-code-preview"
             :value="backgroundFarColor"
             type="text"
@@ -202,6 +206,7 @@ watchEffect(() => {
             type="color"
           >
           <input
+            id="backgroundMidColorInputPreview"
             class="color-code-preview"
             :value="backgroundMidColor"
             type="text"
@@ -217,6 +222,7 @@ watchEffect(() => {
             type="color"
           >
           <input
+            id="backgroundNearColorInputPreview"
             class="color-code-preview"
             :value="backgroundNearColor"
             type="text"
@@ -232,6 +238,7 @@ watchEffect(() => {
             type="color"
           >
           <input
+            id="foregroundColorInputPreview"
             class="color-code-preview"
             :value="foregroundColor"
             type="text"
@@ -247,6 +254,7 @@ watchEffect(() => {
             type="color"
           >
           <input
+            id="secondaryColorInputPreview"
             class="color-code-preview"
             :value="secondaryColor"
             type="text"
@@ -262,6 +270,7 @@ watchEffect(() => {
             type="color"
           >
           <input
+            id="accentColorInputPreview"
             class="color-code-preview"
             :value="accentColor"
             type="text"
@@ -277,6 +286,7 @@ watchEffect(() => {
             type="color"
           >
           <input
+            id="errorColorInputPreview"
             class="color-code-preview"
             :value="errorColor"
             type="text"
