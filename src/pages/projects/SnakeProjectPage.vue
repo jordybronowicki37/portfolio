@@ -14,7 +14,7 @@ const githubURL = import.meta.env.VITE_SNAKE_GITHUB_URL;
     <EditorLine :indentation="0" />
     <EditorLine :indentation="0" />
     <EditorLine :indentation="1">
-      <h2>Project: Snake Game</h2>
+      <h1># Project: Snake Game</h1>
     </EditorLine>
 
     <EditorLine :indentation="2" />
@@ -34,9 +34,7 @@ const githubURL = import.meta.env.VITE_SNAKE_GITHUB_URL;
     <section>
       <EditorLine :indentation="2" />
       <EditorLine :indentation="2">
-        <h3 class="text-only-section">
-          Play the famous game of snake
-        </h3>
+        <h2 class="text-only-section">## Play the famous game of snake</h2>
       </EditorLine>
       <EditorLine :indentation="2">
         <p class="text-only-section">
@@ -56,7 +54,7 @@ const githubURL = import.meta.env.VITE_SNAKE_GITHUB_URL;
         >
           <template #text>
             <div>
-              <h3>Single player mode</h3>
+              <h2>## Single player mode</h2>
               <p>
                 In Single Player mode, challenge yourself through a selection of diverse levels, each presenting
                 unique hurdles and escalating difficulty. Conquer independent challenges in every level and aim
@@ -85,7 +83,7 @@ const githubURL = import.meta.env.VITE_SNAKE_GITHUB_URL;
         >
           <template #text>
             <div>
-              <h3>Choose out of a bunch of different levels</h3>
+              <h2>## Choose out of a bunch of different levels</h2>
               <p>
                 Conquer a variety of levels in Single Player mode, each with its unique challenges and
                 high-scores to beat. Test your skills and adapt your strategies to overcome diverse obstacles.
@@ -113,7 +111,7 @@ const githubURL = import.meta.env.VITE_SNAKE_GITHUB_URL;
         >
           <template #text>
             <div>
-              <h3>Versus mode</h3>
+              <h2>## Versus mode</h2>
               <p>
                 Experience the ultimate showdown in Versus Mode, where two players compete head-to-head.
                 Your goal? Gather as much fruit as you can to grow your snake and eliminate your opponent.

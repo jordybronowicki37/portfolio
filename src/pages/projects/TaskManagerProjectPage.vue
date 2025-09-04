@@ -12,7 +12,7 @@ import EditorProject from "./EditorProject.vue";
     <EditorLine :indentation="0" />
     <EditorLine :indentation="0" />
     <EditorLine :indentation="1">
-      <h2>Project: Task Manager</h2>
+      <h1># Project: Task Manager</h1>
     </EditorLine>
 
     <EditorLine :indentation="2" />
@@ -36,7 +36,7 @@ import EditorProject from "./EditorProject.vue";
         >
           <template #text>
             <div>
-              <h3>Manage your tasks</h3>
+              <h2>## Manage your tasks</h2>
               <p>
                 Introducing my Task Manager project, a robust organizational tool designed to streamline
                 your workflow and enhance productivity. This intuitive system allows you to create customized
@@ -65,7 +65,7 @@ import EditorProject from "./EditorProject.vue";
         >
           <template #text>
             <div>
-              <h3>Assign tags and users to tasks</h3>
+              <h2>## Assign tags and users to tasks</h2>
               <p>
                 Seamlessly assign specific tags or users to your tasks, ensuring clarity in responsibilities
                 and enhancing team collaboration. With this feature, managing tasks becomes effortless.
@@ -89,14 +89,12 @@ import EditorProject from "./EditorProject.vue";
     <section>
       <EditorLine :indentation="2" />
       <EditorLine :indentation="2">
-        <h3 class="list-title">
-          Features
-        </h3>
+        <h2 class="list-title">## Features</h2>
       </EditorLine>
       <ul class="features-list">
         <EditorLine :indentation="2">
           <li>
-            <h4>Create multiple Boards</h4>
+            <h3>Create multiple Boards</h3>
             <p>
               Craft multiple boards, each serving as a dedicated space for a project, task category, or team.
               Organize your work efficiently, ensuring a clear overview of your tasks.
@@ -105,7 +103,7 @@ import EditorProject from "./EditorProject.vue";
         </EditorLine>
         <EditorLine :indentation="2">
           <li>
-            <h4>Create Task-lists</h4>
+            <h3>Create Task-lists</h3>
             <p>
               Within each board, you can create task-lists representing the different states of your tasks.
               Define custom states such as To-Do, In Progress, and Done. Lanes provide a visual
@@ -115,7 +113,7 @@ import EditorProject from "./EditorProject.vue";
         </EditorLine>
         <EditorLine :indentation="2">
           <li>
-            <h4>Task Management</h4>
+            <h3>Task Management</h3>
             <p>
               Populate your lanes with tasks, breaking down your projects into manageable components.
             </p>
@@ -123,7 +121,7 @@ import EditorProject from "./EditorProject.vue";
         </EditorLine>
         <EditorLine :indentation="2">
           <li>
-            <h4>Tags for Task Grouping</h4>
+            <h3>Tags for Task Grouping</h3>
             <p>
               Enhance organization by tagging tasks with relevant keywords or categories. Group tasks
               together, making it effortless to track specific themes or priorities.
@@ -132,7 +130,7 @@ import EditorProject from "./EditorProject.vue";
         </EditorLine>
         <EditorLine :indentation="2">
           <li>
-            <h4>Collaborative Environment</h4>
+            <h3>Collaborative Environment</h3>
             <p>
               Invite collaborators to your boards, fostering seamless communication and collaboration.
               Assign tasks and work together to achieve common goals.
@@ -146,9 +144,7 @@ import EditorProject from "./EditorProject.vue";
       <EditorLine :indentation="2" />
       <EditorLine :indentation="2">
         <section>
-          <h3 class="list-title">
-            Used Amazon Web Services
-          </h3>
+          <h2 class="list-title">## Used Amazon Web Services</h2>
           <ul class="services-list">
             <li>
               <AWSServiceCard name="CloudFront" />

@@ -13,7 +13,7 @@ const githubURL = import.meta.env.VITE_BEFIT_GITHUB_URL;
     <EditorLine :indentation="0" />
     <EditorLine :indentation="0" />
     <EditorLine :indentation="1">
-      <h2>Project: BeFit bot</h2>
+      <h1># Project: BeFit bot</h1>
     </EditorLine>
 
     <EditorLine :indentation="2" />
@@ -37,7 +37,7 @@ const githubURL = import.meta.env.VITE_BEFIT_GITHUB_URL;
         >
           <template #text>
             <div>
-              <h3>Log your exercises</h3>
+              <h2>## Log your exercises</h2>
               <p>
                 By creating a exercise log you create a datapoint for keeping track of you progress. By doing this you
                 can later view extensive insights into the progress the you have made.
@@ -65,7 +65,7 @@ const githubURL = import.meta.env.VITE_BEFIT_GITHUB_URL;
         >
           <template #text>
             <div>
-              <h3>View detailed data on an exercise</h3>
+              <h2>## View detailed data on an exercise</h2>
               <p>
                 View detailed data on a single exercise, see your own statistics on the exercise and view the
                 exercise leaderboard.
@@ -92,7 +92,7 @@ const githubURL = import.meta.env.VITE_BEFIT_GITHUB_URL;
         >
           <template #text>
             <div>
-              <h3>View the global leaderboard</h3>
+              <h2>## View the global leaderboard</h2>
               <p>
                 The global leaderboard takes in account all of the exercises you have participated in.
                 A score is calculated for each exercise by taking in account the total amount of participants
@@ -122,7 +122,7 @@ const githubURL = import.meta.env.VITE_BEFIT_GITHUB_URL;
         >
           <template #text>
             <div>
-              <h3>View your progress</h3>
+              <h2>## View your progress</h2>
               <p>
                 View your progress on a specific exercise on a line-chart. This can either represent the amount of
                 weight that you lifted, the sets that you completed, the time it took to reach a certain goal or the
@@ -150,7 +150,7 @@ const githubURL = import.meta.env.VITE_BEFIT_GITHUB_URL;
         >
           <template #text>
             <div>
-              <h3>View your stats</h3>
+              <h2>## View your stats</h2>
               <p>
                 View a lot of statistics from your user account and try to improve those numbers!
               </p>
@@ -177,7 +177,7 @@ const githubURL = import.meta.env.VITE_BEFIT_GITHUB_URL;
         >
           <template #text>
             <div>
-              <h3>Achievements</h3>
+              <h2>## Achievements</h2>
               <p>
                 There are 20 unique achievements for you to complete. You must complete them all!
               </p>
@@ -197,14 +197,12 @@ const githubURL = import.meta.env.VITE_BEFIT_GITHUB_URL;
     <section>
       <EditorLine :indentation="2" />
       <EditorLine :indentation="2">
-        <h3 class="list-title">
-          Features
-        </h3>
+        <h2 class="list-title">## Features</h2>
       </EditorLine>
       <ul class="features-list">
         <EditorLine :indentation="2">
           <li>
-            <h4>Add your own exercises</h4>
+            <h3>Add your own exercises</h3>
             <p>
               Have a specific exercise you have to track? No problem! You can add your own exercises to keep track of.
             </p>
@@ -212,7 +210,7 @@ const githubURL = import.meta.env.VITE_BEFIT_GITHUB_URL;
         </EditorLine>
         <EditorLine :indentation="2">
           <li>
-            <h4>Log your exercises</h4>
+            <h3>Log your exercises</h3>
             <p>
               By adding exercise logs you can get more insights in your personal progress.
             </p>
@@ -220,7 +218,7 @@ const githubURL = import.meta.env.VITE_BEFIT_GITHUB_URL;
         </EditorLine>
         <EditorLine :indentation="2">
           <li>
-            <h4>View your progress</h4>
+            <h3>View your progress</h3>
             <p>
               Get insights into your personal progress for each of your exercises.
             </p>
@@ -228,7 +226,7 @@ const githubURL = import.meta.env.VITE_BEFIT_GITHUB_URL;
         </EditorLine>
         <EditorLine :indentation="2">
           <li>
-            <h4>Set goals for certain exercises</h4>
+            <h3>Set goals for certain exercises</h3>
             <p>
               Set a personal goal for an exercise to work towards.
             </p>
@@ -236,7 +234,7 @@ const githubURL = import.meta.env.VITE_BEFIT_GITHUB_URL;
         </EditorLine>
         <EditorLine :indentation="2">
           <li>
-            <h4>Compare your progress to others</h4>
+            <h3>Compare your progress to others</h3>
             <p>
               Compare your progress with your friends and motivate each other to work towards a common goal.
             </p>
@@ -244,7 +242,7 @@ const githubURL = import.meta.env.VITE_BEFIT_GITHUB_URL;
         </EditorLine>
         <EditorLine :indentation="2">
           <li>
-            <h4>Receive motivation</h4>
+            <h3>Receive motivation</h3>
             <p>
               Receive and request motivational quotes that keep you working hard on achieving your goals.
             </p>
@@ -252,7 +250,7 @@ const githubURL = import.meta.env.VITE_BEFIT_GITHUB_URL;
         </EditorLine>
         <EditorLine :indentation="2">
           <li>
-            <h4>And much much more...</h4>
+            <h3>And much much more...</h3>
             <p>View the GitHub repository for a full breakdown of all commands and functionalities.</p>
           </li>
         </EditorLine>

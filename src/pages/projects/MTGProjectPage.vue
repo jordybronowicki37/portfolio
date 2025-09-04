@@ -12,7 +12,7 @@ import EditorProject from "./EditorProject.vue";
     <EditorLine :indentation="0" />
     <EditorLine :indentation="0" />
     <EditorLine :indentation="1">
-      <h2>Project: MTG Cards Collection Manager</h2>
+      <h1># Project: MTG Cards Collection Manager</h1>
     </EditorLine>
 
     <EditorLine :indentation="2" />
@@ -35,7 +35,7 @@ import EditorProject from "./EditorProject.vue";
         >
           <template #text>
             <div>
-              <h3>View a card's oracle to see all the different releases</h3>
+              <h2>## View a card's oracle to see all the different releases</h2>
               <p>
                 See all the information of a card on the oracle page. In this page you can see the abilities, costs,
                 rules and the releases of a card.
@@ -63,7 +63,7 @@ import EditorProject from "./EditorProject.vue";
         >
           <template #text>
             <div>
-              <h3>View a specific card</h3>
+              <h2>## View a specific card</h2>
               <p>
                 See the information of a specific card. In this page you can see the abilities, costs and rules of that
                 specific card. Beware that the rules may have changed with a later release of the card, always check
@@ -85,14 +85,12 @@ import EditorProject from "./EditorProject.vue";
     <section>
       <EditorLine :indentation="2" />
       <EditorLine :indentation="2">
-        <h3 class="list-title">
-          Features
-        </h3>
+        <h2 class="list-title">## Features</h2>
       </EditorLine>
       <ul class="features-list">
         <EditorLine :indentation="2">
           <li>
-            <h4>Manage your Collection</h4>
+            <h3>Manage your Collection</h3>
             <p>
               Add cards from your physical collection and quickly search for specific cards.
             </p>
@@ -100,7 +98,7 @@ import EditorProject from "./EditorProject.vue";
         </EditorLine>
         <EditorLine :indentation="2">
           <li>
-            <h4>Create playable decks</h4>
+            <h3>Create playable decks</h3>
             <p>
               Add cards from your collection to a specific deck and check if the deck is valid for the commander game
               mode.
@@ -109,7 +107,7 @@ import EditorProject from "./EditorProject.vue";
         </EditorLine>
         <EditorLine :indentation="2">
           <li>
-            <h4>Add cards to wishlist</h4>
+            <h3>Add cards to wishlist</h3>
             <p>
               If you need a specific card to complete a deck, then you can add that card to your wishlist and finish
               the deck that you are building.
@@ -118,7 +116,7 @@ import EditorProject from "./EditorProject.vue";
         </EditorLine>
         <EditorLine :indentation="2">
           <li>
-            <h4>Check the price of certain cards</h4>
+            <h3>Check the price of certain cards</h3>
             <p>
               The price of all the cards in our database is updated every single day. With this you can easily check
               if there is a discounted price on a certain card trading website.
@@ -131,9 +129,7 @@ import EditorProject from "./EditorProject.vue";
     <section>
       <EditorLine :indentation="2" />
       <EditorLine :indentation="2">
-        <h3 class="list-title">
-          Used Amazon Web Services
-        </h3>
+        <h2 class="list-title">## Used Amazon Web Services</h2>
       </EditorLine>
       <EditorLine :indentation="2">
         <ul class="services-list">

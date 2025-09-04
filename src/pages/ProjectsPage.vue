@@ -60,7 +60,7 @@ watch([filterText, filterTags], function () {
       <section>
         <EditorLine :indentation="0">
           <header class="page-header">
-            <h2>Projects</h2><span>{{ projectCardsData.length }}</span>
+            <h1># Projects<span>{{ projectCardsData.length }}</span></h1>
           </header>
         </EditorLine>
         <EditorLine :indentation="1">

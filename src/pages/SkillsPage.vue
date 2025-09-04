@@ -29,12 +29,12 @@ let skillPillCount = -1;
   <Editor>
     <EditorLine :indentation="0" />
     <EditorLine :indentation="0">
-      <h2>My skills</h2>
+      <h1># My skills</h1>
     </EditorLine>
 
     <section>
       <EditorLine :indentation="1">
-        <h3>So you are interested in my skills?</h3>
+        <h2>## So you are interested in my skills?</h2>
       </EditorLine>
       <EditorLine :indentation="2">
         <p>
@@ -48,7 +48,7 @@ let skillPillCount = -1;
 
     <EditorLine :indentation="1" />
     <EditorLine :indentation="1">
-      <h3>Backend</h3>
+      <h3>### Backend</h3>
     </EditorLine>
     <ul>
       <EditorLine
@@ -67,7 +67,7 @@ let skillPillCount = -1;
 
     <EditorLine :indentation="1" />
     <EditorLine :indentation="1">
-      <h3>Frontend</h3>
+      <h3>### Frontend</h3>
     </EditorLine>
     <ul>
       <EditorLine
@@ -86,7 +86,7 @@ let skillPillCount = -1;
 
     <EditorLine :indentation="1" />
     <EditorLine :indentation="1">
-      <h3>Deployment</h3>
+      <h3>### Deployment</h3>
     </EditorLine>
     <ul>
       <EditorLine
@@ -105,7 +105,7 @@ let skillPillCount = -1;
 
     <EditorLine :indentation="1" />
     <EditorLine :indentation="1">
-      <h3>Databases</h3>
+      <h3>### Databases</h3>
     </EditorLine>
     <ul>
       <EditorLine

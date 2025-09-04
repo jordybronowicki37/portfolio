@@ -135,9 +135,6 @@ defineProps<{
   display: grid;
   grid-template-columns: auto auto;
   gap: 0.3rem 0.5rem;
-  background-color: var(--bg-color-600);
-  border-radius: 0.5rem;
-  padding: 0.5rem;
 }
 .tag-list-wrapper {
   display: flex;

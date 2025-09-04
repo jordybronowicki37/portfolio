@@ -42,7 +42,7 @@ function createTheme() {
 
   <div class="all-settings-wrapper">
     <div class="themes-setting-wrapper">
-      <h2>Themes</h2>
+      <h3>Themes</h3>
       <div class="themes-wrapper">
         <button
           v-for="[title, theme] in Object.entries(Themes)"
@@ -57,7 +57,7 @@ function createTheme() {
     </div>
 
     <div>
-      <h2>Custom themes</h2>
+      <h3>Custom themes</h3>
       <div class="custom-themes-container themes-wrapper">
         <div
           v-for="theme in store.customThemes"
@@ -117,7 +117,7 @@ function createTheme() {
     </div>
 
     <div class="tutorial-setting-wrapper">
-      <h2>Tutorial</h2>
+      <h3>Tutorial</h3>
       <button @click="restartOnboarding">
         Restart tutorial
       </button>

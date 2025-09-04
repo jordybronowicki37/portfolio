@@ -11,7 +11,7 @@ import EditorProject from "./EditorProject.vue";
     <EditorLine :indentation="0" />
     <EditorLine :indentation="0" />
     <EditorLine :indentation="1">
-      <h2>Project: Neerslag Radar</h2>
+      <h1># Project: Neerslag Radar</h1>
     </EditorLine>
 
     <EditorLine :indentation="2" />
@@ -34,7 +34,7 @@ import EditorProject from "./EditorProject.vue";
         >
           <template #text>
             <div>
-              <h3>Data insights</h3>
+              <h2>## Data insights</h2>
               <p>
                 View the data in either a map or in a graph visualisation. The map visualisation animates through all
                 data slices in 5 minute intervals. The color gradient displays the rainfall intensity in mm/H. The graph
@@ -63,7 +63,7 @@ import EditorProject from "./EditorProject.vue";
         >
           <template #text>
             <div>
-              <h3>Create complex dashboards</h3>
+              <h2>## Create complex dashboards</h2>
               <p>
                 Create complex dashboards by adding multiple views with differing insights. Compare the data between
                 different locations by placing the visualisations next to each other.
@@ -90,7 +90,7 @@ import EditorProject from "./EditorProject.vue";
         >
           <template #text>
             <div>
-              <h3>Easily switch between dashboards</h3>
+              <h2>## Easily switch between dashboards</h2>
               <p>
                 Create multiple dashboards so that you can easily switch between different insights or projects.
               </p>
@@ -110,14 +110,12 @@ import EditorProject from "./EditorProject.vue";
     <section>
       <EditorLine :indentation="2" />
       <EditorLine :indentation="2">
-        <h3 class="list-title">
-          Features
-        </h3>
+        <h2 class="list-title">## Features</h2>
       </EditorLine>
       <ul class="features-list">
         <EditorLine :indentation="2">
           <li>
-            <h4>View your data iteratively in the map visualisation</h4>
+            <h3>View your data iteratively in the map visualisation</h3>
             <p>
               View every frame separately or play them as a video.
             </p>
@@ -125,7 +123,7 @@ import EditorProject from "./EditorProject.vue";
         </EditorLine>
         <EditorLine :indentation="2">
           <li>
-            <h4>Create selections</h4>
+            <h3>Create selections</h3>
             <p>
               Make a selection of cells to only view the relevant information of a specific location.
             </p>
@@ -133,7 +131,7 @@ import EditorProject from "./EditorProject.vue";
         </EditorLine>
         <EditorLine :indentation="2">
           <li>
-            <h4>View your data in a graph visualisation</h4>
+            <h3>View your data in a graph visualisation</h3>
             <p>
               View all the data of your selection in a graph.
             </p>
@@ -141,7 +139,7 @@ import EditorProject from "./EditorProject.vue";
         </EditorLine>
         <EditorLine :indentation="2">
           <li>
-            <h4>View partial data</h4>
+            <h3>View partial data</h3>
             <p>
               Configure a timespan to only view a section of the dataset.
             </p>
@@ -149,7 +147,7 @@ import EditorProject from "./EditorProject.vue";
         </EditorLine>
         <EditorLine :indentation="2">
           <li>
-            <h4>Save, update and load dashboards as configurations</h4>
+            <h3>Save, update and load dashboards as configurations</h3>
             <p>
               Dashboards are saved locally. They contain all of the added views with their selected settings.
             </p>
@@ -157,7 +155,7 @@ import EditorProject from "./EditorProject.vue";
         </EditorLine>
         <EditorLine :indentation="2">
           <li>
-            <h4>Fast load times</h4>
+            <h3>Fast load times</h3>
             <p>
               By using data streaming, the load times for the dataset are extremely fast.
             </p>

@@ -9,7 +9,7 @@ const env = import.meta.env;
   <Editor>
     <EditorLine :indentation="0" />
     <EditorLine :indentation="0">
-      <h2>Contact</h2>
+      <h1># Contact</h1>
     </EditorLine>
     <EditorLine :indentation="1">
       Reach out and let's build something cool.

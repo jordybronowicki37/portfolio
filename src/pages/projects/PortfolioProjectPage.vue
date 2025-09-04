@@ -15,7 +15,7 @@ const githubURL = import.meta.env.VITE_PORTFOLIO_GITHUB_URL;
     <EditorLine :indentation="0" />
     <EditorLine :indentation="0" />
     <EditorLine :indentation="1">
-      <h2>Project: Portfolio</h2>
+      <h1># Project: Portfolio</h1>
     </EditorLine>
 
     <EditorLine :indentation="2" />
@@ -39,7 +39,7 @@ const githubURL = import.meta.env.VITE_PORTFOLIO_GITHUB_URL;
         >
           <template #text>
             <div>
-              <h3>Code editor inspired</h3>
+              <h2>## Code editor inspired</h2>
               <p>
                 My personal portfolio website stands as a testament to my passion for coding and design.
                 Designed to resemble a familiar code editor.
@@ -66,7 +66,7 @@ const githubURL = import.meta.env.VITE_PORTFOLIO_GITHUB_URL;
         >
           <template #text>
             <div>
-              <h3>Multiple projects</h3>
+              <h2>## Multiple projects</h2>
               <p>
                 This website serves as a digital canvas where I showcase my projects and skills.
               </p>
@@ -86,9 +86,7 @@ const githubURL = import.meta.env.VITE_PORTFOLIO_GITHUB_URL;
     <section>
       <EditorLine :indentation="2" />
       <EditorLine :indentation="2">
-        <h3 class="text-only-section">
-          Themes
-        </h3>
+        <h2 class="text-only-section">## Themes</h2>
       </EditorLine>
       <EditorLine :indentation="2">
         <p class="text-only-section">
@@ -131,14 +129,12 @@ const githubURL = import.meta.env.VITE_PORTFOLIO_GITHUB_URL;
     <section>
       <EditorLine :indentation="2" />
       <EditorLine :indentation="2">
-        <h3 class="list-title">
-          Features
-        </h3>
+        <h2 class="list-title">## Features</h2>
       </EditorLine>
       <ul class="features-list">
         <EditorLine :indentation="2">
           <li>
-            <h4>Immersive Code Editor Environment</h4>
+            <h3>Immersive Code Editor Environment</h3>
             <p>
               Navigating my portfolio feels like exploring lines of code in a familiar editor, creating a
               comfortable space for fellow tech enthusiasts.
@@ -147,7 +143,7 @@ const githubURL = import.meta.env.VITE_PORTFOLIO_GITHUB_URL;
         </EditorLine>
         <EditorLine :indentation="2">
           <li>
-            <h4>Project Showcase</h4>
+            <h3>Project Showcase</h3>
             <p>
               Dive into a variety of projects, each encapsulating my dedication to innovation. From coding
               experiments to fully developed applications, my work speaks volumes about my capabilities.
@@ -156,7 +152,7 @@ const githubURL = import.meta.env.VITE_PORTFOLIO_GITHUB_URL;
         </EditorLine>
         <EditorLine :indentation="2">
           <li>
-            <h4>Responsive Design</h4>
+            <h3>Responsive Design</h3>
             <p>
               The website seamlessly adjusts to different devices, ensuring a smooth experience whether
               you're browsing on a desktop, tablet, or smartphone.
@@ -165,7 +161,7 @@ const githubURL = import.meta.env.VITE_PORTFOLIO_GITHUB_URL;
         </EditorLine>
         <EditorLine :indentation="2">
           <li>
-            <h4>Connection Opportunities</h4>
+            <h3>Connection Opportunities</h3>
             <p>
               Interested in discussing collaborations, projects, or just exchanging ideas? Reach out via
               the contact section. I'm always eager to connect with fellow enthusiasts and professionals.

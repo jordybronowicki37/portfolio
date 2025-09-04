@@ -7,10 +7,10 @@ import EditorLine from "../components/EditorLine.vue";
   <Editor>
     <EditorLine :indentation="0" />
     <EditorLine :indentation="0">
-      <h2>Jordy Bronowicki</h2>
+      <h1># Jordy Bronowicki</h1>
     </EditorLine>
     <EditorLine :indentation="1">
-      <h3>Full-stack software developer</h3>
+      <h2>## Full-stack software developer</h2>
     </EditorLine>
 
     <section>
@@ -35,7 +35,7 @@ import EditorLine from "../components/EditorLine.vue";
       <EditorLine :indentation="1" />
       <EditorLine :indentation="1" />
       <EditorLine :indentation="1">
-        <h3>My work</h3>
+        <h2>## My work</h2>
       </EditorLine>
       <EditorLine :indentation="2">
         <p>
@@ -50,7 +50,7 @@ import EditorLine from "../components/EditorLine.vue";
       <EditorLine :indentation="1" />
       <EditorLine :indentation="1" />
       <EditorLine :indentation="1">
-        <h3>What sets me apart</h3>
+        <h2>## What sets me apart</h2>
       </EditorLine>
       <EditorLine :indentation="2">
         <p>
@@ -65,7 +65,7 @@ import EditorLine from "../components/EditorLine.vue";
       <EditorLine :indentation="1" />
       <EditorLine :indentation="1" />
       <EditorLine :indentation="1">
-        <h3>My proudest achievement</h3>
+        <h2>## My proudest achievement</h2>
       </EditorLine>
       <EditorLine :indentation="2">
         <p>
@@ -81,7 +81,7 @@ import EditorLine from "../components/EditorLine.vue";
       <EditorLine :indentation="1" />
       <EditorLine :indentation="1" />
       <EditorLine :indentation="1">
-        <h3>Looking ahead</h3>
+        <h2>## Looking ahead</h2>
       </EditorLine>
       <EditorLine :indentation="2">
         <p>
@@ -95,7 +95,7 @@ import EditorLine from "../components/EditorLine.vue";
       <EditorLine :indentation="1" />
       <EditorLine :indentation="1" />
       <EditorLine :indentation="1">
-        <h3>Thank you</h3>
+        <h2>## Thank you</h2>
       </EditorLine>
       <EditorLine :indentation="2">
         <p>

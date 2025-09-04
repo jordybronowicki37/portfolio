@@ -12,7 +12,7 @@ import EditorProject from "./EditorProject.vue";
     <EditorLine :indentation="0" />
     <EditorLine :indentation="0" />
     <EditorLine :indentation="1">
-      <h2>Project: AIMAS</h2>
+      <h1># Project: AIMAS</h1>
     </EditorLine>
 
     <EditorLine :indentation="2" />
@@ -36,10 +36,8 @@ import EditorProject from "./EditorProject.vue";
         >
           <template #text>
             <div>
-              <h3>Live insights into all incidents</h3>
-              <p>
-                Get a live overview of all the incidents that are occurring on the dutch motorways.
-              </p>
+              <h2>## Live insights into all incidents</h2>
+              <p>Get a live overview of all the incidents that are occurring on the dutch motorways.</p>
             </div>
           </template>
           <template #image>
@@ -56,14 +54,12 @@ import EditorProject from "./EditorProject.vue";
     <section>
       <EditorLine :indentation="2" />
       <EditorLine :indentation="2">
-        <h3 class="list-title">
-          Features
-        </h3>
+        <h2 class="list-title">## Features</h2>
       </EditorLine>
       <ul class="features-list">
         <EditorLine :indentation="2">
           <li>
-            <h4>Live updates</h4>
+            <h3>Live updates</h3>
             <p>
               All the accident and incident data gets updated every 5 minutes.
             </p>
@@ -71,7 +67,7 @@ import EditorProject from "./EditorProject.vue";
         </EditorLine>
         <EditorLine :indentation="2">
           <li>
-            <h4>Overview page</h4>
+            <h3>Overview page</h3>
             <p>
               View all active accidents and incidents.
             </p>
@@ -79,7 +75,7 @@ import EditorProject from "./EditorProject.vue";
         </EditorLine>
         <EditorLine :indentation="2">
           <li>
-            <h4>Order towing services</h4>
+            <h3>Order towing services</h3>
             <p>
               Create orders for towing services to come and help at the incident. The order is send to three separate
               api's. An employee can either accept, deny or ignore the order. If multiple towing services accept the
@@ -93,9 +89,7 @@ import EditorProject from "./EditorProject.vue";
     <section>
       <EditorLine :indentation="2" />
       <EditorLine :indentation="2">
-        <h3 class="list-title">
-          Used Amazon Web Services
-        </h3>
+        <h2 class="list-title">## Used Amazon Web Services</h2>
       </EditorLine>
       <EditorLine :indentation="2">
         <ul class="services-list">
