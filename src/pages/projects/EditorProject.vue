@@ -21,11 +21,8 @@ import Editor from "../../components/Editor.vue";
   height: 100%;
   z-index: 1;
 }
-.project-page h3 {
+.project-page h2 {
   margin-bottom: 0.2rem;
-}
-.project-page .tags-wrapper {
-  width: fit-content;
 }
 @container editor-line (width > 500px) {
   .project-page .project-image {
@@ -52,9 +49,6 @@ import Editor from "../../components/Editor.vue";
   list-style: none;
 }
 @media screen and (min-width: 600px) {
-  .project-page .text-only-section {
-    padding-left: 1rem;
-  }
   .features-list li {
     margin-left: 1.25rem;
   }

@@ -34,10 +34,12 @@ const githubURL = import.meta.env.VITE_SNAKE_GITHUB_URL;
     <section>
       <EditorLine :indentation="2" />
       <EditorLine :indentation="2">
-        <h2 class="text-only-section">## Play the famous game of snake</h2>
+        <h2>
+          ## Play the famous game of snake
+        </h2>
       </EditorLine>
       <EditorLine :indentation="2">
-        <p class="text-only-section">
+        <p>
           Dive into the thrilling world of my Snake Game, a project that offers not just one, but two exciting
           game modes: Single Player and Versus Mode.
         </p>

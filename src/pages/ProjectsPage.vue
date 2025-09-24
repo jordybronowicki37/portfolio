@@ -156,13 +156,10 @@ watch([filterText, filterTags], function () {
   gap: 2rem;
 }
 
-.page-header > h2 {
-  font-size: x-large;
-}
-
-.page-header > span {
+.page-header span {
+  margin-left: 1rem;
   opacity: 0.7;
-  font-size: x-large;
+  font-size: xx-large;
 }
 
 .projects-container {

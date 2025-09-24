@@ -85,7 +85,9 @@ import EditorProject from "./EditorProject.vue";
     <section>
       <EditorLine :indentation="2" />
       <EditorLine :indentation="2">
-        <h2 class="list-title">## Features</h2>
+        <h2 class="list-title">
+          ## Features
+        </h2>
       </EditorLine>
       <ul class="features-list">
         <EditorLine :indentation="2">
@@ -129,7 +131,9 @@ import EditorProject from "./EditorProject.vue";
     <section>
       <EditorLine :indentation="2" />
       <EditorLine :indentation="2">
-        <h2 class="list-title">## Used Amazon Web Services</h2>
+        <h2 class="list-title">
+          ## Used Amazon Web Services
+        </h2>
       </EditorLine>
       <EditorLine :indentation="2">
         <ul class="services-list">

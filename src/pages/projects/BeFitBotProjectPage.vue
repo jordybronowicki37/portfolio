@@ -197,7 +197,9 @@ const githubURL = import.meta.env.VITE_BEFIT_GITHUB_URL;
     <section>
       <EditorLine :indentation="2" />
       <EditorLine :indentation="2">
-        <h2 class="list-title">## Features</h2>
+        <h2 class="list-title">
+          ## Features
+        </h2>
       </EditorLine>
       <ul class="features-list">
         <EditorLine :indentation="2">

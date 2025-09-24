@@ -86,15 +86,17 @@ const githubURL = import.meta.env.VITE_PORTFOLIO_GITHUB_URL;
     <section>
       <EditorLine :indentation="2" />
       <EditorLine :indentation="2">
-        <h2 class="text-only-section">## Themes</h2>
+        <h2>
+          ## Themes
+        </h2>
       </EditorLine>
       <EditorLine :indentation="2">
-        <p class="text-only-section">
+        <p>
           The editor supports multiple different themes so that you can customize it however you like.
         </p>
       </EditorLine>
       <EditorLine :indentation="2">
-        <div class="images-collection text-only-section">
+        <div class="images-collection">
           <ImageFocusModal
             title="Dark theme"
             description=""
@@ -129,7 +131,9 @@ const githubURL = import.meta.env.VITE_PORTFOLIO_GITHUB_URL;
     <section>
       <EditorLine :indentation="2" />
       <EditorLine :indentation="2">
-        <h2 class="list-title">## Features</h2>
+        <h2 class="list-title">
+          ## Features
+        </h2>
       </EditorLine>
       <ul class="features-list">
         <EditorLine :indentation="2">
