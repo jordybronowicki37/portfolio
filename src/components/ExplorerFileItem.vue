@@ -1,10 +1,24 @@
 <script setup lang="ts">
-defineProps<{link: string, title: string}>()
+defineProps<{link: string, title: string, icon?: string}>()
 </script>
 
 <template>
   <nav :class="[`file-item-${title}`]">
     <box-icon
+      v-if="icon === 'debug'"
+      name="flask"
+      type="solid"
+      size="xs"
+      color="var(--font-color-200)"
+    />
+    <box-icon
+      v-else-if="icon === 'bug'"
+      name="bug"
+      size="xs"
+      color="var(--font-color-200)"
+    />
+    <box-icon
+      v-else
       name="file"
       size="xs"
       color="var(--font-color-200)"

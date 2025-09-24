@@ -472,19 +472,57 @@ onBeforeUnmount(() => {
 
 <template>
   <div class="asteroids-wrap">
-    <canvas ref="canvas" tabindex="0"></canvas>
+    <canvas
+      ref="canvas"
+      tabindex="0"
+    />
     <div class="hud">
       <div>Score: {{ state.score }}</div>
       <div>Lives: {{ state.lives }}</div>
-      <div v-if="state.status === Status.PAUSED" class="overlay">PAUSED — press P to resume</div>
-      <div v-if="state.status === Status.GAMEOVER" class="overlay">GAME OVER — press R to restart</div>
-      <div v-if="state.status === Status.NOT_STARTED" class="overlay">Press R to start game</div>
+      <div
+        v-if="state.status === Status.PAUSED"
+        class="overlay"
+      >
+        PAUSED — press P to resume
+      </div>
+      <div
+        v-if="state.status === Status.GAMEOVER"
+        class="overlay"
+      >
+        GAME OVER — press R to restart
+      </div>
+      <div
+        v-if="state.status === Status.NOT_STARTED"
+        class="overlay"
+      >
+        Press R to start game
+      </div>
     </div>
-    <div class="touch-controls" v-if="showTouchControls">
-      <button @touchstart.prevent="startThrust" @touchend.prevent="stopThrust">Thrust</button>
-      <button @touchstart.prevent="startRotateLeft" @touchend.prevent="stopRotate">◀</button>
-      <button @touchstart.prevent="startRotateRight" @touchend.prevent="stopRotate">▶</button>
-      <button @touchstart.prevent="shoot">Fire</button>
+    <div
+      v-if="showTouchControls"
+      class="touch-controls"
+    >
+      <button
+        @touchstart.prevent="startThrust"
+        @touchend.prevent="stopThrust"
+      >
+        Thrust
+      </button>
+      <button
+        @touchstart.prevent="startRotateLeft"
+        @touchend.prevent="stopRotate"
+      >
+        ◀
+      </button>
+      <button
+        @touchstart.prevent="startRotateRight"
+        @touchend.prevent="stopRotate"
+      >
+        ▶
+      </button>
+      <button @touchstart.prevent="shoot">
+        Fire
+      </button>
     </div>
   </div>
 </template>

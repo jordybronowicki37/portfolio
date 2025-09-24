@@ -69,7 +69,16 @@ const githubURL = import.meta.env.VITE_PORTFOLIO_GITHUB_URL;
           link="/projects/task-manager"
         />
       </ExplorerFolderItem>
-
+      <ExplorerFileItem
+        title="debug"
+        link="/debug"
+        icon="debug"
+      />
+      <ExplorerFileItem
+        title="bug"
+        link="/asteroids"
+        icon="bug"
+      />
       <ExplorerLinkItem
         title="GitHub"
         :link="githubURL"
