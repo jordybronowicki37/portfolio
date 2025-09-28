@@ -8,6 +8,7 @@ import TechPillConfigured from "../components/TechPillConfigured.vue";
 import {ALL_TECH_PILL_TYPES} from "../data/TechPillConfiguredData.ts";
 import TechPillLink from "../components/TechPillLink.vue";
 import TextDocBlock from "../components/TextDocBlock.vue";
+import Bug from "../components/Bug.vue";
 
 const selectedAwsCard = ref<string>(Object.keys(AWS_ICONS)[0])
 </script>
@@ -106,9 +107,37 @@ const selectedAwsCard = ref<string>(Object.keys(AWS_ICONS)[0])
     <EditorLine :indentation="1" />
     <EditorLine :indentation="1">
       <h2>Bugs</h2>
-
+      <div class="bugs-wrapper">
+        <div><Bug preview :bugType="1" /></div>
+        <div><Bug preview :bugType="2" /></div>
+        <div><Bug preview :bugType="3" /></div>
+        <div><Bug preview :bugType="4" /></div>
+        <div><Bug preview :bugType="5" /></div>
+        <div class="bugs-eating-wrapper">
+          <Bug preview :bugType="6">
+            <div class="bugs-food-block" />
+          </Bug>
+        </div>
+        <div class="bugs-eating-wrapper">
+          <Bug preview :bugType="7">
+            <div class="bugs-food-block" />
+          </Bug>
+        </div>
+        <div class="bugs-eating-wrapper">
+          <Bug preview :bugType="8">
+            <div class="bugs-food-block" />
+          </Bug>
+        </div>
+        <div class="bugs-eating-wrapper">
+          <Bug preview :bugType="9">
+            <div class="bugs-food-block" />
+          </Bug>
+        </div>
+      </div>
     </EditorLine>
 
+    <EditorLine :indentation="1" />
+    <EditorLine :indentation="1" />
     <EditorLine :indentation="0" />
     <EditorLine :indentation="0" />
   </Editor>
@@ -155,5 +184,18 @@ h3 {
 }
 .headings-wrapper * {
   margin: 0;
+}
+.bugs-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
+}
+.bugs-food-block {
+  width: 4rem;
+  height: 2rem;
+  background-color: green;
+}
+.bugs-eating-wrapper {
+  width: min-content;
 }
 </style>
