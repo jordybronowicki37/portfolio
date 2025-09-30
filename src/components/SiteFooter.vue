@@ -7,7 +7,7 @@ import EditorSettings from "./EditorSettings.vue";
 const uri = location.hostname;
 let branchName = "master";
 if (uri.includes("-dev")) branchName = "staging";
-if (uri.includes("localhost")) branchName = "dev";
+if (uri === 'localhost') branchName = "dev";
 
 const dialog = ref<HTMLDialogElement>();
 const branchesOverviewOpened = ref(false);

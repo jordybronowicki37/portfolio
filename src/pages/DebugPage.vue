@@ -108,28 +108,65 @@ const selectedAwsCard = ref<string>(Object.keys(AWS_ICONS)[0])
     <EditorLine :indentation="1">
       <h2>Bugs</h2>
       <div class="bugs-wrapper">
-        <div><Bug preview :bugType="1" /></div>
-        <div><Bug preview :bugType="2" /></div>
-        <div><Bug preview :bugType="3" /></div>
-        <div><Bug preview :bugType="4" /></div>
-        <div><Bug preview :bugType="5" /></div>
+        <div>
+          <Bug
+            preview
+            :bug-type="1"
+          />
+        </div>
+        <div>
+          <Bug
+            preview
+            :bug-type="2"
+          />
+        </div>
+        <div>
+          <Bug
+            preview
+            :bug-type="3"
+          />
+        </div>
+        <div>
+          <Bug
+            preview
+            :bug-type="4"
+          />
+        </div>
+        <div>
+          <Bug
+            preview
+            :bug-type="5"
+          />
+        </div>
         <div class="bugs-eating-wrapper">
-          <Bug preview :bugType="6">
+          <Bug
+            preview
+            :bug-type="6"
+          >
             <div class="bugs-food-block" />
           </Bug>
         </div>
         <div class="bugs-eating-wrapper">
-          <Bug preview :bugType="7">
+          <Bug
+            preview
+            :bug-type="7"
+          >
             <div class="bugs-food-block" />
           </Bug>
         </div>
         <div class="bugs-eating-wrapper">
-          <Bug preview :bugType="8">
+          <Bug
+            preview
+            :bug-type="8"
+          >
             <div class="bugs-food-block" />
           </Bug>
         </div>
         <div class="bugs-eating-wrapper">
-          <Bug preview :bugType="9">
+          <Bug
+            preview
+            :bug-type="9"
+          >
             <div class="bugs-food-block" />
           </Bug>
         </div>

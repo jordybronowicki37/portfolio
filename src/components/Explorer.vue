@@ -2,8 +2,10 @@
 import ExplorerFolderItem from "./ExplorerFolderItem.vue";
 import ExplorerFileItem from "./ExplorerFileItem.vue";
 import ExplorerLinkItem from "./ExplorerLinkItem.vue";
+import {store} from "../data/Store.ts";
 
 const githubURL = import.meta.env.VITE_PORTFOLIO_GITHUB_URL;
+const uri = location.hostname
 </script>
 
 <template>
@@ -70,11 +72,13 @@ const githubURL = import.meta.env.VITE_PORTFOLIO_GITHUB_URL;
         />
       </ExplorerFolderItem>
       <ExplorerFileItem
+        v-if="uri === 'localhost'"
         title="debug"
         link="/debug"
         icon="debug"
       />
       <ExplorerFileItem
+        v-if="store.bugsCompleted.length === 9 || uri === 'localhost'"
         title="bug"
         link="/asteroids"
         icon="bug"
