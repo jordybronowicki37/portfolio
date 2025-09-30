@@ -3,6 +3,7 @@ import packageJson from '/package.json';
 import {ref} from "vue";
 import EditorBranchesOverview from "./EditorBranchesOverview.vue";
 import EditorSettings from "./EditorSettings.vue";
+import {MAX_AMOUNT_OF_BUGS, store} from "../data/Store.ts";
 
 const uri = location.hostname;
 let branchName = "master";
@@ -11,12 +12,17 @@ if (uri === 'localhost') branchName = "dev";
 
 const dialog = ref<HTMLDialogElement>();
 const branchesOverviewOpened = ref(false);
+const bugsOverviewOpened = ref(false);
+const amountOfBugsLeft = MAX_AMOUNT_OF_BUGS - store.bugsCompleted.length
 </script>
 
 <template>
   <footer>
-    <div class="current-branch">
-      <div
+    <div
+      class="current-branch"
+      title="Current branch"
+    >
+      <button
         class="footer-tab"
         @click="branchesOverviewOpened = !branchesOverviewOpened"
       >
@@ -26,7 +32,7 @@ const branchesOverviewOpened = ref(false);
           color="var(--font-color-200)"
         />
         <span>{{ branchName }}</span>
-      </div>
+      </button>
       <div
         v-if="branchesOverviewOpened"
         class="branches-overview"
@@ -36,12 +42,38 @@ const branchesOverviewOpened = ref(false);
       </div>
     </div>
     <div class="footer-separator" />
-    <div class="footer-tab">
+    <div class="bugs-wrapper">
+      <button
+        class="footer-tab"
+        title="Bugs remaining"
+        @click="bugsOverviewOpened = !bugsOverviewOpened"
+      >
+        <box-icon
+          type="solid"
+          name="bug"
+          size="1em"
+          color="var(--font-color-200)"
+        />
+        <span>{{ amountOfBugsLeft }}</span>
+      </button>
+      <div
+        v-if="bugsOverviewOpened"
+        class="bugs-overview"
+        @mouseleave="bugsOverviewOpened = false"
+      >
+        Test
+      </div>
+    </div>
+    <div
+      class="footer-tab"
+      title="Current version"
+    >
       V{{ packageJson.version }}
     </div>
     <button
       id="editor-settings-button"
-      class="settings-button footer-tab"
+      class="footer-tab"
+      title="Settings"
       @click="dialog?.showModal()"
     >
       <box-icon
@@ -70,19 +102,24 @@ footer {
   display: flex;
   justify-content: flex-end;
 }
-.current-branch {
+.current-branch, .bugs-wrapper {
   position: relative;
 }
-.branches-overview {
+.branches-overview, .bugs-overview {
   position: absolute;
   bottom: 100%;
   left: 0;
 }
-.settings-button {
+button span {
+  font-family: Monospaced, monospace;
+  font-size: initial;
+  margin-left: 0.1em;
+}
+button {
   background-color: unset;
   border: none;
 }
-.settings-button:focus-visible {
+button:focus-visible {
   outline: none;
 }
 .footer-tab {

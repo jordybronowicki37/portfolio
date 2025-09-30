@@ -1,6 +1,7 @@
 import {reactive} from "vue";
 import {CustomTheme, EditorTab} from "./Models";
 
+export const MAX_AMOUNT_OF_BUGS = 9
 export const CURRENT_THEME_KEY = "THEME";
 export const CUSTOM_THEMES_KEY = "CUSTOM_THEMES";
 export const FOUND_BUGS_KEY = "FOUND_BUGS";

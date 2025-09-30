@@ -2,7 +2,7 @@
 import ExplorerFolderItem from "./ExplorerFolderItem.vue";
 import ExplorerFileItem from "./ExplorerFileItem.vue";
 import ExplorerLinkItem from "./ExplorerLinkItem.vue";
-import {store} from "../data/Store.ts";
+import {MAX_AMOUNT_OF_BUGS, store} from "../data/Store.ts";
 
 const githubURL = import.meta.env.VITE_PORTFOLIO_GITHUB_URL;
 const uri = location.hostname
@@ -78,7 +78,7 @@ const uri = location.hostname
         icon="debug"
       />
       <ExplorerFileItem
-        v-if="store.bugsCompleted.length === 9 || uri === 'localhost'"
+        v-if="store.bugsCompleted.length > MAX_AMOUNT_OF_BUGS-1 || uri === 'localhost'"
         title="bug"
         link="/asteroids"
         icon="bug"

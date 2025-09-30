@@ -19,7 +19,10 @@ function complete(): void {
     class="bug-wrapper"
     :class="[`bug-${bugType}`]"
   >
-    <div class="bug-distort-wrapper" @click="complete">
+    <div
+      class="bug-distort-wrapper"
+      @click="complete"
+    >
       <box-icon
         type="solid"
         name="bug"
@@ -32,8 +35,15 @@ function complete(): void {
     v-else-if="bugType >= 6"
     class="eating-bug-wrapper"
   >
-    <div v-if="preview || !completed" class="bug-wrapper eating-bug" :class="[`bug-${bugType}`]">
-      <div class="bug-distort-wrapper" @click="complete">
+    <div
+      v-if="preview || !completed"
+      class="bug-wrapper eating-bug"
+      :class="[`bug-${bugType}`]"
+    >
+      <div
+        class="bug-distort-wrapper"
+        @click="complete"
+      >
         <box-icon
           type="solid"
           name="bug"
@@ -41,7 +51,10 @@ function complete(): void {
         />
       </div>
     </div>
-    <div class="slot-wrapper" :class="[preview || !completed ? 'slot-distort-wrapper' : '']">
+    <div
+      class="slot-wrapper"
+      :class="[preview || !completed ? 'slot-distort-wrapper' : '']"
+    >
       <slot />
     </div>
   </div>
