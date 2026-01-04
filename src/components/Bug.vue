@@ -15,7 +15,7 @@ function complete(): void {
 
 <template>
   <div
-    v-if="bugType < 6 && (preview || !completed)"
+    v-if="bugType <= 10 && (preview || !completed)"
     class="bug-wrapper"
     :class="[`bug-${bugType}`]"
   >
@@ -32,13 +32,13 @@ function complete(): void {
   </div>
 
   <div
-    v-else-if="bugType >= 6"
+    v-else-if="bugType > 10"
     class="eating-bug-wrapper"
+    :class="[`bug-${bugType}`]"
   >
     <div
       v-if="preview || !completed"
       class="bug-wrapper eating-bug"
-      :class="[`bug-${bugType}`]"
     >
       <div
         class="bug-distort-wrapper"
@@ -140,80 +140,97 @@ function complete(): void {
 }
 
 /* ========= Variants ========= */
-.bug-1 {
+.bug-1, .bug-2 {
   animation: hover 4s infinite ease-in-out, glitch 2.5s infinite steps(1);
   .bug-distort-wrapper {
     animation: distort 4.5s infinite steps(1);
   }
 }
 
-.bug-2 {
+.bug-3, .bug-4 {
   animation: zigzag 5s infinite ease-in-out, glitch 3s infinite steps(1);
   .bug-distort-wrapper {
     animation: distort 3s infinite steps(1);
   }
 }
-.bug-3 {
+.bug-5, .bug-6 {
   animation: loop 6s infinite linear, glitch 4.5s infinite steps(1);
   .bug-distort-wrapper {
     animation: distort 2s infinite steps(1);
   }
 }
 
-.bug-4 {
+.bug-7, .bug-8 {
   animation: jittery 2s infinite linear, glitch 5s infinite steps(1);
   .bug-distort-wrapper {
     animation: distort 4s infinite steps(1);
   }
 }
 
-.bug-5 {
+.bug-9, .bug-10 {
   animation: zigzag 7s infinite ease-in-out, glitch 2.5s infinite steps(1);
   .bug-distort-wrapper {
     animation: distort 5s infinite steps(1);
   }
 }
 
-.bug-6 {
-  left: 20%;
-  top: -13px;
-  rotate: -8deg;
-  animation: nibble 1s infinite, glitch 1.5s infinite steps(1);
+.bug-11 {
+  .eating-bug {
+    left: 20%;
+    top: -13px;
+    rotate: -8deg;
+    animation: nibble 1s infinite, glitch 1.5s infinite steps(1);
+  }
   .bug-distort-wrapper {
     animation: distort 2.5s infinite steps(1);
   }
-}
-
-.bug-7 {
-  left: -8px;
-  top: -13px;
-  rotate: -30deg;
-  animation: munch 1.2s infinite, glitch 2.5s infinite steps(1);
-  .bug-distort-wrapper {
+  .slot-distort-wrapper {
     animation: distort 5s infinite steps(1);
   }
 }
 
-.bug-8 {
-  right: -8px;
-  top: -13px;
-  rotate: 30deg;
-  animation: nibble 2s infinite, glitch 3.5s infinite steps(1);
+.bug-12 {
+  .eating-bug {
+    left: -8px;
+    top: -13px;
+    rotate: -30deg;
+    animation: munch 1.2s infinite, glitch 2.5s infinite steps(1);
+  }
   .bug-distort-wrapper {
     animation: distort 5s infinite steps(1);
+  }
+  .slot-distort-wrapper {
+    animation: distort 4s infinite steps(1);
   }
 }
 
-.bug-9 {
-  right: 30%;
-  top: -15px;
-  rotate: 10deg;
-  animation: munch 1.5s infinite, glitch 4s infinite steps(1);
+.bug-13, .bug-14 {
+  .eating-bug {
+    right: -8px;
+    top: -13px;
+    rotate: 30deg;
+    animation: nibble 2s infinite, glitch 3.5s infinite steps(1);
+  }
   .bug-distort-wrapper {
     animation: distort 5s infinite steps(1);
   }
+  .slot-distort-wrapper {
+    animation: distort 3.5s infinite steps(1);
+  }
 }
-.slot-distort-wrapper {
-  animation: distort 3.5s infinite steps(1);
+
+.bug-15 {
+  .eating-bug {
+    right: 30%;
+    top: -15px;
+    rotate: 10deg;
+    animation: munch 1.5s infinite, glitch 4s infinite steps(1);
+  }
+  .bug-distort-wrapper {
+    animation: distort 5s infinite steps(1);
+  }
+  .slot-distort-wrapper {
+    animation: distort 4.5s infinite steps(1);
+  }
 }
 </style>

@@ -117,19 +117,7 @@ const selectedAwsCard = ref<string>(Object.keys(AWS_ICONS)[0])
         <div>
           <Bug
             preview
-            :bug-type="2"
-          />
-        </div>
-        <div>
-          <Bug
-            preview
             :bug-type="3"
-          />
-        </div>
-        <div>
-          <Bug
-            preview
-            :bug-type="4"
           />
         </div>
         <div>
@@ -138,34 +126,46 @@ const selectedAwsCard = ref<string>(Object.keys(AWS_ICONS)[0])
             :bug-type="5"
           />
         </div>
-        <div class="bugs-eating-wrapper">
-          <Bug
-            preview
-            :bug-type="6"
-          >
-            <div class="bugs-food-block" />
-          </Bug>
-        </div>
-        <div class="bugs-eating-wrapper">
+        <div>
           <Bug
             preview
             :bug-type="7"
-          >
-            <div class="bugs-food-block" />
-          </Bug>
+          />
         </div>
-        <div class="bugs-eating-wrapper">
-          <Bug
-            preview
-            :bug-type="8"
-          >
-            <div class="bugs-food-block" />
-          </Bug>
-        </div>
-        <div class="bugs-eating-wrapper">
+        <div>
           <Bug
             preview
             :bug-type="9"
+          />
+        </div>
+        <div class="bugs-eating-wrapper">
+          <Bug
+            preview
+            :bug-type="11"
+          >
+            <div class="bugs-food-block" />
+          </Bug>
+        </div>
+        <div class="bugs-eating-wrapper">
+          <Bug
+            preview
+            :bug-type="12"
+          >
+            <div class="bugs-food-block" />
+          </Bug>
+        </div>
+        <div class="bugs-eating-wrapper">
+          <Bug
+            preview
+            :bug-type="13"
+          >
+            <div class="bugs-food-block" />
+          </Bug>
+        </div>
+        <div class="bugs-eating-wrapper">
+          <Bug
+            preview
+            :bug-type="15"
           >
             <div class="bugs-food-block" />
           </Bug>

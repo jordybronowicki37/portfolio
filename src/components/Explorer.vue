@@ -82,7 +82,7 @@ const uri = location.hostname
         icon="debug"
       />
       <ExplorerFileItem
-        v-if="store.bugsCompleted.length > MAX_AMOUNT_OF_BUGS-1 || uri === 'localhost'"
+        v-if="store.bugsCompleted.length >= MAX_AMOUNT_OF_BUGS || uri === 'localhost'"
         title="bug"
         link="/asteroids"
         icon="bug"
