@@ -67,6 +67,14 @@ const folderOpen = ref<boolean>(document.URL.includes(link));
   flex-direction: column;
   margin-left: 1rem;
 }
+nav {
+  display: flex;
+  align-items: center;
+}
+box-icon {
+  flex-shrink: 0;
+  line-height: 0;
+}
 a {
   color: inherit;
   text-decoration: none;

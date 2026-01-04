@@ -52,6 +52,12 @@ watchPostEffect(() => {
       class="editor-tab"
       :class="[route.name === tab.name ? 'active-tab' : '']"
     >
+      <box-icon
+        class="tab-icon"
+        name="file"
+        size="xs"
+        :color="route.name === tab.name ? 'var(--accent-color)' : 'var(--font-color-200)'"
+      />
       <router-link
         :to="tab.fullPath"
         class="editor-tab-link"
@@ -88,17 +94,18 @@ watchPostEffect(() => {
   position: relative;
   display: flex;
   align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
 }
 @media screen and (min-width: 600px) {
-  .editor-tab:not(:hover) .editor-tab-close-btn {
-    display: none;
+  .editor-tab:not(:hover):not(.active-tab) .editor-tab-close-btn {
+    opacity: 0;
   }
 }
 .active-tab .editor-tab-link {
   color: var(--accent-color);
-  position: relative;
 }
-.active-tab .editor-tab-link::after {
+.active-tab::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -109,14 +116,14 @@ watchPostEffect(() => {
   border-radius: 5px;
 }
 .editor-tab-link {
-  padding: 0.5rem 2rem;
   display: inline-block;
   text-decoration: none;
   white-space: nowrap;
 }
+.tab-icon {
+  line-height: 0;
+}
 .editor-tab-close-btn {
-  position: absolute;
-  right: 0;
   background-color: transparent;
   border: none;
   border-radius: 4px;

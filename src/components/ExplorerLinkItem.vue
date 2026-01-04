@@ -23,6 +23,12 @@ nav {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  display: flex;
+  align-items: center;
+}
+box-icon {
+  flex-shrink: 0;
+  line-height: 0;
 }
 a {
   color: inherit;
