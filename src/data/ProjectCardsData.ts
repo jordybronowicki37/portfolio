@@ -99,5 +99,17 @@ export const projectCardsData: ProjectCardProps[] = [
     ],
     "pageLink": "/projects/mining-game",
     "description": "Me and my friend group wanted to create a fun game in which you would compete in mining for resources. This is a small overview of the map generation that is to be used inside of the game.",
+  },
+  {
+    "title": "Pro-Padding",
+    "imageSrc": "/img/projects/pro-padding-dashboard-example.png",
+    "imageAlt": "An edited screenshot example of an dashboard",
+    "tags": ["typescript", "svelte", "tailwind", "personal", "completed"],
+    "externalLinks": [
+      import.meta.env.VITE_PRO_PADDING_GITHUB_URL,
+      import.meta.env.VITE_PRO_PADDING_DEPLOYMENT_URL
+    ],
+    "pageLink": "/projects/pro-padding",
+    "description": "With this browser-based utility, you can easily edit screenshots into professional sharable previews of for example: Social media posts, application components, dashboards, data tables, charts, code blocks and more...",
   }
 ]

@@ -62,14 +62,19 @@ const routes: RouteRecordRaw[] = [
     component: () => import("./pages/projects/NeerslagRadarProjectPage.vue")
   },
   {
+    path: "/projects/portfolio",
+    name: "portfolio-project",
+    component: () => import("./pages/projects/PortfolioProjectPage.vue")
+  },
+  {
     path: "/projects/production-calculator",
     name: "production-calculator-project",
     component: () => import("./pages/projects/ProdCalProjectPage.vue")
   },
   {
-    path: "/projects/portfolio",
-    name: "portfolio-project",
-    component: () => import("./pages/projects/PortfolioProjectPage.vue")
+    path: "/projects/pro-padding",
+    name: "pro-padding-project",
+    component: () => import("./pages/projects/ProPaddingProjectPage.vue")
   },
   {
     path: "/projects/snake-game",

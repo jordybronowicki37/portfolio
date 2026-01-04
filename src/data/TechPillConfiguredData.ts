@@ -216,6 +216,23 @@ export const ALL_FRONTEND_TYPES: PillDataType[] = [
     skillLevel: 85,
   },
   {
+    type: "playwright",
+    category: "frontend",
+    description: "An end-to-end testing framework that enables reliable, cross-browser automation for web applications, with support for Chromium, Firefox, and WebKit.",
+    links: [
+      {
+        name: "Product page",
+        url: "https://playwright.dev/",
+      },
+      {
+        name: "Documentation",
+        url: "https://playwright.dev/docs/intro",
+      },
+    ],
+    bgColor: "#2DAD32",
+    skillLevel: 64,
+  },
+  {
     type: "react",
     category: "frontend",
     description: "A popular JavaScript library developed by Facebook for building user interfaces, particularly single-page applications with a component-based architecture.",
@@ -265,6 +282,40 @@ export const ALL_FRONTEND_TYPES: PillDataType[] = [
     ],
     bgColor: "#CB6699",
     skillLevel: 69,
+  },
+  {
+    type: "svelte",
+    category: "frontend",
+    description: "A modern front-end framework that compiles components at build time into highly efficient JavaScript, reducing runtime overhead and improving application performance.",
+    links: [
+      {
+        name: "Product page",
+        url: "https://svelte.dev/",
+      },
+      {
+        name: "Documentation",
+        url: "https://svelte.dev/docs/svelte/overview",
+      },
+    ],
+    bgColor: "#FF3E00",
+    skillLevel: 20,
+  },
+  {
+    type: "tailwind",
+    category: "frontend",
+    description: "A utility-first CSS framework that enables rapid UI development by composing designs directly in markup using low-level, reusable utility classes.",
+    links: [
+      {
+        name: "Product page",
+        url: "https://tailwindcss.com/",
+      },
+      {
+        name: "Documentation",
+        url: "https://tailwindcss.com/docs/",
+      },
+    ],
+    bgColor: "#00BCFF",
+    skillLevel: 20,
   },
   {
     type: "typescript",

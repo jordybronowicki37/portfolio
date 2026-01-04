@@ -63,6 +63,10 @@ const uri = location.hostname
           link="/projects/production-calculator"
         />
         <ExplorerFileItem
+          title="pro-padding"
+          link="/projects/pro-padding"
+        />
+        <ExplorerFileItem
           title="snake game"
           link="/projects/snake-game"
         />
