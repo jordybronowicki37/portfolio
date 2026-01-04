@@ -66,7 +66,7 @@ export const ALL_BACKEND_TYPES: PillDataType[] = [
       },
     ],
     bgColor: "#EC2025",
-    skillLevel: 93,
+    skillLevel: 85,
   },
   {
     type: "python",
@@ -230,7 +230,7 @@ export const ALL_FRONTEND_TYPES: PillDataType[] = [
       },
     ],
     bgColor: "#2DAD32",
-    skillLevel: 64,
+    skillLevel: 30,
   },
   {
     type: "react",
@@ -315,7 +315,7 @@ export const ALL_FRONTEND_TYPES: PillDataType[] = [
       },
     ],
     bgColor: "#00BCFF",
-    skillLevel: 20,
+    skillLevel: 25,
   },
   {
     type: "typescript",
@@ -369,7 +369,7 @@ export const ALL_FRONTEND_TYPES: PillDataType[] = [
       },
     ],
     bgColor: "#0d518d",
-    skillLevel: 50,
+    skillLevel: 45,
   },
 ];
 export const ALL_PERSISTENCE_TYPES: PillDataType[] = [
@@ -480,7 +480,7 @@ export const ALL_DEPLOYMENT_TYPES: PillDataType[] = [
       },
     ],
     bgColor: "#035BDA",
-    skillLevel: 20,
+    skillLevel: 64,
   },
   {
     type: "github",

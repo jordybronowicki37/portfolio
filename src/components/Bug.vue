@@ -5,7 +5,7 @@ import {FOUND_BUGS_KEY, store} from "../data/Store.ts";
 const { bugType, preview = false } = defineProps<{ bugType: number, preview?: boolean }>();
 const completed = ref<boolean>(store.bugsCompleted.includes(bugType));
 function complete(): void {
-  if (!store.bugsCompleted.includes(bugType) && !preview) {
+  if (!store.bugsCompleted.includes(bugType) && preview) {
     store.bugsCompleted.push(bugType);
     localStorage.setItem(FOUND_BUGS_KEY, JSON.stringify(store.bugsCompleted))
   }
@@ -26,7 +26,7 @@ function complete(): void {
       <box-icon
         type="solid"
         name="bug"
-        color="red"
+        color="var(--error-color)"
       />
     </div>
   </div>
@@ -47,7 +47,7 @@ function complete(): void {
         <box-icon
           type="solid"
           name="bug"
-          color="red"
+          color="var(--error-color)"
         />
       </div>
     </div>
@@ -69,11 +69,11 @@ function complete(): void {
 }
 .slot-wrapper {
   position: relative;
-  z-index: 10;
+  z-index: 1;
 }
 .eating-bug-wrapper {
   position: relative;
-  z-index: 1;
+  z-index: 0;
 }
 .eating-bug {
   position: absolute;

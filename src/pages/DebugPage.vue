@@ -107,7 +107,7 @@ const selectedAwsCard = ref<string>(Object.keys(AWS_ICONS)[0])
     <EditorLine :indentation="1" />
     <EditorLine :indentation="1">
       <h2>Bugs</h2>
-      <div class="bugs-wrapper">
+      <div class="bugs-tab">
         <div>
           <Bug
             preview
@@ -222,7 +222,7 @@ h3 {
 .headings-wrapper * {
   margin: 0;
 }
-.bugs-wrapper {
+.bugs-tab {
   display: flex;
   flex-wrap: wrap;
   gap: 5rem;

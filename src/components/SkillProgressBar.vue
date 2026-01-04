@@ -25,12 +25,14 @@ const pillWidth = `${tech.skillLevel}%`
   max-width: 30rem;
   background-color: var(--bg-color-700);
   border: 1px solid var(--bg-color-500);
+  border-radius: 10rem;
 }
 .skill-pill {
   background-color: v-bind(bgColor);
   border-color: v-bind(color);
   border-width: 2px;
   border-style: solid;
+  border-radius: 10rem;
   padding: 2px 0.5rem;
   display: flex;
   justify-content: space-between;
@@ -42,9 +44,6 @@ const pillWidth = `${tech.skillLevel}%`
 }
 .skill-pill div {
   color: inherit;
-}
-.skill-pill-wrapper, .skill-pill {
-  border-radius: 10rem;
 }
 @keyframes growPill {
   from {

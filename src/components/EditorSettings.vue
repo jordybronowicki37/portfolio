@@ -41,6 +41,7 @@ function createTheme() {
   </button>
 
   <div class="all-settings-wrapper">
+    <h2>Settings</h2>
     <div class="themes-setting-wrapper">
       <h3>Themes</h3>
       <div class="themes-wrapper">

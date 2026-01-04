@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import Editor from "../components/Editor.vue";
-
 </script>
 
 <template>
@@ -28,6 +27,7 @@ import Editor from "../components/Editor.vue";
 }
 .not-found-code {
   color: var(--error-color);
+  opacity: 0.7;
   font-size: 80px;
   font-weight: 700;
 }

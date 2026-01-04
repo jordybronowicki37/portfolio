@@ -1,9 +1,10 @@
 <script setup lang="ts">
 import packageJson from '/package.json';
-import {ref} from "vue";
+import {computed, ref, watch} from "vue";
 import EditorBranchesOverview from "./EditorBranchesOverview.vue";
 import EditorSettings from "./EditorSettings.vue";
 import {MAX_AMOUNT_OF_BUGS, store} from "../data/Store.ts";
+import BugOverview from "./BugOverview.vue";
 
 const uri = location.hostname;
 let branchName = "master";
@@ -13,17 +14,21 @@ if (uri === 'localhost') branchName = "dev";
 const dialog = ref<HTMLDialogElement>();
 const branchesOverviewOpened = ref(false);
 const bugsOverviewOpened = ref(false);
-const amountOfBugsLeft = MAX_AMOUNT_OF_BUGS - store.bugsCompleted.length
+const amountOfBugsLeft = computed(() => MAX_AMOUNT_OF_BUGS - store.bugsCompleted.length);
+const bugCollected = ref(false);
+
+watch([store.bugsCompleted], () => {
+  bugCollected.value = true;
+  setTimeout(() => {bugCollected.value = false;}, 2000);
+})
 </script>
 
 <template>
   <footer>
-    <div
-      class="current-branch"
-      title="Current branch"
-    >
+    <div class="branches-tab">
       <button
         class="footer-tab"
+        title="Current branch"
         @click="branchesOverviewOpened = !branchesOverviewOpened"
       >
         <box-icon
@@ -35,16 +40,16 @@ const amountOfBugsLeft = MAX_AMOUNT_OF_BUGS - store.bugsCompleted.length
       </button>
       <div
         v-if="branchesOverviewOpened"
-        class="branches-overview"
+        class="branches-overview-popup"
         @mouseleave="branchesOverviewOpened = false"
       >
         <EditorBranchesOverview :current-branch="branchName" />
       </div>
     </div>
     <div class="footer-separator" />
-    <div class="bugs-wrapper">
+    <div class="bugs-tab">
       <button
-        class="footer-tab"
+        class="footer-tab bugs-tab-button"
         title="Bugs remaining"
         @click="bugsOverviewOpened = !bugsOverviewOpened"
       >
@@ -56,12 +61,20 @@ const amountOfBugsLeft = MAX_AMOUNT_OF_BUGS - store.bugsCompleted.length
         />
         <span>{{ amountOfBugsLeft }}</span>
       </button>
+      <box-icon
+        v-if="bugCollected"
+        class="bug-collection-animation"
+        type="solid"
+        name="bug"
+        size="1em"
+        color="var(--error-color)"
+      />
       <div
         v-if="bugsOverviewOpened"
-        class="bugs-overview"
+        class="bugs-overview-popup"
         @mouseleave="bugsOverviewOpened = false"
       >
-        Test
+        <BugOverview/>
       </div>
     </div>
     <div
@@ -102,13 +115,53 @@ footer {
   display: flex;
   justify-content: flex-end;
 }
-.current-branch, .bugs-wrapper {
+.branches-tab, .bugs-tab {
   position: relative;
+  height: auto;
+  width: auto;
 }
-.branches-overview, .bugs-overview {
+.branches-overview-popup {
   position: absolute;
-  bottom: 100%;
-  left: 0;
+  bottom: calc(100% + 10px);
+  left: 10px;
+}
+.bugs-overview-popup {
+  position: absolute;
+  bottom: calc(100% + 10px);
+  right: 0;
+}
+.bugs-tab-button {
+  background: var(--bg-color-600);
+  position: relative;
+  z-index: 1;
+}
+.bug-collection-animation {
+  z-index: 0;
+  position: absolute;
+  left: 10px;
+  animation: bug-collection ease-out 2s 1 forwards;
+}
+@keyframes bug-collection {
+  0% {
+    bottom: 5px;
+    transform: rotate(0deg);
+  }
+  10% { transform: rotate(5deg); }
+  20% { transform: rotate(-5deg); }
+  30% { transform: rotate(3deg); }
+  40% { transform: rotate(-3deg); }
+  50% {
+    bottom: calc(100% + 10px);
+    transform: rotate(0deg);
+  }
+  60% { transform: rotate(5deg); }
+  70% { transform: rotate(-5deg); }
+  80% { transform: rotate(3deg); }
+  90% { transform: rotate(-3deg); }
+  100% {
+    bottom: 5px;
+    transform: rotate(0deg);
+  }
 }
 button span {
   font-family: Monospaced, monospace;

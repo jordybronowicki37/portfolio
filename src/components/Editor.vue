@@ -35,7 +35,7 @@ import EditorTabsContainer from "./EditorTabsContainer.vue";
   overflow-y: auto;
 }
 #editor-info-panel {
-  background: var(--bg-color-500);
+  background: var(--bg-color-600);
   border-left: 1px solid var(--secondary-color);
   padding: 1rem
 }
