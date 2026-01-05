@@ -5,6 +5,7 @@ import ProjectProperties from "../../components/ProjectProperties.vue";
 import AWSServiceCard from "../../components/AWSServiceCard.vue";
 import TextDocBlock from "../../components/TextDocBlock.vue";
 import EditorProject from "./EditorProject.vue";
+import Bug from "../../components/Bug.vue";
 </script>
 
 <template>
@@ -72,11 +73,13 @@ import EditorProject from "./EditorProject.vue";
             </div>
           </template>
           <template #image>
-            <img
-              src="/img/projects/mtg-card-overview.png"
-              alt="MTG card overview"
-              class="project-image"
-            >
+            <Bug :bug-type="13">
+              <img
+                src="/img/projects/mtg-card-overview.png"
+                alt="MTG card overview"
+                class="project-image"
+              >
+            </Bug>
           </template>
         </ImageTextCombinedView>
       </EditorLine>

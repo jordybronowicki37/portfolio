@@ -4,6 +4,7 @@ import ImageTextCombinedView from "../../components/ImageTextCombinedView.vue";
 import ProjectProperties from "../../components/ProjectProperties.vue";
 import TextDocBlock from "../../components/TextDocBlock.vue";
 import EditorProject from "./EditorProject.vue";
+import Bug from "../../components/Bug.vue";
 </script>
 
 <template>
@@ -93,7 +94,9 @@ import EditorProject from "./EditorProject.vue";
     </section>
 
     <section>
-      <EditorLine :indentation="2" />
+      <EditorLine :indentation="2">
+        <Bug :bug-type="8" />
+      </EditorLine>
       <EditorLine :indentation="2">
         <ImageTextCombinedView
           image-title="Mining game cave generation with 3D blocks"

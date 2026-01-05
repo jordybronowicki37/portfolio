@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import packageJson from '/package.json';
+// @ts-ignore
+import packageJson from "/package.json";
 import {computed, ref, watch} from "vue";
 import EditorBranchesOverview from "./EditorBranchesOverview.vue";
 import EditorSettings from "./EditorSettings.vue";
@@ -50,16 +51,16 @@ watch([store.bugsCompleted], () => {
     <div class="bugs-tab">
       <button
         class="footer-tab bugs-tab-button"
-        title="Bugs remaining"
+        :title="amountOfBugsLeft>1 ?`${amountOfBugsLeft} bugs remaining` : amountOfBugsLeft===1 ? '1 bug remaining' : 'No bugs found'"
         @click="bugsOverviewOpened = !bugsOverviewOpened"
       >
         <box-icon
           type="solid"
           name="bug"
           size="1em"
-          color="var(--font-color-200)"
+          :color="amountOfBugsLeft>0 ? 'var(--font-color-200)' : '#439934'"
         />
-        <span>{{ amountOfBugsLeft }}</span>
+        <span v-if="amountOfBugsLeft>0">{{ amountOfBugsLeft }}</span>
       </button>
       <box-icon
         v-if="bugCollected"
@@ -74,7 +75,7 @@ watch([store.bugsCompleted], () => {
         class="bugs-overview-popup"
         @mouseleave="bugsOverviewOpened = false"
       >
-        <BugOverview/>
+        <BugOverview />
       </div>
     </div>
     <div
@@ -134,6 +135,7 @@ footer {
   background: var(--bg-color-600);
   position: relative;
   z-index: 1;
+  height: 100%;
 }
 .bug-collection-animation {
   z-index: 0;

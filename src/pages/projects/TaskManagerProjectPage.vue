@@ -5,6 +5,7 @@ import ProjectProperties from "../../components/ProjectProperties.vue";
 import AWSServiceCard from "../../components/AWSServiceCard.vue";
 import TextDocBlock from "../../components/TextDocBlock.vue";
 import EditorProject from "./EditorProject.vue";
+import Bug from "../../components/Bug.vue";
 </script>
 
 <template>
@@ -45,11 +46,13 @@ import EditorProject from "./EditorProject.vue";
             </div>
           </template>
           <template #image>
-            <img
-              src="/img/projects/tas-board.png"
-              alt="Tasks inside of a board example"
-              class="project-image"
-            >
+            <Bug :bug-type="11">
+              <img
+                src="/img/projects/tas-board.png"
+                alt="Tasks inside of a board example"
+                class="project-image"
+              >
+            </Bug>
           </template>
         </ImageTextCombinedView>
       </EditorLine>
@@ -143,7 +146,9 @@ import EditorProject from "./EditorProject.vue";
     </section>
 
     <section>
-      <EditorLine :indentation="2" />
+      <EditorLine :indentation="2">
+        <Bug :bug-type="4" />
+      </EditorLine>
       <EditorLine :indentation="2">
         <section>
           <h2 class="list-title">

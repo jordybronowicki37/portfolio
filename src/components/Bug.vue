@@ -5,7 +5,7 @@ import {FOUND_BUGS_KEY, store} from "../data/Store.ts";
 const { bugType, preview = false } = defineProps<{ bugType: number, preview?: boolean }>();
 const completed = ref<boolean>(store.bugsCompleted.includes(bugType));
 function complete(): void {
-  if (!store.bugsCompleted.includes(bugType) && preview) {
+  if (!store.bugsCompleted.includes(bugType) && !preview) {
     store.bugsCompleted.push(bugType);
     localStorage.setItem(FOUND_BUGS_KEY, JSON.stringify(store.bugsCompleted))
   }
@@ -15,7 +15,7 @@ function complete(): void {
 
 <template>
   <div
-    v-if="bugType <= 10 && (preview || !completed)"
+    v-if="bugType <= 8 && (preview || !completed)"
     class="bug-wrapper"
     :class="[`bug-${bugType}`]"
   >
@@ -32,7 +32,7 @@ function complete(): void {
   </div>
 
   <div
-    v-else-if="bugType > 10"
+    v-else-if="bugType > 8"
     class="eating-bug-wrapper"
     :class="[`bug-${bugType}`]"
   >
@@ -160,21 +160,21 @@ function complete(): void {
   }
 }
 
-.bug-7, .bug-8 {
+.bug-7 {
   animation: jittery 2s infinite linear, glitch 5s infinite steps(1);
   .bug-distort-wrapper {
     animation: distort 4s infinite steps(1);
   }
 }
 
-.bug-9, .bug-10 {
+.bug-8 {
   animation: zigzag 7s infinite ease-in-out, glitch 2.5s infinite steps(1);
   .bug-distort-wrapper {
     animation: distort 5s infinite steps(1);
   }
 }
 
-.bug-11 {
+.bug-9, .bug-10 {
   .eating-bug {
     left: 20%;
     top: -13px;
@@ -189,7 +189,7 @@ function complete(): void {
   }
 }
 
-.bug-12 {
+.bug-11, .bug-12 {
   .eating-bug {
     left: -8px;
     top: -13px;
@@ -204,7 +204,7 @@ function complete(): void {
   }
 }
 
-.bug-13, .bug-14 {
+.bug-13 {
   .eating-bug {
     right: -8px;
     top: -13px;
@@ -219,7 +219,7 @@ function complete(): void {
   }
 }
 
-.bug-15 {
+.bug-14, .bug-15 {
   .eating-bug {
     right: 30%;
     top: -15px;

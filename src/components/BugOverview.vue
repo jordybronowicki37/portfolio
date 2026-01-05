@@ -14,10 +14,10 @@ const completionPercentage = computed(() => `${Math.round(foundBugs.length/MAX_A
     <div class="bugs-overview-container">
       <box-icon
         v-for="i in MAX_AMOUNT_OF_BUGS"
+        :key="i"
         type="solid"
         name="bug"
         size="1em"
-        :key="i"
         :color="foundBugs.includes(i) ? `var(--error-color)` : `var(--font-color-200)`"
         :title="foundBugs.includes(i) ? `Bug #${i} found` : `Bug #${i} not found yet`"
       />
@@ -25,9 +25,9 @@ const completionPercentage = computed(() => `${Math.round(foundBugs.length/MAX_A
 
     <div class="bugs-completion-container">
       <div class="skill-pill-wrapper">
-        <div class="skill-pill"></div>
+        <div class="skill-pill" />
       </div>
-      <p>{{completionPercentage}}</p>
+      <p>{{ completionPercentage }}</p>
     </div>
   </div>
 </template>

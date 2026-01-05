@@ -4,6 +4,7 @@ import ImageTextCombinedView from "../../components/ImageTextCombinedView.vue";
 import ProjectProperties from "../../components/ProjectProperties.vue";
 import TextDocBlock from "../../components/TextDocBlock.vue";
 import EditorProject from "./EditorProject.vue";
+import Bug from "../../components/Bug.vue";
 </script>
 
 <template>
@@ -90,6 +91,7 @@ import EditorProject from "./EditorProject.vue";
         >
           <template #text>
             <div>
+              <Bug :bug-type="6" />
               <h2>## Easily switch between dashboards</h2>
               <p>
                 Create multiple dashboards so that you can easily switch between different insights or projects.

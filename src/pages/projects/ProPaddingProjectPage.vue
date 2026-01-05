@@ -4,6 +4,7 @@ import ProjectProperties from "../../components/ProjectProperties.vue";
 import TextDocBlock from "../../components/TextDocBlock.vue";
 import EditorProject from "./EditorProject.vue";
 import ImageFocusModal from "../../components/ImageFocusModal.vue";
+import Bug from "../../components/Bug.vue";
 
 const githubURL = import.meta.env.VITE_PRO_PADDING_GITHUB_URL
 const deploymentURL = import.meta.env.VITE_PRO_PADDING_DEPLOYMENT_URL
@@ -41,15 +42,17 @@ const deploymentURL = import.meta.env.VITE_PRO_PADDING_DEPLOYMENT_URL
       </EditorLine>
       <EditorLine :indentation="2">
         <div class="images-collection">
-          <ImageFocusModal
-            title="Dashboard example"
-            description="A centralized dashboard view presenting key metrics, charts, and summaries in a clear, organized layout for quick insights and monitoring."
-          >
-            <img
-              src="/img/projects/pro-padding-dashboard-example.png"
-              alt="Pro-Padding dashboard example"
+          <Bug :bug-type="10">
+            <ImageFocusModal
+              title="Dashboard example"
+              description="A centralized dashboard view presenting key metrics, charts, and summaries in a clear, organized layout for quick insights and monitoring."
             >
-          </ImageFocusModal>
+              <img
+                src="/img/projects/pro-padding-dashboard-example.png"
+                alt="Pro-Padding dashboard example"
+              >
+            </ImageFocusModal>
+          </Bug>
           <ImageFocusModal
             title="Code example"
             description="A formatted code snippet with syntax highlighting, illustrating readable and well-structured source code."
@@ -126,7 +129,9 @@ const deploymentURL = import.meta.env.VITE_PRO_PADDING_DEPLOYMENT_URL
       </ul>
     </section>
 
-    <EditorLine :indentation="2" />
+    <EditorLine :indentation="2">
+      <Bug :bug-type="5" />
+    </EditorLine>
     <EditorLine :indentation="1" />
     <EditorLine :indentation="0" />
     <EditorLine :indentation="0" />

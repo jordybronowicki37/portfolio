@@ -5,6 +5,7 @@ import ProjectProperties from "../../components/ProjectProperties.vue";
 import AWSServiceCard from "../../components/AWSServiceCard.vue";
 import TextDocBlock from "../../components/TextDocBlock.vue";
 import EditorProject from "./EditorProject.vue";
+import Bug from "../../components/Bug.vue";
 </script>
 
 <template>
@@ -28,7 +29,9 @@ import EditorProject from "./EditorProject.vue";
     </EditorLine>
 
     <section>
-      <EditorLine :indentation="2" />
+      <EditorLine :indentation="2">
+        <Bug :bug-type="2" />
+      </EditorLine>
       <EditorLine :indentation="2">
         <ImageTextCombinedView
           image-title="AIMAS Accidents overview"
@@ -110,7 +113,9 @@ import EditorProject from "./EditorProject.vue";
             <AWSServiceCard name="StepFunctions" />
           </li>
           <li>
-            <AWSServiceCard name="EventBridge" />
+            <Bug :bug-type="9">
+              <AWSServiceCard name="EventBridge" />
+            </Bug>
           </li>
           <li>
             <AWSServiceCard name="SNS" />

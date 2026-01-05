@@ -135,13 +135,13 @@ const selectedAwsCard = ref<string>(Object.keys(AWS_ICONS)[0])
         <div>
           <Bug
             preview
-            :bug-type="9"
+            :bug-type="8"
           />
         </div>
         <div class="bugs-eating-wrapper">
           <Bug
             preview
-            :bug-type="11"
+            :bug-type="9"
           >
             <div class="bugs-food-block" />
           </Bug>

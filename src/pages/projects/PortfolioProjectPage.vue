@@ -5,6 +5,7 @@ import ProjectProperties from "../../components/ProjectProperties.vue";
 import ImageFocusModal from "../../components/ImageFocusModal.vue";
 import TextDocBlock from "../../components/TextDocBlock.vue";
 import EditorProject from "./EditorProject.vue";
+import Bug from "../../components/Bug.vue";
 
 const deploymentURL = import.meta.env.VITE_PORTFOLIO_PRODUCTION_DEPLOYMENT_URL;
 const githubURL = import.meta.env.VITE_PORTFOLIO_GITHUB_URL;
@@ -97,15 +98,17 @@ const githubURL = import.meta.env.VITE_PORTFOLIO_GITHUB_URL;
       </EditorLine>
       <EditorLine :indentation="2">
         <div class="images-collection">
-          <ImageFocusModal
-            title="Dark theme"
-            description=""
-          >
-            <img
-              src="/img/projects/portfolio-theme-1.jpeg"
-              alt="Portfolio theme"
+          <Bug :bug-type="15">
+            <ImageFocusModal
+              title="Dark theme"
+              description=""
             >
-          </ImageFocusModal>
+              <img
+                src="/img/projects/portfolio-theme-1.jpeg"
+                alt="Portfolio theme"
+              >
+            </ImageFocusModal>
+          </Bug>
           <ImageFocusModal
             title="Blue theme"
             description=""

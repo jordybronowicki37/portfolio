@@ -4,6 +4,7 @@ import ImageTextCombinedView from "../../components/ImageTextCombinedView.vue";
 import ProjectProperties from "../../components/ProjectProperties.vue";
 import TextDocBlock from "../../components/TextDocBlock.vue";
 import EditorProject from "./EditorProject.vue";
+import Bug from "../../components/Bug.vue";
 
 const githubURL = import.meta.env.VITE_PRODCAL_GITHUB_URL
 </script>
@@ -78,11 +79,13 @@ const githubURL = import.meta.env.VITE_PRODCAL_GITHUB_URL
             </div>
           </template>
           <template #image>
-            <img
-              src="/img/projects/prod-cal-editor.png"
-              alt="Production calculator editor preview"
-              class="project-image"
-            >
+            <Bug :bug-type="14">
+              <img
+                src="/img/projects/prod-cal-editor.png"
+                alt="Production calculator editor preview"
+                class="project-image"
+              >
+            </Bug>
           </template>
         </ImageTextCombinedView>
       </EditorLine>
@@ -160,7 +163,9 @@ const githubURL = import.meta.env.VITE_PRODCAL_GITHUB_URL
     </section>
 
     <section>
-      <EditorLine :indentation="2" />
+      <EditorLine :indentation="2">
+        <Bug :bug-type="7" />
+      </EditorLine>
       <EditorLine :indentation="2">
         <h2 class="list-title">
           ## Features

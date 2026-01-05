@@ -4,6 +4,7 @@ import ProjectProperties from "../../components/ProjectProperties.vue";
 import TextDocBlock from "../../components/TextDocBlock.vue";
 import EditorProject from "./EditorProject.vue";
 import EditorLine from "../../components/EditorLine.vue";
+import Bug from "../../components/Bug.vue";
 
 const deploymentURL = import.meta.env.VITE_SNAKE_DEPLOYMENT_URL;
 const githubURL = import.meta.env.VITE_SNAKE_GITHUB_URL;
@@ -93,11 +94,13 @@ const githubURL = import.meta.env.VITE_SNAKE_GITHUB_URL;
             </div>
           </template>
           <template #image>
-            <img
-              src="/img/projects/snake-levels.png"
-              alt="Snake levels preview"
-              class="project-image"
-            >
+            <Bug :bug-type="12">
+              <img
+                src="/img/projects/snake-levels.png"
+                alt="Snake levels preview"
+                class="project-image"
+              >
+            </Bug>
           </template>
         </ImageTextCombinedView>
       </EditorLine>

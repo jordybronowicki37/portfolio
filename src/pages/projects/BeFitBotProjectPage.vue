@@ -4,6 +4,7 @@ import ImageTextCombinedView from "../../components/ImageTextCombinedView.vue";
 import ProjectProperties from "../../components/ProjectProperties.vue";
 import TextDocBlock from "../../components/TextDocBlock.vue";
 import EditorProject from "./EditorProject.vue";
+import Bug from "../../components/Bug.vue";
 
 const githubURL = import.meta.env.VITE_BEFIT_GITHUB_URL;
 </script>
@@ -113,7 +114,9 @@ const githubURL = import.meta.env.VITE_BEFIT_GITHUB_URL;
     </section>
 
     <section>
-      <EditorLine :indentation="2" />
+      <EditorLine :indentation="2">
+        <Bug :bug-type="3" />
+      </EditorLine>
       <EditorLine :indentation="2">
         <ImageTextCombinedView
           image-on-the-left
