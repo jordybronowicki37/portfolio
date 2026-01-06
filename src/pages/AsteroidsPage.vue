@@ -480,22 +480,86 @@ onBeforeUnmount(() => {
       <div>Score: {{ state.score }}</div>
       <div>Lives: {{ state.lives }}</div>
       <div
-        v-if="state.status === Status.PAUSED"
+        v-if="state.status !== Status.PLAYING"
         class="overlay"
       >
-        PAUSED — press P to resume
-      </div>
-      <div
-        v-if="state.status === Status.GAMEOVER"
-        class="overlay"
-      >
-        GAME OVER — press R to restart
-      </div>
-      <div
-        v-if="state.status === Status.NOT_STARTED"
-        class="overlay"
-      >
-        Press R to start game
+        <div class="game-message" v-if="state.status === Status.PAUSED">
+          <span>PAUSED — press</span>
+          <div class="square-button">
+            P
+          </div>
+          <span>to resume</span>
+        </div>
+        <div class="game-message" v-if="state.status === Status.GAMEOVER">
+          <span>GAME OVER — press</span>
+          <div class="square-button">
+            R
+          </div>
+          <span>to restart</span>
+        </div>
+        <div class="game-message" v-if="state.status === Status.NOT_STARTED">
+          <span>Press</span>
+          <div class="square-button">
+            R
+          </div>
+          <span>to start game</span>
+        </div>
+
+        <div
+          v-if="!showTouchControls"
+          class="keyboard-controls"
+        >
+          <div class="button-line">
+            <div>Accelerate</div>
+            <div class="square-button">
+              W
+            </div>
+            <div class="square-button">
+              ⇧
+            </div>
+          </div>
+
+          <div class="button-line">
+            <div>Turn left</div>
+            <div class="square-button">
+              A
+            </div>
+            <div class="square-button">
+              ⇦
+            </div>
+          </div>
+
+          <div class="button-line">
+            <div>Turn right</div>
+            <div class="square-button">
+              D
+            </div>
+            <div class="square-button">
+              ⇨
+            </div>
+          </div>
+
+          <div class="button-line">
+            <div>Shoot</div>
+            <div class="large-button">
+              SPACE
+            </div>
+          </div>
+
+          <div class="button-line">
+            <div>Start/restart</div>
+            <div class="square-button">
+              R
+            </div>
+          </div>
+
+          <div class="button-line">
+            <div>Pause</div>
+            <div class="square-button">
+              P
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <div
@@ -527,7 +591,7 @@ onBeforeUnmount(() => {
   </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .asteroids-wrap {
   width: 100%;
   height: 100%;
@@ -552,9 +616,9 @@ canvas {
   display: flex;
   gap: 1rem;
   z-index: 10;
-}
-.hud div {
-  color: #fff;
+  div {
+    color: #fff;
+  }
 }
 .overlay {
   position: absolute;
@@ -567,6 +631,12 @@ canvas {
   font-size: 20px;
   user-select: none;
 }
+.keyboard-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 2rem;
+}
 .touch-controls {
   position: absolute;
   right: 12px;
@@ -574,13 +644,46 @@ canvas {
   display: flex;
   gap: 8px;
   z-index: 12;
+
+  button {
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: none;
+    background: #222a;
+    color: #fff;
+    font-weight: 600;
+  }
 }
-.touch-controls button {
-  padding: 10px 12px;
-  border-radius: 8px;
+.game-message {
+  display: flex;
+  align-items: center;
+  .square-button {
+    margin: 0 8px;
+  }
+}
+.button-line {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+
+  :first-child {
+    flex-grow: 1;
+    margin-right: 1rem;
+  }
+}
+.square-button, .large-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2rem;
+  height: 2rem;
+  border-radius: 6px;
   border: none;
-  background: rgba(255,255,255,0.06);
+  background: #222a;
   color: #fff;
   font-weight: 600;
+}
+.large-button {
+  padding: 0 12px;
 }
 </style>
