@@ -39,7 +39,7 @@ function switchTabVisibility(tab: string) {
 
 <template>
   <div
-    id="side-bar-wrapper"
+    id="sidebar-wrapper"
     ref="resizableDiv"
     :class="[isResizing ? 'is-resizing' : '']"
     :style="[tabOpened ? {flex: `0 0 ${width}px`} : {minWidth: 'initial'}]"
@@ -49,7 +49,7 @@ function switchTabVisibility(tab: string) {
         <box-icon
           name="folder"
           size="1.5rem"
-          color="var(--font-color-200)"
+          color="var(--sidebar-tab-icon-color)"
           title="File explorer"
           @click="switchTabVisibility('File explorer')"
         />
@@ -58,7 +58,7 @@ function switchTabVisibility(tab: string) {
         <box-icon
           name="git-commit"
           size="1.5rem"
-          color="var(--font-color-200)"
+          color="var(--sidebar-tab-icon-color)"
           title="Commits"
           @click="switchTabVisibility('Commits')"
         />
@@ -67,7 +67,7 @@ function switchTabVisibility(tab: string) {
         <box-icon
           name="git-pull-request"
           size="1.5rem"
-          color="var(--font-color-200)"
+          color="var(--sidebar-tab-icon-color)"
           title="Pull requests"
           @click="switchTabVisibility('Pull requests')"
         />
@@ -76,7 +76,7 @@ function switchTabVisibility(tab: string) {
         <box-icon
           name="hash"
           size="1.5rem"
-          color="var(--font-color-200)"
+          color="var(--sidebar-tab-icon-color)"
           title="Headings"
           @click="switchTabVisibility('Headings')"
         />
@@ -86,7 +86,7 @@ function switchTabVisibility(tab: string) {
           name="github"
           type="logo"
           size="1.5rem"
-          color="var(--font-color-200)"
+          color="var(--sidebar-tab-icon-color)"
           title="GitHub profile"
         />
       </a>
@@ -94,31 +94,34 @@ function switchTabVisibility(tab: string) {
 
     <div
       v-if="tabOpened"
-      id="side-bar-content-wrapper"
+      id="sidebar-content-wrapper"
     >
-      <div id="side-bar-title">
+      <div id="sidebar-title">
         <div>{{ tabOpened }}</div>
-        <button
-          @click="tabOpened=''"
-        >
-          <box-icon
-            name="minus"
-            size="xs"
-            color="var(--font-color-200)"
-          />
-        </button>
+        <div class="close-button-wrapper">
+          <button
+            @click="tabOpened=''"
+            title="Close side bar"
+          >
+            <box-icon
+              name="minus"
+              size="xs"
+              color="var(--sidebar-close-button-color)"
+            />
+          </button>
+        </div>
       </div>
 
       <div
         v-if="tabOpened === 'File explorer'"
-        id="onboarding-view-side-bar"
+        id="onboarding-view-sidebar"
       >
         <Explorer />
       </div>
     </div>
 
     <div
-      id="side-bar-resize-handle"
+      id="sidebar-resize-handle"
       @mousedown="startResize"
     />
   </div>
@@ -131,8 +134,8 @@ body :has(.is-resizing) {
 }
 </style>
 
-<style scoped>
-#side-bar-wrapper {
+<style lang="scss" scoped>
+#sidebar-wrapper {
   display: flex;
   position: relative;
   max-width: 40%;
@@ -141,32 +144,35 @@ body :has(.is-resizing) {
 }
 #side-menu {
   border-right: 1px solid var(--bg-color-800);
+
+  .active {
+    background: var(--bg-color-500);
+  }
+  * {
+    --sidebar-tab-icon-color: var(--font-color-200);
+    all: unset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    height: 1.3rem;
+    width: 1.3rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    &:hover {
+      --sidebar-tab-icon-color: var(--accent-color);
+      background: var(--bg-color-500);
+    }
+  }
 }
-#side-menu>* {
-  all: unset;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0.5rem;
-  padding: 0.5rem;
-  height: 1.3rem;
-  width: 1.3rem;
-  border-radius: 0.5rem;
-  cursor: pointer;
-}
-#side-menu>*:hover {
-  background: var(--bg-color-500);
-}
-#side-menu .active {
-  background: var(--bg-color-500);
-}
-#side-bar-content-wrapper {
+#sidebar-content-wrapper {
   border-right: 1px solid var(--secondary-color);
   height: 100%;
   flex-grow: 1;
   overflow: hidden;
 }
-#side-bar-resize-handle {
+#sidebar-resize-handle {
   cursor: ew-resize;
   width: 5px;
   position: absolute;
@@ -175,7 +181,7 @@ body :has(.is-resizing) {
   right: -2px;
   z-index: 1;
 }
-#side-bar-title {
+#sidebar-title {
   width: 100%;
   text-align: center;
   font-weight: bold;
@@ -184,19 +190,34 @@ body :has(.is-resizing) {
   position: relative;
   overflow: hidden;
   flex-shrink: 0;
-}
-#side-bar-title button:hover {
-  background: var(--bg-color-800);
-}
-#side-bar-title button {
-  all: unset;
-  position: absolute;
-  right: 0;
-  top: 0;
-  cursor: pointer;
+
+  .close-button-wrapper {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  button {
+    --sidebar-close-button-color: var(--font-color-200);
+    all: unset;
+    cursor: pointer;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 1.5rem;
+    width: 1.5rem;
+    margin: 0.5rem;
+    background: var(--bg-color-500);
+
+    &:hover {
+      --sidebar-close-button-color: var(--accent-color);
+    }
+  }
 }
 @media screen and (max-width: 600px) {
-  #side-bar-wrapper {
+  #sidebar-wrapper {
     display: none;
   }
 }
