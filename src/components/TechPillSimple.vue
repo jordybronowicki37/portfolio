@@ -23,5 +23,10 @@ if (color.length === 7) bgColor = color + "33";
   display: flex;
   gap: 0.5rem;
   width: min-content;
+  transition: background-color 500ms;
+
+  &:hover {
+    background-color: v-bind(color);
+  }
 }
 </style>
