@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import Explorer from "./Explorer.vue";
-import {ref, watch} from "vue";
+import {ref, useSlots, watch} from "vue";
 
 const resizableDiv = ref<HTMLDivElement>();
-const tabOpened = ref<string>("File explorer");
+const tabOpened = ref<string>("Info");
 const isResizing = ref<boolean>(false);
 const width = ref<number>(300);
+const slots = useSlots();
 
 watch(resizableDiv, () => {
   if (resizableDiv.value === undefined) return;
@@ -19,7 +19,7 @@ const startResize = () => {
 }
 const resize = (event: MouseEvent) => {
   if (isResizing.value) {
-    width.value = event.clientX;
+    width.value = window.innerWidth - event.clientX;
   }
 }
 const stopResize = () => {
@@ -39,64 +39,18 @@ function switchTabVisibility(tab: string) {
 
 <template>
   <div
-    id="sidebar-wrapper"
+    v-if="Object.keys(slots).length > 0"
+    id="editor-sidebar-wrapper"
     ref="resizableDiv"
     :class="[isResizing ? 'is-resizing' : '']"
     :style="[tabOpened ? {flex: `0 0 ${width}px`} : {minWidth: 'initial'}]"
   >
-    <div id="sidebar-menu">
-      <button :class="[tabOpened === 'File explorer' ? 'active' : '']">
-        <box-icon
-          name="folder"
-          size="1.5rem"
-          color="var(--sidebar-tab-icon-color)"
-          title="File explorer"
-          @click="switchTabVisibility('File explorer')"
-        />
-      </button>
-      <button :class="[tabOpened === 'Commits' ? 'active' : '']">
-        <box-icon
-          name="git-commit"
-          size="1.5rem"
-          color="var(--sidebar-tab-icon-color)"
-          title="Commits"
-          @click="switchTabVisibility('Commits')"
-        />
-      </button>
-      <button :class="[tabOpened === 'Pull requests' ? 'active' : '']">
-        <box-icon
-          name="git-pull-request"
-          size="1.5rem"
-          color="var(--sidebar-tab-icon-color)"
-          title="Pull requests"
-          @click="switchTabVisibility('Pull requests')"
-        />
-      </button>
-      <button :class="[tabOpened === 'Headings' ? 'active' : '']">
-        <box-icon
-          name="hash"
-          size="1.5rem"
-          color="var(--sidebar-tab-icon-color)"
-          title="Headings"
-          @click="switchTabVisibility('Headings')"
-        />
-      </button>
-      <a href="https://github.com/jordybronowicki37">
-        <box-icon
-          name="github"
-          type="logo"
-          size="1.5rem"
-          color="var(--sidebar-tab-icon-color)"
-          title="GitHub profile"
-        />
-      </a>
-    </div>
-
     <div
-      v-if="tabOpened"
-      id="sidebar-content-wrapper"
-    >
-      <div id="sidebar-title">
+      id="sidebar-resize-handle"
+      @mousedown="startResize"
+    />
+    <div id="editor-sidebar-content">
+      <div id="editor-sidebar-title">
         <div>{{ tabOpened }}</div>
         <div class="close-button-wrapper">
           <button
@@ -113,35 +67,74 @@ function switchTabVisibility(tab: string) {
       </div>
 
       <div
-        v-if="tabOpened === 'File explorer'"
-        id="onboarding-view-sidebar"
+        v-if="tabOpened === 'Info'"
+        id="sidebar-info-wrapper"
       >
-        <Explorer />
+        <slot name="info" />
+      </div>
+      <div
+        v-if="tabOpened === 'Search'"
+        id="sidebar-search-wrapper"
+      >
+        <slot name="search" />
+      </div>
+      <div
+        v-if="tabOpened === 'Heading'"
+        id="sidebar-heading-wrapper"
+      >
+        <slot name="heading" />
       </div>
     </div>
-
-    <div
-      id="sidebar-resize-handle"
-      @mousedown="startResize"
-    />
+    <div id="editor-sidebar-menu">
+      <button
+        v-if="slots['info']"
+        :class="[tabOpened === 'Info' ? 'active' : '']"
+      >
+        <box-icon
+          name="info-circle"
+          size="1.5rem"
+          color="var(--sidebar-tab-icon-color)"
+          title="Info"
+          @click="switchTabVisibility('Info')"
+        />
+      </button>
+      <button
+        v-if="slots['search']"
+        :class="[tabOpened === 'Search' ? 'active' : '']"
+      >
+        <box-icon
+          name="search"
+          size="1.5rem"
+          color="var(--sidebar-tab-icon-color)"
+          title="Search"
+          @click="switchTabVisibility('Search')"
+        />
+      </button>
+    </div>
   </div>
 </template>
 
-<style lang="scss" scoped>
+<style scoped>
 .is-resizing {
   user-select: none;
   cursor: ew-resize;
 }
-#sidebar-wrapper {
-  display: flex;
+#editor-sidebar-wrapper {
+  background: var(--bg-color-600);
+  border-left: 1px solid var(--secondary-color);
   position: relative;
   max-width: 40%;
-  min-width: 15%;
-  background: var(--bg-color-600);
-  border-right: 1px solid var(--secondary-color);
+  display: flex;
+  justify-content: flex-end;
 }
-#sidebar-menu {
-  border-right: 1px solid var(--bg-color-800);
+#editor-sidebar-content {
+  flex-grow: 1;
+}
+#sidebar-info-wrapper {
+  padding: 1rem;
+}
+#editor-sidebar-menu {
+  border-left: 1px solid var(--bg-color-800);
 
   .active {
     background: var(--bg-color-500);
@@ -164,21 +157,7 @@ function switchTabVisibility(tab: string) {
     }
   }
 }
-#sidebar-content-wrapper {
-  height: 100%;
-  flex-grow: 1;
-  overflow: hidden;
-}
-#sidebar-resize-handle {
-  cursor: ew-resize;
-  width: 5px;
-  position: absolute;
-  height: 100%;
-  top: 0;
-  right: -2px;
-  z-index: 1;
-}
-#sidebar-title {
+#editor-sidebar-title {
   width: 100%;
   text-align: center;
   font-weight: bold;
@@ -213,9 +192,13 @@ function switchTabVisibility(tab: string) {
     }
   }
 }
-@media screen and (max-width: 600px) {
-  #sidebar-wrapper {
-    display: none;
-  }
+#sidebar-resize-handle {
+  cursor: ew-resize;
+  width: 5px;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: -2px;
+  z-index: 1;
 }
 </style>

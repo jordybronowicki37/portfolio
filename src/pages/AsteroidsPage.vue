@@ -483,21 +483,30 @@ onBeforeUnmount(() => {
         v-if="state.status !== Status.PLAYING"
         class="overlay"
       >
-        <div class="game-message" v-if="state.status === Status.PAUSED">
+        <div
+          v-if="state.status === Status.PAUSED"
+          class="game-message"
+        >
           <span>PAUSED — press</span>
           <div class="square-button">
             P
           </div>
           <span>to resume</span>
         </div>
-        <div class="game-message" v-if="state.status === Status.GAMEOVER">
+        <div
+          v-if="state.status === Status.GAMEOVER"
+          class="game-message"
+        >
           <span>GAME OVER — press</span>
           <div class="square-button">
             R
           </div>
           <span>to restart</span>
         </div>
-        <div class="game-message" v-if="state.status === Status.NOT_STARTED">
+        <div
+          v-if="state.status === Status.NOT_STARTED"
+          class="game-message"
+        >
           <span>Press</span>
           <div class="square-button">
             R

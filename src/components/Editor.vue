@@ -1,5 +1,9 @@
 <script setup lang="ts">
 import EditorTabsContainer from "./EditorTabsContainer.vue";
+import EditorSideBar from "./EditorSideBar.vue";
+import {useSlots} from "vue";
+
+const slots = useSlots();
 </script>
 
 <template>
@@ -10,9 +14,26 @@ import EditorTabsContainer from "./EditorTabsContainer.vue";
         <slot />
       </div>
     </div>
-    <div id="editor-info-panel">
-      <slot name="info" />
-    </div>
+    <EditorSideBar>
+      <template
+        v-if="slots.info"
+        #info
+      >
+        <slot name="info" />
+      </template>
+      <template
+        v-if="slots.heading"
+        #heading
+      >
+        <slot name="heading" />
+      </template>
+      <template
+        v-if="slots.search"
+        #search
+      >
+        <slot name="search" />
+      </template>
+    </EditorSideBar>
   </div>
 </template>
 
@@ -33,13 +54,5 @@ import EditorTabsContainer from "./EditorTabsContainer.vue";
   flex-direction: column;
   flex-grow: 1;
   overflow-y: auto;
-}
-#editor-info-panel {
-  background: var(--bg-color-600);
-  border-left: 1px solid var(--secondary-color);
-  padding: 1rem
-}
-#editor-info-panel:not(:has(*)) {
-  display: none;
 }
 </style>
