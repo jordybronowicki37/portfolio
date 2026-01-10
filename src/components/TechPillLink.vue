@@ -31,7 +31,7 @@ const typeData = GetPillData(pillText);
   color: var(--font-color-200);
   display: flex;
   gap: 0.2rem;
-  padding: 0 0.5rem;
+  padding: 2px 0.5rem;
   text-transform: uppercase;
   font-size: 10px;
   font-weight: 800;

@@ -144,7 +144,7 @@ defineProps<{
 }
 .grade-text, .group-size-text {
   color: var(--font-color-200);
-  margin: 0 0.5rem;
+  padding: 2px 0.5rem;
   text-transform: uppercase;
   font-weight: 800;
   font-size: 10px;
