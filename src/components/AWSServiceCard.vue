@@ -71,13 +71,11 @@ function closeModal() {
   </section>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .aws-service-card {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  width: fit-content;
-  padding-right: 0.5rem;
 }
 header {
   display: flex;
@@ -86,6 +84,10 @@ header {
 }
 .main-header {
   cursor: pointer;
+  display: flex;
+  h4 {
+    flex-grow: 1;
+  }
 }
 img {
   height: 2em;

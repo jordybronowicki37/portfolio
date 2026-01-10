@@ -145,42 +145,6 @@ import Bug from "../../components/Bug.vue";
       </ul>
     </section>
 
-    <section>
-      <EditorLine :indentation="2">
-        <Bug :bug-type="4" />
-      </EditorLine>
-      <EditorLine :indentation="2">
-        <section>
-          <h2 class="list-title">
-            ## Used Amazon Web Services
-          </h2>
-          <ul class="services-list">
-            <li>
-              <AWSServiceCard name="CloudFront" />
-            </li>
-            <li>
-              <AWSServiceCard name="ALB" />
-            </li>
-            <li>
-              <AWSServiceCard name="RDS" />
-            </li>
-            <li>
-              <AWSServiceCard name="ECS" />
-            </li>
-            <li>
-              <AWSServiceCard name="ECR" />
-            </li>
-            <li>
-              <AWSServiceCard name="Fargate" />
-            </li>
-            <li>
-              <AWSServiceCard name="S3" />
-            </li>
-          </ul>
-        </section>
-      </EditorLine>
-    </section>
-
     <EditorLine :indentation="2" />
     <EditorLine :indentation="1" />
     <EditorLine :indentation="0" />
@@ -197,6 +161,32 @@ import Bug from "../../components/Bug.vue";
         :group-size="2"
         status="completed"
       />
+    </template>
+
+    <template #aws>
+      <ul class="aws-services-list">
+        <li>
+          <AWSServiceCard name="CloudFront" />
+        </li>
+        <li>
+          <AWSServiceCard name="ALB" />
+        </li>
+        <li>
+          <AWSServiceCard name="RDS" />
+        </li>
+        <li>
+          <AWSServiceCard name="ECS" />
+        </li>
+        <li>
+          <AWSServiceCard name="ECR" />
+        </li>
+        <li>
+          <AWSServiceCard name="Fargate" />
+        </li>
+        <li>
+          <AWSServiceCard name="S3" />
+        </li>
+      </ul>
     </template>
   </EditorProject>
 </template>

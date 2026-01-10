@@ -33,6 +33,12 @@ const slots = useSlots();
       >
         <slot name="search" />
       </template>
+      <template
+        v-if="slots.aws"
+        #aws
+      >
+        <slot name="aws" />
+      </template>
     </EditorSideBar>
   </div>
 </template>

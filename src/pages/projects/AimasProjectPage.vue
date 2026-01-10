@@ -91,48 +91,6 @@ import Bug from "../../components/Bug.vue";
       </ul>
     </section>
 
-    <section>
-      <EditorLine :indentation="2" />
-      <EditorLine :indentation="2">
-        <h2 class="list-title">
-          ## Used Amazon Web Services
-        </h2>
-      </EditorLine>
-      <EditorLine :indentation="2">
-        <ul class="services-list">
-          <li>
-            <AWSServiceCard name="CloudFront" />
-          </li>
-          <li>
-            <AWSServiceCard name="DynamoDB" />
-          </li>
-          <li>
-            <AWSServiceCard name="ApiGateway" />
-          </li>
-          <li>
-            <AWSServiceCard name="StepFunctions" />
-          </li>
-          <li>
-            <Bug :bug-type="9">
-              <AWSServiceCard name="EventBridge" />
-            </Bug>
-          </li>
-          <li>
-            <AWSServiceCard name="SNS" />
-          </li>
-          <li>
-            <AWSServiceCard name="SSM" />
-          </li>
-          <li>
-            <AWSServiceCard name="Lambda" />
-          </li>
-          <li>
-            <AWSServiceCard name="S3" />
-          </li>
-        </ul>
-      </EditorLine>
-    </section>
-
     <EditorLine :indentation="2" />
     <EditorLine :indentation="1" />
     <EditorLine :indentation="0" />
@@ -149,6 +107,40 @@ import Bug from "../../components/Bug.vue";
         :group-size="2"
         status="completed"
       />
+    </template>
+
+    <template #aws>
+      <ul class="aws-services-list">
+        <li>
+          <AWSServiceCard name="CloudFront" />
+        </li>
+        <li>
+          <AWSServiceCard name="DynamoDB" />
+        </li>
+        <li>
+          <AWSServiceCard name="ApiGateway" />
+        </li>
+        <li>
+          <AWSServiceCard name="StepFunctions" />
+        </li>
+        <li>
+          <Bug :bug-type="9">
+            <AWSServiceCard name="EventBridge" />
+          </Bug>
+        </li>
+        <li>
+          <AWSServiceCard name="SNS" />
+        </li>
+        <li>
+          <AWSServiceCard name="SSM" />
+        </li>
+        <li>
+          <AWSServiceCard name="Lambda" />
+        </li>
+        <li>
+          <AWSServiceCard name="S3" />
+        </li>
+      </ul>
     </template>
   </EditorProject>
 </template>

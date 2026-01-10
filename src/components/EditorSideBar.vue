@@ -2,7 +2,7 @@
 import {ref, useSlots, watch} from "vue";
 
 const resizableDiv = ref<HTMLDivElement>();
-const tabOpened = ref<string>("Info");
+const tabOpened = ref<string>("info");
 const isResizing = ref<boolean>(false);
 const width = ref<number>(300);
 const slots = useSlots();
@@ -49,9 +49,9 @@ function switchTabVisibility(tab: string) {
       id="sidebar-resize-handle"
       @mousedown="startResize"
     />
-    <div id="editor-sidebar-content">
+    <div id="editor-sidebar-content-wrapper">
       <div id="editor-sidebar-title">
-        <div>{{ tabOpened }}</div>
+        <p>{{ tabOpened }}</p>
         <div class="close-button-wrapper">
           <button
             title="Close side bar"
@@ -66,55 +66,101 @@ function switchTabVisibility(tab: string) {
         </div>
       </div>
 
-      <div
-        v-if="tabOpened === 'Info'"
-        id="sidebar-info-wrapper"
-      >
-        <slot name="info" />
-      </div>
-      <div
-        v-if="tabOpened === 'Search'"
-        id="sidebar-search-wrapper"
-      >
-        <slot name="search" />
-      </div>
-      <div
-        v-if="tabOpened === 'Heading'"
-        id="sidebar-heading-wrapper"
-      >
-        <slot name="heading" />
+      <div id="editor-sidebar-content">
+        <div
+          v-if="tabOpened === 'info'"
+          id="sidebar-info-wrapper"
+        >
+          <slot name="info" />
+        </div>
+        <div
+          v-if="tabOpened === 'search'"
+          id="sidebar-search-wrapper"
+        >
+          <slot name="search" />
+        </div>
+        <div
+          v-if="tabOpened === 'heading'"
+          id="sidebar-heading-wrapper"
+        >
+          <slot name="heading" />
+        </div>
+        <div
+          v-if="tabOpened === 'aws'"
+          id="sidebar-aws-wrapper"
+        >
+          <slot name="aws" />
+        </div>
       </div>
     </div>
+
     <div id="editor-sidebar-menu">
       <button
         v-if="slots['info']"
-        :class="[tabOpened === 'Info' ? 'active' : '']"
+        :class="[tabOpened === 'info' ? 'active' : '']"
       >
         <box-icon
           name="info-circle"
           size="1.5rem"
           color="var(--sidebar-tab-icon-color)"
           title="Info"
-          @click="switchTabVisibility('Info')"
+          @click="switchTabVisibility('info')"
         />
       </button>
       <button
         v-if="slots['search']"
-        :class="[tabOpened === 'Search' ? 'active' : '']"
+        :class="[tabOpened === 'search' ? 'active' : '']"
       >
         <box-icon
           name="search"
           size="1.5rem"
           color="var(--sidebar-tab-icon-color)"
           title="Search"
-          @click="switchTabVisibility('Search')"
+          @click="switchTabVisibility('search')"
+        />
+      </button>
+      <button
+        v-if="slots['aws']"
+        :class="[tabOpened === 'aws' ? 'active' : '']"
+      >
+        <box-icon
+          name="aws"
+          type="logo"
+          size="1.5rem"
+          color="var(--sidebar-tab-icon-color)"
+          title="AWS"
+          @click="switchTabVisibility('aws')"
         />
       </button>
     </div>
   </div>
 </template>
 
-<style scoped>
+<style lang="scss">
+#sidebar-info-wrapper {
+  margin: 1rem;
+}
+#sidebar-aws-wrapper ul {
+  margin: 1rem;
+  list-style: none;
+  li {
+    margin-bottom: 1rem;
+  }
+}
+@container editor-sidebar-content (width < 300px) {
+  #sidebar-info-wrapper {
+    margin: 4px;
+  }
+  #sidebar-aws-wrapper ul {
+    margin: 4px;
+    li {
+      margin-bottom: 4px;
+    }
+  }
+}
+</style>
+
+<style lang="scss" scoped>
 .is-resizing {
   user-select: none;
   cursor: ew-resize;
@@ -124,18 +170,21 @@ function switchTabVisibility(tab: string) {
   border-left: 1px solid var(--secondary-color);
   position: relative;
   max-width: 40%;
+  min-width: 15%;
   display: flex;
   justify-content: flex-end;
 }
-#editor-sidebar-content {
+#editor-sidebar-content-wrapper {
   flex-grow: 1;
 }
-#sidebar-info-wrapper {
-  padding: 1rem;
+#editor-sidebar-content {
+  container-name: editor-sidebar-content;
+  container-type: inline-size;
+  width: 100%;
+  overflow: hidden;
 }
 #editor-sidebar-menu {
   border-left: 1px solid var(--bg-color-800);
-
   .active {
     background: var(--bg-color-500);
   }
@@ -166,7 +215,9 @@ function switchTabVisibility(tab: string) {
   position: relative;
   overflow: hidden;
   flex-shrink: 0;
-
+  p {
+    text-transform: capitalize;
+  }
   .close-button-wrapper {
     position: absolute;
     right: 0;
@@ -175,7 +226,6 @@ function switchTabVisibility(tab: string) {
     display: flex;
     align-items: center;
   }
-
   button {
     --sidebar-close-button-color: var(--font-color-200);
     all: unset;
@@ -186,7 +236,6 @@ function switchTabVisibility(tab: string) {
     width: 1.5rem;
     margin: 0.5rem;
     background: var(--bg-color-500);
-
     &:hover {
       --sidebar-close-button-color: var(--accent-color);
     }
