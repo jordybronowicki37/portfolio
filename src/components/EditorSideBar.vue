@@ -169,8 +169,8 @@ function switchTabVisibility(tab: string) {
   background: var(--bg-color-600);
   border-left: 1px solid var(--secondary-color);
   position: relative;
-  max-width: 40%;
-  min-width: 15%;
+  max-width: min(40vw, 750px);
+  min-width: max(15vw, 250px);
   display: flex;
   justify-content: flex-end;
 }

@@ -1,6 +1,8 @@
 <script setup lang="ts">
-
 import Editor from "../../components/Editor.vue";
+import {useSlots} from "vue";
+
+const slots = useSlots();
 </script>
 
 <template>
@@ -9,16 +11,32 @@ import Editor from "../../components/Editor.vue";
       <template #default>
         <slot name="default" />
       </template>
-      <template #info>
+
+      <template
+        v-if="slots['info']"
+        #info
+      >
         <slot name="info" />
       </template>
-      <template #search>
+
+      <template
+        v-if="slots['search']"
+        #search
+      >
         <slot name="search" />
       </template>
-      <template #heading>
+
+      <template
+        v-if="slots['heading']"
+        #heading
+      >
         <slot name="heading" />
       </template>
-      <template #aws>
+      
+      <template
+        v-if="slots['aws']"
+        #aws
+      >
         <slot name="aws" />
       </template>
     </Editor>

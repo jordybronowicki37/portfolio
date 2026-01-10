@@ -135,8 +135,8 @@ function switchTabVisibility(tab: string) {
 #sidebar-wrapper {
   display: flex;
   position: relative;
-  max-width: 40%;
-  min-width: 15%;
+  max-width: min(40vw, 750px);
+  min-width: max(15vw, 250px);
   background: var(--bg-color-600);
   border-right: 1px solid var(--secondary-color);
 }
