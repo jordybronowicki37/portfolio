@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<svg width="600pt" height="600pt" viewBox="23.894 25.328 71.204 74.923" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="600pt" height="600pt" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
   <defs>
     <g>
       <symbol overflow="visible" id="glyph0-0">
@@ -149,17 +149,17 @@
       <stop offset="1" style="stop-color:rgb(91.618347%,42.643738%,18.930054%);stop-opacity:1;"/>
     </linearGradient>
   </defs>
-  <g id="surface1" transform="matrix(1.974606, 0, 0, 2.077473, -59.024729, -61.937597)" style="">
+  <g id="surface1" transform="matrix(2.776573, 0, 0, 2.776573, -116.626907, -116.6269)" style="">
     <g clip-path="url(#clip2)" clip-rule="nonzero">
       <g clip-path="url(#clip3)" clip-rule="nonzero">
         <path style=" stroke:none;fill-rule:nonzero;fill:url(#linear0);" d="M 42.003906 42.003906 L 42.003906 78.019531 L 78.019531 78.019531 L 78.019531 42.003906 Z M 42.003906 42.003906 "/>
       </g>
     </g>
     <g style="fill:rgb(100%,100%,100%);fill-opacity:0.8706;">
-      <use transform="matrix(1, 0, 0, 1, 47, 68)" xlink:href="#glyph0-0"/>
+      <use transform="matrix(1, 0, 0, 1, 47, 68)" href="#glyph0-0"/>
     </g>
     <g style="fill:rgb(100%,100%,100%);fill-opacity:0.8706;">
-      <use transform="matrix(1, 0, 0, 1, 58, 68)" xlink:href="#glyph1-0"/>
+      <use transform="matrix(1, 0, 0, 1, 58, 68)" href="#glyph1-0"/>
     </g>
   </g>
 </svg>
