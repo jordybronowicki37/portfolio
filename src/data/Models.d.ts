@@ -47,6 +47,13 @@ export type CustomThemeColors = {
 }
 
 export type EditorTab = {
-  name: string;
-  fullPath: string;
+  name: string,
+  fullPath: string,
+}
+
+export type ProjectFilters = {
+  name: string,
+  tags: string[],
+  sort: 'name' | 'created',
+  direction: 'asc' | 'desc',
 }

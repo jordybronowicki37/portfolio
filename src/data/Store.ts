@@ -1,5 +1,5 @@
 import {reactive} from "vue";
-import {CustomTheme, EditorTab} from "./Models";
+import {CustomTheme, EditorTab, ProjectCardProps, ProjectFilters} from "./Models";
 
 export const MAX_AMOUNT_OF_BUGS = 15
 export const CURRENT_THEME_KEY = "THEME";
@@ -18,7 +18,9 @@ export type StoreTypes = {
   startOnboarding: boolean,
   customThemes: CustomTheme[],
   tabHistory: EditorTab[],
-  bugsCompleted: number[]
+  bugsCompleted: number[],
+  projectFilters: ProjectFilters,
+  projectsFiltered: ProjectCardProps[],
 }
 export const store = reactive<StoreTypes>({
   theme: localStorage.getItem(CURRENT_THEME_KEY) || Themes.dark,
@@ -26,4 +28,6 @@ export const store = reactive<StoreTypes>({
   customThemes: JSON.parse(localStorage.getItem(CUSTOM_THEMES_KEY) || "[]"),
   bugsCompleted: JSON.parse(localStorage.getItem(FOUND_BUGS_KEY) || "[]"),
   tabHistory: [],
+  projectFilters: { name: '', tags: [], sort: 'name', direction: 'asc' },
+  projectsFiltered: [],
 })

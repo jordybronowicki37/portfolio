@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import {ref, useSlots, watch} from "vue";
 
+const slots = useSlots();
 const resizableDiv = ref<HTMLDivElement>();
-const tabOpened = ref<string>("info");
+const tabOpened = ref<string>(Object.keys(slots)[0] ?? '');
 const isResizing = ref<boolean>(false);
 const width = ref<number>(300);
-const slots = useSlots();
 
 watch(resizableDiv, () => {
   if (resizableDiv.value === undefined) return;
@@ -140,6 +140,9 @@ function switchTabVisibility(tab: string) {
 #sidebar-info-wrapper {
   margin: 1rem;
 }
+#sidebar-search-wrapper {
+  margin: 1rem;
+}
 #sidebar-aws-wrapper ul {
   margin: 1rem;
   list-style: none;
@@ -149,6 +152,9 @@ function switchTabVisibility(tab: string) {
 }
 @container editor-sidebar-content (width < 300px) {
   #sidebar-info-wrapper {
+    margin: 4px;
+  }
+  #sidebar-search-wrapper {
     margin: 4px;
   }
   #sidebar-aws-wrapper ul {
@@ -175,6 +181,8 @@ function switchTabVisibility(tab: string) {
   justify-content: flex-end;
 }
 #editor-sidebar-content-wrapper {
+  display: flex;
+  flex-direction: column;
   flex-grow: 1;
 }
 #editor-sidebar-content {
@@ -182,6 +190,7 @@ function switchTabVisibility(tab: string) {
   container-type: inline-size;
   width: 100%;
   overflow: hidden;
+  flex-grow: 1;
 }
 #editor-sidebar-menu {
   border-left: 1px solid var(--bg-color-800);

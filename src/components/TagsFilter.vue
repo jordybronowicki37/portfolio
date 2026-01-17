@@ -1,15 +1,19 @@
 <script setup lang="ts">
-import {projectCardsData} from "../data/ProjectCardsData.ts";
 import {
   ALL_BACKEND_TYPES,
   ALL_DEPLOYMENT_TYPES,
-  ALL_FRONTEND_TYPES, ALL_INTEGRATION_TYPES,
-  ALL_PERSISTENCE_TYPES, ALL_PROJECT_STATUSES,
-  ALL_PROJECT_TYPES, ALL_PROJECT_VISIBILITY
+  ALL_FRONTEND_TYPES,
+  ALL_INTEGRATION_TYPES,
+  ALL_PERSISTENCE_TYPES,
+  ALL_PROJECT_STATUSES,
+  ALL_PROJECT_TYPES,
+  ALL_PROJECT_VISIBILITY
 } from "../data/TechPillConfiguredData.ts";
 import {PillDataType, ProjectCardProps} from "../data/Models";
 import TechPillConfigured from "./TechPillConfigured.vue";
-import {watch, ref} from "vue";
+import {computed, ref, watch} from "vue";
+import {store} from "../data/Store.ts";
+import {projectCardsData} from "../data/ProjectCardsData.ts";
 
 const emit = defineEmits<{
   (e: 'tagsFilterChanged', value: string[]): void
@@ -30,71 +34,78 @@ type TagOccurrenceGroup = {
 }
 
 const allProjects = projectCardsData as ProjectCardProps[];
-const flattenedTags = allProjects.flatMap(v => v.tags);
-const mappedTagOccurrences = flattenedTags.reduce((obj, tag) => {
-  if (obj[tag]) obj[tag].amount += 1;
-  else obj[tag] = { amount: 1, tag }
-  return obj;
-}, {} as TagOccurrenceObj);
-const openSourceProjects = allProjects.reduce((v, p) => p.externalLinks.find(l => l.includes("github")) ? v+1 : v, 0);
-const closedSourceProjects = allProjects.reduce((v, p) => p.externalLinks.find(l => l.includes("github")) ? v : v+1, 0);
-mappedTagOccurrences["open source"] = {tag: "open source", amount: openSourceProjects}
-mappedTagOccurrences["closed source"] = {tag: "closed source", amount: closedSourceProjects}
 
-function SortOccurrences(occurrences: TagOccurrence[]): TagOccurrence[] {
-  return occurrences.sort((a, b) => {
-    const difference = b.amount - a.amount;
-    if (difference !== 0) return difference;
-    return (a.tag > b.tag) ? 1 : ((b.tag > a.tag) ? -1 : 0);
-  });
-}
+const tagOccurrenceGroups = computed(() => {
+  const filteredProjects = store.projectsFiltered;
+  const mappedTags = allProjects.flatMap(v => v.tags).reduce((obj, tag) => {
+    if (!obj[tag]) obj[tag] = { amount: 0, tag }
+    return obj;
+  }, {} as TagOccurrenceObj);
+  const mappedTagOccurrences = filteredProjects.flatMap(v => v.tags).reduce((obj, tag) => {
+    if (obj[tag]) obj[tag].amount += 1;
+    else obj[tag] = { amount: 1, tag }
+    return obj;
+  }, mappedTags);
+  const openSourceProjects = filteredProjects.reduce((v, p) => p.externalLinks.find(l => l.includes("github")) ? v+1 : v, 0);
+  const closedSourceProjects = filteredProjects.reduce((v, p) => p.externalLinks.find(l => l.includes("github")) ? v : v+1, 0);
+  mappedTagOccurrences["open source"] = {tag: "open source", amount: openSourceProjects}
+  mappedTagOccurrences["closed source"] = {tag: "closed source", amount: closedSourceProjects}
 
-function SortAndCountTypeOccurences(types: PillDataType[]) {
-  return SortOccurrences(Object.values(mappedTagOccurrences).filter(v => types.map(t => t.type).includes(v.tag)));
-}
-
-const backendOccurrences = SortAndCountTypeOccurences(ALL_BACKEND_TYPES);
-const deploymentOccurrences = SortAndCountTypeOccurences(ALL_DEPLOYMENT_TYPES);
-const frontendOccurrences = SortAndCountTypeOccurences(ALL_FRONTEND_TYPES);
-const persistenceOccurrences = SortAndCountTypeOccurences(ALL_PERSISTENCE_TYPES);
-const projectStatusOccurrences = SortAndCountTypeOccurences(ALL_PROJECT_STATUSES);
-const projectTypeOccurrences = SortAndCountTypeOccurences(ALL_PROJECT_TYPES);
-const projectVisibilityOccurrences = SortAndCountTypeOccurences(ALL_PROJECT_VISIBILITY);
-const integrationOccurrences = SortAndCountTypeOccurences(ALL_INTEGRATION_TYPES);
-const tagOccurrenceGroups: TagOccurrenceGroup[] = [
-  {
-    title: "Project type",
-    tags: projectTypeOccurrences
-  },
-  {
-    title: "Project completion status",
-    tags: projectStatusOccurrences
-  },
-  {
-    title: "Project visibility",
-    tags: projectVisibilityOccurrences
-  },
-  {
-    title: "Backend",
-    tags: backendOccurrences
-  },
-  {
-    title: "Frontend",
-    tags: frontendOccurrences
-  },
-  {
-    title: "Persistence",
-    tags: persistenceOccurrences
-  },
-  {
-    title: "Deployment",
-    tags: deploymentOccurrences
-  },
-  {
-    title: "Integration",
-    tags: integrationOccurrences
+  function SortAndCountTypeOccurrences(types: PillDataType[]) {
+    return SortOccurrences(Object.values(mappedTagOccurrences).filter(v => types.map(t => t.type).includes(v.tag)));
   }
-];
+
+  function SortOccurrences(occurrences: TagOccurrence[]): TagOccurrence[] {
+    return occurrences.sort((a, b) => {
+      const difference = b.amount - a.amount;
+      if (difference !== 0) return difference;
+      return (a.tag > b.tag) ? 1 : -1;
+    });
+  }
+
+  const backendOccurrences = SortAndCountTypeOccurrences(ALL_BACKEND_TYPES);
+  const deploymentOccurrences = SortAndCountTypeOccurrences(ALL_DEPLOYMENT_TYPES);
+  const frontendOccurrences = SortAndCountTypeOccurrences(ALL_FRONTEND_TYPES);
+  const persistenceOccurrences = SortAndCountTypeOccurrences(ALL_PERSISTENCE_TYPES);
+  const projectStatusOccurrences = SortAndCountTypeOccurrences(ALL_PROJECT_STATUSES);
+  const projectTypeOccurrences = SortAndCountTypeOccurrences(ALL_PROJECT_TYPES);
+  const projectVisibilityOccurrences = SortAndCountTypeOccurrences(ALL_PROJECT_VISIBILITY);
+  const integrationOccurrences = SortAndCountTypeOccurrences(ALL_INTEGRATION_TYPES);
+  return [
+    {
+      title: "Project type",
+      tags: projectTypeOccurrences
+    },
+    {
+      title: "Project completion status",
+      tags: projectStatusOccurrences
+    },
+    {
+      title: "Project visibility",
+      tags: projectVisibilityOccurrences
+    },
+    {
+      title: "Backend",
+      tags: backendOccurrences
+    },
+    {
+      title: "Frontend",
+      tags: frontendOccurrences
+    },
+    {
+      title: "Persistence",
+      tags: persistenceOccurrences
+    },
+    {
+      title: "Deployment",
+      tags: deploymentOccurrences
+    },
+    {
+      title: "Integration",
+      tags: integrationOccurrences
+    }
+  ] as TagOccurrenceGroup[];
+})
 
 const filterTags = ref<string[]>(initialTags);
 
@@ -104,7 +115,7 @@ watch(filterTags, () => {
 </script>
 
 <template>
-  <div class="tags-filter-options">
+  <div class="tags-filter">
     <div
       v-for="tagGroup in tagOccurrenceGroups"
       :key="tagGroup.title"
@@ -136,29 +147,31 @@ watch(filterTags, () => {
   </div>
 </template>
 
-<style scoped>
-.tags-filter-options {
+<style lang="scss" scoped>
+.tags-filter {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   overflow-y: auto;
-  padding: 0.5rem;
-}
-.tag-group-title {
-  font-size: 12px;
-  user-select: none;
-}
-.tech-occurrence {
-  display: flex;
-  align-items: center;
-}
-.tech-occurrence label {
-  flex-grow: 1;
-  user-select: none;
-}
-.tech-occurrence span {
-  opacity: 0.6;
-  user-select: none;
+  padding: 4px 8px;
+  .tag-group-title {
+    font-size: 12px;
+    user-select: none;
+  }
+  .tech-occurrence {
+    display: flex;
+    align-items: center;
+    label {
+      flex-grow: 1;
+      cursor: pointer;
+    }
+    input {
+      cursor: pointer;
+    }
+    span {
+      opacity: 0.6;
+    }
+  }
 }
 </style>
