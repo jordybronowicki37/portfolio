@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import Editor from "../../components/Editor.vue";
 import {useSlots} from "vue";
+import EditorHeadings from "../../components/EditorHeadings.vue";
 
 const slots = useSlots();
 </script>
@@ -26,13 +27,10 @@ const slots = useSlots();
         <slot name="search" />
       </template>
 
-      <template
-        v-if="slots['heading']"
-        #heading
-      >
-        <slot name="heading" />
+      <template #heading>
+        <EditorHeadings />
       </template>
-      
+
       <template
         v-if="slots['aws']"
         #aws
@@ -52,8 +50,6 @@ const slots = useSlots();
   }
   ul {
     padding: 0;
-  }
-  ul:not(.aws-services-list) {
     margin: 0;
   }
   .project-image {

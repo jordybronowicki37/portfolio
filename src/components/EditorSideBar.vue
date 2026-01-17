@@ -108,6 +108,18 @@ function switchTabVisibility(tab: string) {
         />
       </button>
       <button
+        v-if="slots['heading']"
+        title="Headings"
+        :class="[tabOpened === 'heading' ? 'active' : '']"
+        @click="switchTabVisibility('heading')"
+      >
+        <box-icon
+          name="hash"
+          size="1.5rem"
+          color="var(--sidebar-tab-icon-color)"
+        />
+      </button>
+      <button
         v-if="slots['search']"
         title="Search"
         :class="[tabOpened === 'search' ? 'active' : '']"
@@ -137,31 +149,27 @@ function switchTabVisibility(tab: string) {
 </template>
 
 <style lang="scss">
-#sidebar-info-wrapper {
-  margin: 1rem;
-}
-#sidebar-search-wrapper {
+#sidebar-info-wrapper,
+#sidebar-heading-wrapper,
+#sidebar-search-wrapper,
+#sidebar-aws-wrapper {
   margin: 1rem;
 }
 #sidebar-aws-wrapper ul {
-  margin: 1rem;
   list-style: none;
   li {
     margin-bottom: 1rem;
   }
 }
 @container editor-sidebar-content (width < 300px) {
-  #sidebar-info-wrapper {
+  #sidebar-info-wrapper,
+  #sidebar-heading-wrapper,
+  #sidebar-search-wrapper,
+  #sidebar-aws-wrapper {
     margin: 4px;
   }
-  #sidebar-search-wrapper {
-    margin: 4px;
-  }
-  #sidebar-aws-wrapper ul {
-    margin: 4px;
-    li {
-      margin-bottom: 4px;
-    }
+  #sidebar-aws-wrapper ul li {
+    margin-bottom: 4px;
   }
 }
 </style>

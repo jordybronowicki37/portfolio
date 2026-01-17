@@ -78,17 +78,6 @@ function switchTabVisibility(tab: string) {
           color="var(--sidebar-tab-icon-color)"
         />
       </button>
-      <button
-        title="Headings"
-        :class="[tabOpened === 'Headings' ? 'active' : '']"
-        @click="switchTabVisibility('Headings')"
-      >
-        <box-icon
-          name="hash"
-          size="1.5rem"
-          color="var(--sidebar-tab-icon-color)"
-        />
-      </button>
       <a href="https://github.com/jordybronowicki37">
         <box-icon
           name="github"
