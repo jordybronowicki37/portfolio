@@ -15,7 +15,7 @@ const githubURL = import.meta.env.VITE_SNAKE_GITHUB_URL;
     <EditorLine :indentation="0" />
     <EditorLine :indentation="0" />
     <EditorLine :indentation="1">
-      <h1># Project: Snake Game</h1>
+      <h1 id="project-snake-title"># Project: Snake Game</h1>
     </EditorLine>
 
     <EditorLine :indentation="2" />
@@ -35,7 +35,7 @@ const githubURL = import.meta.env.VITE_SNAKE_GITHUB_URL;
     <section>
       <EditorLine :indentation="2" />
       <EditorLine :indentation="2">
-        <h2>
+        <h2 id="project-snake-game">
           ## Play the famous game of snake
         </h2>
       </EditorLine>
@@ -57,7 +57,7 @@ const githubURL = import.meta.env.VITE_SNAKE_GITHUB_URL;
         >
           <template #text>
             <div>
-              <h2>## Single player mode</h2>
+              <h2 id="project-snake-single-player">## Single player mode</h2>
               <p>
                 In Single Player mode, challenge yourself through a selection of diverse levels, each presenting
                 unique hurdles and escalating difficulty. Conquer independent challenges in every level and aim
@@ -86,7 +86,7 @@ const githubURL = import.meta.env.VITE_SNAKE_GITHUB_URL;
         >
           <template #text>
             <div>
-              <h2>## Choose out of a bunch of different levels</h2>
+              <h2 id="project-snake-levels">## Choose out of a bunch of different levels</h2>
               <p>
                 Conquer a variety of levels in Single Player mode, each with its unique challenges and
                 high-scores to beat. Test your skills and adapt your strategies to overcome diverse obstacles.
@@ -116,7 +116,7 @@ const githubURL = import.meta.env.VITE_SNAKE_GITHUB_URL;
         >
           <template #text>
             <div>
-              <h2>## Versus mode</h2>
+              <h2 id="project-snake-versus">## Versus mode</h2>
               <p>
                 Experience the ultimate showdown in Versus Mode, where two players compete head-to-head.
                 Your goal? Gather as much fruit as you can to grow your snake and eliminate your opponent.

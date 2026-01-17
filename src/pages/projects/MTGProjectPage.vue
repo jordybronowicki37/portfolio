@@ -13,7 +13,7 @@ import Bug from "../../components/Bug.vue";
     <EditorLine :indentation="0" />
     <EditorLine :indentation="0" />
     <EditorLine :indentation="1">
-      <h1># Project: MTG Cards Collection Manager</h1>
+      <h1 id="project-mtg-title"># Project: MTG Cards Collection Manager</h1>
     </EditorLine>
 
     <EditorLine :indentation="2" />
@@ -36,7 +36,7 @@ import Bug from "../../components/Bug.vue";
         >
           <template #text>
             <div>
-              <h2>## View a card's oracle to see all the different releases</h2>
+              <h2 id="project-mtg-oracle">## View a card's oracle to see all the different releases</h2>
               <p>
                 See all the information of a card on the oracle page. In this page you can see the abilities, costs,
                 rules and the releases of a card.
@@ -64,7 +64,7 @@ import Bug from "../../components/Bug.vue";
         >
           <template #text>
             <div>
-              <h2>## View a specific card</h2>
+              <h2 id="project-mtg-card">## View a specific card</h2>
               <p>
                 See the information of a specific card. In this page you can see the abilities, costs and rules of that
                 specific card. Beware that the rules may have changed with a later release of the card, always check
@@ -88,14 +88,14 @@ import Bug from "../../components/Bug.vue";
     <section>
       <EditorLine :indentation="2" />
       <EditorLine :indentation="2">
-        <h2 class="list-title">
+        <h2 id="project-mtg-features" class="list-title">
           ## Features
         </h2>
       </EditorLine>
       <ul class="features-list">
         <EditorLine :indentation="2">
           <li>
-            <h3>Manage your Collection</h3>
+            <h3 id="project-mtg-collection">Manage your Collection</h3>
             <p>
               Add cards from your physical collection and quickly search for specific cards.
             </p>
@@ -103,7 +103,7 @@ import Bug from "../../components/Bug.vue";
         </EditorLine>
         <EditorLine :indentation="2">
           <li>
-            <h3>Create playable decks</h3>
+            <h3 id="project-mtg-decks">Create playable decks</h3>
             <p>
               Add cards from your collection to a specific deck and check if the deck is valid for the commander game
               mode.
@@ -112,7 +112,7 @@ import Bug from "../../components/Bug.vue";
         </EditorLine>
         <EditorLine :indentation="2">
           <li>
-            <h3>Add cards to wishlist</h3>
+            <h3 id="project-mtg-wishlist">Add cards to wishlist</h3>
             <p>
               If you need a specific card to complete a deck, then you can add that card to your wishlist and finish
               the deck that you are building.
@@ -121,7 +121,7 @@ import Bug from "../../components/Bug.vue";
         </EditorLine>
         <EditorLine :indentation="2">
           <li>
-            <h3>Check the price of certain cards</h3>
+            <h3 id="project-mtg-price">Check the price of certain cards</h3>
             <p>
               The price of all the cards in our database is updated every single day. With this you can easily check
               if there is a discounted price on a certain card trading website.

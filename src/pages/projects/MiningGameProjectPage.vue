@@ -12,7 +12,7 @@ import Bug from "../../components/Bug.vue";
     <EditorLine :indentation="0" />
     <EditorLine :indentation="0" />
     <EditorLine :indentation="1">
-      <h1># Project: Mining Game - Map Generation</h1>
+      <h1 id="project-mining-title"># Project: Mining Game - Map Generation</h1>
     </EditorLine>
 
     <EditorLine :indentation="2" />
@@ -36,7 +36,7 @@ import Bug from "../../components/Bug.vue";
         >
           <template #text>
             <div>
-              <h2>## First iteration of cave generation</h2>
+              <h2 id="project-mining-first-iteration">## First iteration of cave generation</h2>
               <p>
                 This is the first iteration of the cave generation.
                 Here you can see that in the center of the map a treasure room is located and in each of the corners is a base located.
@@ -73,7 +73,7 @@ import Bug from "../../components/Bug.vue";
         >
           <template #text>
             <div>
-              <h2>## Added resources to cave generation</h2>
+              <h2 id="project-mining-added-resources">## Added resources to cave generation</h2>
               <p>
                 In this second iteration of the cave generation, I have added resource generation.
                 There are 5 different resources: Coal, Copper, Iron, Gold and Uranium.
@@ -104,7 +104,7 @@ import Bug from "../../components/Bug.vue";
         >
           <template #text>
             <div>
-              <h2>## The first adaptation of the map generation with 3D blocks</h2>
+              <h2 id="project-mining-3d-blocks">## The first adaptation of the map generation with 3D blocks</h2>
               <p>
                 This is my first attempt at translating the 2D generation to becoming 3D.
                 We simply removed the 2D WPF interface and moved the generation logic to the Unity game engine in
@@ -133,7 +133,7 @@ import Bug from "../../components/Bug.vue";
         >
           <template #text>
             <div>
-              <h2>## The second iteration of the map generation with 3D blocks</h2>
+              <h2 id="project-mining-better-blocks">## The second iteration of the map generation with 3D blocks</h2>
               <p>
                 The generation now includes a large floor tile, no spacing between blocks and a border around the map.
                 Also the bases are added with a distinguishable floor tile color.
@@ -160,7 +160,7 @@ import Bug from "../../components/Bug.vue";
         >
           <template #text>
             <div>
-              <h2>## The mine cart tracks are in!</h2>
+              <h2 id="project-mining-tracks">## The mine cart tracks are in!</h2>
               <p>
                 This version now has mine cart tracks implemented.
                 For the time being these are only decorational, but in the future we will make them functional.

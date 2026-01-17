@@ -15,7 +15,7 @@ const deploymentURL = import.meta.env.VITE_PRO_PADDING_DEPLOYMENT_URL
     <EditorLine :indentation="0" />
     <EditorLine :indentation="0" />
     <EditorLine :indentation="1">
-      <h1># Project: Pro-Padding</h1>
+      <h1 id="project-pro-padding-title"># Project: Pro-Padding</h1>
     </EditorLine>
 
     <EditorLine :indentation="2" />
@@ -31,7 +31,7 @@ const deploymentURL = import.meta.env.VITE_PRO_PADDING_DEPLOYMENT_URL
     <section>
       <EditorLine :indentation="2" />
       <EditorLine :indentation="2">
-        <h2>
+        <h2 id="project-pro-padding-examples">
           ## Examples
         </h2>
       </EditorLine>
@@ -96,14 +96,14 @@ const deploymentURL = import.meta.env.VITE_PRO_PADDING_DEPLOYMENT_URL
     <section>
       <EditorLine :indentation="2" />
       <EditorLine :indentation="2">
-        <h2 class="list-title">
+        <h2 id="project-pro-padding-features" class="list-title">
           ## Features
         </h2>
       </EditorLine>
       <ul class="features-list">
         <EditorLine :indentation="2">
           <li>
-            <h3>Professional backgrounds</h3>
+            <h3 id="project-pro-padding-professional-backgrounds">Professional backgrounds</h3>
             <p>
               Add personally crafted backgrounds to your screenshots to professionalize them before sharing.
             </p>
@@ -111,7 +111,7 @@ const deploymentURL = import.meta.env.VITE_PRO_PADDING_DEPLOYMENT_URL
         </EditorLine>
         <EditorLine :indentation="2">
           <li>
-            <h3>Automatic cropping</h3>
+            <h3 id="project-pro-padding-automatic-cropping">Automatic cropping</h3>
             <p>
               The uploaded screenshot is automatically cropped if the borders are of an identical color. This way your
               screenshot will always be centered perfectly into the tool.
@@ -120,7 +120,7 @@ const deploymentURL = import.meta.env.VITE_PRO_PADDING_DEPLOYMENT_URL
         </EditorLine>
         <EditorLine :indentation="2">
           <li>
-            <h3>Customize all dimensions</h3>
+            <h3 id="project-pro-padding-customize-dimensions">Customize all dimensions</h3>
             <p>
               With the expansive options, you can customize almost everything within the tool.
             </p>
