@@ -97,39 +97,39 @@ function switchTabVisibility(tab: string) {
     <div id="editor-sidebar-menu">
       <button
         v-if="slots['info']"
+        title="Info"
         :class="[tabOpened === 'info' ? 'active' : '']"
+        @click="switchTabVisibility('info')"
       >
         <box-icon
           name="info-circle"
           size="1.5rem"
           color="var(--sidebar-tab-icon-color)"
-          title="Info"
-          @click="switchTabVisibility('info')"
         />
       </button>
       <button
         v-if="slots['search']"
+        title="Search"
         :class="[tabOpened === 'search' ? 'active' : '']"
+        @click="switchTabVisibility('search')"
       >
         <box-icon
           name="search"
           size="1.5rem"
           color="var(--sidebar-tab-icon-color)"
-          title="Search"
-          @click="switchTabVisibility('search')"
         />
       </button>
       <button
         v-if="slots['aws']"
+        title="AWS"
         :class="[tabOpened === 'aws' ? 'active' : '']"
+        @click="switchTabVisibility('aws')"
       >
         <box-icon
           name="aws"
           type="logo"
           size="1.5rem"
           color="var(--sidebar-tab-icon-color)"
-          title="AWS"
-          @click="switchTabVisibility('aws')"
         />
       </button>
     </div>

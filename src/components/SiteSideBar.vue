@@ -45,40 +45,48 @@ function switchTabVisibility(tab: string) {
     :style="[tabOpened ? {flex: `0 0 ${width}px`} : {minWidth: 'initial'}]"
   >
     <div id="sidebar-menu">
-      <button :class="[tabOpened === 'File explorer' ? 'active' : '']">
+      <button
+        title="File explorer"
+        :class="[tabOpened === 'File explorer' ? 'active' : '']"
+        @click="switchTabVisibility('File explorer')"
+      >
         <box-icon
           name="folder"
           size="1.5rem"
           color="var(--sidebar-tab-icon-color)"
-          title="File explorer"
-          @click="switchTabVisibility('File explorer')"
         />
       </button>
-      <button :class="[tabOpened === 'Commits' ? 'active' : '']">
+      <button
+        title="Commits"
+        :class="[tabOpened === 'Commits' ? 'active' : '']"
+        @click="switchTabVisibility('Commits')"
+      >
         <box-icon
           name="git-commit"
           size="1.5rem"
           color="var(--sidebar-tab-icon-color)"
-          title="Commits"
-          @click="switchTabVisibility('Commits')"
         />
       </button>
-      <button :class="[tabOpened === 'Pull requests' ? 'active' : '']">
+      <button
+        title="Pull requests"
+        :class="[tabOpened === 'Pull requests' ? 'active' : '']"
+        @click="switchTabVisibility('Pull requests')"
+      >
         <box-icon
           name="git-pull-request"
           size="1.5rem"
           color="var(--sidebar-tab-icon-color)"
-          title="Pull requests"
-          @click="switchTabVisibility('Pull requests')"
         />
       </button>
-      <button :class="[tabOpened === 'Headings' ? 'active' : '']">
+      <button
+        title="Headings"
+        :class="[tabOpened === 'Headings' ? 'active' : '']"
+        @click="switchTabVisibility('Headings')"
+      >
         <box-icon
           name="hash"
           size="1.5rem"
           color="var(--sidebar-tab-icon-color)"
-          title="Headings"
-          @click="switchTabVisibility('Headings')"
         />
       </button>
       <a href="https://github.com/jordybronowicki37">
