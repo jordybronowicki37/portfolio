@@ -2,19 +2,9 @@
 import TechPillConfigured from "./TechPillConfigured.vue";
 import TechPillLink from "./TechPillLink.vue";
 import TechPillSimple from "./TechPillSimple.vue";
+import {ProjectCardProps} from "../data/Models";
 
-defineProps<{
-  languages: string[],
-  frameworks?: string[],
-  integrations?: string[],
-  database?: string,
-  deployment?: string,
-  type: string,
-  groupSize?: number,
-  grade?: number,
-  status: string,
-  links?: string[],
-}>();
+defineProps<ProjectCardProps>();
 </script>
 
 <template>
@@ -22,107 +12,107 @@ defineProps<{
     <p>Languages:</p>
     <div class="tag-list-wrapper">
       <TechPillConfigured
-        v-for="language in languages"
+        v-for="language in tags.languages"
         :key="language"
         :type="language"
       />
     </div>
 
-    <p v-if="frameworks">
+    <p v-if="tags.frameworks">
       Frameworks:
     </p>
     <div
-      v-if="frameworks"
+      v-if="tags.frameworks"
       class="tag-list-wrapper"
     >
       <TechPillConfigured
-        v-for="framework in frameworks"
+        v-for="framework in tags.frameworks"
         :key="framework"
         :type="framework"
       />
     </div>
 
-    <p v-if="integrations">
+    <p v-if="tags.integrations">
       Integrations:
     </p>
     <div
-      v-if="integrations"
+      v-if="tags.integrations"
       class="tag-list-wrapper"
     >
       <TechPillConfigured
-        v-for="integration in integrations"
+        v-for="integration in tags.integrations"
         :key="integration"
         :type="integration"
       />
     </div>
 
-    <p v-if="database">
+    <p v-if="tags.database">
       Database:
     </p>
     <div
-      v-if="database"
+      v-if="tags.database"
       class="tag-list-wrapper"
     >
-      <TechPillConfigured :type="database" />
+      <TechPillConfigured :type="tags.database" />
     </div>
 
-    <p v-if="deployment">
+    <p v-if="tags.deployment">
       Deployment:
     </p>
     <div
-      v-if="deployment"
+      v-if="tags.deployment"
       class="tag-list-wrapper"
     >
-      <TechPillConfigured :type="deployment" />
+      <TechPillConfigured :type="tags.deployment" />
     </div>
 
     <p>Type:</p>
     <div class="tag-list-wrapper">
-      <TechPillConfigured :type="type" />
+      <TechPillConfigured :type="tags.type" />
     </div>
 
-    <p v-if="grade">
+    <p v-if="tags.grade">
       Grade:
     </p>
     <div
-      v-if="grade"
+      v-if="tags.grade"
       class="tag-list-wrapper"
     >
       <TechPillSimple color="#555">
         <p class="grade-text">
-          {{ grade }}
+          {{ tags.grade }}
         </p>
       </TechPillSimple>
     </div>
 
-    <p v-if="groupSize">
+    <p v-if="tags.groupSize">
       Group size:
     </p>
     <div
-      v-if="groupSize"
+      v-if="tags.groupSize"
       class="tag-list-wrapper"
     >
       <TechPillSimple color="#555">
         <p class="group-size-text">
-          {{ groupSize }}
+          {{ tags.groupSize }}
         </p>
       </TechPillSimple>
     </div>
 
     <p>Status:</p>
     <div class="tag-list-wrapper">
-      <TechPillConfigured :type="status" />
+      <TechPillConfigured :type="tags.status" />
     </div>
 
-    <p v-if="links && links.length">
+    <p v-if="externalLinks && externalLinks.length">
       Links:
     </p>
     <div
-      v-if="links && links.length"
+      v-if="externalLinks && externalLinks.length"
       class="tag-list-wrapper"
     >
       <TechPillLink
-        v-for="link in links"
+        v-for="link in externalLinks"
         :key="link"
         :link="link"
       />

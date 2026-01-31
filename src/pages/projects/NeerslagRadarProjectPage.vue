@@ -5,6 +5,7 @@ import ProjectProperties from "../../components/ProjectProperties.vue";
 import TextDocBlock from "../../components/TextDocBlock.vue";
 import EditorProject from "./EditorProject.vue";
 import Bug from "../../components/Bug.vue";
+import {neerslagProjectCardData} from "../../data/ProjectCardsData.ts";
 </script>
 
 <template>
@@ -174,14 +175,7 @@ import Bug from "../../components/Bug.vue";
     <EditorLine :indentation="0" />
 
     <template #info>
-      <ProjectProperties
-        :languages="['c#', 'typescript', 'html', 'css']"
-        :frameworks="['.net', 'angular']"
-        type="school/external"
-        status="completed"
-        :grade="8.5"
-        :group-size="5"
-      />
+      <ProjectProperties v-bind="neerslagProjectCardData"/>
     </template>
   </EditorProject>
 </template>

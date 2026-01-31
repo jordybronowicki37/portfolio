@@ -2,11 +2,24 @@ export type ProjectCardProps = {
   title: string,
   imageSrc: string,
   imageAlt: string,
-  tags: string[],
+  tags: ProjectCardTags,
   externalLinks: string[],
   pageLink?: string,
   description:string,
-  startedAt?: ProjectCardDate,
+  startedAt: ProjectCardDate,
+}
+
+export type ProjectCardTags = {
+  summary: string[],
+  languages: string[],
+  frameworks?: string[],
+  integrations?: string[],
+  database?: string,
+  deployment?: string,
+  type: 'group' | 'personal' | 'school' | 'school/external',
+  groupSize?: number,
+  grade?: number,
+  status: 'completed' | 'in progress' | 'abandoned',
 }
 
 export type ProjectCardDate = {

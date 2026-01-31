@@ -5,6 +5,7 @@ import TextDocBlock from "../../components/TextDocBlock.vue";
 import EditorProject from "./EditorProject.vue";
 import EditorLine from "../../components/EditorLine.vue";
 import Bug from "../../components/Bug.vue";
+import {snakeProjectCardData} from "../../data/ProjectCardsData.ts";
 
 const deploymentURL = import.meta.env.VITE_SNAKE_DEPLOYMENT_URL;
 const githubURL = import.meta.env.VITE_SNAKE_GITHUB_URL;
@@ -143,17 +144,7 @@ const githubURL = import.meta.env.VITE_SNAKE_GITHUB_URL;
     <EditorLine :indentation="0" />
 
     <template #info>
-      <ProjectProperties
-        :languages="['typescript', 'html', 'css']"
-        :frameworks="['vue']"
-        deployment="render"
-        type="personal"
-        status="in progress"
-        :links="[
-          githubURL,
-          deploymentURL
-        ]"
-      />
+      <ProjectProperties v-bind="snakeProjectCardData"/>
     </template>
   </EditorProject>
 </template>

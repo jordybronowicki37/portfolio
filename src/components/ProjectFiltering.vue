@@ -30,18 +30,32 @@ const sortTypeOpened = ref(false);
 
 function sortProjects(p1: ProjectCardProps, p2: ProjectCardProps): number {
   let result = 0;
-  if (sortType.value === 'created') {
-    // TODO implement created sorting
-  } else {
-    result = p1.title.toLowerCase() > p2.title.toLowerCase() ? 1 : -1;
+
+  switch (sortType.value) {
+    case "created":
+      const sy1 = p1.startedAt.year;
+      const sy2 = p2.startedAt.year;
+      const sm1 = p1.startedAt.month;
+      const sm2 = p2.startedAt.month;
+
+      if (sy1 === sy2) {
+        if (sm1 === sm2) {
+          break
+        }
+        result = sm1 > sm2 ? 1 : -1;
+        break
+      }
+      result = sy1 > sy2 ? 1 : -1;
+      break
+    case "name":
+    default:
+      result = p1.title.toLowerCase() > p2.title.toLowerCase() ? 1 : -1;
   }
-  if (result === 0) {
-    return 0;
-  } else if (sortDirection.value === 'desc') {
+
+  if (sortDirection.value === 'desc' && result !== 0) {
     return result > 0 ? -1 : 1;
-  } else {
-    return result > 0 ? 1 : -1;
   }
+  return result;
 }
 
 function filterProjects() {
@@ -51,9 +65,9 @@ function filterProjects() {
     .filter(v =>
       v.title.toLowerCase().includes(loweredFilterText) ||
       v.description.toLowerCase().includes(loweredFilterText) ||
-      v.tags.filter(t => t.toLowerCase().includes(loweredFilterText)).length > 0
+      v.tags.summary.filter(t => t.toLowerCase().includes(loweredFilterText)).length > 0
     )
-    .filter(v => techFilterTags.every(tag => v.tags.includes(tag)))
+    .filter(v => techFilterTags.every(tag => v.tags.summary.includes(tag)))
     .filter(v => !filterTags.value.includes("open source") || v.externalLinks.find(l => l.includes("github")) != undefined)
     .filter(v => !filterTags.value.includes("closed source") || v.externalLinks.find(l => l.includes("github")) == undefined)
     .sort(sortProjects);

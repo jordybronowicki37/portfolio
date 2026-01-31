@@ -5,6 +5,7 @@ import TextDocBlock from "../../components/TextDocBlock.vue";
 import EditorProject from "./EditorProject.vue";
 import ImageFocusModal from "../../components/ImageFocusModal.vue";
 import Bug from "../../components/Bug.vue";
+import {proPaddingProjectCardData} from "../../data/ProjectCardsData.ts";
 
 const githubURL = import.meta.env.VITE_PRO_PADDING_GITHUB_URL
 const deploymentURL = import.meta.env.VITE_PRO_PADDING_DEPLOYMENT_URL
@@ -137,14 +138,7 @@ const deploymentURL = import.meta.env.VITE_PRO_PADDING_DEPLOYMENT_URL
     <EditorLine :indentation="0" />
 
     <template #info>
-      <ProjectProperties
-        :languages="['typescript', 'html', 'css']"
-        :frameworks="['svelte', 'tailwind']"
-        deployment="render"
-        type="personal"
-        status="completed"
-        :links="[githubURL, deploymentURL]"
-      />
+      <ProjectProperties v-bind="proPaddingProjectCardData"/>
     </template>
   </EditorProject>
 </template>

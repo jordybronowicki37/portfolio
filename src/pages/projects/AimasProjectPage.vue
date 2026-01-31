@@ -6,6 +6,7 @@ import AWSServiceCard from "../../components/AWSServiceCard.vue";
 import TextDocBlock from "../../components/TextDocBlock.vue";
 import EditorProject from "./EditorProject.vue";
 import Bug from "../../components/Bug.vue";
+import {aimasProjectCardData} from "../../data/ProjectCardsData.ts";
 </script>
 
 <template>
@@ -97,16 +98,7 @@ import Bug from "../../components/Bug.vue";
     <EditorLine :indentation="0" />
 
     <template #info>
-      <ProjectProperties
-        :languages="['python', 'typescript', 'html', 'sass']"
-        :frameworks="['sam', 'websocket', 'react', 'redux']"
-        database="dynamodb"
-        deployment="aws"
-        type="school"
-        :grade="7.8"
-        :group-size="2"
-        status="completed"
-      />
+      <ProjectProperties v-bind="aimasProjectCardData"/>
     </template>
 
     <template #aws>

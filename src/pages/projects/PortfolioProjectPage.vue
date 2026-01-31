@@ -6,6 +6,7 @@ import ImageFocusModal from "../../components/ImageFocusModal.vue";
 import TextDocBlock from "../../components/TextDocBlock.vue";
 import EditorProject from "./EditorProject.vue";
 import Bug from "../../components/Bug.vue";
+import {portfolioProjectCardData} from "../../data/ProjectCardsData.ts";
 
 const deploymentURL = import.meta.env.VITE_PORTFOLIO_PRODUCTION_DEPLOYMENT_URL;
 const githubURL = import.meta.env.VITE_PORTFOLIO_GITHUB_URL;
@@ -184,14 +185,7 @@ const githubURL = import.meta.env.VITE_PORTFOLIO_GITHUB_URL;
     <EditorLine :indentation="0" />
 
     <template #info>
-      <ProjectProperties
-        :languages="['typescript', 'html', 'css']"
-        :frameworks="['vue']"
-        deployment="render"
-        type="personal"
-        status="completed"
-        :links="[githubURL, deploymentURL]"
-      />
+      <ProjectProperties v-bind="portfolioProjectCardData"/>
     </template>
   </EditorProject>
 </template>

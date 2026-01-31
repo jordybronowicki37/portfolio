@@ -5,6 +5,7 @@ import ProjectProperties from "../../components/ProjectProperties.vue";
 import TextDocBlock from "../../components/TextDocBlock.vue";
 import EditorProject from "./EditorProject.vue";
 import Bug from "../../components/Bug.vue";
+import {befitProjectCardData} from "../../data/ProjectCardsData.ts";
 
 const githubURL = import.meta.env.VITE_BEFIT_GITHUB_URL;
 </script>
@@ -268,15 +269,7 @@ const githubURL = import.meta.env.VITE_BEFIT_GITHUB_URL;
     <EditorLine :indentation="0" />
 
     <template #info>
-      <ProjectProperties
-        :languages="['java']"
-        :frameworks="['spring']"
-        :integrations="['discord']"
-        database="postgresql"
-        type="personal"
-        status="completed"
-        :links="[githubURL]"
-      />
+      <ProjectProperties v-bind="befitProjectCardData"/>
     </template>
   </EditorProject>
 </template>

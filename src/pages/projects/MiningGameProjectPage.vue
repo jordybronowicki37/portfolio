@@ -5,6 +5,7 @@ import ProjectProperties from "../../components/ProjectProperties.vue";
 import TextDocBlock from "../../components/TextDocBlock.vue";
 import EditorProject from "./EditorProject.vue";
 import Bug from "../../components/Bug.vue";
+import {miningGameProjectCardData} from "../../data/ProjectCardsData.ts";
 </script>
 
 <template>
@@ -191,14 +192,7 @@ import Bug from "../../components/Bug.vue";
     <EditorLine :indentation="0" />
 
     <template #info>
-      <ProjectProperties
-        :frameworks="['wpf']"
-        :languages="['c#']"
-        :integrations="['unity']"
-        type="group"
-        :group-size="5"
-        status="in progress"
-      />
+      <ProjectProperties v-bind="miningGameProjectCardData"/>
     </template>
   </EditorProject>
 </template>

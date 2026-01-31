@@ -6,6 +6,7 @@ import AWSServiceCard from "../../components/AWSServiceCard.vue";
 import TextDocBlock from "../../components/TextDocBlock.vue";
 import EditorProject from "./EditorProject.vue";
 import Bug from "../../components/Bug.vue";
+import {mtgProjectCardData} from "../../data/ProjectCardsData.ts";
 </script>
 
 <template>
@@ -137,17 +138,7 @@ import Bug from "../../components/Bug.vue";
     <EditorLine :indentation="0" />
 
     <template #info>
-      <ProjectProperties
-        :languages="['python', 'scala', 'typescript', 'html', 'sass']"
-        :frameworks="['sam', 'vue', 'cypress']"
-        :integrations="['scryfall']"
-        database="dynamodb"
-        deployment="aws"
-        type="school"
-        :grade="7.7"
-        :group-size="6"
-        status="completed"
-      />
+      <ProjectProperties v-bind="mtgProjectCardData"/>
     </template>
 
     <template #aws>

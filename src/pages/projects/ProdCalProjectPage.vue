@@ -5,6 +5,7 @@ import ProjectProperties from "../../components/ProjectProperties.vue";
 import TextDocBlock from "../../components/TextDocBlock.vue";
 import EditorProject from "./EditorProject.vue";
 import Bug from "../../components/Bug.vue";
+import {prodCalProjectCardData} from "../../data/ProjectCardsData.ts";
 
 const githubURL = import.meta.env.VITE_PRODCAL_GITHUB_URL
 </script>
@@ -223,14 +224,7 @@ const githubURL = import.meta.env.VITE_PRODCAL_GITHUB_URL
     <EditorLine :indentation="0" />
 
     <template #info>
-      <ProjectProperties
-        :languages="['c#', 'typescript', 'html', 'sass']"
-        :frameworks="['.net', 'react', 'redux']"
-        database="mongodb"
-        type="personal"
-        status="in progress"
-        :links="[githubURL]"
-      />
+      <ProjectProperties v-bind="prodCalProjectCardData"/>
     </template>
   </EditorProject>
 </template>

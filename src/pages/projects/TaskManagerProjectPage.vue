@@ -6,6 +6,7 @@ import AWSServiceCard from "../../components/AWSServiceCard.vue";
 import TextDocBlock from "../../components/TextDocBlock.vue";
 import EditorProject from "./EditorProject.vue";
 import Bug from "../../components/Bug.vue";
+import {taskManagerProjectCardData} from "../../data/ProjectCardsData.ts";
 </script>
 
 <template>
@@ -151,16 +152,7 @@ import Bug from "../../components/Bug.vue";
     <EditorLine :indentation="0" />
 
     <template #info>
-      <ProjectProperties
-        :languages="['java', 'typescript', 'html', 'sass']"
-        :frameworks="['spring', 'react', 'redux']"
-        database="postgresql"
-        deployment="aws"
-        type="school"
-        :grade="8.1"
-        :group-size="2"
-        status="completed"
-      />
+      <ProjectProperties v-bind="taskManagerProjectCardData"/>
     </template>
 
     <template #aws>

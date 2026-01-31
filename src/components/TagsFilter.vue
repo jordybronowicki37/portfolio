@@ -37,11 +37,11 @@ const allProjects = projectCardsData as ProjectCardProps[];
 
 const tagOccurrenceGroups = computed(() => {
   const filteredProjects = store.projectsFiltered;
-  const mappedTags = allProjects.flatMap(v => v.tags).reduce((obj, tag) => {
+  const mappedTags = allProjects.flatMap(v => v.tags.summary).reduce((obj, tag) => {
     if (!obj[tag]) obj[tag] = { amount: 0, tag }
     return obj;
   }, {} as TagOccurrenceObj);
-  const mappedTagOccurrences = filteredProjects.flatMap(v => v.tags).reduce((obj, tag) => {
+  const mappedTagOccurrences = filteredProjects.flatMap(v => v.tags.summary).reduce((obj, tag) => {
     if (obj[tag]) obj[tag].amount += 1;
     else obj[tag] = { amount: 1, tag }
     return obj;

@@ -18,7 +18,7 @@ defineProps<{project: ProjectCardProps}>();
     </header>
     <TechPillContainer
       :links="project.externalLinks"
-      :types="project.tags"
+      :types="project.tags.summary"
       background-color="transparent"
     />
     <p>
