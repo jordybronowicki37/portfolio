@@ -41,13 +41,13 @@ function switchTabVisibility(tab: string) {
   <div
     id="sidebar-wrapper"
     ref="resizableDiv"
-    :class="[isResizing ? 'is-resizing' : '']"
+    :class="{ 'is-resizing': isResizing }"
     :style="[tabOpened ? {flex: `0 0 ${width}px`} : {minWidth: 'initial'}]"
   >
     <div id="sidebar-menu">
       <button
         title="File explorer"
-        :class="[tabOpened === 'File explorer' ? 'active' : '']"
+        :class="{ 'active': tabOpened === 'File explorer' }"
         @click="switchTabVisibility('File explorer')"
       >
         <box-icon
@@ -58,7 +58,7 @@ function switchTabVisibility(tab: string) {
       </button>
       <button
         title="Commits"
-        :class="[tabOpened === 'Commits' ? 'active' : '']"
+        :class="{ 'active': tabOpened === 'Commits' }"
         @click="switchTabVisibility('Commits')"
       >
         <box-icon
@@ -69,7 +69,7 @@ function switchTabVisibility(tab: string) {
       </button>
       <button
         title="Pull requests"
-        :class="[tabOpened === 'Pull requests' ? 'active' : '']"
+        :class="{ 'active': tabOpened === 'Pull requests' }"
         @click="switchTabVisibility('Pull requests')"
       >
         <box-icon

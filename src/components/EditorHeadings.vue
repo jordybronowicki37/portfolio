@@ -64,8 +64,8 @@ headerItems.reverse();
         v-for="prefix in heading.prefixes"
         class="heading-prefix"
       >
-        <div :class="prefix[0] === 'I' ? 'active' : ''" class="straight-prefix"></div>
-        <div :class="prefix[1] === 'L' ? 'active' : ''" class="curve-prefix"></div>
+        <div :class="{ 'active': prefix[0] === 'I' }" class="straight-prefix"></div>
+        <div :class="{ 'active': prefix[1] === 'L' }" class="curve-prefix"></div>
       </div>
       <router-link
         :to="`${route.path}#${heading.id}`"

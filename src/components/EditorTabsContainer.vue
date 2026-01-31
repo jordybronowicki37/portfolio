@@ -50,7 +50,7 @@ watchPostEffect(() => {
       v-for="tab in store.tabHistory"
       :key="tab.name"
       class="editor-tab"
-      :class="[route.name === tab.name ? 'active-tab' : '']"
+      :class="{ 'active-tab': route.name === tab.name }"
     >
       <box-icon
         class="tab-icon"

@@ -6,6 +6,12 @@ export type ProjectCardProps = {
   externalLinks: string[],
   pageLink?: string,
   description:string,
+  startedAt?: ProjectCardDate,
+}
+
+export type ProjectCardDate = {
+  year: number,
+  month: number,
 }
 
 export type PillDataCategories = "backend" | "frontend" | "persistence" | "deployment" | "integration" | "project-type" | "project-status" | "project-visibility" | "unknown";

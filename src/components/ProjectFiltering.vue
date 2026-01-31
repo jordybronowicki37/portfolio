@@ -164,13 +164,13 @@ watch([filterText, filterTags, sortType, sortDirection], () => {
           </header>
           <div class="sorting-filter-options">
             <button
-              :class="sortType === 'name' ? 'active' : ''"
+              :class="{ 'active': sortType === 'name' }"
               @click="() => sortType = 'name'"
             >
               Name
             </button>
             <button
-              :class="sortType === 'created' ? 'active' : ''"
+              :class="{ 'active': sortType === 'created' }"
               @click="() => sortType = 'created'"
             >
               Created

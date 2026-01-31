@@ -42,7 +42,7 @@ function switchTabVisibility(tab: string) {
     v-if="Object.keys(slots).length > 0"
     id="editor-sidebar-wrapper"
     ref="resizableDiv"
-    :class="[isResizing ? 'is-resizing' : '']"
+    :class="{ 'is-resizing': isResizing }"
     :style="[tabOpened ? {flex: `0 0 ${width}px`} : {minWidth: 'initial'}]"
   >
     <div
@@ -98,7 +98,7 @@ function switchTabVisibility(tab: string) {
       <button
         v-if="slots['info']"
         title="Info"
-        :class="[tabOpened === 'info' ? 'active' : '']"
+        :class="{ 'active': tabOpened === 'info' }"
         @click="switchTabVisibility('info')"
       >
         <box-icon
@@ -110,7 +110,7 @@ function switchTabVisibility(tab: string) {
       <button
         v-if="slots['heading']"
         title="Headings"
-        :class="[tabOpened === 'heading' ? 'active' : '']"
+        :class="{ 'active': tabOpened === 'heading' }"
         @click="switchTabVisibility('heading')"
       >
         <box-icon
@@ -122,7 +122,7 @@ function switchTabVisibility(tab: string) {
       <button
         v-if="slots['search']"
         title="Search"
-        :class="[tabOpened === 'search' ? 'active' : '']"
+        :class="{ 'active': tabOpened === 'search' }"
         @click="switchTabVisibility('search')"
       >
         <box-icon
@@ -134,7 +134,7 @@ function switchTabVisibility(tab: string) {
       <button
         v-if="slots['aws']"
         title="AWS"
-        :class="[tabOpened === 'aws' ? 'active' : '']"
+        :class="{ 'active': tabOpened === 'aws' }"
         @click="switchTabVisibility('aws')"
       >
         <box-icon
