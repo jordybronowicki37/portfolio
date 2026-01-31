@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import Editor from "../components/Editor.vue";
-import EditorLine from "../components/EditorLine.vue";
 import ProjectCard from "../components/ProjectCard.vue";
 import ProjectFiltering from "../components/ProjectFiltering.vue";
 import {store} from "../data/Store.ts";
@@ -8,26 +7,19 @@ import {store} from "../data/Store.ts";
 
 <template>
   <Editor>
-    <div id="onboarding-view-projects">
-      <EditorLine :indentation="0" />
-
-      <section>
-        <EditorLine :indentation="0">
+    <div id="projects-page-content">
+      <div id="onboarding-view-projects">
+        <section>
           <header class="page-header">
             <h1># Projects</h1>
           </header>
-        </EditorLine>
-        <EditorLine :indentation="1">
           <p>
             Here you can find some of the projects that I have either created myself or in collaboration with other
             students.
           </p>
-        </EditorLine>
-      </section>
-      <EditorLine :indentation="1" />
-    </div>
+        </section>
+      </div>
 
-    <EditorLine :indentation="2">
       <div class="projects-container">
         <ProjectCard
           v-for="project in store.projectsFiltered"
@@ -35,12 +27,7 @@ import {store} from "../data/Store.ts";
           :project="project"
         />
       </div>
-    </EditorLine>
-
-    <EditorLine :indentation="2" />
-    <EditorLine :indentation="1" />
-    <EditorLine :indentation="0" />
-    <EditorLine :indentation="0" />
+    </div>
 
     <template #search>
       <ProjectFiltering />
@@ -49,6 +36,13 @@ import {store} from "../data/Store.ts";
 </template>
 
 <style scoped>
+#projects-page-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+}
+
 .page-header {
   display: flex;
   gap: 2rem;
@@ -63,7 +57,8 @@ import {store} from "../data/Store.ts";
 .projects-container {
   display: grid;
   justify-items: center;
-  gap: 10px;
+  position: sticky;
+  gap: 2rem;
 }
 @media screen and (min-width: 1201px) {
   .projects-container {
