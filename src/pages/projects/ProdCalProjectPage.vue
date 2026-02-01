@@ -15,7 +15,9 @@ const githubURL = import.meta.env.VITE_PRODCAL_GITHUB_URL
     <EditorLine :indentation="0" />
     <EditorLine :indentation="0" />
     <EditorLine :indentation="1">
-      <h1 id="project-prodcal-title"># Project: Production Calculator</h1>
+      <h1 id="project-prodcal-title">
+        # Project: Production Calculator
+      </h1>
     </EditorLine>
 
     <EditorLine :indentation="2" />
@@ -39,7 +41,9 @@ const githubURL = import.meta.env.VITE_PRODCAL_GITHUB_URL
         >
           <template #text>
             <div>
-              <h2 id="project-prodcal-multiple-projects">## Multiple different projects</h2>
+              <h2 id="project-prodcal-multiple-projects">
+                ## Multiple different projects
+              </h2>
               <p>
                 With the Production Calculator, you can handle an array of projects tailored to your manufacturing
                 needs. From optimizing existing production lines to creating innovative setups, our tool supports
@@ -69,7 +73,9 @@ const githubURL = import.meta.env.VITE_PRODCAL_GITHUB_URL
         >
           <template #text>
             <div>
-              <h2 id="project-prodcal-editor">## Editor</h2>
+              <h2 id="project-prodcal-editor">
+                ## Editor
+              </h2>
               <p>
                 Our intuitive editor provides a visual representation of your entire production process.
                 Utilizing flow chart-based mapping, you can design, modify, and analyze production lines
@@ -95,14 +101,19 @@ const githubURL = import.meta.env.VITE_PRODCAL_GITHUB_URL
     <section>
       <EditorLine :indentation="2" />
       <EditorLine :indentation="2">
-        <h2 id="project-prodcal-connections-nodes" class="list-title">
+        <h2
+          id="project-prodcal-connections-nodes"
+          class="list-title"
+        >
           ## Connections and nodes
         </h2>
       </EditorLine>
       <ul class="features-list">
         <EditorLine :indentation="2">
           <li>
-            <h3 id="project-prodcal-connections">Connections</h3>
+            <h3 id="project-prodcal-connections">
+              Connections
+            </h3>
             <p>
               Link nodes by specifying the product traveling along the connection. The connection can represent
               any type of transportation.
@@ -111,7 +122,9 @@ const githubURL = import.meta.env.VITE_PRODCAL_GITHUB_URL
         </EditorLine>
         <EditorLine :indentation="2">
           <li>
-            <h3 id="project-prodcal-start-node">Start-node</h3>
+            <h3 id="project-prodcal-start-node">
+              Start-node
+            </h3>
             <p>
               Initiates the production process by creating new products. This can represent a resource collector
               like a mine, pump or other extractor.
@@ -120,7 +133,9 @@ const githubURL = import.meta.env.VITE_PRODCAL_GITHUB_URL
         </EditorLine>
         <EditorLine :indentation="2">
           <li>
-            <h3 id="project-prodcal-production-node">Production-node</h3>
+            <h3 id="project-prodcal-production-node">
+              Production-node
+            </h3>
             <p>
               Requires a recipes to transform products into different types. This can represent any machine that
               has an input and an output.
@@ -129,13 +144,17 @@ const githubURL = import.meta.env.VITE_PRODCAL_GITHUB_URL
         </EditorLine>
         <EditorLine :indentation="2">
           <li>
-            <h3 id="project-prodcal-end-node">End-node</h3>
+            <h3 id="project-prodcal-end-node">
+              End-node
+            </h3>
             <p>
               Consumes, destroys or discards products marking the completion of the production cycle.
             </p>
           </li>
           <li>
-            <h3 id="project-prodcal-input-node">Input-node</h3>
+            <h3 id="project-prodcal-input-node">
+              Input-node
+            </h3>
             <p>
               This marks the input of a worksheet. It can represent any imported product for a factory. The parent
               worksheet must provide these products to the worksheet-node.
@@ -144,7 +163,9 @@ const githubURL = import.meta.env.VITE_PRODCAL_GITHUB_URL
         </EditorLine>
         <EditorLine :indentation="2">
           <li>
-            <h3 id="project-prodcal-worksheet-node">Worksheet-node</h3>
+            <h3 id="project-prodcal-worksheet-node">
+              Worksheet-node
+            </h3>
             <p>
               With this node a worksheet can be reused inside of another worksheet. This can be useful for
               creating an entire map of all the factories that have connections to each other.
@@ -153,7 +174,9 @@ const githubURL = import.meta.env.VITE_PRODCAL_GITHUB_URL
         </EditorLine>
         <EditorLine :indentation="2">
           <li>
-            <h3 id="project-prodcal-output-node">Output-node</h3>
+            <h3 id="project-prodcal-output-node">
+              Output-node
+            </h3>
             <p>
               This node represents an output product of a worksheet, this product can then be used inside of the
               parent worksheet for further processing.
@@ -168,20 +191,27 @@ const githubURL = import.meta.env.VITE_PRODCAL_GITHUB_URL
         <Bug :bug-type="7" />
       </EditorLine>
       <EditorLine :indentation="2">
-        <h2 id="project-prodcal-features" class="list-title">
+        <h2
+          id="project-prodcal-features"
+          class="list-title"
+        >
           ## Features
         </h2>
       </EditorLine>
       <ul class="features-list">
         <EditorLine :indentation="2">
           <li>
-            <h3 id="project-prodcal-projects">Projects</h3>
+            <h3 id="project-prodcal-projects">
+              Projects
+            </h3>
             <p>With a project you can group all the necessary elements of your game-save together.</p>
           </li>
         </EditorLine>
         <EditorLine :indentation="2">
           <li>
-            <h3 id="project-prodcal-entity-collections">Entity collection presets</h3>
+            <h3 id="project-prodcal-entity-collections">
+              Entity collection presets
+            </h3>
             <p>
               Choose from diverse presets tailored to different factory building games for your project.
               This collection contains all the products, recipes and machines that are available in that game.
@@ -190,7 +220,9 @@ const githubURL = import.meta.env.VITE_PRODCAL_GITHUB_URL
         </EditorLine>
         <EditorLine :indentation="2">
           <li>
-            <h3 id="project-prodcal-separate-worksheets">Separate into Worksheets</h3>
+            <h3 id="project-prodcal-separate-worksheets">
+              Separate into Worksheets
+            </h3>
             <p>
               Create multiple worksheets within a project for the separation of different factories or production lines.
               You can reuse these worksheets inside of other worksheets by using the worksheet-node.
@@ -199,19 +231,25 @@ const githubURL = import.meta.env.VITE_PRODCAL_GITHUB_URL
         </EditorLine>
         <EditorLine :indentation="2">
           <li>
-            <h3 id="project-prodcal-flow-chart">Flow Chart Representation</h3>
+            <h3 id="project-prodcal-flow-chart">
+              Flow Chart Representation
+            </h3>
             <p>Visualize production lines and/or factories by using the intuitive flow chart based editor.</p>
           </li>
         </EditorLine>
         <EditorLine :indentation="2">
           <li>
-            <h3 id="project-prodcal-production-targets">Production Targets</h3>
+            <h3 id="project-prodcal-production-targets">
+              Production Targets
+            </h3>
             <p>Set minimum, maximum, or exact product requirements for nodes, ensuring accurate calculations.</p>
           </li>
         </EditorLine>
         <EditorLine :indentation="2">
           <li>
-            <h3 id="project-prodcal-efficiency-analysis">Efficiency Analysis</h3>
+            <h3 id="project-prodcal-efficiency-analysis">
+              Efficiency Analysis
+            </h3>
             <p>Calculate throughput and efficiency to optimize production processes.</p>
           </li>
         </EditorLine>
@@ -224,7 +262,7 @@ const githubURL = import.meta.env.VITE_PRODCAL_GITHUB_URL
     <EditorLine :indentation="0" />
 
     <template #info>
-      <ProjectProperties v-bind="prodCalProjectCardData"/>
+      <ProjectProperties v-bind="prodCalProjectCardData" />
     </template>
   </EditorProject>
 </template>

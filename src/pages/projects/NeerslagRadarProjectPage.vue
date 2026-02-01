@@ -13,7 +13,9 @@ import {neerslagProjectCardData} from "../../data/ProjectCardsData.ts";
     <EditorLine :indentation="0" />
     <EditorLine :indentation="0" />
     <EditorLine :indentation="1">
-      <h1 id="project-neerslag-title"># Project: Neerslag Radar</h1>
+      <h1 id="project-neerslag-title">
+        # Project: Neerslag Radar
+      </h1>
     </EditorLine>
 
     <EditorLine :indentation="2" />
@@ -36,7 +38,9 @@ import {neerslagProjectCardData} from "../../data/ProjectCardsData.ts";
         >
           <template #text>
             <div>
-              <h2 id="project-neerslag-data-insights">## Data insights</h2>
+              <h2 id="project-neerslag-data-insights">
+                ## Data insights
+              </h2>
               <p>
                 View the data in either a map or in a graph visualisation. The map visualisation animates through all
                 data slices in 5 minute intervals. The color gradient displays the rainfall intensity in mm/H. The graph
@@ -65,7 +69,9 @@ import {neerslagProjectCardData} from "../../data/ProjectCardsData.ts";
         >
           <template #text>
             <div>
-              <h2 id="project-neerslag-dashboards">## Create complex dashboards</h2>
+              <h2 id="project-neerslag-dashboards">
+                ## Create complex dashboards
+              </h2>
               <p>
                 Create complex dashboards by adding multiple views with differing insights. Compare the data between
                 different locations by placing the visualisations next to each other.
@@ -93,7 +99,9 @@ import {neerslagProjectCardData} from "../../data/ProjectCardsData.ts";
           <template #text>
             <div>
               <Bug :bug-type="6" />
-              <h2 id="project-neerslag-switch-dashboards">## Easily switch between dashboards</h2>
+              <h2 id="project-neerslag-switch-dashboards">
+                ## Easily switch between dashboards
+              </h2>
               <p>
                 Create multiple dashboards so that you can easily switch between different insights or projects.
               </p>
@@ -113,14 +121,19 @@ import {neerslagProjectCardData} from "../../data/ProjectCardsData.ts";
     <section>
       <EditorLine :indentation="2" />
       <EditorLine :indentation="2">
-        <h2 id="project-neerslag-features" class="list-title">
+        <h2
+          id="project-neerslag-features"
+          class="list-title"
+        >
           ## Features
         </h2>
       </EditorLine>
       <ul class="features-list">
         <EditorLine :indentation="2">
           <li>
-            <h3 id="project-neerslag-map-visualisation">View your data iteratively in the map visualisation</h3>
+            <h3 id="project-neerslag-map-visualisation">
+              View your data iteratively in the map visualisation
+            </h3>
             <p>
               View every frame separately or play them as a video.
             </p>
@@ -128,7 +141,9 @@ import {neerslagProjectCardData} from "../../data/ProjectCardsData.ts";
         </EditorLine>
         <EditorLine :indentation="2">
           <li>
-            <h3 id="project-neerslag-create-selections">Create selections</h3>
+            <h3 id="project-neerslag-create-selections">
+              Create selections
+            </h3>
             <p>
               Make a selection of cells to only view the relevant information of a specific location.
             </p>
@@ -136,7 +151,9 @@ import {neerslagProjectCardData} from "../../data/ProjectCardsData.ts";
         </EditorLine>
         <EditorLine :indentation="2">
           <li>
-            <h3 id="project-neerslag-graphs">View your data in a graph visualisation</h3>
+            <h3 id="project-neerslag-graphs">
+              View your data in a graph visualisation
+            </h3>
             <p>
               View all the data of your selection in a graph.
             </p>
@@ -144,7 +161,9 @@ import {neerslagProjectCardData} from "../../data/ProjectCardsData.ts";
         </EditorLine>
         <EditorLine :indentation="2">
           <li>
-            <h3 id="project-neerslag-partial-data">View partial data</h3>
+            <h3 id="project-neerslag-partial-data">
+              View partial data
+            </h3>
             <p>
               Configure a timespan to only view a section of the dataset.
             </p>
@@ -152,7 +171,9 @@ import {neerslagProjectCardData} from "../../data/ProjectCardsData.ts";
         </EditorLine>
         <EditorLine :indentation="2">
           <li>
-            <h3 id="project-neerslag-crud-dashboard-functions">Save, update and load dashboards as configurations</h3>
+            <h3 id="project-neerslag-crud-dashboard-functions">
+              Save, update and load dashboards as configurations
+            </h3>
             <p>
               Dashboards are saved locally. They contain all of the added views with their selected settings.
             </p>
@@ -160,7 +181,9 @@ import {neerslagProjectCardData} from "../../data/ProjectCardsData.ts";
         </EditorLine>
         <EditorLine :indentation="2">
           <li>
-            <h3 id="project-neerslag-fast">Fast load times</h3>
+            <h3 id="project-neerslag-fast">
+              Fast load times
+            </h3>
             <p>
               By using data streaming, the load times for the dataset are extremely fast.
             </p>
@@ -175,7 +198,7 @@ import {neerslagProjectCardData} from "../../data/ProjectCardsData.ts";
     <EditorLine :indentation="0" />
 
     <template #info>
-      <ProjectProperties v-bind="neerslagProjectCardData"/>
+      <ProjectProperties v-bind="neerslagProjectCardData" />
     </template>
   </EditorProject>
 </template>

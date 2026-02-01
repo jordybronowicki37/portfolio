@@ -14,7 +14,9 @@ import {taskManagerProjectCardData} from "../../data/ProjectCardsData.ts";
     <EditorLine :indentation="0" />
     <EditorLine :indentation="0" />
     <EditorLine :indentation="1">
-      <h1 id="project-task-manager-title"># Project: Task Manager</h1>
+      <h1 id="project-task-manager-title">
+        # Project: Task Manager
+      </h1>
     </EditorLine>
 
     <EditorLine :indentation="2" />
@@ -38,7 +40,9 @@ import {taskManagerProjectCardData} from "../../data/ProjectCardsData.ts";
         >
           <template #text>
             <div>
-              <h2 id="project-task-manager-tasks">## Manage your tasks</h2>
+              <h2 id="project-task-manager-tasks">
+                ## Manage your tasks
+              </h2>
               <p>
                 Introducing my Task Manager project, a robust organizational tool designed to streamline
                 your workflow and enhance productivity. This intuitive system allows you to create customized
@@ -69,7 +73,9 @@ import {taskManagerProjectCardData} from "../../data/ProjectCardsData.ts";
         >
           <template #text>
             <div>
-              <h2 id="project-task-manager-assign-tags-users">## Assign tags and users to tasks</h2>
+              <h2 id="project-task-manager-assign-tags-users">
+                ## Assign tags and users to tasks
+              </h2>
               <p>
                 Seamlessly assign specific tags or users to your tasks, ensuring clarity in responsibilities
                 and enhancing team collaboration. With this feature, managing tasks becomes effortless.
@@ -93,14 +99,19 @@ import {taskManagerProjectCardData} from "../../data/ProjectCardsData.ts";
     <section>
       <EditorLine :indentation="2" />
       <EditorLine :indentation="2">
-        <h2 id="project-task-manager-features" class="list-title">
+        <h2
+          id="project-task-manager-features"
+          class="list-title"
+        >
           ## Features
         </h2>
       </EditorLine>
       <ul class="features-list">
         <EditorLine :indentation="2">
           <li>
-            <h3 id="project-task-manager-multiple-boards">Create multiple Boards</h3>
+            <h3 id="project-task-manager-multiple-boards">
+              Create multiple Boards
+            </h3>
             <p>
               Craft multiple boards, each serving as a dedicated space for a project, task category, or team.
               Organize your work efficiently, ensuring a clear overview of your tasks.
@@ -109,7 +120,9 @@ import {taskManagerProjectCardData} from "../../data/ProjectCardsData.ts";
         </EditorLine>
         <EditorLine :indentation="2">
           <li>
-            <h3 id="project-task-manager-task-lists">Create Task-lists</h3>
+            <h3 id="project-task-manager-task-lists">
+              Create Task-lists
+            </h3>
             <p>
               Within each board, you can create task-lists representing the different states of your tasks.
               Define custom states such as To-Do, In Progress, and Done. Lanes provide a visual
@@ -119,7 +132,9 @@ import {taskManagerProjectCardData} from "../../data/ProjectCardsData.ts";
         </EditorLine>
         <EditorLine :indentation="2">
           <li>
-            <h3 id="project-task-manager-task-management">Task Management</h3>
+            <h3 id="project-task-manager-task-management">
+              Task Management
+            </h3>
             <p>
               Populate your lanes with tasks, breaking down your projects into manageable components.
             </p>
@@ -127,7 +142,9 @@ import {taskManagerProjectCardData} from "../../data/ProjectCardsData.ts";
         </EditorLine>
         <EditorLine :indentation="2">
           <li>
-            <h3 id="project-task-manager-tags">Tags for Task Grouping</h3>
+            <h3 id="project-task-manager-tags">
+              Tags for Task Grouping
+            </h3>
             <p>
               Enhance organization by tagging tasks with relevant keywords or categories. Group tasks
               together, making it effortless to track specific themes or priorities.
@@ -136,7 +153,9 @@ import {taskManagerProjectCardData} from "../../data/ProjectCardsData.ts";
         </EditorLine>
         <EditorLine :indentation="2">
           <li>
-            <h3 id="project-task-manager-collaborate">Collaborative Environment</h3>
+            <h3 id="project-task-manager-collaborate">
+              Collaborative Environment
+            </h3>
             <p>
               Invite collaborators to your boards, fostering seamless communication and collaboration.
               Assign tasks and work together to achieve common goals.
@@ -152,7 +171,7 @@ import {taskManagerProjectCardData} from "../../data/ProjectCardsData.ts";
     <EditorLine :indentation="0" />
 
     <template #info>
-      <ProjectProperties v-bind="taskManagerProjectCardData"/>
+      <ProjectProperties v-bind="taskManagerProjectCardData" />
     </template>
 
     <template #aws>

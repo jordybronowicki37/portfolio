@@ -17,7 +17,9 @@ const githubURL = import.meta.env.VITE_PORTFOLIO_GITHUB_URL;
     <EditorLine :indentation="0" />
     <EditorLine :indentation="0" />
     <EditorLine :indentation="1">
-      <h1 id="project-portfolio-title"># Project: Portfolio</h1>
+      <h1 id="project-portfolio-title">
+        # Project: Portfolio
+      </h1>
     </EditorLine>
 
     <EditorLine :indentation="2" />
@@ -41,7 +43,9 @@ const githubURL = import.meta.env.VITE_PORTFOLIO_GITHUB_URL;
         >
           <template #text>
             <div>
-              <h2 id="project-portfolio-code-editor">## Code editor inspired</h2>
+              <h2 id="project-portfolio-code-editor">
+                ## Code editor inspired
+              </h2>
               <p>
                 My personal portfolio website stands as a testament to my passion for coding and design.
                 Designed to resemble a familiar code editor.
@@ -68,7 +72,9 @@ const githubURL = import.meta.env.VITE_PORTFOLIO_GITHUB_URL;
         >
           <template #text>
             <div>
-              <h2 id="project-portfolio-multiple-projects">## Multiple projects</h2>
+              <h2 id="project-portfolio-multiple-projects">
+                ## Multiple projects
+              </h2>
               <p>
                 This website serves as a digital canvas where I showcase my projects and skills.
               </p>
@@ -135,14 +141,19 @@ const githubURL = import.meta.env.VITE_PORTFOLIO_GITHUB_URL;
     <section>
       <EditorLine :indentation="2" />
       <EditorLine :indentation="2">
-        <h2 id="project-portfolio-features" class="list-title">
+        <h2
+          id="project-portfolio-features"
+          class="list-title"
+        >
           ## Features
         </h2>
       </EditorLine>
       <ul class="features-list">
         <EditorLine :indentation="2">
           <li>
-            <h3 id="project-portfolio-code-editor-environment">Immersive Code Editor Environment</h3>
+            <h3 id="project-portfolio-code-editor-environment">
+              Immersive Code Editor Environment
+            </h3>
             <p>
               Navigating my portfolio feels like exploring lines of code in a familiar editor, creating a
               comfortable space for fellow tech enthusiasts.
@@ -151,7 +162,9 @@ const githubURL = import.meta.env.VITE_PORTFOLIO_GITHUB_URL;
         </EditorLine>
         <EditorLine :indentation="2">
           <li>
-            <h3 id="project-portfolio-project-showcase">Project Showcase</h3>
+            <h3 id="project-portfolio-project-showcase">
+              Project Showcase
+            </h3>
             <p>
               Dive into a variety of projects, each encapsulating my dedication to innovation. From coding
               experiments to fully developed applications, my work speaks volumes about my capabilities.
@@ -160,7 +173,9 @@ const githubURL = import.meta.env.VITE_PORTFOLIO_GITHUB_URL;
         </EditorLine>
         <EditorLine :indentation="2">
           <li>
-            <h3 id="project-portfolio-responsive-design">Responsive Design</h3>
+            <h3 id="project-portfolio-responsive-design">
+              Responsive Design
+            </h3>
             <p>
               The website seamlessly adjusts to different devices, ensuring a smooth experience whether
               you're browsing on a desktop, tablet, or smartphone.
@@ -169,7 +184,9 @@ const githubURL = import.meta.env.VITE_PORTFOLIO_GITHUB_URL;
         </EditorLine>
         <EditorLine :indentation="2">
           <li>
-            <h3 id="project-portfolio-networking">Connection Opportunities</h3>
+            <h3 id="project-portfolio-networking">
+              Connection Opportunities
+            </h3>
             <p>
               Interested in discussing collaborations, projects, or just exchanging ideas? Reach out via
               the contact section. I'm always eager to connect with fellow enthusiasts and professionals.
@@ -185,7 +202,7 @@ const githubURL = import.meta.env.VITE_PORTFOLIO_GITHUB_URL;
     <EditorLine :indentation="0" />
 
     <template #info>
-      <ProjectProperties v-bind="portfolioProjectCardData"/>
+      <ProjectProperties v-bind="portfolioProjectCardData" />
     </template>
   </EditorProject>
 </template>

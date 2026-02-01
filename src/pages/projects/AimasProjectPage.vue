@@ -14,7 +14,9 @@ import {aimasProjectCardData} from "../../data/ProjectCardsData.ts";
     <EditorLine :indentation="0" />
     <EditorLine :indentation="0" />
     <EditorLine :indentation="1">
-      <h1 id="project-aimas-title"># Project: AIMAS</h1>
+      <h1 id="project-aimas-title">
+        # Project: AIMAS
+      </h1>
     </EditorLine>
 
     <EditorLine :indentation="2" />
@@ -40,7 +42,9 @@ import {aimasProjectCardData} from "../../data/ProjectCardsData.ts";
         >
           <template #text>
             <div>
-              <h2 id="project-aimas-live-insights">## Live insights into all incidents</h2>
+              <h2 id="project-aimas-live-insights">
+                ## Live insights into all incidents
+              </h2>
               <p>Get a live overview of all the incidents that are occurring on the dutch motorways.</p>
             </div>
           </template>
@@ -58,14 +62,19 @@ import {aimasProjectCardData} from "../../data/ProjectCardsData.ts";
     <section>
       <EditorLine :indentation="2" />
       <EditorLine :indentation="2">
-        <h2 id="project-aimas-features" class="list-title">
+        <h2
+          id="project-aimas-features"
+          class="list-title"
+        >
           ## Features
         </h2>
       </EditorLine>
       <ul class="features-list">
         <EditorLine :indentation="2">
           <li>
-            <h3 id="project-aimas-live-updates">Live updates</h3>
+            <h3 id="project-aimas-live-updates">
+              Live updates
+            </h3>
             <p>
               All the accident and incident data gets updated every 5 minutes.
             </p>
@@ -73,7 +82,9 @@ import {aimasProjectCardData} from "../../data/ProjectCardsData.ts";
         </EditorLine>
         <EditorLine :indentation="2">
           <li>
-            <h3 id="project-aimas-overview">Overview page</h3>
+            <h3 id="project-aimas-overview">
+              Overview page
+            </h3>
             <p>
               View all active accidents and incidents.
             </p>
@@ -81,7 +92,9 @@ import {aimasProjectCardData} from "../../data/ProjectCardsData.ts";
         </EditorLine>
         <EditorLine :indentation="2">
           <li>
-            <h3 id="project-aimas-order-towing">Order towing services</h3>
+            <h3 id="project-aimas-order-towing">
+              Order towing services
+            </h3>
             <p>
               Create orders for towing services to come and help at the incident. The order is send to three separate
               api's. An employee can either accept, deny or ignore the order. If multiple towing services accept the
@@ -98,7 +111,7 @@ import {aimasProjectCardData} from "../../data/ProjectCardsData.ts";
     <EditorLine :indentation="0" />
 
     <template #info>
-      <ProjectProperties v-bind="aimasProjectCardData"/>
+      <ProjectProperties v-bind="aimasProjectCardData" />
     </template>
 
     <template #aws>

@@ -56,16 +56,22 @@ headerItems.reverse();
 <template>
   <div class="editor-headings">
     <div
-      class="editor-heading-entry"
       v-for="heading in headerItems"
       :key="heading.text"
+      class="editor-heading-entry"
     >
       <div
         v-for="prefix in heading.prefixes"
         class="heading-prefix"
       >
-        <div :class="{ 'active': prefix[0] === 'I' }" class="straight-prefix"></div>
-        <div :class="{ 'active': prefix[1] === 'L' }" class="curve-prefix"></div>
+        <div
+          :class="{ 'active': prefix[0] === 'I' }"
+          class="straight-prefix"
+        />
+        <div
+          :class="{ 'active': prefix[1] === 'L' }"
+          class="curve-prefix"
+        />
       </div>
       <router-link
         :to="`${route.path}#${heading.id}`"
