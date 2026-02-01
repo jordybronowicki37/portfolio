@@ -46,6 +46,7 @@ dialog:focus-visible {
 * {
   scrollbar-width: thin;
   scrollbar-color: var(--bg-color-500) var(--bg-color-800);
+  transition: background-color 0.2s, border-color 0.2s, color 0.2s;
 }
 
 /* Scrollbar on Chrome, Edge, and Safari */
