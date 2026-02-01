@@ -606,13 +606,13 @@ export const ALL_PROJECT_STATUSES: PillDataType[] = [
   {
     type: "completed",
     category: "project-status",
-    description: "This project had been completed but can still receive updates.",
+    description: "This project has been completed.",
     bgColor: "#20ca52",
   },
   {
     type: "in progress",
     category: "project-status",
-    description: "This project is still under development.",
+    description: "This project is still under development and still receives updates.",
     bgColor: "#b28000",
   },
   {

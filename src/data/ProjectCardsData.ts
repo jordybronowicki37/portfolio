@@ -28,13 +28,13 @@ export const befitProjectCardData: ProjectCardProps = {
   imageSrc: "/img/projects/befit-progress.png",
   imageAlt: "A standard exercise progress report",
   tags: {
-    summary: ["java", "spring", "postgresql", "discord", "personal", "completed"],
+    summary: ["java", "spring", "postgresql", "discord", "personal", "in progress"],
     languages: ['java'],
     frameworks: ['spring'],
     integrations: ['discord'],
     database: 'postgresql',
     type: 'personal',
-    status: 'completed',
+    status: 'in progress',
   },
   externalLinks: [
     import.meta.env.VITE_BEFIT_GITHUB_URL
@@ -51,13 +51,13 @@ export const miningGameProjectCardData: ProjectCardProps = {
   imageSrc: "/img/projects/mining-game-map-gen-3d-2.png",
   imageAlt: "A topdown preview of the map generation",
   tags: {
-    summary: ["c#", "wpf", "unity", "group", "in progress"],
+    summary: ["c#", "wpf", "unity", "group", "abandoned"],
     languages: ['c#'],
     frameworks: ['wpf'],
     integrations: ['unity'],
     type: 'group',
     groupSize: 5,
-    status: 'in progress',
+    status: 'abandoned',
   },
   externalLinks: [
     import.meta.env.VITE_MINING_GAME_GITHUB_URL
@@ -119,12 +119,12 @@ export const portfolioProjectCardData: ProjectCardProps = {
   imageSrc: "/img/projects/portfolio-projects.jpeg",
   imageAlt: "Portfolio home page screenshot",
   tags: {
-    summary: ["vue", "typescript", "personal", "completed"],
+    summary: ["vue", "typescript", "personal", "in progress"],
     languages: ['typescript', 'html', 'css'],
     frameworks: ['vue'],
     deployment: 'render',
     type: 'personal',
-    status: 'completed',
+    status: 'in progress',
   },
   externalLinks: [
     import.meta.env.VITE_PORTFOLIO_GITHUB_URL,
@@ -142,12 +142,12 @@ export const prodCalProjectCardData: ProjectCardProps = {
   imageSrc: "/img/projects/prod-cal-editor.png",
   imageAlt: "Production calculator editor preview",
   tags: {
-    summary: [".net", "c#", "mongodb", "react", "typescript", "redux", "sass", "personal", "in progress"],
+    summary: [".net", "c#", "mongodb", "react", "typescript", "redux", "sass", "personal", "abandoned"],
     languages: ['c#', 'typescript', 'html', 'sass'],
     frameworks: ['.net', 'react', 'redux'],
     database: 'mongodb',
     type: 'personal',
-    status: 'in progress',
+    status: 'abandoned',
   },
   externalLinks: [
     import.meta.env.VITE_PRODCAL_GITHUB_URL
@@ -187,12 +187,12 @@ export const snakeProjectCardData: ProjectCardProps = {
   imageSrc: "/img/projects/snake-game.png",
   imageAlt: "Production calculator editor screenshot",
   tags: {
-    summary: ["vue", "typescript", "personal", "in progress"],
+    summary: ["vue", "typescript", "personal", "abandoned"],
     languages: ['typescript', 'html', 'css'],
     frameworks: ['vue'],
     deployment: 'render',
     type: 'personal',
-    status: 'in progress',
+    status: 'abandoned',
   },
   externalLinks: [
     import.meta.env.VITE_SNAKE_GITHUB_URL,
