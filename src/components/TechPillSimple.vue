@@ -1,9 +1,13 @@
 <script setup lang="ts">
-const {color} = defineProps<{ color: string; }>();
+const {color, backgroundColor} = defineProps<{ color: string; backgroundColor?: string; }>();
 
 let bgColor = color;
-if (color.length === 4) bgColor = color + "3";
-if (color.length === 7) bgColor = color + "33";
+if (backgroundColor) {
+  bgColor = backgroundColor;
+} else {
+  if (color.length === 4) bgColor = color + "3";
+  if (color.length === 7) bgColor = color + "33";
+}
 </script>
 
 <template>
