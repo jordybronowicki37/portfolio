@@ -44,7 +44,7 @@ h2 {
   background: var(--bg-color-600);
   border: 1px solid var(--secondary-color);
   box-shadow: 0 0 1rem #0005;
-  border-radius: 1rem;
+  border-radius: 5px;
 }
 .bugs-overview-container {
   width: min-content;

@@ -37,13 +37,14 @@ h2 {
   font-size: larger;
   opacity: 0.8;
   margin-bottom: 0.5rem;
+  color: var(--font-color-200);
 }
 .branches-overview {
   padding: 0.5rem;
   background-color: var(--bg-color-600);
   border: 1px solid var(--secondary-color);
   box-shadow: 0 0 1rem #0005;
-  border-radius: 1rem;
+  border-radius: 5px;
 }
 p {
   margin-bottom: 0.4rem;

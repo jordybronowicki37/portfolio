@@ -54,6 +54,9 @@ const slots = useSlots();
   flex-direction: column;
   flex-grow: 1;
   overflow: hidden;
+  background-color: var(--bg-color-600);
+  margin: 0 5px;
+  border-radius: 5px;
 }
 #editor-lines-wrapper {
   display: flex;

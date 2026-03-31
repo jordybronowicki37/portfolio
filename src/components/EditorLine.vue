@@ -31,11 +31,10 @@ defineProps<{indentation: number}>();
   display: inline-block;
   text-align: right;
   color: var(--secondary-color);
-  background: var(--bg-color-700);
+  background: var(--bg-color-600);
   border-right: 1px solid var(--secondary-color);
   height: 100%;
   width: 2em;
-  padding-left: 0.2rem;
   padding-right: 0.5rem;
 }
 

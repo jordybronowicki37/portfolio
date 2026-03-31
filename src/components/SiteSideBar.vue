@@ -94,7 +94,7 @@ function switchTabVisibility(tab: string) {
       id="sidebar-content-wrapper"
     >
       <div id="sidebar-title">
-        <div>{{ tabOpened }}</div>
+        <p>{{ tabOpened }}</p>
         <div class="close-button-wrapper">
           <button
             title="Close side bar"
@@ -134,22 +134,22 @@ function switchTabVisibility(tab: string) {
   position: relative;
   max-width: min(40vw, 750px);
   min-width: max(15vw, 250px);
-  background: var(--bg-color-600);
-  border-right: 1px solid var(--secondary-color);
 }
 #sidebar-menu {
-  border-right: 1px solid var(--bg-color-800);
-
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0 0.5rem;
   .active {
-    background: var(--bg-color-500);
+    --sidebar-tab-icon-color: var(--font-color-200);
+    background: var(--bg-color-600);
   }
   >* {
-    --sidebar-tab-icon-color: var(--font-color-200);
+    --sidebar-tab-icon-color: var(--font-color-400);
     all: unset;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0.5rem;
     padding: 0.5rem;
     height: 1.3rem;
     width: 1.3rem;
@@ -157,34 +157,37 @@ function switchTabVisibility(tab: string) {
     cursor: pointer;
     &:hover {
       --sidebar-tab-icon-color: var(--accent-color);
-      background: var(--bg-color-500);
+      background: var(--bg-color-600);
     }
   }
 }
 #sidebar-content-wrapper {
-  height: 100%;
   flex-grow: 1;
   overflow: hidden;
+  background: var(--bg-color-800);
+  margin-right: 5px;
+  border-radius: 5px;
 }
 #sidebar-resize-handle {
   cursor: ew-resize;
-  width: 5px;
+  width: 10px;
   position: absolute;
   height: 100%;
   top: 0;
-  right: -2px;
+  right: -5px;
   z-index: 1;
 }
 #sidebar-title {
   width: 100%;
-  text-align: center;
   font-weight: bold;
   padding: 0.5rem 0;
   border-bottom: 1px solid var(--bg-color-800);
   position: relative;
   overflow: hidden;
   flex-shrink: 0;
-
+  p {
+    padding-left: 0.5rem;
+  }
   .close-button-wrapper {
     position: absolute;
     right: 0;
@@ -193,7 +196,6 @@ function switchTabVisibility(tab: string) {
     display: flex;
     align-items: center;
   }
-
   button {
     --sidebar-close-button-color: var(--font-color-200);
     all: unset;
@@ -203,10 +205,10 @@ function switchTabVisibility(tab: string) {
     height: 1.5rem;
     width: 1.5rem;
     margin: 0.5rem;
-    background: var(--bg-color-500);
-
+    text-align: center;
     &:hover {
       --sidebar-close-button-color: var(--accent-color);
+      background: var(--bg-color-600);
     }
   }
 }

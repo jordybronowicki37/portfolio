@@ -20,13 +20,6 @@ for (let i = 0; i < headings.length; i++) {
   const hasHigherElementAfter = [...headings.values()].splice(headings.length - i).find(n => headingIndex > parseInt(n.nodeName[1])) !== undefined;
   const hasSameElementAfter = [...headings.values()].splice(headings.length - i).find(n => element.nodeName === n.nodeName) !== undefined;
 
-  console.log({
-    selectedElements: [...headings.values()].splice(headings.length - i),
-    element,
-    headingIndex,
-    previousHeadingIndex,
-  });
-
   let prefixes: headerItem['prefixes'] = [];
   if (headingIndex === 2) {
     if (previousHeadingIndex === 2 || hasSameElementAfter) {
@@ -91,14 +84,7 @@ headerItems.reverse();
     white-space: nowrap;
     font-size: var(--editor-heading-size);
     margin-left: 4px;
-  }
-  .heading-H1 {
-  }
-  .heading-H2 {
-  }
-  .heading-H3 {
-  }
-  .heading-H4 {
+    text-decoration-color: var(--font-color-400);
   }
   .editor-heading-entry {
     display: flex;

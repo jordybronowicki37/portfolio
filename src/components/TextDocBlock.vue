@@ -22,7 +22,7 @@ defineProps<{text: string}>()
 
 <style scoped>
 div, p {
-  color: #5c7e67;
+  color: #429172;
   font-family: monospace;
   font-size: large;
 }

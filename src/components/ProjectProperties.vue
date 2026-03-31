@@ -131,9 +131,6 @@ defineProps<ProjectCardProps>();
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  p {
-    font-weight: bold;
-  }
   .tag-list-wrapper {
     display: flex;
     align-items: center;

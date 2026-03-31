@@ -1,12 +1,12 @@
 .dark-theme {
     --font-color-200: #ffffffde;
-    --font-color-300: #bdbdbd;
-    --font-color-400: #bbb;
+    --font-color-300: #bbb;
+    --font-color-400: #999;
     --bg-color-800: #242424;
-    --bg-color-700: #2a2a2a;
-    --bg-color-600: #333;
-    --bg-color-500: #444;
-    --secondary-color: #777;
+    --bg-color-700: #272727;
+    --bg-color-600: #2a2a2a;
+    --bg-color-500: #333;
+    --secondary-color: #666;
     --accent-color: #ea6d30;
     --error-color: #f10505;
 }

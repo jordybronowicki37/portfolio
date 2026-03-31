@@ -68,22 +68,12 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  background-color: var(--bg-color-800);
-  background-image: linear-gradient(
-    90deg,
-    color-mix(in srgb, var(--accent-color) 50%, transparent),
-    color-mix(in srgb, var(--bg-color-800) 90%, transparent) 20%
-  );
-  border-bottom: 1px solid var(--secondary-color);
   position: relative;
-}
-header > * {
-  padding: 0.2rem;
+  padding: 0.5rem 1rem;
 }
 #icon {
-  height: 1.5rem;
-  width: 1.5rem;
+  height: 1.3rem;
+  width: 1.3rem;
 }
 #current-file-title {
   color: var(--font-color-400);

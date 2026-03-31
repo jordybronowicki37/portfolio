@@ -153,23 +153,12 @@ function switchTabVisibility(tab: string) {
 #sidebar-heading-wrapper,
 #sidebar-search-wrapper,
 #sidebar-aws-wrapper {
-  margin: 1rem;
+  margin: 0.5rem;
 }
 #sidebar-aws-wrapper ul {
   list-style: none;
   li {
     margin-bottom: 1rem;
-  }
-}
-@container editor-sidebar-content (width < 300px) {
-  #sidebar-info-wrapper,
-  #sidebar-heading-wrapper,
-  #sidebar-search-wrapper,
-  #sidebar-aws-wrapper {
-    margin: 4px;
-  }
-  #sidebar-aws-wrapper ul li {
-    margin-bottom: 4px;
   }
 }
 </style>
@@ -180,8 +169,8 @@ function switchTabVisibility(tab: string) {
   cursor: ew-resize;
 }
 #editor-sidebar-wrapper {
-  background: var(--bg-color-600);
-  border-left: 1px solid var(--secondary-color);
+  margin-left: 5px;
+  border-radius: 5px;
   position: relative;
   max-width: min(40vw, 750px);
   min-width: max(15vw, 250px);
@@ -192,6 +181,8 @@ function switchTabVisibility(tab: string) {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  background: var(--bg-color-800);
+  border-radius: 5px;
 }
 #editor-sidebar-content {
   container-name: editor-sidebar-content;
@@ -201,17 +192,20 @@ function switchTabVisibility(tab: string) {
   flex-grow: 1;
 }
 #editor-sidebar-menu {
-  border-left: 1px solid var(--bg-color-800);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0 0.5rem;
   .active {
-    background: var(--bg-color-500);
+    --sidebar-tab-icon-color: var(--font-color-200);
+    background: var(--bg-color-600);
   }
   >* {
-    --sidebar-tab-icon-color: var(--font-color-200);
+    --sidebar-tab-icon-color: var(--font-color-400);
     all: unset;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0.5rem;
     padding: 0.5rem;
     height: 1.3rem;
     width: 1.3rem;
@@ -219,23 +213,23 @@ function switchTabVisibility(tab: string) {
     cursor: pointer;
     &:hover {
       --sidebar-tab-icon-color: var(--accent-color);
-      background: var(--bg-color-500);
+      background: var(--bg-color-600);
     }
   }
 }
 #editor-sidebar-title {
   width: 100%;
-  text-align: center;
   font-weight: bold;
   padding: 0.5rem 0;
-  border-bottom: 1px solid var(--bg-color-800);
   position: relative;
   overflow: hidden;
   flex-shrink: 0;
   p {
+    padding-left: 0.5rem;
     text-transform: capitalize;
   }
   .close-button-wrapper {
+    text-align: center;
     position: absolute;
     right: 0;
     top: 0;
@@ -252,19 +246,19 @@ function switchTabVisibility(tab: string) {
     height: 1.5rem;
     width: 1.5rem;
     margin: 0.5rem;
-    background: var(--bg-color-500);
     &:hover {
       --sidebar-close-button-color: var(--accent-color);
+      background: var(--bg-color-600);
     }
   }
 }
 #sidebar-resize-handle {
   cursor: ew-resize;
-  width: 5px;
+  width: 10px;
   position: absolute;
   height: 100%;
   top: 0;
-  left: -2px;
+  left: -10px;
   z-index: 1;
 }
 </style>

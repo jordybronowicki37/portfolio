@@ -35,7 +35,7 @@ watch([store.bugsCompleted], () => {
         <box-icon
           name="git-branch"
           size="1em"
-          color="var(--font-color-200)"
+          color="var(--footer-icon-color)"
         />
         <span>{{ branchName }}</span>
       </button>
@@ -58,7 +58,7 @@ watch([store.bugsCompleted], () => {
           type="solid"
           name="bug"
           size="1em"
-          :color="amountOfBugsLeft>0 ? 'var(--font-color-200)' : '#439934'"
+          :color="amountOfBugsLeft>0 ? 'var(--footer-icon-color)' : '#439934'"
         />
         <span v-if="amountOfBugsLeft>0">{{ amountOfBugsLeft }}</span>
       </button>
@@ -82,7 +82,7 @@ watch([store.bugsCompleted], () => {
       class="footer-tab"
       title="Current version"
     >
-      V{{ packageJson.version }}
+      <span>V{{ packageJson.version }}</span>
     </div>
     <button
       id="editor-settings-button"
@@ -94,7 +94,7 @@ watch([store.bugsCompleted], () => {
         type="solid"
         name="cog"
         size="1em"
-        color="var(--font-color-200)"
+        color="var(--footer-icon-color)"
       />
     </button>
   </footer>
@@ -111,10 +111,9 @@ watch([store.bugsCompleted], () => {
 
 <style scoped>
 footer {
-  background: var(--bg-color-600);
-  border-top: 1px solid var(--secondary-color);
   display: flex;
   justify-content: flex-end;
+  padding: 5px;
 }
 .branches-tab, .bugs-tab {
   position: relative;
@@ -132,7 +131,6 @@ footer {
   right: 0;
 }
 .bugs-tab-button {
-  background: var(--bg-color-600);
   position: relative;
   z-index: 1;
   height: 100%;
@@ -180,12 +178,23 @@ button:focus-visible {
 .footer-tab {
   display: flex;
   align-items: center;
-  padding: 0.2rem 0.5rem;
+  padding: 0.2rem 0.3rem;
+  margin: 0 0.2rem;
   cursor: pointer;
   user-select: none;
-}
-.footer-tab:hover {
-  background-color: var(--bg-color-500);
+  border-radius: 5px;
+  --footer-icon-color: var(--font-color-400);
+
+  span {
+    color: var(--font-color-400);
+  }
+  &:hover {
+    --footer-icon-color: var(--font-color-200);
+    background-color: var(--bg-color-500);
+    span {
+      color: var(--font-color-200);
+    }
+  }
 }
 .footer-separator {
   flex-grow: 1;
@@ -193,9 +202,9 @@ button:focus-visible {
 dialog {
   position: relative;
   overflow: hidden auto;
-}
-dialog>div {
-  min-width: 10rem;
-  min-height: 10rem;
+  &>div {
+    min-width: 10rem;
+    min-height: 10rem;
+  }
 }
 </style>

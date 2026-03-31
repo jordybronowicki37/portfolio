@@ -83,10 +83,9 @@ watchPostEffect(() => {
 .editor-tabs-container {
   display: flex;
   flex: 0 0 content;
-  width: 100%;
   overflow: auto;
   background-color: var(--bg-color-700);
-  border-bottom: 1px solid var(--secondary-color);
+  border-bottom: 1px solid var(--bg-color-500);
   scroll-behavior: smooth;
   z-index: 1;
 }
